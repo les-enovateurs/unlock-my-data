@@ -404,7 +404,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
                 inCatalog: true,
                 logo: svc.logo,
                 countryCode: svc.country_code,
-                why: svc.better_alternative_explication || undefined,
+                why: svc.better_alternative_explication_fr || undefined,
                 whyEn: svc.better_alternative_explication_en || undefined,
             };
         });
@@ -485,7 +485,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         apkLab,
         alternatives,
         betterAlternative: isTruthyFlag(entreprise.better_alternative),
-        betterAlternativeWhy: pick(entreprise.better_alternative_explication, entreprise.better_alternative_explication_en),
+        betterAlternativeWhy: pick(entreprise.better_alternative_explication_fr, entreprise.better_alternative_explication_en),
         compareServicesParam,
         analysis,
         review,

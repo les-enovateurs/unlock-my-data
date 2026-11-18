@@ -26,7 +26,7 @@
     "country_code": "nl",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "lidl",
@@ -60,7 +60,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "booking",
@@ -89,7 +89,7 @@
     "country_code": "de",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -120,7 +120,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "amazon",
@@ -161,7 +161,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "amazon",
@@ -201,7 +201,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "leboncoin",
@@ -235,7 +235,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "youtube",
@@ -271,7 +271,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -294,7 +294,7 @@
     "country_code": "us",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -326,7 +326,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -358,7 +358,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "happn",
@@ -394,7 +394,7 @@
     "country_code": "nl",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -426,7 +426,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -458,7 +458,7 @@
     "country_code": "es",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -481,7 +481,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -513,7 +513,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -545,7 +545,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -577,7 +577,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "Ouvrir les paramètres intégrés au jeu et utiliser les options de confidentialité. La politique précise que les demandes relatives aux droits peuvent être effectuées via cette interface.",
+    "better_alternative_explication_fr": "Ouvrir les paramètres intégrés au jeu et utiliser les options de confidentialité. La politique précise que les demandes relatives aux droits peuvent être effectuées via cette interface.",
     "better_alternative_explication_en": "Open the in-game settings interface and use the available privacy options. The Privacy Policy states that legal-rights requests can be made through this interface",
     "alternatives": []
   },
@@ -609,7 +609,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": true,
-    "better_alternative_explication": "Stockage en France, certification ISO 27001, ISO 27017, ISO 27018, SecNumCloud(ANSSI) et HDS (données de santé), chiffrement de bout en bout (zero-knowledge), lien avec délai de validité, traçabilité",
+    "better_alternative_explication_fr": "Stockage en France, certification ISO 27001, ISO 27017, ISO 27018, SecNumCloud(ANSSI) et HDS (données de santé), chiffrement de bout en bout (zero-knowledge), lien avec délai de validité, traçabilité",
     "better_alternative_explication_en": "Storage in France, ISO 27001, ISO 27017, ISO 27018, SecNumCloud (ANSSI) and HDS (health data) certification, end-to-end encryption (zero-knowledge), time-stamped links, traceability.",
     "alternatives": []
   },
@@ -649,7 +649,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -681,7 +681,7 @@
     "country_code": "ee",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -712,7 +712,7 @@
     "country_code": "nl",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "opodo",
@@ -749,7 +749,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "amazon",
@@ -790,7 +790,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "* Chiffrement des données + authentification forte\n* Détection des fraudes et alertes en temps réel\n* Supervision par les régulateurs français (ACPR, RGPD)\n* Très faible taux d’incidents majeurs (\\<0,01%)\n\nDonc : **Tes données sont protégées selon les standards bancaires élevés européens**\n\n\n\n### Points à nuancer (important)\n\n* Banque **très orientée data & automatisation**\n* Historique de pratique discutée (demande d’accès impôts → CNIL)\n* Forte dépendance au digital → plus exposée au phishing (comme toutes les banques en ligne)\n\nTraduction simple :\n\n* sécurisée contre le hacking “classique”\n* mais **pas la plus minimaliste en collecte de données**\n\n\n\n**`Une autre alternative peut être N26 : `**\n\n* Culture allemande → très stricte sur la vie privée\n* Moins de produits → moins de collecte de données\n* Architecture moderne avec sécurité forte\n\n### Limite :\n\n* Historique de contrôles AML - anti blanchiment d'argent -  (pas directement lié aux données perso)",
+    "better_alternative_explication_fr": "* Chiffrement des données + authentification forte\n* Détection des fraudes et alertes en temps réel\n* Supervision par les régulateurs français (ACPR, RGPD)\n* Très faible taux d’incidents majeurs (\\<0,01%)\n\nDonc : **Tes données sont protégées selon les standards bancaires élevés européens**\n\n\n\n### Points à nuancer (important)\n\n* Banque **très orientée data & automatisation**\n* Historique de pratique discutée (demande d’accès impôts → CNIL)\n* Forte dépendance au digital → plus exposée au phishing (comme toutes les banques en ligne)\n\nTraduction simple :\n\n* sécurisée contre le hacking “classique”\n* mais **pas la plus minimaliste en collecte de données**\n\n\n\n**`Une autre alternative peut être N26 : `**\n\n* Culture allemande → très stricte sur la vie privée\n* Moins de produits → moins de collecte de données\n* Architecture moderne avec sécurité forte\n\n### Limite :\n\n* Historique de contrôles AML - anti blanchiment d'argent -  (pas directement lié aux données perso)",
     "better_alternative_explication_en": "* Data encryption + strong authentication\n* Fraud detection and real-time alerts\n* Supervision by French regulators (ACPR, GDPR)\n* Very low rate of major incidents (\\<0.01%)\n\n-> Therefore: your data is protected according to high European banking standards\n\n\n\n### Points to consider :\n\n* Data- and automation-driven bank\n* History of controversial practice (requesting access to tax credentials → CNIL)\n* Strong reliance on digital → more exposure to phishing (like all online banks)\n\nConclusion :&#x20;\n\n* Secure against “classic” hacking\n* But not the most minimal in terms of data collection\n\n\n\n\n### <u>Another alternative can be N26 Bank :</u>\n\n* German culture → very strict on privacy\n* Fewer products → less data collection\n* Modern architecture with strong security\n\n**Limitation:**\n\n* History of AML (anti-money laundering) controls — not directly related to personal data protection",
     "alternatives": []
   },
@@ -822,7 +822,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -853,7 +853,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -876,7 +876,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "doctolib",
@@ -911,7 +911,7 @@
     "country_code": "se",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -942,7 +942,7 @@
     "country_code": "au",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -973,7 +973,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "lidl",
@@ -999,7 +999,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1031,7 +1031,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1063,7 +1063,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1094,7 +1094,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mistral"
@@ -1127,7 +1127,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1159,7 +1159,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1190,7 +1190,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mistral"
@@ -1224,7 +1224,7 @@
     "country_code": "us",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1256,7 +1256,7 @@
     "country_code": "it",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1288,7 +1288,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1320,7 +1320,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1343,7 +1343,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1374,7 +1374,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mistral"
@@ -1408,7 +1408,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1440,7 +1440,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1472,7 +1472,7 @@
     "country_code": "gb",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1503,7 +1503,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1526,7 +1526,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1557,7 +1557,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "element",
@@ -1592,7 +1592,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "youtube",
@@ -1628,7 +1628,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1659,7 +1659,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "caisse-nationale-dassurance-maladie",
@@ -1695,7 +1695,7 @@
     "country_code": "de",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1727,7 +1727,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1759,7 +1759,7 @@
     "country_code": "de",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1799,7 +1799,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "**GOG.com** : plateforme sans DRM, sans collecte de données excessive, appartenant à CD Projekt (UE 🇵🇱). **Itch.io** pour les jeux indépendants : open source friendly, politique de confidentialité minimaliste.",
+    "better_alternative_explication_fr": "**GOG.com** : plateforme sans DRM, sans collecte de données excessive, appartenant à CD Projekt (UE 🇵🇱). **Itch.io** pour les jeux indépendants : open source friendly, politique de confidentialité minimaliste.",
     "better_alternative_explication_en": "**GOG.com** : DRM-free platform with minimal data collection, owned by CD Projekt (EU 🇵🇱). **Itch.io** for indie games: open-source friendly, minimal privacy policy.",
     "alternatives": []
   },
@@ -1830,7 +1830,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mastodon"
@@ -1864,7 +1864,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1896,7 +1896,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "Le navigateur Firefox est Open Source, conçu par une fondation à but non lucratif, et offre de nombreuses fonctionnalités de confidentialité.",
+    "better_alternative_explication_fr": "Le navigateur Firefox est Open Source, conçu par une fondation à but non lucratif, et offre de nombreuses fonctionnalités de confidentialité.",
     "better_alternative_explication_en": "The Firefox browser is Open Source, designed by a non-profit foundation, and offers many privacy features.",
     "alternatives": []
   },
@@ -1919,7 +1919,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1951,7 +1951,7 @@
     "country_code": "gb",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -1983,7 +1983,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "E-commerce français",
+    "better_alternative_explication_fr": "E-commerce français",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2015,7 +2015,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "amazon-prime-video",
@@ -2041,7 +2041,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2073,7 +2073,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "France Travail est le service public de l'emploi en France. Son utilisation est nécessaire pour s'inscrire comme demandeur d'emploi et percevoir des allocations. Il n'existe pas d'alternative légale.",
+    "better_alternative_explication_fr": "France Travail est le service public de l'emploi en France. Son utilisation est nécessaire pour s'inscrire comme demandeur d'emploi et percevoir des allocations. Il n'existe pas d'alternative légale.",
     "better_alternative_explication_en": "France Travail is the French public employment service. Registration is required to receive unemployment benefits. No legal alternative exists.",
     "alternatives": []
   },
@@ -2105,7 +2105,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2137,7 +2137,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": true,
-    "better_alternative_explication": "Hébergement en France, sécurité du transfert avec un lien qui expire au bout d'une durée qui peut être déterminée. Possibilité d'ajouter un mot de passe.",
+    "better_alternative_explication_fr": "Hébergement en France, sécurité du transfert avec un lien qui expire au bout d'une durée qui peut être déterminée. Possibilité d'ajouter un mot de passe.",
     "better_alternative_explication_en": "Hosted in France, with secure file transfers via a link that expires after a specified period. Possibility to add a password.",
     "alternatives": []
   },
@@ -2169,7 +2169,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2192,7 +2192,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mistral"
@@ -2217,7 +2217,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "proton-mail"
@@ -2251,7 +2251,7 @@
     "country_code": "pl",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "GOG est une plateforme sans DRM, hébergée dans l'UE, avec une politique de confidentialité claire et conforme au RGPD. Aucune sanction connue. Idéal pour les utilisateurs soucieux de leur vie privée.",
+    "better_alternative_explication_fr": "GOG est une plateforme sans DRM, hébergée dans l'UE, avec une politique de confidentialité claire et conforme au RGPD. Aucune sanction connue. Idéal pour les utilisateurs soucieux de leur vie privée.",
     "better_alternative_explication_en": "GOG is a DRM-free platform hosted in the EU, with a clear GDPR-compliant privacy policy. No known sanctions. Ideal for privacy-conscious users.",
     "alternatives": []
   },
@@ -2274,7 +2274,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "proton-drive",
@@ -2300,7 +2300,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "osmand",
@@ -2334,7 +2334,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "tinder",
@@ -2369,7 +2369,7 @@
     "country_code": "se",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2400,7 +2400,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "tinder",
@@ -2435,7 +2435,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "Il est recommandé de privilégier des plateformes de covoiturage Open Source et coopératives.",
+    "better_alternative_explication_fr": "Il est recommandé de privilégier des plateformes de covoiturage Open Source et coopératives.",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2458,7 +2458,7 @@
     "country_code": "us",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "proton-drive"
@@ -2491,7 +2491,7 @@
     "country_code": "se",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2523,7 +2523,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2554,7 +2554,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2585,7 +2585,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2608,7 +2608,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "pixelfed"
@@ -2633,7 +2633,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2665,7 +2665,7 @@
     "country_code": "cz",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2697,7 +2697,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2728,7 +2728,7 @@
     "country_code": "no",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "pronote",
@@ -2763,7 +2763,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2795,7 +2795,7 @@
     "country_code": "us",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2827,7 +2827,7 @@
     "country_code": "se",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "Privilégier le paiement par virement bancaire direct (SEPA) ou des banques éthiques et coopératives qui favorisent l'inclusion numérique et le droit au non-numérique plutôt que des services automatisés par l'IA.&#x20;\n\nEn choisissant le virement direct, l'utilisateur limite également le transfert de ses données vers des pays hors UE/EEE.",
+    "better_alternative_explication_fr": "Privilégier le paiement par virement bancaire direct (SEPA) ou des banques éthiques et coopératives qui favorisent l'inclusion numérique et le droit au non-numérique plutôt que des services automatisés par l'IA.&#x20;\n\nEn choisissant le virement direct, l'utilisateur limite également le transfert de ses données vers des pays hors UE/EEE.",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2859,7 +2859,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2891,7 +2891,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2923,7 +2923,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -2954,7 +2954,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "vinted",
@@ -2989,7 +2989,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "carrefour",
@@ -3024,7 +3024,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3056,7 +3056,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3087,7 +3087,7 @@
     "country_code": "de",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "carrefour",
@@ -3113,7 +3113,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3145,7 +3145,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3177,7 +3177,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3208,7 +3208,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "doctolib",
@@ -3244,7 +3244,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3276,7 +3276,7 @@
     "country_code": "es",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3307,7 +3307,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3339,7 +3339,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3362,7 +3362,7 @@
     "country_code": "de",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "instagram",
@@ -3399,7 +3399,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "slack",
@@ -3436,7 +3436,7 @@
     "country_code": "us",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3468,7 +3468,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3500,7 +3500,7 @@
     "country_code": "de",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3523,7 +3523,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "tinder",
@@ -3560,7 +3560,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3583,7 +3583,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "signal"
@@ -3608,7 +3608,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "proton-drive",
@@ -3634,7 +3634,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mattermost",
@@ -3669,7 +3669,7 @@
     "country_code": "in",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3692,7 +3692,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3715,7 +3715,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "doctolib",
@@ -3751,7 +3751,7 @@
     "country_code": "pl",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3783,7 +3783,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3814,7 +3814,7 @@
     "country_code": "au",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "pronote",
@@ -3849,7 +3849,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3880,7 +3880,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "youtube",
@@ -3916,7 +3916,7 @@
     "country_code": "jp",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "Les utilisateurs soucieux de leur vie privée peuvent limiter les données partagées via les paramètres du compte Nintendo.",
+    "better_alternative_explication_fr": "Les utilisateurs soucieux de leur vie privée peuvent limiter les données partagées via les paramètres du compte Nintendo.",
     "better_alternative_explication_en": "Privacy-conscious users can limit shared data via Nintendo Account settings.",
     "alternatives": []
   },
@@ -3948,7 +3948,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -3971,7 +3971,7 @@
     "country_code": "ie",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "tinder",
@@ -3997,7 +3997,7 @@
     "country_code": "gb",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "booking",
@@ -4026,7 +4026,7 @@
     "country_code": "nl",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "google-maps",
@@ -4073,7 +4073,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "Parcoursup est un service public obligatoire pour l'accès à l'enseignement supérieur en France. Il n'existe pas d'alternative légale pour les lycéens souhaitant candidater dans les formations concernées.",
+    "better_alternative_explication_fr": "Parcoursup est un service public obligatoire pour l'accès à l'enseignement supérieur en France. Il n'existe pas d'alternative légale pour les lycéens souhaitant candidater dans les formations concernées.",
     "better_alternative_explication_en": "Parcoursup is a mandatory French public service for higher education admissions. There is no legal alternative for students wishing to apply to the formations covered by the platform.",
     "alternatives": []
   },
@@ -4105,7 +4105,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4128,7 +4128,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "Privilégier le virement bancaire direct (SEPA) ou des banques éthiques.\n\nCes alternatives évite les risques liés aux fuites de données massives.",
+    "better_alternative_explication_fr": "Privilégier le virement bancaire direct (SEPA) ou des banques éthiques.\n\nCes alternatives évite les risques liés aux fuites de données massives.",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4159,7 +4159,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "qwant",
@@ -4193,7 +4193,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "instagram",
@@ -4230,7 +4230,7 @@
     "country_code": "jp",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "steam",
@@ -4265,7 +4265,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4303,7 +4303,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4334,7 +4334,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "moodle",
@@ -4368,7 +4368,7 @@
     "country_code": "ch",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "google-drive",
@@ -4404,7 +4404,7 @@
     "country_code": "gb",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "doctolib",
@@ -4439,7 +4439,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4471,7 +4471,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "Service français et avec une politique de confidentialité bien détaillée.",
+    "better_alternative_explication_fr": "Service français et avec une politique de confidentialité bien détaillée.",
     "better_alternative_explication_en": "A French service with a comprehensive privacy policy.",
     "alternatives": [
       "perplexity",
@@ -4508,7 +4508,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4539,7 +4539,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "instagram",
@@ -4577,7 +4577,7 @@
     "country_code": "gb",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4608,7 +4608,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "slack",
@@ -4644,7 +4644,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4667,7 +4667,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "amazon",
@@ -4707,7 +4707,7 @@
     "country_code": "ie",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "booking",
@@ -4745,7 +4745,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4768,7 +4768,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "Il est recommandé de privilégier des outils de reconnaissance musicale qui traitent les données localement sur l'appareil sans les associer à un compte publicitaire ou à un identifiant unique persistant, afin d'éviter le profilage de vos goûts musicaux.",
+    "better_alternative_explication_fr": "Il est recommandé de privilégier des outils de reconnaissance musicale qui traitent les données localement sur l'appareil sans les associer à un compte publicitaire ou à un identifiant unique persistant, afin d'éviter le profilage de vos goûts musicaux.",
     "better_alternative_explication_en": "It is recommended to favor music recognition tools that process data locally on the device without associating it with an advertising account or a persistent unique identifier, in order to avoid profiling of your musical tastes.",
     "alternatives": []
   },
@@ -4799,7 +4799,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4830,7 +4830,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
+    "better_alternative_explication_fr": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
     "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
     "alternatives": []
   },
@@ -4861,7 +4861,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mattermost",
@@ -4896,7 +4896,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -4919,7 +4919,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "instagram",
@@ -4956,7 +4956,7 @@
     "country_code": "se",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "deezer"
@@ -4990,7 +4990,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5021,7 +5021,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "playstation",
@@ -5055,7 +5055,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5087,7 +5087,7 @@
     "country_code": "us",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5119,7 +5119,7 @@
     "country_code": "ch",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "Stockage en UE, lien de transfert avec durée de validité, mot de passe, cryptage du transfert",
+    "better_alternative_explication_fr": "Stockage en UE, lien de transfert avec durée de validité, mot de passe, cryptage du transfert",
     "better_alternative_explication_en": "Storage within the EU, transfer link with a validity period, password, transfer encryption",
     "alternatives": []
   },
@@ -5150,7 +5150,7 @@
     "country_code": "ru",
     "exodus": true,
     "better_alternative": true,
-    "better_alternative_explication": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
+    "better_alternative_explication_fr": "Contrairement à WhatsApp, qui est régulièrement ciblé par des vulnérabilités 'zéro-clic' permettant le déploiement de logiciels espions sans interaction de l'utilisateur (cf. Rapport CERT-FR, sec. 2.2), cette messagerie offre une alternative plus sécurisée et moins exposée à ces attaques critiques.\\n\\n[Source : Menaces sur les téléphones mobiles - CERT-FR (26 nov. 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
     "better_alternative_explication_en": "Unlike WhatsApp, which is regularly targeted by 'zero-click' vulnerabilities allowing the deployment of spyware without user interaction (cf. CERT-FR Report, sec. 2.2), this messenger offers a more secure alternative that is less exposed to these critical attacks.\\n\\n[Source: Mobile Phone Threats - CERT-FR (Nov 26, 2025)](https://www.cert.ssi.gouv.fr/uploads/CERTFR-2025-CTI-012.pdf)",
     "alternatives": [
       "signal"
@@ -5183,7 +5183,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "amazon",
@@ -5215,7 +5215,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5247,7 +5247,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5270,7 +5270,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5302,7 +5302,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5334,7 +5334,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5357,7 +5357,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "youtube",
@@ -5383,7 +5383,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5415,7 +5415,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5447,7 +5447,7 @@
     "country_code": "au",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5479,7 +5479,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5510,7 +5510,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5542,7 +5542,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5565,7 +5565,7 @@
     "country_code": "fr",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5596,7 +5596,7 @@
     "country_code": "lt",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "leboncoin"
@@ -5621,7 +5621,7 @@
     "country_code": "hk",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5644,7 +5644,7 @@
     "country_code": "hk",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5667,7 +5667,7 @@
     "country_code": "hk",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5699,7 +5699,7 @@
     "country_code": "au",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5730,7 +5730,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "osmand",
@@ -5765,7 +5765,7 @@
     "country_code": "fr",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5796,7 +5796,7 @@
     "country_code": "cn",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "signal"
@@ -5821,7 +5821,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "signal"
@@ -5855,7 +5855,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5887,7 +5887,7 @@
     "country_code": "us",
     "exodus": false,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -5910,7 +5910,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "mastodon"
@@ -5935,7 +5935,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "peertube",
@@ -5969,7 +5969,7 @@
     "country_code": "de",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -6001,7 +6001,7 @@
     "country_code": "es",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": []
   },
@@ -6032,7 +6032,7 @@
     "country_code": "us",
     "exodus": true,
     "better_alternative": false,
-    "better_alternative_explication": "",
+    "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
       "skype"

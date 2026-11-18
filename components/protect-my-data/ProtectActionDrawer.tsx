@@ -30,7 +30,7 @@ interface ProtectActionDrawerProps {
   lang: string;
   mode: DrawerMode;
   service: Service;
-  alt: (Service & { better_alternative_explication?: string; better_alternative_explication_en?: string }) | null;
+  alt: (Service & { better_alternative_explication_fr?: string; better_alternative_explication_en?: string }) | null;
   onClose: () => void;
   onMode: (mode: DrawerMode) => void;
 }
@@ -120,7 +120,9 @@ export default function ProtectActionDrawer({
     `${flagEmoji(s.country_code)} ${localizedCountry(lang, s.country_code)}`.trim();
 
   const altWhy = (a: NonNullable<ProtectActionDrawerProps["alt"]>) => {
-    const text = lang === "fr" ? a.better_alternative_explication : a.better_alternative_explication_en || a.better_alternative_explication;
+    const fr = a.better_alternative_explication_fr;
+    const en = a.better_alternative_explication_en;
+    const text = lang === "fr" ? fr : en || fr;
     return text || t.t("planWhyFallback");
   };
 

@@ -54,7 +54,7 @@ export interface Service {
     short_description?: string;
     easy_access_data?: string | number;
     better_alternative?: boolean;
-    better_alternative_explication?: string;
+    better_alternative_explication_fr?: string;
     better_alternative_explication_en?: string;
     country_code?: string;
     last_update_breach?: string | null;

@@ -30,7 +30,7 @@ import ProtectActionDrawer, { DrawerMode } from "./ProtectActionDrawer";
 
 type RichService = Service & {
   better_alternative?: boolean;
-  better_alternative_explication?: string;
+  better_alternative_explication_fr?: string;
   better_alternative_explication_en?: string;
 };
 
@@ -98,7 +98,7 @@ export default function ProtectAdvanced({ lang }: { lang: string }) {
   };
 
   const altWhy = (alt: RichService): string => {
-    const fr = alt.better_alternative_explication;
+    const fr = alt.better_alternative_explication_fr;
     const en = alt.better_alternative_explication_en;
     const text = lang === "fr" ? fr : en || fr;
     return text || t.t("planWhyFallback");
