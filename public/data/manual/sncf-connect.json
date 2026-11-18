@@ -1,0 +1,52 @@
+{
+  "name": "SNCF Connect",
+  "logo": "/img/logos/sncf-connect.webp",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "SNCF",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@connect.sncf",
+      "purposes": [
+        "export",
+        "delete"
+      ]
+    },
+    {
+      "type": "postal",
+      "value": "Service Clients SNCF Connect – 1-3 rue Camille Moke - CS 20012 - 93212 La Plaine Saint-Denis Cedex",
+      "purposes": [
+        "export",
+        "delete"
+      ]
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Pour protéger vos données et s’assurer d’une gestion confidentielle de vos données en toute sécurité, SNCF Connect pourra vous demander les informations nécessaires à la vérification de votre identité en cas de doute raisonnable sur celle-ci. Une copie d’un justificatif d’identité ne vous sera demandée que si nous ne pouvons pas vous identifier par d’autres moyens.  Vos droits sont personnels. Vous pouvez néanmoins mandater un tiers pour les exercer en votre nom, à condition qu’il nous fournisse un mandat écrit et les éléments nécessaires à la vérification de votre identité et de sa qualité de mandataire.",
+  "confidentiality_policy_url": "https://www.sncf-connect.com/informations-legales/confidentialite/partage-donnees",
+  "confidentiality_policy_url_en": "https://www.sncf-connect.com/en-en/legal-information/privacy/transfer-of-data",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_type": "Contacter par mail ou par courrier. Ou bien remplir le formulaire à l'adresse ci-dessous",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "url_export": "https://api.dastra.eu/v1/client/data-subject-request/page?id=828&key=rw7vbcpx5SzooozuRVSr2n9GmyjOCE1QAufmDgmSsaf",
+  "address_export": "Service Clients SNCF Connect – 1-3 rue Camille Moke - CS 20012 - 93212 La Plaine Saint-Denis Cedex",
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Certains prestataires et partenaires de SNCF Connect peuvent être établis hors de l’Espace économique européen (« EEE ») ou accéder à vos données depuis un pays situé hors de l’EEE.\nLorsqu’un tel transfert est nécessaire, SNCF Connect s’assure qu’il est encadré par un mécanisme reconnu par la réglementation applicable et que des garanties appropriées sont mises en œuvre afin d’assurer un niveau de protection adéquat de vos données personnelles.\n\nPour les transferts hors de l’UE ou si les données sont stockées en Europe par une société établie en dehors de l’UE ces garanties peuvent notamment reposer sur :\n-Une décision d’adéquation adoptée par la Commission européenne (pour les transferts vers les États-Unis ou si les données sont stockées en Europe par une société américaine, SNCF Connect exige que ces sociétés soient certifiés conformément à la décision d’adéquation de la Commission européenne relative au Data Privacy Framework UE–États-Unis).\n-La signature des clauses contractuelles types adoptées par la Commission européenne ;                                      -Le cas échéant, des mesures complémentaires techniques, organisationnelles ou contractuelles, telles que le chiffrement, la pseudonymisation, des restrictions d’accès ou des mesures de cloisonnement des données.",
+  "outside_eu_storage": true,
+  "comments": "La politique de confidentialité donne le lien d'un \"formulaire de contact\", lequel renvoie en réalité à la FAQ.\nPour accéder au formulaire, il faut passer par l'adresse \"https://tout-oui.sncf.com/\" et écrire \"Supprimer mes données personnelles\" et cliquer sur \"formulaire de gestions de mes données personnelles\".",
+  "comments_en": "The Privacy Policy gives a link for an \"electric form\" to fill, but this link lead to the Questions page. To access to the form, go to the website \"https://tout-oui.sncf.com/\", type \"Supprimer mes données personnelles\" and clic on \"Formulaire de gestions de mes données personnelles\".\nIf you first ask the Chatbot to answer you in english, then you can type \"Delete my personal data\" and click on the \"Personal Data Management Form\"",
+  "better_alternative": false,
+  "created_at": "2026-11-16",
+  "created_by": "noel.b",
+  "status": "draft",
+  "playstore": {
+    "id": "com.vsct.vsc.mobile.horaireetresa.android",
+    "name": "SNCF Connect: Trains & trajets"
+  }
+}
