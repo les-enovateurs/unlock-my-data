@@ -21,6 +21,7 @@ import { Service } from "@/constants/protectData";
 import { firstEmail } from "@/lib/contacts";
 import { EMAIL_TEMPLATES, webmailLinks } from "@/constants/emailTemplates";
 import { flagEmoji, localizedCountry, isServiceEU } from "@/lib/geo/serviceGeo";
+import { pickLang } from "@/lib/pickLang";
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 
@@ -119,12 +120,8 @@ export default function ProtectActionDrawer({
   const country = (s: Service) =>
     `${flagEmoji(s.country_code)} ${localizedCountry(lang, s.country_code)}`.trim();
 
-  const altWhy = (a: NonNullable<ProtectActionDrawerProps["alt"]>) => {
-    const fr = a.better_alternative_explication_fr;
-    const en = a.better_alternative_explication_en;
-    const text = lang === "fr" ? fr : en || fr;
-    return text || t.t("planWhyFallback");
-  };
+  const altWhy = (a: NonNullable<ProtectActionDrawerProps["alt"]>) =>
+    pickLang(a, "better_alternative_explication", lang) || t.t("planWhyFallback");
 
   // --- Deletion email --------------------------------------------------------
   const tpl = EMAIL_TEMPLATES[lang === "fr" ? "fr" : "en"];
