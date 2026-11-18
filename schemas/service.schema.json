@@ -23,6 +23,7 @@
             "description": "Recommended alternative explanation (FR)",
             "$ref": "#/$defs/string"
         },
+        "better_alternative_explication": false,
         "clean_guide_en": {
             "description": "Heavy data deletion guide (EN)",
             "type": "string",

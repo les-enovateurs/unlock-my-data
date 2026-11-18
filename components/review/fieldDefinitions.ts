@@ -31,16 +31,6 @@ export const REVIEW_BOOLEAN_FIELDS = new Set([
   "better_alternative"
 ]);
 
-export const REVIEW_BILINGUAL_FIELDS = new Set([
-  "privacy_policy_quote",
-  "comments",
-  "response_format",
-  "response_delay",
-  "details_required_documents",
-  "confidentiality_policy_url",
-  "better_alternative_explication"
-]);
-
 const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {
   country_code: {
     type: "select",

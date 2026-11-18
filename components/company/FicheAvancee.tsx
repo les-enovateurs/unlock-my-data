@@ -1485,7 +1485,7 @@ function TabEssentiel({ p, t, tabHref }: { p: FicheProps; t: ReturnType<typeof u
     // The drawer compares fiche to fiche: an alternative without a fiche cannot feed it.
     const firstKnownAlt = p.alternatives.find((a) => a.inCatalog !== false) || null;
     const firstAlt = firstKnownAlt ? altToService(firstKnownAlt) : null;
-    // better_alternative_explication is markdown bullets in the data files.
+    // better_alternative_explication_fr is markdown bullets in the data files.
     const selfWhy = (p.betterAlternativeWhy || "")
         .split(/\r?\n/)
         .map((l) => l.replace(/^\s*[*•-]\s*/, "").replace(/\\(.)/g, "$1").trim())
