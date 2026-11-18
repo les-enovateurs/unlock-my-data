@@ -23,6 +23,7 @@ import {
   SERVICE_CATEGORIES,
 } from "@/constants/protectData";
 import { flagEmoji, localizedCountry, isServiceEU } from "@/lib/geo/serviceGeo";
+import { pickLang } from "@/lib/pickLang";
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 import ProtectDataSelection from "./ProtectDataSelection";
@@ -97,12 +98,8 @@ export default function ProtectAdvanced({ lang }: { lang: string }) {
     );
   };
 
-  const altWhy = (alt: RichService): string => {
-    const fr = alt.better_alternative_explication_fr;
-    const en = alt.better_alternative_explication_en;
-    const text = lang === "fr" ? fr : en || fr;
-    return text || t.t("planWhyFallback");
-  };
+  const altWhy = (alt: RichService): string =>
+    pickLang(alt, "better_alternative_explication", lang) || t.t("planWhyFallback");
 
   // --- Logo / avatar tile ----------------------------------------------------
   const Avatar = ({ s, size = 38 }: { s: Service; size?: number }) => (
