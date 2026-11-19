@@ -187,15 +187,15 @@
             "$ref": "#/$defs/string"
         },
         "response_delay": false,
-        "response_format": {
-            "$comment": "FIXME: will become response_format_fr (#456)",
-            "description": "Response format (FR)",
-            "$ref": "#/$defs/string"
-        },
         "response_format_en": {
             "description": "Response format (EN)",
             "$ref": "#/$defs/string"
         },
+        "response_format_fr": {
+            "description": "Response format (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "response_format": false,
         "sanction_details": {
             "$comment": "FIXME: will become sanction_details_fr (#456)",
             "description": "Sanction details (FR)",
