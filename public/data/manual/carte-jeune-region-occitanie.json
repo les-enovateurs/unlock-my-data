@@ -1,6 +1,6 @@
 {
   "name": "Carte Jeune Région Occitanie",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/70/Logo_Occitanie.png",
+  "logo": "/img/logos/carte-jeune-region-occitanie.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Région Occitanie / Pyrénées-Méditerranée",
