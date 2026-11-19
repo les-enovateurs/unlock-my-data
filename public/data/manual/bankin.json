@@ -1,6 +1,6 @@
 {
   "name": "Bankin'",
-  "logo": "https://bankin.com/images/Logo-Bankin-New2x.png",
+  "logo": "/img/logos/bankin.webp",
   "country_code": "fr",
   "belongs_to_group": false,
   "contacts": [
