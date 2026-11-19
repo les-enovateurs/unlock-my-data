@@ -15,7 +15,7 @@ test('findPairs flags wrong language, untranslated text and key drift', () => {
     {
       comments: 'Les données sont stockées aux États-Unis par le groupe',
       comments_en: 'Les données sont stockées aux États-Unis par le groupe',
-      response_delay: 'Un mois pour les demandes',
+      response_delay_fr: 'Un mois pour les demandes',
       response_delay_en: 'Un mois pour les demandes de la plupart des clients',
       i18n: { fr: { a: 'x', b: 'y' }, en: { a: 'x', c: 'z' } },
     },
@@ -23,7 +23,7 @@ test('findPairs flags wrong language, untranslated text and key drift', () => {
     (rule, where) => findings.push(`${rule} @ ${where}`)
   );
   assert.deepEqual(findings.sort(), [
-    'EN text looks French @ fiche.response_delay',
+    'EN text looks French @ fiche.response_delay_fr',
     'FR and EN text identical (untranslated) @ fiche.comments',
     'key missing in EN @ fiche.i18n.b',
     'key missing in FR @ fiche.i18n.c',

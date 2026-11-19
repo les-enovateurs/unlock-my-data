@@ -66,7 +66,7 @@ export type EntrepriseData = {
     url_export?: string;
     url_export_en?: string;
     address_export?: string;
-    response_delay?: string;
+    response_delay_fr?: string;
     response_delay_en?: string;
     sanctioned_by_cnil?: boolean;
     sanction_details?: string;

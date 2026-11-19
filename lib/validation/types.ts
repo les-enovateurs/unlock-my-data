@@ -55,7 +55,7 @@ export interface ServiceData extends ServiceMetadata {
   message_exchange?: any[];
   url_export?: string;
   address_export?: string;
-  response_delay?: string;
+  response_delay_fr?: string;
   response_delay_en?: string;
   sanctioned_by_cnil?: boolean;
   sanction_details?: string;

@@ -33,7 +33,8 @@ Below are the fields with explanations:
 | `example_form_export`            | Array of object (see for example carrefour.json) list of elements that contains url, type, description and date |
 | `message_exchange`               | Array of object (see for example carrefour.json) list of elements that contains url, type, description and date |
 | `address_export`                 | Physical address to ask for our data                                                                            |
-| `response_delay`                 | Usual response delay (e.g., `Instant`).                                                                         |
+| `response_delay_en`              | Usual response delay (e.g., `Instant`).                                                                         |
+| `response_delay_fr`              | Usual response delay (e.g., `Instantané`).                                                                      |
 | `sanctioned_by_cnil`             | Boolean: has the CNIL sanctioned the company?                                                                   |
 | `sanction_details`               | Details and references to CNIL sanctions.                                                                       |
 | `data_transfer_policy`           | Boolean: does the company have a data transfer policy?                                                          |
@@ -114,7 +115,8 @@ Below are the fields with explanations:
      "example_form_export": [],
      "message_exchange": [],
      "address_export": "",
-     "response_delay": "",
+     "response_delay_en": "",
+     "response_delay_fr": "",
      "sanctioned_by_cnil": false,
      "sanction_details": "",
      "data_transfer_policy": false,
