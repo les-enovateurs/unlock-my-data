@@ -178,15 +178,15 @@
             "description": "Privacy policy quote (EN)",
             "$ref": "#/$defs/string"
         },
-        "response_delay": {
-            "$comment": "FIXME: will become response_delay_fr (#456)",
-            "description": "Response delay (FR)",
-            "$ref": "#/$defs/string"
-        },
         "response_delay_en": {
             "description": "Response delay (EN)",
             "$ref": "#/$defs/string"
         },
+        "response_delay_fr": {
+            "description": "Response delay (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "response_delay": false,
         "response_format": {
             "$comment": "FIXME: will become response_format_fr (#456)",
             "description": "Response format (FR)",
