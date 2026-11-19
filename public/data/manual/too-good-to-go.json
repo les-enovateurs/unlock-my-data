@@ -14,7 +14,7 @@
   "data_access_type_en": "11.1 Easy access to exercise your rights directly in our App Our App provides you with full control over your own personal information. We have incorporated privacy by design and privacy by default on our Platforms and have user-friendly features for you to be able to exercise your rights directly in the App, e.g. to delete your personal information as well as an option to retrieve a copy of the personal information that we process about you. If you wish to exercise your rights directly in the App, please visit your account settings in the App. You may also:  unsubscribe from our newsletter request a copy of your data, or delete your account by submitting your email address to us via this link: https://space.toogoodtogo.com/privacy.",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "response_format": "JSON",
+  "response_format_fr": "JSON",
   "url_export": "https://store.toogoodtogo.com/login?cookie_consent=false&locale=en-ca&referring_domain=https://www.toogoodtogo.com",
   "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,

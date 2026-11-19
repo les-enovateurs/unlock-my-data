@@ -21,7 +21,7 @@
   "data_access_type": "Envoyer email type accées data + réponse email avec informations personelles",
   "data_access_type_en": "Send email : Dear Revolut DPO,  I would like a copy of the following personal information that you hold about me, and which I have a right to view under the Data Protection Act and General Data Protection Regulation (2018):  all the information you held about me from the opening of my account on 05/11/2021.  If you need any further information from me, please let me know as soon as possible. I would like you to contact me on this email.  I would prefer if you sent me a copy of my data in electronic format.   I would like to remind you that data protection law requires you to respond to my request within one month.  Please can you confirm that you have received and read this request?   Thank you,  Anna Finch + answer with Please provide the following information to verify your identity:  - Your full name - Date of birth - The phone number associated with your account",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/revolut/KYC.png",

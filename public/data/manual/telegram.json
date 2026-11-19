@@ -17,7 +17,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "Html",
+  "response_format_fr": "Html",
   "response_format_en": "Html",
   "url_export": "https://edpo.com/telegram-gdpr-data-request/",
   "address_export": "Avenue Huart Hamoir, 71 • 1030 Bruxelles • Belgique",

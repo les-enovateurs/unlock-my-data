@@ -24,7 +24,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "html",
+  "response_format_fr": "html",
   "example_form_export": [
     {
       "url": "/export/chatgpt/instruction.zip",

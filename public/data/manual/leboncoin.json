@@ -21,7 +21,7 @@
   "data_access_type": "Se connecter à son compte, puis se diriger vers les paramètres. Vous trouverez en bas de la page l'option récupérer mes données, celles-ci vous seront transmises à l'email du compte.",
   "data_access_type_en": "Log in to their account, then head to the settings. You will find at the bottom of the page the option to retrieve my data, which will be sent to your account email.",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "url_export": "https://www.leboncoin.fr/account/settings",
   "address_export": "Adevinta France, Délégué à la protection des données, 24 rue des Jeûneurs – 75002 Paris",
   "response_delay_fr": "1 mois conformément au RGPD",

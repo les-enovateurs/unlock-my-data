@@ -10,7 +10,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": false,
-  "response_format": "HTML et Excel",
+  "response_format_fr": "HTML et Excel",
   "response_format_en": "HTML and Excel",
   "url_export": "https://takeout.google.com/settings/takeout",
   "response_delay_fr": "Réponse automatique",

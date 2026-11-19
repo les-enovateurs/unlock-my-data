@@ -13,7 +13,7 @@
   "data_access_type": "Se rendre dans la rubrique règles de confidentialité et conditions d'utilisation de son compte Google puis se diriger dans la rubrique exporter ou supprimer vos informations, ensuite sélectionnez l'application Gemini",
   "data_access_type_en": "Go to the privacy rules and usage conditions of your Google account and then go to the export or delete your information section, then select the Gemini application",
   "data_access_via_email": false,
-  "response_format": "Zip",
+  "response_format_fr": "Zip",
   "response_format_en": "Zip",
   "response_delay_fr": "Réponse automatique",
   "response_delay_en": "Automatic response",

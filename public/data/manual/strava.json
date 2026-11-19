@@ -20,7 +20,7 @@
   "data_access_type": "Récupération des données accessibles dans les \"paramètres\" strava, puis dans la rubrique \"Mon compte\", puis \"Télécharger ou supprimer le compte",
   "data_access_type_en": "Retrieval of data accessible in the \"settings\" strava, then in the \"My account\" section, then \"Download or delete the account",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "url_export": "https://www.strava.com/athlete/delete_your_account",
   "address_export": "Making it Work Magennis Court Pearse Street Dublin 2 D02 FK76 Irlande",
   "response_delay_fr": "Réponse automatique",

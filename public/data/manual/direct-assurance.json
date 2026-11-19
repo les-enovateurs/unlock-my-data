@@ -12,7 +12,7 @@
   "data_access_via_form": true,
   "data_access_via_email": false,
   "data_access_via_other": false,
-  "response_format": "pdf",
+  "response_format_fr": "pdf",
   "leaks": [
     {
       "date": "2024-11-21",

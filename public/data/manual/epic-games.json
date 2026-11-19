@@ -26,7 +26,7 @@
   "data_access_type_en": "Log in your Epic Games account on their website. Chose the \"Settings\" tab. Scroll down until the \"Download account data\" section and click on \"Request download\"",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "response_format": "pdf",
+  "response_format_fr": "pdf",
   "url_export": "https://www.epicgames.com/id/login",
   "response_delay_fr": "Dossier disponible rapidemment (dès le lendemain parfois) et pendant 15 jours avant de devoir faire une nouvelle demande.",
   "sanctioned_by_cnil": false,

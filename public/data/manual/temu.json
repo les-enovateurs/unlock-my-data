@@ -18,7 +18,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "Excel",
+  "response_format_fr": "Excel",
   "response_format_en": "Excel",
   "example_data_export": [
     {

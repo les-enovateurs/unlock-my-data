@@ -19,7 +19,7 @@
   "data_access_type": "Email ou courrier avec copie de la pièce d'identité",
   "data_access_type_en": "Send mail or email with a copy of your ID license",
   "data_access_via_email": true,
-  "response_format": "pdf",
+  "response_format_fr": "pdf",
   "address_export": "Cegedim – DPO – 137 rue d'Aguesseau – 92100 Boulogne-Billancourt",
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,

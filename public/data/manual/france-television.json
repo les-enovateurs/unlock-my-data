@@ -21,7 +21,7 @@
   "data_access_type": "Se rendre dans son compte, puis choisir \"Récupérer mes données personnelles\".",
   "data_access_type_en": "Go to your account, then choose \"Retrieve my personal data\".",
   "data_access_via_email": true,
-  "response_format": "html",
+  "response_format_fr": "html",
   "example_data_export": [
     {
       "url": "/export/france-television/data.html",

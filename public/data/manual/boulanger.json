@@ -18,7 +18,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,
-  "response_format": "Excel",
+  "response_format_fr": "Excel",
   "response_format_en": "Excel",
   "response_delay_fr": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the GDPR",

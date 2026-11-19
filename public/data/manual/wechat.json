@@ -19,7 +19,7 @@
   "data_access_type": "Bouton accès automatique en mode connecté dans l'application. Formulaire web : https://help.wechat.com/cgi-bin/newreadtemplate?t=help_center/index_vue#/rights-request",
   "data_access_type_en": "Automatic access button when logged into the app. Web form: https://help.wechat.com/cgi-bin/newreadtemplate?t=help_center/index_vue#/rights-request",
   "data_access_via_email": true,
-  "response_format": "Échec des trois demandes - 2 via app - 1 via page web",
+  "response_format_fr": "Échec des trois demandes - 2 via app - 1 via page web",
   "response_format_en": "Failure of three requests - 2 via app - 1 via web page",
   "response_delay_fr": "Officiellement: 72h max Réalité: N/A",
   "response_delay_en": "Officially: 72h max Reality: N/A",

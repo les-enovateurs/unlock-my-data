@@ -22,7 +22,7 @@
   "data_access_type_en": "Log in your Epicgames account on their website. Chose the \"Settings\" tab. Scroll down until the \"Download account data\" section and click on \"Request download\"",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "response_format": "pdf",
+  "response_format_fr": "pdf",
   "leaks": [
     {
       "date": "2019-01-01",

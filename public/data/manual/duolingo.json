@@ -21,7 +21,7 @@
   "data_access_type": "Cliquer sur exporter mes données dans la rubrique profil du compte Duolingo, un mail sera alors envoyé dans les 30 jours contenant un lien pour récupérer ses données",
   "data_access_type_en": "Click on export my data in the profile section of the Duolingo account, an email will then be sent within 30 days containing a link to retrieve its data",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/duolingo/duolingo.zip",

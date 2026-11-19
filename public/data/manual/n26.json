@@ -13,7 +13,7 @@
   "data_access_type_en": "Current customers: online GDPR webform (access, erasure, objection) and data export from the online customer area (link sent by email, valid 24 h, protected by a temporary password). Former customers: same webform with a copy of an ID card or passport",
   "data_access_via_email": false,
   "data_access_via_other": true,
-  "response_format": "JSON (export portabilité)",
+  "response_format_fr": "JSON (export portabilité)",
   "url_export": "https://n26-privacy.my.onetrust.com/webform/e6969c9f-ac87-40b3-8ef6-66f0cd90a48b/58b5de95-f188-4236-8c30-4b6bbe70716e",
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,

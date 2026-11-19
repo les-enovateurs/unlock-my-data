@@ -17,7 +17,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "JSON et Excel",
+  "response_format_fr": "JSON et Excel",
   "response_format_en": "JSON and Excel",
   "response_delay_fr": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",

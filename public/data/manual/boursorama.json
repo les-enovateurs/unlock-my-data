@@ -20,7 +20,7 @@
   "data_access_type": "Si le demandeur est client de la banque, l'accès peut se faire avec une réponse automatique et immédiate à travers l'URL du site précisée plus loin. Si non, il est nécessaire de remplir un formulaire avec nom, prénom, date de naissance, email et pièce d'identité.",
   "data_access_type_en": "If the requester is a bank customer, access can be granted through an automatic and immediate response via the website URL specified below. If not, it is necessary to complete a form with last name, first name, date of birth, email, and an identity document.",
   "data_access_via_email": true,
-  "response_format": "pdf",
+  "response_format_fr": "pdf",
   "example_data_export": [
     {
       "url": "/export/boursorama/Boursorama_Personal_Data_Anonym.pdf",

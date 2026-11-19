@@ -20,7 +20,7 @@
   "data_access_type": "Début via e-mail puis via chat sur une plateforme d'échange",
   "data_access_type_en": "Start via email then via chat on a platform of exchange",
   "data_access_via_email": true,
-  "response_format": "Fichier zip avec mot de passe envoyé par sms contenant un excel",
+  "response_format_fr": "Fichier zip avec mot de passe envoyé par sms contenant un excel",
   "response_format_en": "Zip file with password sent by sms containing an excel",
   "example_data_export": [
     {

@@ -23,7 +23,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "JSON",
+  "response_format_fr": "JSON",
   "response_format_en": "JSON",
   "example_data_export": [
     {

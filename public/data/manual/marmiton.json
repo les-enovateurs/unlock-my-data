@@ -16,7 +16,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "csv",
+  "response_format_fr": "csv",
   "url_export": "https://www.reworldmedia.com/contact-rgpd",
   "address_export": "Reworld Media France, Délégué à la protection des données c/o service juridique, 8, rue François Ory 92543 Montrouge cedex",
   "response_delay_fr": "1 mois conformément au RGPD",

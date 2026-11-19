@@ -20,7 +20,7 @@
   "data_access_type": "Etre connecté à son compte ou CNI si demande par mail",
   "data_access_type_en": "Be logged into your account or provide your national identity card number if the request is made by email",
   "data_access_via_email": true,
-  "response_format": "Html ou Json",
+  "response_format_fr": "Html ou Json",
   "url_export": "https://accountscenter.facebook.com/info_and_permissions",
   "address_export": "Meta Platforms Ireland Ltd, Merrion Road, Dublin 4, D04 X2K5, Irlande.",
   "response_delay_fr": "Sous 1 mois conformément au RGPD",

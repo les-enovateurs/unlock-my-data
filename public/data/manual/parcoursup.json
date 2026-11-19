@@ -29,7 +29,7 @@
   "data_access_type": "Envoyer un courrier ou email au DPO du MESR en mentionnant son identité et en invoquant l'article 15 du RGPD",
   "data_access_type_en": "Send a letter or email to the MESR DPO, stating your identity and invoking Article 15 of the GDPR",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "address_export": "Délégué à la protection des données (DPD) du ministère de l’enseignement supérieur, de la recherche - 1 rue Descartes - 75005 Paris",
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,

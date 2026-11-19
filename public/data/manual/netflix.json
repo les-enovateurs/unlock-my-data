@@ -18,7 +18,7 @@
   "data_access_type": "Bouton accès automatique en mode connecté",
   "data_access_type_en": "Automatic access button in connected mode",
   "data_access_via_email": true,
-  "response_format": "Fichiers TXT/CSV dans archive ZIP",
+  "response_format_fr": "Fichiers TXT/CSV dans archive ZIP",
   "response_format_en": "TXT/CSV files in ZIP archive",
   "response_delay_fr": "12h",
   "sanctioned_by_cnil": false,

@@ -18,7 +18,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "Txt ou JSON au choix",
+  "response_format_fr": "Txt ou JSON au choix",
   "response_format_en": "Txt or JSON choice",
   "url_export": "https://support.signal.org/hc/fr/articles/5538911756954-Pour-r%C3%A9cup%C3%A9rer-les-donn%C3%A9es-de-votre-compte",
   "url_export_en": "https://support.signal.org/hc/en-us/articles/5538911756954-Requesting-your-account-data",

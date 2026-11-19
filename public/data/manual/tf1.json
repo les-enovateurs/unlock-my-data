@@ -11,7 +11,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": false,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/tf1/TF1_pdf.pdf",

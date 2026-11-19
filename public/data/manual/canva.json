@@ -19,7 +19,7 @@
   "data_access_via_form": true,
   "data_access_type": "Il suffit d'être connecté, vous pouvez accéder à un formulaire intégré sur la plateforme, où vous préciserez et décrirez le motif de votre demande. D'autre part vous pouvez également accédez à vos droits de confidentialité en envoyant un e-mail à privacy@canva.com. Pour les utilisateurs européens, des formulaires de demande de données sont accessibles via leur représentant local (EDPO) : privacy@edpo.com et les demandes concernant les données peuvent être adressé à l'adresse suivante :  http://edpo.com/gdpr-data-request/",
   "data_access_via_email": true,
-  "response_format": "il est indiqué que les utilisateurs ont droit de recevoir une \"version électronique structurée\" de leurs informations, mais le format précis n'est pas précisé",
+  "response_format_fr": "il est indiqué que les utilisateurs ont droit de recevoir une \"version électronique structurée\" de leurs informations, mais le format précis n'est pas précisé",
   "url_export": "https://www.canva.com/fr_fr/help/legal-form/",
   "address_export": "Ground Floor, 71 Lower Baggot Street, Dublin, D02 P593, Irlande.",
   "response_delay_fr": "1 mois conformément au RGPD",

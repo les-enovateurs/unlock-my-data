@@ -10,7 +10,7 @@
   "data_access_type": "Formulaire à compléter",
   "data_access_type_en": "Form to complete",
   "data_access_via_email": false,
-  "response_format": "PDF",
+  "response_format_fr": "PDF",
   "response_format_en": "PDF",
   "url_export": "https://edreamsodigeo-privacy.my.onetrust.com/webform/6c5da0dc-05a2-4059-a58b-a144b7de6001/2d297101-0aaf-42d8-9abc-4d264566585c",
   "response_delay_fr": "J+3",

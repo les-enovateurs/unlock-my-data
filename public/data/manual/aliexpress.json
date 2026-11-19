@@ -19,7 +19,7 @@
   "data_access_via_form": true,
   "data_access_type": "Être connecté à son compte",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/aliexpress/322277x.zip",

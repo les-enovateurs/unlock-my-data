@@ -18,7 +18,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "Pdf",
+  "response_format_fr": "Pdf",
   "response_format_en": "Pdf",
   "example_data_export": [
     {

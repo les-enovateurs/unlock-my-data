@@ -17,7 +17,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "csv",
+  "response_format_fr": "csv",
   "url_export": "https://www.spotify.com/account/privacy",
   "address_export": "Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Suède",
   "response_delay_fr": "1 mois conformément au RGPD",

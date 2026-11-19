@@ -22,7 +22,7 @@
   "data_access_type_en": "email to contact@kiabi.com and in case of trouble to dataprotectionofficer@kiabi.com",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_format": "txt",
+  "response_format_fr": "txt",
   "leaks": [
     {
       "date": "2025-01-07",

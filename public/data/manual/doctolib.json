@@ -17,7 +17,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "url_export": "https://www.doctolib.fr/patient_support_requests/new",
   "address_export": "54 quai Charles Pasqua 92300 Levallois-Perret",
   "response_delay_fr": "1 mois conformément au RGPD",

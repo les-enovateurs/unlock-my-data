@@ -21,7 +21,7 @@
   "data_access_type": "Contacter le DPO par e-mail, préciser que vous exercez votre droit d'accès ou de portabilité RGPD, fournir les informations d'identification du compte et attendre la réponse",
   "data_access_type_en": "Contact the DPO by email, request access or data portability under GDPR, provide account identification details, and wait for the response",
   "data_access_via_email": false,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/bereal/BeReal.pdf",

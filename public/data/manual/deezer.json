@@ -14,7 +14,7 @@
   "data_access_type_en": "Contact Deezer Customer Care via the online request form to ask for access to or a copy of your data. Account deletion is also available directly and immediately from account settings (deezer.com/account).",
   "data_access_via_email": false,
   "data_access_via_other": false,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "url_export": "https://support.deezer.com/hc/en-gb/requests/new?ticket_form_id=360000057869",
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
@@ -41,7 +41,7 @@
       "resolved": false
     },
     {
-      "field": "response_format",
+      "field": "response_format_fr",
       "message": "Je n'ai pas vu cette information.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-11-13T14:52:20.012Z",

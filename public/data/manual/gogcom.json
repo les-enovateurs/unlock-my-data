@@ -21,7 +21,7 @@
   "data_access_type": "Envoyer un email à privacy@gog.com en précisant votre adresse de compte et le type de demande (accès, suppression, export)",
   "data_access_type_en": "Send an email to privacy@gog.com specifying your account email and the type of request (access, deletion, export)",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "url_export": "https://support.gog.com/hc/fr/requests/new",
   "address_export": "Délégué à la protection des données, GOG sp. z o.o., Jagiellońska 74, 03-301 Varsovie, Pologne",
   "response_delay_fr": "1 mois conformément au RGPD",

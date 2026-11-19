@@ -21,7 +21,7 @@
   "data_access_type": "Envoyer un mail à support@elitesingles.com ou bien à: https://www.elitesingles.com/feedback",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_format": "Les données sont théoriquement effacées",
+  "response_format_fr": "Les données sont théoriquement effacées",
   "url_export": "https://www.elitesingles.com/feedback",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,

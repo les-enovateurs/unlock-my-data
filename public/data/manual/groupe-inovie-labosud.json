@@ -20,7 +20,7 @@
   "data_access_type": "Email ou courrier accompagné d'un justificatif d'identité avec photographie",
   "data_access_type_en": "Email or simple mail with an ID certificate including a photograph",
   "data_access_via_email": true,
-  "response_format": "pdf",
+  "response_format_fr": "pdf",
   "address_export": "MBA & Associées, DPO Inovie Group, 235 rue Hélène Boucher, 34170 Castelnau-Le-Lez",
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,

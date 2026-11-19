@@ -14,7 +14,7 @@
   "data_access_type": "Sur l'application X pour iOS ou Android :  Appuyez sur l'icône de votre  profil  . Appuyez sur Paramètres et confidentialité . Sélectionnez votre compte . Appuyez sur « Télécharger une archive de vos données » . Confirmez votre mot de passe, puis appuyez sur Demander l'archive .",
   "data_access_type_en": "On the X app for iOS or Android: Tap your profile icon. Tap Settings and privacy. Select Your account. Tap “Download an archive of your data.” Confirm your password, then tap Request archive.",
   "data_access_via_email": false,
-  "response_format": "html",
+  "response_format_fr": "html",
   "url_export": "https://x.com/home",
   "address_export": "One Cumberland Place Fenian Street Dublin 2  D02 AX07 Ireland",
   "response_delay_fr": "Sous 1 mois conformément au RGPD.",
