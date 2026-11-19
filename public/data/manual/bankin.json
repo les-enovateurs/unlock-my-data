@@ -1,0 +1,44 @@
+{
+  "name": "Bankin'",
+  "logo": "https://bankin.com/images/Logo-Bankin-New2x.png",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@bankin.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données. Indiquer l'adresse e-mail utilisée lors de l'inscription au service.",
+      "comment_en": "Data Protection Officer. State the e-mail address used when signing up for the service."
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Adresse e-mail utilisée lors de l'inscription. Bankin' se réserve le droit de demander une autre pièce justificative en cas de doute sur l'authenticité des justificatifs.",
+  "confidentiality_policy_url": "https://web.bankin.com/legal/Politique+de+confidentialite%CC%81+du+Service+Bankin%E2%80%99+-+Mars+2026.pdf",
+  "confidentiality_policy_url_en": "https://web.bankin.com/legal/Politique+de+confidentialite%CC%81+du+Service+Bankin%E2%80%99+-+Mars+2026.pdf",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail au DPO à dpo@bankin.com en indiquant l'adresse e-mail renseignée lors de la souscription au service Bankin'. Pour les données traitées par l'agrégateur Powens : dpo@powens.com.",
+  "data_access_type_en": "Send an e-mail to the DPO at dpo@bankin.com stating the e-mail address used when subscribing to the Bankin' service. For data processed by the aggregator Powens: dpo@powens.com.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Vos Données Personnelles sont stockées au sein de l'Espace Économique Européen (ci-après « EEE ») dans le cadre des finalités envisagées. Le cas échéant, vous serez informés d'un transfert de vos Données Personnelles vers un destinataire situé dans un pays en dehors de l'EEE et des modalités de transfert en l'absence de mesures de protection appropriées.",
+  "outside_eu_storage": false,
+  "comments": "Bankin' SAS (RCS Paris 907 753 735), 4 rue de la Pierre Levée, 75011 Paris. Agrégation de comptes via Powens. Sous-traitants cités dans la politique (sans pays) : Appsflyer, Mixpanel, Zendesk, Yampa, AWS, SumoLogic, Firebase, Algoan, Selectra. Le délai de réponse n'est pas indiqué dans la politique (délai légal RGPD d'un mois). Politique applicable depuis le 13 mars 2026. Aucune fuite de données publique trouvée.",
+  "comments_en": "Bankin' SAS (Paris trade register 907 753 735), 4 rue de la Pierre Levée, 75011 Paris. Account aggregation via Powens. Subprocessors named in the policy (no countries given): Appsflyer, Mixpanel, Zendesk, Yampa, AWS, SumoLogic, Firebase, Algoan, Selectra. Response time is not stated in the policy (GDPR legal deadline of one month). Policy in force since 13 March 2026. No public data breach found.",
+  "better_alternative": false,
+  "created_at": "2026-11-19",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.bankeen",
+    "name": "Bankin' : Gestion de budget"
+  }
+}
