@@ -1,6 +1,6 @@
 {
   "name": "MGEL",
-  "logo": "https://www.mgel.fr/wp-content/uploads/2025/12/cropped-Groupe-MGEL-Logo-180x180.png",
+  "logo": "/img/logos/mgel.webp",
   "country_code": "fr",
   "belongs_to_group": false,
   "contacts": [
