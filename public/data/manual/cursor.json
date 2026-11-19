@@ -1,0 +1,43 @@
+{
+  "name": "Cursor",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/4/42/Cursor_logo.svg",
+  "country_code": "us",
+  "belongs_to_group": true,
+  "group_name": "Anysphere, Inc.",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "hi@cursor.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse indiquée pour exercer ses droits",
+      "comment_en": "Address given to exercise rights"
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://cursor.com/fr/privacy",
+  "confidentiality_policy_url_en": "https://cursor.com/privacy",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail à hi@cursor.com (vous ou un mandataire). Cursor peut demander des informations pour vérifier l'identité ; en cas de refus, recours possible à la même adresse",
+  "data_access_type_en": "Send an email to hi@cursor.com (you or an authorised agent). Cursor may ask for information to verify identity; if refused, appeal at the same address",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "« Anysphere traite vos données personnelles aux fins décrites dans la présente Politique de confidentialité sur des serveurs situés dans diverses juridictions, y compris aux États‑Unis. [...] nous ne transférons les données qu’en conformité avec des mécanismes de transfert juridiquement valables. Pour les utilisateurs de l’Espace économique européen (« EEE »), lorsque vous accédez à notre Service, vos données personnelles peuvent être transférées vers nos serveurs [...] »",
+  "transfer_destination_countries": [
+    "us"
+  ],
+  "outside_eu_storage": true,
+  "comments": "Cursor est un éditeur de code avec IA développé par Anysphere, Inc. (États-Unis). Politique mise à jour le 6 novembre 2026. Données traitées sur des serveurs dans plusieurs juridictions dont les États-Unis. Les informations d'entraînement des modèles sont décrites dans une page séparée (Vue d'ensemble de la confidentialité). Pas de délai de réponse indiqué. Pas de sanction CNIL ni de fuite connue. Pas d'application mobile (logiciel de bureau).",
+  "comments_en": "Cursor is an AI code editor developed by Anysphere, Inc. (United States). Policy updated on 6 November 2026. Data processed on servers in several jurisdictions including the United States. Model training information is described on a separate page (Privacy overview). No response time stated. No known CNIL sanction or leak. No mobile app (desktop software).",
+  "better_alternative": false,
+  "created_at": "2026-11-19",
+  "created_by": "wassym",
+  "status": "draft"
+}
