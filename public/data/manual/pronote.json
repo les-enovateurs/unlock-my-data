@@ -22,7 +22,7 @@
   "data_access_via_email": true,
   "response_format": "Demande à réaliser",
   "response_format_en": "Request to be done",
-  "response_delay": "Demande à réaliser",
+  "response_delay_fr": "Demande à réaliser",
   "response_delay_en": "Request to be done",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

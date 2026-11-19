@@ -19,7 +19,7 @@
   "data_access_via_email": true,
   "data_access_via_other": false,
   "address_export": "TI3RS 37E Avenue de Massettes, 73190 Challes les Eaux, France France",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "**Outils et sous-traitants**\n\nTI3RS utilise notamment :\n\n* **Google Analytics** (site),\n* **Firebase** (application),\n* **Mixpanel** (analyse d’usage de l’application).",

@@ -31,7 +31,7 @@
     }
   ],
   "url_export": "https://clients.boursobank.com/mon-profil/parametres-de-confidentialite/client-ou-pas",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": true,
   "sanction_details": "En 2023, la banque en ligne Boursorama a été **mise en demeure par la Commission nationale de l’informatique et des libertés (CNIL) pour avoir demandé à certains clients leur identifiant et mot de passe du site gouvernemental des impôts**. <u>Il s'agit bien d'une mise en demeure et non pas d'une sanction :</u> c’est un avertissement officiel avec obligation de se mettre en conformité. Le délai de mise en conformité de 2 mois étant dépassé sans sanction de la CNIL, c'est généralement un **signal fort que la mise en conformité a été effectuée dans les délais**, et ce malgré aucune communication officielle à ce sujet.",
   "data_transfer_policy": true,

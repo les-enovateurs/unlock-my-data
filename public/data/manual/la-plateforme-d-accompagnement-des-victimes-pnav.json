@@ -17,7 +17,7 @@
   "data_access_via_email": true,
   "data_access_via_other": false,
   "address_export": "Service du Premier ministre  À l'attention du délégué à la protection des données (DPD)  56 rue de Varenne  75700 Paris",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vous pouvez exercer vos droits ou obtenir des informations concernant le traitement de vos données personnelles directement auprès du responsable de traitement par courriel à l'adresse suivante : [rgpd@dila.gouv.fr](mailto:rgpd@dila.gouv.fr).\n\nSi la réponse apportée ne convient pas à l'usager, ce dernier peut alors saisir le délégué à la protection des données des services du Premier ministre à l'adresse suivante : [dpd@pm.gouv.fr](mailto:dpd@pm.gouv.fr)",

@@ -13,7 +13,7 @@
   "response_format": "HTML et Excel",
   "response_format_en": "HTML and Excel",
   "url_export": "https://takeout.google.com/settings/takeout",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "response_delay_en": "Automatic response",
   "sanctioned_by_cnil": true,
   "sanction_details": "Sanction CNIL GOOGLE LLC et GOOGLE IRELAND LIMITED du 31 décembre 2021:/n*Manquement au recueil de consentement",

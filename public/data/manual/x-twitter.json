@@ -17,7 +17,7 @@
   "response_format": "html",
   "url_export": "https://x.com/home",
   "address_export": "One Cumberland Place Fenian Street Dublin 2  D02 AX07 Ireland",
-  "response_delay": "Sous 1 mois conformément au RGPD.",
+  "response_delay_fr": "Sous 1 mois conformément au RGPD.",
   "sanctioned_by_cnil": true,
   "sanction_details": "Décembre 2025 : sanction de 120 millions d'euros par la commission européenne pour non respect du DSA (https://ec.europa.eu/commission/presscorner/detail/fr/ip_25_2934). Décembre 2020 : sanction de 450 000 euros par la CNIL irlandaise pour notification tardive d'une violation de données et documentation insuffisante de la violation.(https://www.edpb.europa.eu/our-work-tools/our-documents/binding-decision-board-art-65/decision-012020-dispute-arisen-draft_en)",
   "sanction_details_en": "December 2025: €120 million fine imposed by the European Commission for non-compliance with the DSA (https://ec.europa.eu/commission/presscorner/detail/fr/ip_25_2934). December 2020: €450,000 fine imposed by the Irish Data Protection Commission for late notification of a data breach and insufficient documentation of the breach. (https://www.edpb.europa.eu/our-work-tools/our-documents/binding-decision-board-art-65/decision-012020-dispute-arisen-draft_en)",

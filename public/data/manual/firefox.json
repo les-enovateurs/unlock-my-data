@@ -23,7 +23,7 @@
   "data_access_via_email": true,
   "url_export": "https://privacyportal.onetrust.com/webform/1350748f-7139-405c-8188-22740b3b5587/4ba08202-2ede-4934-a89e-f0b0870f95f0",
   "address_export": "Bird & Bird DPO Services SRL Avenue Louise 235 b 1 1050 Bruxelles Belgique",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Mozilla (et nos serveurs) sont basés aux États-Unis. Étant donné que nous sommes une entreprise internationale, afin de fournir les services décrits dans la présente Politique de confidentialité, les informations que nous recueillons peuvent être consultées à partir des lieux où se trouvent nos employés et les données peuvent également être transférées vers d'autres juridictions suite au partage des données avec nos partenaires.&#x20;",

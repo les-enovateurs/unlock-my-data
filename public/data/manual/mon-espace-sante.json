@@ -16,7 +16,7 @@
   "response_format": "pdf",
   "url_export": "https://www.cnil.fr/fr",
   "address_export": "Commission nationale de l’informatique et des libertés - 3, place de Fontenoy - TSA 80715 - 75334 Paris cedex 07",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "# La Caisse Nationale d’Assurance Maladie (Cnam) et le Ministère de la Santé, des Familles, de l'Autonomie et des Personnes handicapées s’engagent, dans le cadre du traitement dénommé « Mon espace santé », à assurer la protection, la confidentialité et la sécurité de l’ensemble de vos données personnelles. « Mon espace santé » contient notamment des données de santé, qui font l’objet d’une protection particulière par l’article L. 1110-4 du code de la santé publique. La violation du secret entourant ces données est réprimé pénalement (article 226-13 du code pénal).\n\n\n\nSur l’ensemble des pages sur lesquelles vous pouvez consulter Mon espace santé, nous appliquons la présente politique de protection des données personnelles. Celle-ci nous permet de vous informer sur l’utilisation de vos données et la protection de ces dernières.",

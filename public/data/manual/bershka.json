@@ -22,7 +22,7 @@
   "data_access_via_email": true,
   "response_format": "Demande en cours",
   "address_export": "22 rue Bergère, 75009 Paris, France",
-  "response_delay": "Demande en cours",
+  "response_delay_fr": "Demande en cours",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Pour des raisons d’efficacité du service, certains de ces fournisseurs sont situés en dehors de l’Espace économique\n\neuropéen dont le niveau de protection des données personnelles n’est pas comparable à celui de l’Union\n\neuropéenne, c’est notamment le cas des États-Unis.",

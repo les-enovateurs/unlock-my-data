@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "response_format": "Fichiers TXT/CSV dans archive ZIP",
   "response_format_en": "TXT/CSV files in ZIP archive",
-  "response_delay": "12h",
+  "response_delay_fr": "12h",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "outside_eu_storage": true,

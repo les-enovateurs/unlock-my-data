@@ -16,7 +16,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_delay": "30 jours max",
+  "response_delay_fr": "30 jours max",
   "response_delay_en": "30 days max",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

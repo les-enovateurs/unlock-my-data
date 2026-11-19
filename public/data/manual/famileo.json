@@ -19,7 +19,7 @@
   "data_access_via_form": false,
   "data_access_via_email": true,
   "address_export": "FAMILEO (Données personnelles) 4 Avenue Louis Martin, 35400 Saint-Malo",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "Aucune sanction CNIL rendue publique. L'entreprise Entourage Solutions a eu un contrôle de routine de la CNIL en 2019, ne conduisant à aucune sanction.",
   "data_transfer_policy": true,
@@ -66,7 +66,7 @@
       "resolved": false
     },
     {
-      "field": "response_delay",
+      "field": "response_delay_fr",
       "message": "30 jours ouvrés",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:10:23.785Z",
@@ -146,7 +146,7 @@
       "resolved": false
     },
     {
-      "field": "response_delay",
+      "field": "response_delay_fr",
       "message": "J'ai lu 30 jours ouvrés (donc 1 mois à peu près)",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:25:10.586Z",

@@ -31,7 +31,7 @@
       "date": "2024-01-01"
     }
   ],
-  "response_delay": "4 jours ouvrés (5 au total)",
+  "response_delay_fr": "4 jours ouvrés (5 au total)",
   "response_delay_en": "4 working days (5 total)",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

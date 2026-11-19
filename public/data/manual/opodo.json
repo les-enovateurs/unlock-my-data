@@ -13,7 +13,7 @@
   "response_format": "PDF",
   "response_format_en": "PDF",
   "url_export": "https://edreamsodigeo-privacy.my.onetrust.com/webform/6c5da0dc-05a2-4059-a58b-a144b7de6001/2d297101-0aaf-42d8-9abc-4d264566585c",
-  "response_delay": "J+3",
+  "response_delay_fr": "J+3",
   "response_delay_en": "D+3",
   "sanctioned_by_cnil": false,
   "sanction_details": "/",

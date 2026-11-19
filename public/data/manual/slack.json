@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "url_export": "https://datasubjectrequest.salesforce.com/privacy/",
   "address_export": "Slack Technologies Limited Salesforce Tower 60 R801, North Dock Dublin Ireland",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month according to the GDPR",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

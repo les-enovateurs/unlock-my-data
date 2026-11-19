@@ -23,7 +23,7 @@
   "response_format": "zip",
   "url_export": "https://www.strava.com/athlete/delete_your_account",
   "address_export": "Making it Work Magennis Court Pearse Street Dublin 2 D02 FK76 Irlande",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Si vous êtes situé en dehors des États-Unis et que vous choisissez d’utiliser les Services ou de nous fournir des informations, vous reconnaissez et comprenez que vos informations seront transférées, traitées et stockées aux États-Unis, en raison de la fourniture des Services et des installations de stockage de données situées aux États-Unis.",

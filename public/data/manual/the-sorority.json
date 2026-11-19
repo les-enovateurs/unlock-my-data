@@ -22,7 +22,7 @@
   "data_access_type_en": "Directly in the app:  Menu › Profile",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "La base de données de l’Application est hébergée et sauvegardée en France.\n\n \n\nLa Personne Utilisatrice reconnaît et convient que des Données Personnelles peuvent être transférées ou stockées en dehors du pays où la Société à mission et/ou les Personnes Utilisatrices autorisées se situent, dans le but d’exécuter les Services prévus par les présentes CGU, comme des actions d'entraide et de soutien réalisées dans le monde entier ou le stockage de certaines données.",

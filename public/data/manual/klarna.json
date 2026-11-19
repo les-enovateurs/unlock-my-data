@@ -22,7 +22,7 @@
   "data_access_type_en": "Log in to your Klarna account and submit the request through the interface, or send an email to the data protection team.",
   "data_access_via_email": true,
   "url_export": "https://www.klarna.com/fr/",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "Sanctionné en 2024 par la Cour Administrative d'appel de Suède pour manque de transparence sur le traitement des données personnelles : amende de 670 000 euros.",
   "data_transfer_policy": true,

@@ -20,7 +20,7 @@
   "data_access_type_en": "send an email, it is stated that \"requests cannot originatefrom  anyone other than you\" (our translation)",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_delay": "\"dans les meilleurs délais avec pour limite un délai maximum de trois mois\"",
+  "response_delay_fr": "\"dans les meilleurs délais avec pour limite un délai maximum de trois mois\"",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "1. Vos données personnelles peuvent-elles être transférées en dehors de l'Union européenne ?\n\nLes données personnelles traitées par notre plateforme Tribee sont exclusivement hébergées sur des serveurs situés au sein de l'Union européenne.\n\nPar ailleurs, nous faisons notre maximum pour n'utiliser que des outils techniques dont les serveurs sont également situés au sein de l’Union européenne. Si toutefois cela n'était pas le cas, nous veillons scrupuleusement à ce qu’ils mettent en œuvre les garanties appropriées requises pour assurer la confidentialité et la protection de vos données personnelles.\n\n‍",

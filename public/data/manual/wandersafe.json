@@ -21,7 +21,7 @@
   "data_access_via_other": false,
   "url_export": "https://www.wandersafe.com/contact/",
   "address_export": "WanderSafe LLC  2245 Texas Drive, Suite 300  Sugar Land, Texas 77479 USA",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous engageons des fournisseurs de services tiers de confiance qui remplissent des fonctions en notre nom, y compris l'hébergement cloud, le traitement des paiements, l'analyse, la livraison de courriels et le support client. Ces fournisseurs sont contractuellement obligés de protéger vos informations et ne peuvent les utiliser que pour effectuer des services pour nous.",

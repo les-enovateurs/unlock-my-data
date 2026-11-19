@@ -14,7 +14,7 @@
   "response_format": "csv",
   "url_export": "https://www.cnil.fr/webform/contactez-le-delegue-la-protection-des-donnees-dpo",
   "address_export": "3 Place de Fontenoy 75007 PARIS",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "La CNIL s'engage à ce que les traitements de données personnelles effectués sur cnil.fr soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés.\n\nChaque service en ligne limite la collecte des données personnelles au strict nécessaire (minimisation des données) et s’accompagne d’une information correspondante.",

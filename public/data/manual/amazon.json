@@ -28,7 +28,7 @@
   "response_format_en": "File compressed in Zip format",
   "url_export": "https://www.amazon.fr/hz/privacy-central/data-requests/preview.html",
   "url_export_en": "https://www.amazon.com/hz/privacy-central/data-requests/preview.html",
-  "response_delay": "J+3",
+  "response_delay_fr": "J+3",
   "response_delay_en": "D+3",
   "sanctioned_by_cnil": true,
   "sanction_details": "### [SAN-2023-021](https://www.cnil.fr/fr/surveillance-des-salaries-la-cnil-sanctionne-amazon-france-logistique-dune-amende-de-32-millions) - 32.0M€",

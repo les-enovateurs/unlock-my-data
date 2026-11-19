@@ -12,7 +12,7 @@
   "data_access_via_email": false,
   "response_format": "HTML et Excel",
   "url_export": "https://takeout.google.com/settings/takeout",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": true,
   "sanction_details": "Sanction CNIL de 325 millions d'euros pour GOOGLE LLC et GOOGLE IRELAND LIMITED du 31 décembre 2021:/n*Manquement au recueil de consentement.",
   "data_transfer_policy": true,

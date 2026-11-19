@@ -21,7 +21,7 @@
   "data_access_via_email": true,
   "response_format": "pdf",
   "address_export": "Délégué à la Protection des Données, 42 avenue de la Porte de Clichy 75017, Paris",
-  "response_delay": "J+3",
+  "response_delay_fr": "J+3",
   "sanctioned_by_cnil": true,
   "sanction_details": "### [Rappel CNIL du 2025-02-11](https://www.cnil.fr/fr/qwant-cnil-traitement-des-donnees-personnelles-rappel-obligations-legales) - 0.8M€",
   "data_transfer_policy": false,

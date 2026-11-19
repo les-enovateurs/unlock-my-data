@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "data_access_via_other": true,
   "address_export": "HAAS AVOCATS – Service DPO – 32 rue la Boétie 75008 PARIS",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "L’ensemble des données personnelles Vous concernant est collecté directement auprès de Vous, soit lors de la souscription aux Prestations de Jow, soit lors d’échanges avec nos services (demandes en ligne, courriers, appels téléphoniques…).\n\nPar ailleurs, des données relatives à votre navigation sur la Plateforme ou dans l’application Jow peuvent être utilisées pour cibler vos besoins et centres d’intérêts et cibler nos offres commerciales et publicitaires en fonction.",

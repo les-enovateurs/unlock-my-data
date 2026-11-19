@@ -17,7 +17,7 @@
   "response_format": "pdf",
   "url_export": "https://www.paypal.com/myaccount/privacy/privacyhub",
   "address_export": "S.à.r.l. et Cie, S.C.A., 22-24 Boulevard Royal L-2449, Luxembourg.",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous opérons dans de nombreux pays et nous (ou nos fournisseurs de services) pouvons transférer vos données et les traiter en dehors de votre pays de résidence. Nous utilisons des fournisseurs de services tiers pour traiter et stocker vos informations aux États-Unis et dans d'autres pays. Ces pays n'offrent pas toujours un niveau équivalent de protection de la vie privée.&#x20;",

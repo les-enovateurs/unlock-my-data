@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "response_format": "Excel",
   "response_format_en": "Excel",
-  "response_delay": "Sous 1 mois conformément au RGPD",
+  "response_delay_fr": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the GDPR",
   "sanctioned_by_cnil": true,
   "sanction_details": "Décision 2015-063 du 26 juin 2015 concernant la société Boulanger :<br>* Manquement à l’obligation de veiller à l’adéquation à la pertinence et au caractère Non excessif des données<br>* Manquement à l’obligation d’informer et d’obtenir l’accord préalable des personnes concernées avant d’inscrire des informations (cookies) sur leur équipement terminal de communications électroniques ou d’accéder à celles-ci (lecture des cookies)<br>* Manquement à l’obligation de définir et respecter une durée de conservation des données proportionnée à la finalité du traitement<br>* Manquement à l’obligation d’assurer la sécurité et la confidentialité des données",

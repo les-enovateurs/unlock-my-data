@@ -23,7 +23,7 @@
       "date": "2024-01-01"
     }
   ],
-  "response_delay": "6h",
+  "response_delay_fr": "6h",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "En règle générale le lieu de stockage principal des données se situe dans la région du client ou aux États-Unis une sauvegarde étant par ailleurs souvent stockée dans un centre de données situé dans une autre région.",

@@ -22,7 +22,7 @@
       "date": "2018-10-13"
     }
   ],
-  "response_delay": "Automatique",
+  "response_delay_fr": "Automatique",
   "response_delay_en": "Automatic",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

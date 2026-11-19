@@ -16,7 +16,7 @@
   "data_access_via_other": false,
   "response_format": "zip",
   "url_export": "https://support.deezer.com/hc/en-gb/requests/new?ticket_form_id=360000057869",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Certains destinataires de vos données peuvent se trouver dans des pays autres que le vôtre. Ces pays peuvent ne pas garantir un niveau de protection des données personnelles équivalent à celui de votre pays ; des clauses contractuelles types et des mesures de sécurité adéquates sont alors mises en œuvre.",
@@ -34,7 +34,7 @@
       "resolved": false
     },
     {
-      "field": "response_delay",
+      "field": "response_delay_fr",
       "message": "Je n'ai pas vu  cette mention.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-11-13T14:51:35.278Z",

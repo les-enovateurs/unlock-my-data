@@ -23,7 +23,7 @@
   "data_access_via_email": true,
   "url_export": "https://centrederelationclientsratp.typeform.com/demandedpo?typeform-source=www.ratp.fr",
   "address_export": "Délégué à la protection des données de la RATP, 54 quai de la Rapée, LAC LT73, 75599 Paris cedex 12",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "La RATP a été sanctionnée par la CNIL en 2021, (Délibération de la Formation Restreinte, SAN-2021-019, [https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000044286815](https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000044286815))  concernant les données des fichiers d’évaluation des agents",
   "data_transfer_policy": true,

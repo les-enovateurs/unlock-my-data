@@ -19,7 +19,7 @@
   "data_access_via_form": false,
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "drip respecte et valorise votre vie privée. Nous ne collectons, ne conservons ni ne partageons aucune donnée d'utilisation ni aucune information personnelle. Il n'y a ni publicité, ni logiciel espion, ni suivi. Toutes les données relatives à la santé menstruelle sont stockées uniquement sur votre appareil, sous votre contrôle.",

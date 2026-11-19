@@ -22,7 +22,7 @@
   "data_access_via_email": true,
   "response_format": "pdf",
   "address_export": "Référent du délégué ministériel à la protection des données - Département de la gouvernance et du support des systèmes d'information - 10 rue Auguste Blanqui- 93186 Montreuil Cedex",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "### Les données sont destinées à l’usage des agents de la direction générale des finances publiques dans le cadre de leurs attributions et, le cas échéant, à des destinataires du secteur public ou à d’autres tiers conformément aux dispositions légales et réglementaires.&#x20;\n\nEn dehors des cas recensés dans les autres catégories de traitement présentés dans ce document, la DGFiP procède à des transferts de données à des partenaires externes.",

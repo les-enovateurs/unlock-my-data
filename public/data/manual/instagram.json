@@ -18,7 +18,7 @@
   "data_access_via_email": false,
   "response_format": "HTML ou JSON au choix",
   "response_format_en": "HTML or JSON choice",
-  "response_delay": "Automatique",
+  "response_delay_fr": "Automatique",
   "response_delay_en": "Automatic",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

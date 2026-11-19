@@ -34,7 +34,7 @@
       "date": "2025-06-19"
     }
   ],
-  "response_delay": "Sous 1 mois conformément au RGPD",
+  "response_delay_fr": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "ChatGPT n'a pas été sanctionnée par la CNIL mais a fait l'objet de plusieurs plaintes et d'une enquête. <br> En revanche Open IA a été officiellement sanctionnée par la CNIL italienne pour plusieurs manquements au RGPD.",

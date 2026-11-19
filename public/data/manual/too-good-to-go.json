@@ -16,7 +16,7 @@
   "data_access_via_other": true,
   "response_format": "JSON",
   "url_export": "https://store.toogoodtogo.com/login?cookie_consent=false&locale=en-ca&referring_domain=https://www.toogoodtogo.com",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "8. TRANSFERTS INTERNATIONAUX DE DONNÉES\nTout transfert de vos données personnelles par TGTG à partir de l'UE/EEE, de la Suisse ou du Royaume-Uni vers des pays tiers situés en dehors de ces territoires sera fondé sur une décision d'adéquation de la Commission européenne ou sera régi par les clauses contractuelles types et/ou les règles d'entreprise contraignantes applicables ou par un mécanisme de transfert approprié équivalent, à moins que vous n'en soyez informé autrement. Tout autre transfert international de vos données personnelles en dehors de l'EEE, de la Suisse ou du Royaume-Uni s'effectuera conformément aux mécanismes appropriés de transfert international de données personnelles et aux garanties applicables en vertu de la législation locale régissant le transfert de vos données personnelles.",

@@ -21,7 +21,7 @@
   "data_access_type_en": "By email or directly via your personal account",
   "data_access_via_email": true,
   "data_access_via_other": true,
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "Nous nous engageons à ne pas transférer ou vendre vos données à caractère personnel à un tiers et nos sous-traitants et partenaires réseaux sont contraints de le respecter également. Nous gérons en interne nos newsletters, ainsi vos emails ne sont pas fournis à ce genre de service tiers.",

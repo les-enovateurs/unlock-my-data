@@ -22,7 +22,7 @@
   "data_access_via_email": true,
   "response_format": "pdf",
   "address_export": "MBA & Associées, DPO Inovie Group, 235 rue Hélène Boucher, 34170 Castelnau-Le-Lez",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "En septembre 2025, Inovie Labosud a subi une fuite de données détectée, impliquant un accès non autorisé à des informations personnelles (potentiellement de santé). \n L'entreprise a communiqué publiquement sur cet incident, mais aucune sanction CNIL n'a été prononcée",
   "data_transfer_policy": true,

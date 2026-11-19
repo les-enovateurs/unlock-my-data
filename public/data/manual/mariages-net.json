@@ -18,7 +18,7 @@
   "data_access_via_email": true,
   "data_access_type": "Formulaire en ligne",
   "data_access_type_en": "Online form",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
   "url_export": "https://www.theknotww.com/legalhub/fr/reporting/data-subject-right-request/",
   "address_export": "Wedding Planner, S.L.U., Pau Claris, 89, Bajos, 08010 Barcelone, Espagne",
