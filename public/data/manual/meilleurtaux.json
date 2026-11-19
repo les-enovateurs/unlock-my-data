@@ -1,0 +1,54 @@
+{
+  "name": "Meilleurtaux",
+  "logo": "https://www.meilleurtaux.com/images_html/new-logo-mtx.svg",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "postal",
+      "value": "Meilleurtaux SAS, 36 rue de Saint-Pétersbourg, 75008 Paris",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Siège social (mentions légales). La politique de données renvoie vers le formulaire de contact, thème « Une demande concernant vos données personnelles ».",
+      "comment_en": "Registered office (legal notice). The privacy policy directs requests to the contact form, topic \"A request concerning your personal data\"."
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.meilleurtaux.com/a-propos-de-meilleurtaux/politique-donnee.html",
+  "confidentiality_policy_url_en": "https://www.meilleurtaux.com/a-propos-de-meilleurtaux/politique-donnee.html",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_type": "Remplir le formulaire de contact https://www.meilleurtaux.com/a-propos-de-meilleurtaux/contactez-nous.html en choisissant le thème « Une demande concernant vos données personnelles ». Pour modifier ses données, il est aussi possible de contacter son conseiller dédié. La suppression du compte client se fait via ce même formulaire, puis confirmation par e-mail.",
+  "data_access_type_en": "Fill in the contact form https://www.meilleurtaux.com/a-propos-de-meilleurtaux/contactez-nous.html and choose the topic \"A request concerning your personal data\". To modify your data you can also contact your dedicated advisor. Account deletion is requested through the same form, then confirmed by e-mail.",
+  "data_access_via_email": false,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2024-10-01",
+      "type": "Attaque externe sur les systèmes informatiques signalée par e-mail à certains clients et prospects : identité, coordonnées, date et pays de naissance, nationalité, situation familiale et professionnelle, revenus.",
+      "type_en": "External attack on IT systems reported by e-mail to some customers and prospects: identity, contact details, date and country of birth, nationality, family and professional situation, income.",
+      "proof_url": "https://www.solutions-numeriques.com/vol-de-donnees-chez-meilleurtaux/",
+      "media_link": "https://www.solutions-numeriques.com/vol-de-donnees-chez-meilleurtaux/",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Les sociétés du groupe Meilleurtaux s'engagent à ne transférer les données personnelles hors Union Européenne que dans le strict respect du Règlement (UE) 2016/679 à la loi n°78-17 du 6 janvier 1978 modifiée notamment avec ses filiales et sous-traitants.",
+  "outside_eu_storage": true,
+  "comments": "Meilleurtaux SAS (RCS Paris 424 264 281), courtier en crédit et assurance. Les sociétés du groupe, franchisés et mandataires sont responsables conjoints des traitements. Les activités Placement et Épargne relèvent de Meilleurtaux Placement, qui a sa propre politique. Aucune adresse e-mail de DPO n'est publiée dans la politique : les demandes passent par le formulaire de contact. La pièce d'identité requise n'est pas précisée. Date de la fuite : date de l'article de presse (1er octobre 2024) ; nombre de personnes concernées non communiqué.",
+  "comments_en": "Meilleurtaux SAS (Paris trade register 424 264 281), credit and insurance broker. Group companies, franchisees and agents are joint controllers. Savings and investment activities are handled by Meilleurtaux Placement under a separate policy. No DPO e-mail address is published: requests go through the contact form. ID requirements are not specified. Leak date: date of the press article (1 October 2024); number of people affected not disclosed.",
+  "better_alternative": false,
+  "created_at": "2026-11-19",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.meilleurtaux.android",
+    "name": "Meilleurtaux – Expert finances"
+  }
+}
