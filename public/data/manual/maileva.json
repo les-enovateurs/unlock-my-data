@@ -1,0 +1,51 @@
+{
+  "name": "Maileva",
+  "logo": "https://www.maileva.com/app/uploads/2025/09/Maileva_RVB-240x117.png",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Docaposte (groupe La Poste)",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@docaposte.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse indiquée dans la politique de confidentialité de Maileva pour toute demande d'exercice des droits.",
+      "comment_en": "Address given in the Maileva privacy policy for all requests to exercise your rights."
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "confidentiality_policy_url": "https://www.maileva.com/politique-de-confidentialite/",
+  "confidentiality_policy_url_en": "https://www.maileva.com/politique-de-confidentialite/",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail à privacy@docaposte.fr en précisant le droit exercé (accès, rectification, effacement, portabilité, opposition). Si vous avez seulement reçu un courrier envoyé via Maileva, adressez aussi votre demande à l'expéditeur du courrier, qui est responsable du traitement de vos données.",
+  "data_access_type_en": "Send an e-mail to privacy@docaposte.fr stating the right you are exercising (access, rectification, erasure, portability, objection). If you only received a letter sent through Maileva, also contact the sender of the letter, who is the controller of your data.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-09-09",
+      "type": "Intrusion via une faille logicielle dans le système de production dès le 9 septembre 2026, services suspendus le 23 septembre, résultats de l'enquête publiés le 13 novembre 2026. Environ 22 millions de destinataires de courriers concernés : nom, prénom, adresse postale, genre. Utilisateurs de la plateforme : nom du compte, identifiant, adresse e-mail, nom des fichiers envoyés. Contenu de certains courriers consulté.",
+      "type_en": "Intrusion through a software flaw in the production system from 9 September 2026; services suspended on 23 September; investigation results published on 13 November 2026. About 22 million letter recipients affected: first and last name, postal address, gender. Platform users: account name, login, e-mail address, names of files sent. Content of some letters was accessed.",
+      "proof_url": "https://www.it-connect.fr/maileva-la-poste-fuite-donnees-22-millions-personnes/",
+      "media_link": "https://www.it-connect.fr/maileva-la-poste-fuite-donnees-22-millions-personnes/",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "En principe, vos Données personnelles ne font pas l'objet d'un Transfert en dehors de l'Espace Economique Européen. Toutefois, dans certains cas, vos Données personnelles peuvent faire l'objet d'un Transfert en dehors de l'Espace Economique Européen, par l'intermédiaire de certains Sous-traitants de MAILEVA.",
+  "outside_eu_storage": true,
+  "comments": "Maileva SAS, filiale de Docaposte (groupe La Poste), RCS Créteil 424 335 693, 45/47 boulevard Paul Vaillant Couturier, 94200 Ivry-sur-Seine. Plateforme d'envoi de courriers et recommandés pour entreprises. La politique de confidentialité publiée couvre les utilisateurs du site maileva.com ; pour les destinataires de courriers, Maileva agit pour le compte des entreprises expéditrices. La politique ne précise ni délai de réponse ni pièce d'identité requise. Fuite : selon la presse, IBAN et montants de facturation d'entreprises clientes figureraient aussi dans le lot ; La Poste affirme qu'aucune coordonnée bancaire n'est concernée.",
+  "comments_en": "Maileva SAS, a subsidiary of Docaposte (La Poste group), Créteil trade register 424 335 693, 45/47 boulevard Paul Vaillant Couturier, 94200 Ivry-sur-Seine. Mail and registered letter platform for businesses. The published privacy policy covers maileva.com users; for letter recipients, Maileva acts on behalf of the sending companies. The policy does not state a response time or ID requirement. Breach: according to the press, IBANs and billing amounts of business customers may also be included; La Poste states that no bank details are affected.",
+  "better_alternative": false,
+  "created_at": "2026-11-19",
+  "created_by": "wassym",
+  "status": "draft"
+}
