@@ -27,7 +27,8 @@ Below are the fields with explanations:
 | `data_access_via_form`           | Boolean: is data access possible via an online form?                                                            |
 | `data_access_type`               | Details on data access type (if not covered above).                                                             |
 | `data_access_via_email`          | Boolean: is data access possible via email?                                                                     |
-| `response_format`                | Format of the response (file, zip, PDF, etc.).                                                                  |
+| `response_format_en`             | Format of the response (file, zip, PDF, etc.).                                                                  |
+| `response_format_fr`             | Format of the response (fichier, zip, PDF, etc.).                                                               |
 | `url_export`                     | Url for ask to export your data                                                                                 |
 | `example_data_export`            | Array of object (see for example carrefour.json) list of elements that contains url, type, description and date |
 | `example_form_export`            | Array of object (see for example carrefour.json) list of elements that contains url, type, description and date |
@@ -110,7 +111,8 @@ Below are the fields with explanations:
      "data_access_via_form": false,
      "data_access_type": "",
      "data_access_via_email": false,
-     "response_format": "",
+     "response_format_en": "",
+     "response_format_fr": "",
      "example_data_export": [],
      "example_form_export": [],
      "message_exchange": [],

@@ -27,7 +27,8 @@ Voici la liste des champs et leur explication :
 | `data_access_via_form`           | Booléen : l’accès aux données est-il possible via un formulaire en ligne ?                                                          |
 | `data_access_type`               | Détails sur le type d’accès aux données (si non couvert ci-dessus).                                                                 |
 | `data_access_via_email`          | Booléen : l’accès aux données est-il possible par email ?                                                                           |
-| `response_format`                | Format de la réponse (fichier, zip, PDF, etc.).                                                                                     |
+| `response_format_en`             | Format de la réponse (file, zip, PDF, etc.).                                                                                        |
+| `response_format_fr`             | Format de la réponse (fichier, zip, PDF, etc.).                                                                                     |
 | `url_export`                     | URL pour demander l'export de vos données.                                                                                          |
 | `example_data_export`            | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
 | `example_form_export`            | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
@@ -124,7 +125,8 @@ Voici la liste des champs et leur explication :
      "data_access_via_form": false,
      "data_access_type": "",
      "data_access_via_email": false,
-     "response_format": "",
+     "response_format_en": "",
+     "response_format_fr": "",
      "example_data_export": [],
      "example_form_export": [],
      "message_exchange": [],
