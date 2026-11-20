@@ -1,0 +1,61 @@
+{
+  "name": "Carte Jeune Région Occitanie",
+  "logo": "/img/logos/carte-jeune-region-occitanie.webp",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Région Occitanie / Pyrénées-Méditerranée",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpd@laregion.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données de la Région Occitanie.",
+      "comment_en": "Data Protection Officer of the Occitanie Region."
+    },
+    {
+      "type": "postal",
+      "value": "Région Occitanie, 22 boulevard du Maréchal Juin, 31406 Toulouse cedex 9",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale indiquée pour exercer ses droits.",
+      "comment_en": "Postal address given for exercising your rights."
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Justificatif d'identité (type de pièce non précisé).",
+  "confidentiality_policy_url": "https://www.laregion.fr/RGPD",
+  "confidentiality_policy_url_en": "https://www.laregion.fr/RGPD",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail au DPD à dpd@laregion.fr ou un courrier à Région Occitanie, 22 boulevard du Maréchal Juin, 31406 Toulouse cedex 9, en justifiant de son identité. Pour un mineur, la demande peut être faite par le représentant légal.",
+  "data_access_type_en": "Send an e-mail to the DPO at dpd@laregion.fr or a letter to Région Occitanie, 22 boulevard du Maréchal Juin, 31406 Toulouse cedex 9, with proof of identity. For a minor, the request can be made by the legal guardian.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-03-05",
+      "type": "Incident de sécurité chez le prestataire du système informatique de la Carte Jeune, signalé à la Région le 5 mars 2026 et révélé le 10 mars 2026. Environ 310 000 jeunes concernés, base mise en vente sur le darkweb. Données citées : nom, prénom, coordonnées, photo, établissement scolaire ; l'e-mail d'information envoyé aux bénéficiaires mentionne nom, prénom, date de naissance, adresse e-mail et téléphone.",
+      "type_en": "Security incident at the IT provider of the Carte Jeune system, reported to the Region on 5 March 2026 and revealed on 10 March 2026. About 310,000 young people affected; database put up for sale on the dark web. Data cited: first and last name, contact details, photo, school; the notification e-mail sent to beneficiaries mentions name, date of birth, e-mail address and phone number.",
+      "proof_url": "https://www.solutions-numeriques.com/cyberattaque-en-occitanie-les-donnees-de-310-000-jeunes-beneficiaires-de-la-carte-jeune-mises-en-vente-sur-le-darkweb/",
+      "media_link": "https://www.solutions-numeriques.com/cyberattaque-en-occitanie-les-donnees-de-310-000-jeunes-beneficiaires-de-la-carte-jeune-mises-en-vente-sur-le-darkweb/",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Vos données ne sont pas : vendues ou utilisées pour une finalité autre que celle évoquée précédemment ; transférées vers un pays tiers à l'Union Européenne ou une organisation internationale.",
+  "outside_eu_storage": false,
+  "comments": "Dispositif de la Région Occitanie / Pyrénées-Méditerranée pour les lycéens et jeunes en formation (offres culturelles, commerciales et services liés à l'établissement). Le site cartejeune.laregion.fr renvoie vers la page RGPD générale de la Région (laregion.fr/RGPD) : les informations sur les droits, le DPD et les transferts viennent de cette page, pas d'une politique spécifique à la Carte Jeune. Ligne d'information indiquée dans l'e-mail de notification de la fuite : 05 32 30 00 40.",
+  "comments_en": "Scheme run by the Occitanie / Pyrénées-Méditerranée Region for high-school students and young people in training (cultural and commercial offers, school-related services). The cartejeune.laregion.fr site links to the Region's general GDPR page (laregion.fr/RGPD): information on rights, DPO and transfers comes from that page, not from a Carte Jeune-specific policy. Information line given in the breach notification e-mail: 05 32 30 00 40.",
+  "better_alternative": false,
+  "created_at": "2026-11-19",
+  "created_by": "wassym",
+  "status": "draft"
+}
