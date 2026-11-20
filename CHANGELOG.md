@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.1.0...v1.2.0) (2026-11-20)
+
+
+### Features
+
+* **press:** add monochrome logo symbol for print and engraving ([9cf6713](https://github.com/les-enovateurs/unlock-my-data/commit/9cf671303ae408af513d6f45bf013c3259053d7d))
+
+
+### Bug Fixes
+
+* rename better_alternative_explication in services.json, reject the old key in the schema ([8b11f2a](https://github.com/les-enovateurs/unlock-my-data/commit/8b11f2a98d01cfeb097cb790296886f9909835c6))
+
 ## [1.1.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.0.0...v1.1.0) (2026-11-13)
 
 
