@@ -1,0 +1,29 @@
+{
+  "name": "Wizz Air",
+  "logo": "/img/logos/wizz-air.webp",
+  "country_code": "hu",
+  "belongs_to_group": true,
+  "group_name": "Indigo Partners",
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "identifiants de connexion et informations personnelles demandées par le compte remplies et à jour",
+  "confidentiality_policy_url_en": "https://www.wizzair.com/cms/api/docs/default-source/downloadable-documents/privacy-notices/wizz-air---customer-privacy-notice---5-october-2026.pdf",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_type": "Faire une demande sur le site renseigné ci-dessous",
+  "data_access_type_en": "Send a request using the website provei",
+  "data_access_via_email": false,
+  "data_access_via_other": false,
+  "url_export": "https://www.wizzair.com/en-gb/information-and-services/about-us/data-subject-rights",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "outside_eu_storage": true,
+  "better_alternative": false,
+  "created_at": "2026-11-17",
+  "created_by": "noel.b",
+  "status": "draft",
+  "playstore": {
+    "id": "com.wizzair.WizzAirApp",
+    "name": "Wizz Air - Réservez des Vols"
+  }
+}

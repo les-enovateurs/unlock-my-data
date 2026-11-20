@@ -1,4 +1,5 @@
 import type { FicheBreach } from "./FicheAvancee";
+import { pickLang } from "@/lib/pickLang";
 
 type HibpBreach = { title?: string; name?: string; breachDate: string; pwnCount?: number; description?: string; dataClasses?: string[] };
 type BlfBreach = {
@@ -54,7 +55,7 @@ export function mergeBreaches(
         name: serviceName,
         date: day(l.date),
         classes: [],
-        desc: (lang === "fr" ? l.type : l.type_en || l.type) || "",
+        desc: pickLang(l, "type", lang) || "",
         links: [l.media_link, l.proof_url].filter((u): u is string => Boolean(u)),
         contributor: l.contributor,
     }));

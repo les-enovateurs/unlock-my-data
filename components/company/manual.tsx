@@ -40,6 +40,7 @@ import { mergeBreaches } from './ficheBreaches';
 import { FICHE_TAB_LABELS, ficheHref, ficheTabIds, type FicheTabId } from './ficheTabs';
 import type { ReviewSidecar } from '@/components/review/reviewTypes';
 import { contactsFor } from '@/lib/contacts';
+import { pickLang } from '@/lib/pickLang';
 
 /**
  * Fiches whose `comments` field is an editorial reading meant for readers.
@@ -364,10 +365,10 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
 
     const vulnerabilities: FicheVulnerability[] = (entreprise.vulnerabilities || []).map((v: any) => ({
         date: v.date,
-        title: pick(v.title, v.title_en) || '',
-        description: pick(v.description, v.description_en) || '',
-        mitigation: pick(v.mitigation, v.mitigation_en),
-        risk: pick(v.risk, v.risk_en),
+        title: pickLang(v, "title", lang) || '',
+        description: pickLang(v, "description", lang) || '',
+        mitigation: pickLang(v, "mitigation", lang),
+        risk: pickLang(v, "risk", lang),
         link: v.media_link || undefined,
         reporter: v.reporter || undefined,
     })).sort((a: FicheVulnerability, b: FicheVulnerability) => (a.date < b.date ? 1 : -1));
@@ -404,7 +405,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
                 inCatalog: true,
                 logo: svc.logo,
                 countryCode: svc.country_code,
-                why: svc.better_alternative_explication || undefined,
+                why: svc.better_alternative_explication_fr || undefined,
                 whyEn: svc.better_alternative_explication_en || undefined,
             };
         });
@@ -428,14 +429,14 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
     ] as const).flatMap(([kind, items]) => (items || []).map((d: any): FicheDocument => ({
         kind,
         url: d.url,
-        description: pick(d.description, d.description_en) || d.url,
+        description: pickLang(d, "description", lang) || d.url,
         type: d.type,
         date: d.date || undefined,
     })));
     // "Aucun" says nothing, and "Carte d'identité" repeats the ID card row right above.
     const requiredDocuments = ['', 'Aucun', "Carte d'identité"].includes(entreprise.details_required_documents ?? '')
         ? undefined
-        : pick(entreprise.details_required_documents, entreprise.details_required_documents_en);
+        : pickLang(entreprise, "details_required_documents", lang);
 
     return {
         lang,
@@ -459,21 +460,21 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         viaForm: entreprise.data_access_via_form,
         viaEmail: entreprise.data_access_via_email,
         viaPostal: entreprise.data_access_via_postal,
-        urlExport: pick(entreprise.url_export, entreprise.url_export_en),
+        urlExport: pickLang(entreprise, "url_export", lang),
         addressExport: entreprise.address_export,
         contacts: entreprise.contacts,
-        responseDelay: pick(entreprise.response_delay, entreprise.response_delay_en),
-        responseFormat: pick(entreprise.response_format, entreprise.response_format_en),
+        responseDelay: pickLang(entreprise, "response_delay", lang),
+        responseFormat: pickLang(entreprise, "response_format", lang),
         requiredDocuments,
-        accessProcedure: pick(entreprise.data_access_type, entreprise.data_access_type_en),
+        accessProcedure: pickLang(entreprise, "data_access_type", lang),
         documents,
         outsideEU: isTruthyFlag(entreprise.outside_eu_storage),
         destinations,
         destinationsPartial,
-        quote: pick(entreprise.privacy_policy_quote, entreprise.privacy_policy_quote_en),
-        notes: NOTES_SLUGS.has(slug) ? pick(entreprise.comments, entreprise.comments_en) : undefined,
+        quote: pickLang(entreprise, "privacy_policy_quote", lang),
+        notes: NOTES_SLUGS.has(slug) ? pickLang(entreprise, "comments", lang) : undefined,
         sanctioned: entreprise.sanctioned_by_cnil,
-        sanctionDetails: pick(entreprise.sanction_details, entreprise.sanction_details_en),
+        sanctionDetails: pickLang(entreprise, "sanction_details", lang),
         enforcementFines,
         hasDeleteOption,
         trackers,
@@ -485,7 +486,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         apkLab,
         alternatives,
         betterAlternative: isTruthyFlag(entreprise.better_alternative),
-        betterAlternativeWhy: pick(entreprise.better_alternative_explication, entreprise.better_alternative_explication_en),
+        betterAlternativeWhy: pickLang(entreprise, "better_alternative_explication", lang),
         compareServicesParam,
         analysis,
         review,

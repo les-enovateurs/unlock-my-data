@@ -56,7 +56,25 @@
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "draft",
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "details_required_documents",
+      "message": "Pour exercer Vos droits, Vous devez justifier de votre identité par tout moyen. Lorsqu’ORNIKAR a des doutes raisonnables quant à votre identité, il peut Vous être demandé de fournir des informations supplémentaires nécessaires pour confirmer votre identité.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-16T15:23:54.201Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Some of these service providers may be located outside the European Union, involving a transfer of data, governed in accordance with the guarantees provided for in Chapter V of the GDPR.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-16T15:25:07.119Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-16",
   "playstore": {
     "id": "com.ornikar.learning",
     "name": "Code de la route 2026 & permis"

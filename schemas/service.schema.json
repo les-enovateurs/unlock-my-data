@@ -15,15 +15,15 @@
             "description": "Is this a recommended alternative?",
             "type": "boolean"
         },
-        "better_alternative_explication": {
-            "$comment": "FIXME: will become better_alternative_explication_fr (#456)",
-            "description": "Recommended alternative explanation (FR)",
-            "$ref": "#/$defs/string"
-        },
         "better_alternative_explication_en": {
             "description": "Recommended alternative explanation (EN)",
             "$ref": "#/$defs/string"
         },
+        "better_alternative_explication_fr": {
+            "description": "Recommended alternative explanation (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "better_alternative_explication": false,
         "clean_guide_en": {
             "description": "Heavy data deletion guide (EN)",
             "type": "string",

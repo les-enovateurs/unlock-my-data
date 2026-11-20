@@ -14,7 +14,7 @@ export const REVIEW_MARKDOWN_FIELDS = new Set([
   "privacy_policy_quote_en",
   "comments",
   "comments_en",
-  "better_alternative_explication",
+  "better_alternative_explication_fr",
   "better_alternative_explication_en"
 ]);
 
@@ -29,16 +29,6 @@ export const REVIEW_BOOLEAN_FIELDS = new Set([
   "data_transfer_policy",
   "outside_eu_storage",
   "better_alternative"
-]);
-
-export const REVIEW_BILINGUAL_FIELDS = new Set([
-  "privacy_policy_quote",
-  "comments",
-  "response_format",
-  "response_delay",
-  "details_required_documents",
-  "confidentiality_policy_url",
-  "better_alternative_explication"
 ]);
 
 const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {

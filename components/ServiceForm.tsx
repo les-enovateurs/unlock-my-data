@@ -132,7 +132,7 @@ const initialFormData: FormData = {
     example_data_export: [],
     leaks: [],
     better_alternative: false,
-    better_alternative_explication: "",
+    better_alternative_explication_fr: "",
     better_alternative_explication_en: "",
 };
 
@@ -439,8 +439,8 @@ export default function ServiceForm({
                     confidentiality_policy_url_en:
                         data.confidentiality_policy_url_en || "",
                     better_alternative: data.better_alternative || false,
-                    better_alternative_explication:
-                        data.better_alternative_explication || "",
+                    better_alternative_explication_fr:
+                        data.better_alternative_explication_fr || "",
                     better_alternative_explication_en:
                         data.better_alternative_explication_en || "",
                     originalData,
@@ -680,7 +680,7 @@ export default function ServiceForm({
             "privacy_policy_quote_en",
             "comments",
             "comments_en",
-            "better_alternative_explication",
+            "better_alternative_explication_fr",
             "better_alternative_explication_en",
         ];
         const isOverLimit = markdownFields.some(
@@ -864,7 +864,7 @@ export default function ServiceForm({
                 comments: formData.comments,
                 comments_en: formData.comments_en,
                 better_alternative: formData.better_alternative || false,
-                better_alternative_explication: formData.better_alternative_explication,
+                better_alternative_explication_fr: formData.better_alternative_explication_fr,
                 better_alternative_explication_en: formData.better_alternative_explication_en,
                 ...(mode === "new"
                     ? {
