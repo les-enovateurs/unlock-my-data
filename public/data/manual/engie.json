@@ -1,0 +1,62 @@
+{
+  "name": "ENGIE",
+  "logo": "/img/logos/engie.webp",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "postal",
+      "value": "ENGIE - Service Clients, TSA 87494, 76934 ROUEN CEDEX 09",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale indiquée dans la politique pour exercer ses droits.",
+      "comment_en": "Postal address given in the policy for exercising your rights."
+    },
+    {
+      "type": "email",
+      "value": "rgpd@contact-gazpasserelle.engie.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Uniquement pour les clients bénéficiant d'une offre Passerelle. Les autres clients passent par le formulaire en ligne ou le courrier.",
+      "comment_en": "Only for customers with a Passerelle offer. Other customers use the online form or post."
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "confidentiality_policy_url": "https://particuliers.engie.fr/protection-des-donnees-personnelles.html",
+  "confidentiality_policy_url_en": "https://particuliers.engie.fr/protection-des-donnees-personnelles.html",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_type": "Utiliser le formulaire https://particuliers.engie.fr/formulaire-stop.html, ou écrire à ENGIE - Service Clients, TSA 87494, 76934 ROUEN CEDEX 09. Clients avec une offre Passerelle : e-mail à rgpd@contact-gazpasserelle.engie.fr.",
+  "data_access_type_en": "Use the form https://particuliers.engie.fr/formulaire-stop.html, or write to ENGIE - Service Clients, TSA 87494, 76934 ROUEN CEDEX 09. Customers with a Passerelle offer: e-mail rgpd@contact-gazpasserelle.engie.fr.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-10-27",
+      "type": "Accès inhabituel à un outil utilisé par des partenaires pour la prospection et la commercialisation d'offres d'énergie ; clients en France uniquement, nombre non communiqué. Données selon les lettres de notification : nom, prénom, adresse postale, e-mail, téléphone, numéro PDL ou PCE, identifiant client, numéro de contrat. Pas de données bancaires selon ENGIE.",
+      "type_en": "Unusual data access in a tool used by partners for prospecting and marketing energy offers; customers in France only, number not disclosed. Data according to notification letters: first and last name, postal address, e-mail, phone number, PDL or PCE number, customer ID, contract number. No bank data according to ENGIE.",
+      "proof_url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+      "media_link": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+      "contributor": "wassym"
+    }
+  ],
+  "url_export": "https://particuliers.engie.fr/formulaire-stop.html",
+  "address_export": "ENGIE - Service Clients, TSA 87494, 76934 ROUEN CEDEX 09",
+  "response_delay": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Vos données sont stockées au sein de l'Union européenne, soit par ENGIE soit par ses prestataires. Certaines données font l'objet d'un traitement par certains prestataires situés en dehors de l'Union européenne, dans un pays ne bénéficiant pas d'une décision d'adéquation rendue par la Commission européenne.",
+  "outside_eu_storage": true,
+  "comments": "Fiche basée sur la politique ENGIE particuliers (mise à jour le 30 septembre 2026), responsable : ENGIE SA. Aucune adresse e-mail générale de DPO n'est donnée pour les clients particuliers : formulaire en ligne ou courrier. La pièce d'identité requise n'est pas précisée. Date de la fuite : date de l'article BleepingComputer (27 octobre 2026).",
+  "comments_en": "Based on the ENGIE residential customer privacy policy (updated 30 September 2026); controller: ENGIE SA. No general DPO e-mail is given for residential customers: online form or post. ID requirements are not specified. Leak date: date of the BleepingComputer article (27 October 2026).",
+  "better_alternative": false,
+  "created_at": "2026-11-19",
+  "created_by": "wassym",
+  "status": "draft"
+}
