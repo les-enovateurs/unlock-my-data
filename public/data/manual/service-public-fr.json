@@ -49,10 +49,29 @@
   "data_transfer_policy": true,
   "privacy_policy_quote": "« Pour assurer le bon fonctionnement technique de certaines fonctionnalités du site, des transferts de données personnelles, limités au strict nécessaire, sont susceptibles d’être effectués par des sous-traitants de la DILA. La DILA s’est assurée au préalable que ces transferts présentaient un niveau de protection des données adéquat et suffisant au sens de la réglementation applicable. »",
   "outside_eu_storage": true,
-  "comments": "Responsable de traitement : DILA (26 rue Desaix, 75727 Paris Cedex 15). Base légale : mission d'intérêt public. Transferts hors UE possibles via des sous-traitants, sans précision des pays. Le site utilise des cookies (liste des tiers sur la page Gestion des cookies) et des pixels de suivi. Pas de sanction de la CNIL connue. Pas de délai de réponse indiqué. Page « Données personnelles et sécurité » vérifiée le 26 septembre 2025. Note : l'adresse rgpd@dila.gouv.fr (premier contact pour exercer ses droits, indiquée dans la procédure) est la même que celle de la fiche PNAV, également gérée par la DILA ; elle n'a donc pas été ajoutée dans les contacts pour éviter le blocage doublon.",
-  "comments_en": "Data controller: DILA (26 rue Desaix, 75727 Paris Cedex 15). Legal basis: public interest mission. Possible transfers outside the EU through subcontractors, countries not specified. The site uses cookies (list of third parties on the cookie management page) and tracking pixels. No known CNIL sanction. No response time stated. Personal data page checked on 26 September 2025. Note: rgpd@dila.gouv.fr (first contact to exercise rights, given in the procedure) is the same address as the PNAV entry, also run by DILA; it was therefore not added to the contacts to avoid the duplicate check.",
+  "comments": "Responsable de traitement : DILA (26 rue Desaix, 75727 Paris Cedex 15). Base légale : mission d'intérêt public. Transferts hors UE possibles via des sous-traitants, sans précision des pays. Le site utilise des cookies (liste des tiers sur la page Gestion des cookies) et des pixels de suivi. Pas de sanction de la CNIL connue. Pas de délai de réponse indiqué. Page « Données personnelles et sécurité » vérifiée le 26 septembre 2025. Note : l'adresse [rgpd@dila.gouv.fr](mailto:rgpd@dila.gouv.fr) (premier contact pour exercer ses droits, indiquée dans la procédure) est la même que celle de la fiche PNAV, également gérée par la DILA ; elle n'a donc pas été ajoutée dans les contacts pour éviter le blocage doublon.",
+  "comments_en": "Data controller: DILA (26 rue Desaix, 75727 Paris Cedex 15). Legal basis: public interest mission. Possible transfers outside the EU through subcontractors, countries not specified. The site uses cookies (list of third parties on the cookie management page) and tracking pixels. No known CNIL sanction. No response time stated. Personal data page checked on 26 September 2025. Note: [rgpd@dila.gouv.fr](mailto:rgpd@dila.gouv.fr) (first contact to exercise rights, given in the procedure) is the same address as the PNAV entry, also run by DILA; it was therefore not added to the contacts to avoid the duplicate check.",
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "draft"
+  "status": "published",
+  "review": [
+    {
+      "field": "contacts",
+      "message": "Il semble que cet email soit pour un second niveau. J'ai trouvé:\nVous pouvez exercer vos droits ou obtenir des informations concernant le traitement de vos données personnelles directement auprès du responsable de traitement par courriel à l'adresse suivante : rgpd@dila.gouv.fr.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-16T15:00:06.672Z",
+      "resolved": false,
+      "replies": [
+        {
+          "message": "Désolé, je n'ai vu le commentaire qu'après avoir posté...A ignorer donc.",
+          "author": "dominique_usa",
+          "timestamp": "2026-11-16T15:17:30.027Z"
+        }
+      ]
+    }
+  ],
+  "privacy_policy_quote_en": "« To ensure the proper technical functioning of certain functionalities of the site, transfers of personal data, limited to what is strictly necessary, may be carried out by DILA's subcontractors. DILA has previously ensured that these transfers present an adequate and sufficient level of data protection within the meaning of the applicable regulations. »",
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-16"
 }

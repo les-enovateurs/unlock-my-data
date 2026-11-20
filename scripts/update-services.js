@@ -166,7 +166,7 @@ function transformToServiceFormat(slug, manualData, compareData) {
         country_code: baseData.country_code || additional.country_code || '',
         exodus: Boolean(baseData.playstore?.exodus),
         better_alternative: baseData.better_alternative || false,
-        better_alternative_explication: baseData.better_alternative_explication || '',
+        better_alternative_explication_fr: baseData.better_alternative_explication_fr || '',
         better_alternative_explication_en: baseData.better_alternative_explication_en || '',
         alternatives: baseData.alternatives || []
     };

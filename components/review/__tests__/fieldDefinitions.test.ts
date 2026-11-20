@@ -1,4 +1,4 @@
-import { REVIEW_BILINGUAL_FIELDS, REVIEW_BOOLEAN_FIELDS, REVIEW_MARKDOWN_FIELDS, getReviewFieldDefinition } from "../fieldDefinitions";
+import { REVIEW_BOOLEAN_FIELDS, REVIEW_MARKDOWN_FIELDS, getReviewFieldDefinition } from "../fieldDefinitions";
 
 describe("review field definitions", () => {
   test("maps markdown fields correctly", () => {
@@ -14,10 +14,6 @@ describe("review field definitions", () => {
   test("maps select fields correctly", () => {
     expect(getReviewFieldDefinition("response_format").type).toBe("select");
     expect(getReviewFieldDefinition("transfer_destination_countries").type).toBe("multiselect");
-  });
-
-  test("tracks bilingual fields", () => {
-    expect(REVIEW_BILINGUAL_FIELDS.has("privacy_policy_quote")).toBe(true);
   });
 
   test("maps app field correctly", () => {

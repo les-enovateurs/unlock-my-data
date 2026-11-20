@@ -79,7 +79,7 @@ export type EntrepriseData = {
     comments?: string;
     comments_en?: string;
     better_alternative?: boolean;
-    better_alternative_explication?: string;
+    better_alternative_explication_fr?: string;
     better_alternative_explication_en?: string;
     playstore?: Playstore;
     created_at?: string;

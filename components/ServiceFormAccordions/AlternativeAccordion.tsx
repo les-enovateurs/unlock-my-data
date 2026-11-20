@@ -74,15 +74,15 @@ export function AlternativeAccordion({
                     <div>
                         <label>
                             <span className="umd-label">
-                                {labels.better_alternative_explication || "Explication (FR)"}
+                                {labels.better_alternative_explication_fr || "Explication (FR)"}
                             </span>
                         </label>
                         <MarkdownEditor
-                            value={formData?.better_alternative_explication || ""}
+                            value={formData?.better_alternative_explication_fr || ""}
                             onChange={(val: string) =>
                                 setFormData((prev) =>
                                     prev
-                                        ? { ...prev, better_alternative_explication: val }
+                                        ? { ...prev, better_alternative_explication_fr: val }
                                         : prev,
                                 )
                             }

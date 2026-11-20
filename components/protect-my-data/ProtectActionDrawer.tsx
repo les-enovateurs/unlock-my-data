@@ -21,6 +21,7 @@ import { Service } from "@/constants/protectData";
 import { firstEmail } from "@/lib/contacts";
 import { EMAIL_TEMPLATES, webmailLinks } from "@/constants/emailTemplates";
 import { flagEmoji, localizedCountry, isServiceEU } from "@/lib/geo/serviceGeo";
+import { pickLang } from "@/lib/pickLang";
 import dict from "../../i18n/ProtectMyData.json";
 import Translator from "../tools/t";
 
@@ -30,7 +31,7 @@ interface ProtectActionDrawerProps {
   lang: string;
   mode: DrawerMode;
   service: Service;
-  alt: (Service & { better_alternative_explication?: string; better_alternative_explication_en?: string }) | null;
+  alt: (Service & { better_alternative_explication_fr?: string; better_alternative_explication_en?: string }) | null;
   onClose: () => void;
   onMode: (mode: DrawerMode) => void;
 }
@@ -119,10 +120,8 @@ export default function ProtectActionDrawer({
   const country = (s: Service) =>
     `${flagEmoji(s.country_code)} ${localizedCountry(lang, s.country_code)}`.trim();
 
-  const altWhy = (a: NonNullable<ProtectActionDrawerProps["alt"]>) => {
-    const text = lang === "fr" ? a.better_alternative_explication : a.better_alternative_explication_en || a.better_alternative_explication;
-    return text || t.t("planWhyFallback");
-  };
+  const altWhy = (a: NonNullable<ProtectActionDrawerProps["alt"]>) =>
+    pickLang(a, "better_alternative_explication", lang) || t.t("planWhyFallback");
 
   // --- Deletion email --------------------------------------------------------
   const tpl = EMAIL_TEMPLATES[lang === "fr" ? "fr" : "en"];

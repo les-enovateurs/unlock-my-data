@@ -115,7 +115,7 @@ const FIELD_CATEGORIES = {
     icon: Star,
     iconClass: "text-warning",
     iconBgClass: "bg-warning/10",
-    fields: ["better_alternative", "better_alternative_explication", "better_alternative_explication_en"]
+    fields: ["better_alternative", "better_alternative_explication_fr", "better_alternative_explication_en"]
   },
   app: {
     icon: Globe,

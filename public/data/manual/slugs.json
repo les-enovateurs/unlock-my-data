@@ -144,6 +144,9 @@
     "slug": "curio"
   },
   {
+    "slug": "cursor"
+  },
+  {
     "slug": "decathlon-coach"
   },
   {
@@ -537,6 +540,9 @@
     "slug": "snapchat"
   },
   {
+    "slug": "sncf-connect"
+  },
+  {
     "slug": "sofinco"
   },
   {
@@ -586,6 +592,9 @@
   },
   {
     "slug": "tinder"
+  },
+  {
+    "slug": "too-good-to-go"
   },
   {
     "slug": "trainme"
@@ -649,6 +658,9 @@
   },
   {
     "slug": "withings"
+  },
+  {
+    "slug": "wizz-air"
   },
   {
     "slug": "wormhole"
