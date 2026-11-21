@@ -4719,6 +4719,50 @@
   },
   {
     "mode": 1,
+    "slug": "service-public-fr",
+    "name": "Service-Public.fr",
+    "logo": "/img/logos/service-public-fr.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpd@pm.gouv.fr",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Délégué à la protection des données des services du Premier ministre (recours)",
+        "comment_en": "Data Protection Officer of the Prime Minister's services (appeal)"
+      },
+      {
+        "type": "postal",
+        "value": "Service du Premier ministre, à l'attention du délégué à la protection des données (DPD), 56 rue de Varenne, 75700 Paris",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "DPD par courrier",
+        "comment_en": "DPO by post"
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "shared",
     "name": "Shared",
     "logo": "/img/logos/shared.webp",
@@ -5382,6 +5426,38 @@
     "last_update_breach": null,
     "country_code": "us",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "trainme",
+    "name": "TrainMe",
+    "logo": "/img/logos/trainme.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "hello@trainme.co",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",

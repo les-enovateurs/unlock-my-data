@@ -1,6 +1,6 @@
 {
   "name": "Maileva",
-  "logo": "https://www.maileva.com/app/uploads/2025/09/Maileva_RVB-240x117.png",
+  "logo": "/img/logos/maileva.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Docaposte (groupe La Poste)",
@@ -37,7 +37,7 @@
       "contributor": "wassym"
     }
   ],
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "En principe, vos Données personnelles ne font pas l'objet d'un Transfert en dehors de l'Espace Economique Européen. Toutefois, dans certains cas, vos Données personnelles peuvent faire l'objet d'un Transfert en dehors de l'Espace Economique Européen, par l'intermédiaire de certains Sous-traitants de MAILEVA.",
