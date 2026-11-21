@@ -1,6 +1,6 @@
 {
   "name": "Viamedis",
-  "logo": "https://www.viamedis.fr/wp-content/themes/front/assets/svgs/logo.svg",
+  "logo": "/img/logos/viamedis.webp",
   "country_code": "fr",
   "belongs_to_group": false,
   "contacts": [
@@ -46,7 +46,7 @@
       "contributor": "wassym"
     }
   ],
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "De manière générale, nous privilégions la réalisation du traitement de vos données personnelles en France en priorité ou dans un pays de l'Union Européenne. [...] Aucun transfert de données de santé à caractère personnel vers un pays tiers à l'Espace Economique Européen n'est effectué.",
