@@ -22,7 +22,7 @@
   "data_access_type_en": "email to contact@kiabi.com and in case of trouble to dataprotectionofficer@kiabi.com",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_format": "txt",
+  "response_format_fr": "txt",
   "leaks": [
     {
       "date": "2025-01-07",
@@ -34,7 +34,7 @@
     }
   ],
   "address_export": "KIABI – D.P.O - 100 rue du Calvaire, HEM (59510) France",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous pouvons être amenés à transmettre vos données à des sous-traitants afin de réaliser les services proposés. Dans un tel cas, Kiabi reste responsable de l’usage de vos données qui sera fait par les sous-traitants et s’assure de leur respect des normes en vigueur. Notamment, Kiabi met tout en œuvre pour s’assurer de leur respect des normes de sécurité.",

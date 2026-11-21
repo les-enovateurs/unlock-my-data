@@ -20,7 +20,7 @@
   "data_access_type": "Être connecté a son compte",
   "data_access_via_email": true,
   "url_export": "https://privacy.hmgroup.com/accessPersonalData",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les données personnelles que nous recueillons auprès de vous sont traitées dans un pays de l'Union\n\neuropéenne ou de l'Espace économique européen (« UE/EEE »), mais peuvent également, le cas échéant, être\n\ntransférées et traitées dans un pays en dehors de l'UE/EEE. Un tel transfert transfrontalier de vos données\n\npersonnelles n'aura lieu que s'il est autorisé et effectué conformément aux lois applicables et sans porter\n\natteinte à vos droits statutaires.",

@@ -21,7 +21,7 @@
   "data_access_via_email": true,
   "url_export": "https://www.decathlon.fr/help/app/ask/cat_id/920",
   "address_export": "Decathlon– protection des données personnelles– 4 boulevard de Mons, 59650 Villeneuve d’Ascq",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Le transfert de vos données en dehors de l'Union Européenne s’explique principalement par la localisation de nos sous-traitants.\n\nEn effet, afin de vous proposer un service de qualité, nous avons décidé d'externaliser certaines opérations auprès de prestataires spécialisés qui disposent d'une réelle expertise dans leurs domaines (Un exemple ? L’hébergement).&#x20;\n\nEt certains de ces prestataires sont établis en dehors de l’Union Européenne.",

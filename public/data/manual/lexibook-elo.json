@@ -17,7 +17,7 @@
   "data_access_via_form": false,
   "data_access_via_email": true,
   "address_export": "Lexibook SA, 6 avenue des Andes, bâtiment 11, 91940 Les Ulis, France",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "Within one month, as required by the GDPR",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
@@ -86,7 +86,7 @@
       "resolved": false
     },
     {
-      "field": "response_delay",
+      "field": "response_delay_fr",
       "message": "« Nous répondrons dans un délai d'un mois » — section « Vos droits » de https://lexibook.ai/fr/policies/privacy-policy. C'est le délai de l'article 12.3 du RGPD, repris tel quel.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",

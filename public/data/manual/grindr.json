@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "url_export": "https://edpo.com/gdpr-data-request/",
   "address_export": "EDPO à l'Avenue Huart Hamoir 71, 1030 Bruxelles, Belgique",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,
   "sanction_details": "Sanction de la CNIL Norvégienne à hauteur de 5,8 millions € en 2021. Grindr a été jugé pour avoir divulgué les données personnelles de ses utilisateurs à des tiers à des fins de publicité comportementale sans base légale (https://noyb.eu/fr/eu-58-million-fine-grindr-confirmed).",
   "sanction_details_en": "Norwegian Data Protection Authority imposed a fine of €5.8 million in 2021. Grindr was found guilty of disclosing its users' personal data to third parties for behavioral advertising purposes without legal basis.(https://noyb.eu/fr/eu-58-million-fine-grindr-confirmed).",

@@ -45,7 +45,7 @@
     }
   ],
   "address_export": "Orange Service Client, Gestion des données personnelles, 33732 Bordeaux Cedex 9",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "14 novembre 2024 : amende de 50 millions d'euros prononcée par la CNIL (délibération SAN-2024-019), rendue publique. Manquements : publicités affichées entre les courriels de la messagerie Mail Orange sans consentement (prospection électronique, art. L.34-5 CPCE) et cookies continuant à être lus après retrait du consentement sur orange.fr (art. 82 loi Informatique et Libertés). Injonction de cesser la lecture des cookies sous astreinte de 100 000 euros par jour de retard.",
   "data_transfer_policy": true,

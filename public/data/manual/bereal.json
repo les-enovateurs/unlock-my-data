@@ -21,7 +21,7 @@
   "data_access_type": "Contacter le DPO par e-mail, préciser que vous exercez votre droit d'accès ou de portabilité RGPD, fournir les informations d'identification du compte et attendre la réponse",
   "data_access_type_en": "Contact the DPO by email, request access or data portability under GDPR, provide account identification details, and wait for the response",
   "data_access_via_email": false,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/bereal/BeReal.pdf",
@@ -33,7 +33,7 @@
   ],
   "url_export": "https://bereal.com/fr/privacy",
   "address_export": "BeReal SAS, 30/32 Boulevard Sébastopol, 75004 Paris, France",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "transfer_destination_countries": [

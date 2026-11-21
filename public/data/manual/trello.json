@@ -18,7 +18,7 @@
   "data_access_via_email": true,
   "data_access_type": "Formulaire de contact (ticket support « Personal data and GDPR »)",
   "data_access_type_en": "Contact form (support ticket \"Personal data and GDPR\")",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
   "url_export": "https://support.atlassian.com/atlassian-account/docs/access-your-personal-data/",
   "address_export": "Atlassian Pty Ltd, c/o Atlassian US, Inc., 350 Bush Street, Floor 13, San Francisco, CA 94104, United States",

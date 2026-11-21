@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "url_export": "https://contact.aide.laposte.fr/kb/guide/fr/formulaire-dexercice-des-droits-rgpd-87mPvleQtf/Steps/5184728",
   "address_export": "La Poste - BP 10245 – 33056 LIBOURNE CEDEX",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

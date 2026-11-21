@@ -25,7 +25,7 @@
   "data_access_type_en": "Send an email to hello@trainme.co or a letter to the following postal address: TRAINME, 5 avenue du Général de Gaulle, 94160 Saint-Mandé, France, specifying the data concerned and enclosing a copy of your ID.",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_format": "Non précisé",
+  "response_format_fr": "Non précisé",
   "example_data_export": [
     {
       "type": "customer_data",
@@ -43,7 +43,7 @@
     }
   ],
   "address_export": "TRAINME, 5 avenue du Général de Gaulle, 94160 Saint-Mandé, France",
-  "response_delay": "non mentionné",
+  "response_delay_fr": "non mentionné",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "\"10.5. TRAINME et, en cas d'achat sur le Site, le Vendeur sont les seuls destinataires de ces données. Les données personnelles ne seront en aucun cas transmises à des acteurs commerciaux ou publicitaires.\nTRAINME pourra néanmoins être amenée à transmettre ces données à des prestataires techniques pour les besoins de l’exécution de la Commande et de l’exploitation du Site.\"\n\n\"10.6. Ces données sont stockées en France.\"",

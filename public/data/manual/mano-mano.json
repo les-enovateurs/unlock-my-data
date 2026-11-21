@@ -49,7 +49,7 @@
   "data_access_via_email": true,
   "url_export": "https://faq.manomano.com/hc/fr/requests/new",
   "address_export": "ManoMano, À l’attention du délégué à la protection des données (DPO) 52 rue Bayen 75017 PARIS",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
   "privacy_policy_quote": "Certaines opérations de traitement que nous confions à nos prestataires sont réalisées en dehors de l’Union Européenne. Par ailleurs, dès lors que le Marchand est localisé en dehors de l’Union Européenne, vos données personnelles sont transférées en dehors de l’Union Européenne, dans le pays du Marchand. Des accords ont été signés avec chacun de ces prestataires et Marchands afin de garantir que les transferts de vos données personnelles sont opérés en toute sécurité et dans le respect de la réglementation applicable en vigueur en matière de protection des données.",
   "confidentiality_policy_url": "https://cdn.manomano.com/legal/data-protection/fr.pdf",

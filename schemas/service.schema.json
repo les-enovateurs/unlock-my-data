@@ -3,6 +3,10 @@
     "title": "Service data (public/data/manual/<slug>.json)",
     "type": "object",
     "properties": {
+        "address_export": {
+            "description": "Postal address to request data access",
+            "$ref": "#/$defs/string"
+        },
         "alternatives": {
             "description": "Alternative services",
             "$ref": "#/$defs/slugs"
@@ -72,6 +76,15 @@
             "description": "Author of document creation",
             "$ref": "#/$defs/string"
         },
+        "data_access_type": {
+            "$comment": "FIXME: will become data_access_type_fr (#456)",
+            "description": "How to request data access (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "data_access_type_en": {
+            "description": "How to request data access (EN)",
+            "$ref": "#/$defs/string"
+        },
         "data_access_via_email": {
             "description": "Is data access possible via email?",
             "type": "boolean"
@@ -91,6 +104,15 @@
         "data_transfer_policy": {
             "description": "Does the company have a data transfer policy?",
             "type": "boolean"
+        },
+        "details_required_documents": {
+            "$comment": "FIXME: will become details_required_documents_fr (#456)",
+            "description": "Required documents for data access (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "details_required_documents_en": {
+            "description": "Required documents for data access (EN)",
+            "$ref": "#/$defs/string"
         },
         "enforcement_aliases": {
             "description": "Enforcement aliases (update-enforcement-tracker)",
@@ -156,6 +178,33 @@
             "description": "Privacy policy quote (EN)",
             "$ref": "#/$defs/string"
         },
+        "response_delay_en": {
+            "description": "Response delay (EN)",
+            "$ref": "#/$defs/string"
+        },
+        "response_delay_fr": {
+            "description": "Response delay (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "response_delay": false,
+        "response_format_en": {
+            "description": "Response format (EN)",
+            "$ref": "#/$defs/string"
+        },
+        "response_format_fr": {
+            "description": "Response format (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "response_format": false,
+        "sanction_details": {
+            "$comment": "FIXME: will become sanction_details_fr (#456)",
+            "description": "Sanction details (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "sanction_details_en": {
+            "description": "Sanction details (EN)",
+            "$ref": "#/$defs/string"
+        },
         "sanctioned_by_cnil": {
             "description": "Has the CNIL sanctioned the company?",
             "type": "boolean"
@@ -165,7 +214,7 @@
             "enum": ["draft", "changes_requested", "published"]
         },
         "transfer_destination_countries": {
-            "description": "List of countries data may be transferred to (FR)",
+            "description": "List of countries data may be transferred to",
             "$ref": "#/$defs/destinations"
         },
         "updated_at": {

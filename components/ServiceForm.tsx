@@ -106,11 +106,11 @@ const initialFormData: FormData = {
     data_access_type_en: "",
     data_access_via_email: false,
     data_access_via_other: false,
-    response_format: "",
+    response_format_fr: "",
     response_format_en: "",
     url_export: "",
     address_export: "",
-    response_delay: "",
+    response_delay_fr: "",
     response_delay_en: "",
     sanctioned_by_cnil: false,
     sanction_details: "",
@@ -390,11 +390,11 @@ export default function ServiceForm({
                     data_access_type_en: data.data_access_type_en || "",
                     data_access_via_email: data.data_access_via_email || false,
                     data_access_via_other: data.data_access_via_other || false,
-                    response_format: data.response_format || "",
+                    response_format_fr: data.response_format_fr || "",
                     response_format_en: data.response_format_en || "",
                     url_export: data.url_export || "",
                     address_export: data.address_export || "",
-                    response_delay: data.response_delay || "",
+                    response_delay_fr: data.response_delay_fr || "",
                     response_delay_en: data.response_delay_en || "",
                     sanctioned_by_cnil: data.sanctioned_by_cnil || false,
                     sanction_details: data.sanction_details || "",
@@ -835,11 +835,11 @@ export default function ServiceForm({
                 data_access_type_en: formData.data_access_type_en,
                 data_access_via_email: formData.data_access_via_email,
                 data_access_via_other: formData.data_access_via_other,
-                response_format:
-                    formData.response_format === "Autre" &&
+                response_format_fr:
+                    formData.response_format_fr === "Autre" &&
                         formData.response_format_autre !== ""
                         ? formData.response_format_autre
-                        : formData.response_format,
+                        : formData.response_format_fr,
                 example_data_export: processedExamples,
                 leaks: (formData.leaks || [])
                     .filter((l) => (l.date || "").trim() || (l.type || "").trim() || (l.proof_url || "").trim())
@@ -849,11 +849,11 @@ export default function ServiceForm({
                     })),
                 url_export: formData.url_export,
                 address_export: formData.address_export,
-                response_delay:
-                    formData.response_delay === "Autre" &&
+                response_delay_fr:
+                    formData.response_delay_fr === "Autre" &&
                         formData.response_delay_autre !== ""
                         ? formData.response_delay_autre
-                        : formData.response_delay,
+                        : formData.response_delay_fr,
                 sanctioned_by_cnil: formData.sanctioned_by_cnil,
                 sanction_details: formData.sanction_details,
                 data_transfer_policy: formData.data_transfer_policy,
@@ -1716,14 +1716,14 @@ export default function ServiceForm({
                                                 </label>
                                                 <select
                                                     name="response_format"
-                                                    value={formData?.response_format || ""}
+                                                    value={formData?.response_format_fr || ""}
                                                     onChange={(e) => {
                                                         const value = e.target.value;
                                                         setFormData((prev) =>
                                                             prev
                                                                 ? {
                                                                     ...prev,
-                                                                    response_format: value,
+                                                                    response_format_fr: value,
                                                                 }
                                                                 : prev,
                                                         );
@@ -1736,7 +1736,7 @@ export default function ServiceForm({
                                                         </option>
                                                     ))}
                                                 </select>
-                                                {formData?.response_format === "Autre" && (
+                                                {formData?.response_format_fr === "Autre" && (
                                                     <input
                                                         type="text"
                                                         name="response_format_autre"
@@ -1757,14 +1757,14 @@ export default function ServiceForm({
                                                 </label>
                                                 <select
                                                     name="response_delay"
-                                                    value={formData?.response_delay || ""}
+                                                    value={formData?.response_delay_fr || ""}
                                                     onChange={(e) => {
                                                         const value = e.target.value;
                                                         setFormData((prev) =>
                                                             prev
                                                                 ? {
                                                                     ...prev,
-                                                                    response_delay: value,
+                                                                    response_delay_fr: value,
                                                                 }
                                                                 : prev,
                                                         );
@@ -1777,7 +1777,7 @@ export default function ServiceForm({
                                                         </option>
                                                     ))}
                                                 </select>
-                                                {formData?.response_delay === "Autre" && (
+                                                {formData?.response_delay_fr === "Autre" && (
                                                     <input
                                                         type="text"
                                                         name="response_delay_autre"

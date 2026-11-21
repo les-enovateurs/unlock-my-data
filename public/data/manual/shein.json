@@ -23,7 +23,7 @@
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_format": "JSON",
+  "response_format_fr": "JSON",
   "response_format_en": "JSON",
   "example_data_export": [
     {
@@ -45,7 +45,7 @@
   ],
   "url_export": "https://fr.shein.com/Privacy-Center-a-1045.html",
   "address_export": "Infinite Styles Services Co. Limited, 1-2 Victoria Buildings,Haddington Road,Dublin 4,D04 XN32,Irlande",
-  "response_delay": "Sous 1 mois conformément au RGPD",
+  "response_delay_fr": "Sous 1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "### [SAN-2025-005](https://www.cnil.fr/fr/cookies-deposes-sans-consentement-la-cnil-sanctionne-shein-dune-amende-de-150-millions-deuros) - 150.0M€",

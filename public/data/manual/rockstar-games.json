@@ -19,7 +19,7 @@
   "data_access_via_email": true,
   "url_export": "https://www.take2games.com/data-request/fr/#2-form",
   "address_export": "Take Two Interactive Software Europe Limited  Take-Two House 30 Cleveland Street, London W1T 4JD, UK",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous, nos fournisseurs et nos partenaires pouvons traiter, transférer et stocker des données personnelles vous concernant en lien avec les Services aux États-Unis et dans d’autres pays qui sont susceptibles de ne pas avoir des lois relatives à la confidentialité équivalentes à celles du pays dans lequel vous résidez. Nous prenons des mesures afin d’appliquer des garanties appropriées lorsque nous transférons ces données personnelles.",

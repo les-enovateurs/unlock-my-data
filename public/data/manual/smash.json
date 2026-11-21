@@ -19,7 +19,7 @@
   "data_access_via_email": true,
   "data_access_via_other": false,
   "address_export": "SMASH & CO – 2 rue de la Claire – 69009 Lyon",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Nous stockons les données et les fichiers de nos utilisateurs (en fonction de leur localisation) dans 9 régions du monde afin de pouvoir gagner du temps sur les téléchargements. Pour information, les fichiers ne sont pas dupliqués d'une région à l'autre.",

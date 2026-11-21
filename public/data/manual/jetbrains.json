@@ -20,7 +20,7 @@
   "data_access_type": "Se connecter à son compte, puis se rendre dans le détail du profil et enfin cliquer sur \"Export Personal Data\".",
   "data_access_type_en": "Log in to your account, then go to the profile details and finally click on \"Export Personal Data\".",
   "data_access_via_email": false,
-  "response_format": "excel",
+  "response_format_fr": "excel",
   "example_data_export": [
     {
       "url": "/export/jetbrains/JetBrainsPersonalData.xlsx",
@@ -32,7 +32,7 @@
   ],
   "url_export": "https://account.jetbrains.com/profile-details",
   "address_export": "JetBrains s.r.o., Praha 4, Na Hřebenech II 1718/8, PSČ 140 00, Czech Republic",
-  "response_delay": "Réponse automatique",
+  "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "L’emplacement par défaut pour toutes les données personnelles de nos clients est l’UE, sauf indication contraire. Pour les produits Software as a Service, nous pouvons offrir à nos clients la possibilité de choisir entre héberger leur instance dans l’UE ou dans d’autres régions. Pour JetBrains AI, l’emplacement par défaut du stockage des données personnelles peut différer ; voir ce lien. Parfois, JetBrains peut traiter ou transférer certaines de vos données personnelles (telles que votre nom et votre adresse e-mail) à nos sociétés affiliées ou sous-traitants en dehors de l’UE. Tout transfert et traitement de ce type sera effectué conformément aux lois applicables en matière de protection des données et au présent avis de confidentialité, et se fondera sur une décision d’adéquation pertinente de la Commission européenne, notamment en ce qui concerne les clauses standard de protection des données.",

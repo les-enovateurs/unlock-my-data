@@ -93,7 +93,7 @@ export function validateServiceJSON(data: any): ValidationResult {
   ];
 
   for (const field of bilingualFields) {
-    const frField = data[field];
+    const frField = data[`${field}_fr`] || data[field];
     const enField = data[`${field}_en`];
 
     if (frField && !enField) {

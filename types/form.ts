@@ -20,11 +20,11 @@ export interface FormData {
     data_access_type_en: string;
     data_access_via_email: boolean;
     data_access_via_other: boolean;
-    response_format: string;
+    response_format_fr: string;
     response_format_en: string;
     url_export: string;
     address_export: string;
-    response_delay: string;
+    response_delay_fr: string;
     response_delay_en: string;
     sanctioned_by_cnil: boolean;
     sanction_details: string;

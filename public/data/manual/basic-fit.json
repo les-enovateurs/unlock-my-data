@@ -29,7 +29,7 @@
       "contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Lorsque Basic-Fit externalise le traitement à un sous-traitant, les normes de sécurité et de confidentialité sont toujours évaluées et un contrat de protection des données est conclu. Les données des membre ne sont pas traitées ou stockées en dehors de l’UE et ne se vendent jamais à des tiers. À l’exception de l’utilisation de Google Analytics, qui est établie aux États-Unis, nous utilisons les paramètres de confidentialité de Google Analytics et concluons les « Clauses contractuelles types » nécessaires fournies par la Commission européenne.",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "field": "response_delay",
+      "field": "response_delay_fr",
       "message": "Ils disent 4 semaines...je pense qu'1 mois est OK !",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-19T17:45:18.571Z",

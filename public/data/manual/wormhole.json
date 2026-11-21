@@ -21,7 +21,7 @@
   "data_access_via_email": true,
   "data_access_via_other": false,
   "address_export": "WebTorrent, LLC, PO Box 19678, Stanford, CA 94309",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "Wormhole ne peut pas décrypter ou autrement accéder au contenu de vos fichiers, sauf si vous partagez le lien du fichier avec nous, par exemple lors du signalement de contenu. Wormhole stocke des fichiers chiffrés de bout en bout sur ses serveurs pendant une période limitée.\n\nDes informations techniques supplémentaires sont stockées sur nos serveurs, y compris des jetons d'authentification générés aléatoirement, des clés, des jetons push et d'autres matériaux nécessaires pour établir des connexions et transmettre des fichiers. Wormhole limite ces informations techniques supplémentaires au minimum requis pour exploiter les Services.",
