@@ -1,0 +1,60 @@
+{
+  "name": "Viamedis",
+  "logo": "/img/logos/viamedis.webp",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "donneespersonnelles@viamedis.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données de Viamedis.",
+      "comment_en": "Viamedis Data Protection Officer."
+    },
+    {
+      "type": "postal",
+      "value": "Viamedis - Données Personnelles, 1-11 rue Brillat-Savarin, 75634 Paris Cedex 13",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale du DPO indiquée dans la politique.",
+      "comment_en": "DPO postal address given in the policy."
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Justificatif d'identité pouvant être demandé si nécessaire ; préciser ses coordonnées complètes.",
+  "confidentiality_policy_url": "https://www.viamedis.fr/politique-de-confidentialite/",
+  "confidentiality_policy_url_en": "https://www.viamedis.fr/politique-de-confidentialite/",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Contacter le DPO par e-mail à donneespersonnelles@viamedis.fr ou par courrier à Viamedis - Données Personnelles, 1-11 rue Brillat-Savarin, 75634 Paris Cedex 13, en précisant le ou les droits exercés et ses coordonnées complètes. Un justificatif d'identité peut être demandé si nécessaire.",
+  "data_access_type_en": "Contact the DPO by e-mail at donneespersonnelles@viamedis.fr or by post at Viamedis - Données Personnelles, 1-11 rue Brillat-Savarin, 75634 Paris Cedex 13, stating the right(s) you wish to exercise and your full contact details. Proof of identity may be requested if necessary.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2024-02-07",
+      "type": "Attaque informatique fin janvier 2024 contre Viamedis et Almerys, opérateurs de tiers payant : plus de 33 millions de personnes concernées au total. Données : état civil, date de naissance, numéro de sécurité sociale, nom de l'assureur santé et garanties du contrat. Selon la CNIL, données bancaires, médicales, remboursements, adresses, téléphones et e-mails non concernés.",
+      "type_en": "Cyberattack in late January 2024 against Viamedis and Almerys, third-party payment operators: more than 33 million people affected in total. Data: civil status, date of birth, social security number, name of health insurer and contract coverage. According to the CNIL, bank details, medical data, reimbursements, postal addresses, phone numbers and e-mails were not affected.",
+      "proof_url": "https://cnil.fr/fr/violation-de-donnees-de-deux-operateurs-de-tiers-payant-la-cnil-ouvre-une-enquete-et-rappelle-aux",
+      "media_link": "https://cnil.fr/fr/violation-de-donnees-de-deux-operateurs-de-tiers-payant-la-cnil-ouvre-une-enquete-et-rappelle-aux",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay_fr": "1 mois conformément au RGPD",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "De manière générale, nous privilégions la réalisation du traitement de vos données personnelles en France en priorité ou dans un pays de l'Union Européenne. [...] Aucun transfert de données de santé à caractère personnel vers un pays tiers à l'Espace Economique Européen n'est effectué.",
+  "outside_eu_storage": false,
+  "comments": "Viamedis SA (RCS Paris 432 788 974), opérateur de tiers payant pour de nombreuses complémentaires santé et mutuelles, 1-11 rue Brillat-Savarin, 75634 Paris Cedex 13. Hébergeur de données de santé (HDS). Date de la fuite indiquée : publication de la CNIL du 7 février 2024 (attaque survenue fin janvier 2024). La politique ne précise pas de délai de réponse (délai légal RGPD d'un mois). Aucune sanction CNIL publique trouvée à ce jour.",
+  "comments_en": "Viamedis SA (Paris trade register 432 788 974), third-party payment operator for many supplementary health insurers and mutuals, 1-11 rue Brillat-Savarin, 75634 Paris Cedex 13. Certified health data host (HDS). Leak date given: CNIL publication of 7 February 2024 (attack in late January 2024). The policy does not state a response time (GDPR legal deadline of one month). No public CNIL sanction found to date.",
+  "better_alternative": false,
+  "created_at": "2026-11-19",
+  "created_by": "wassym",
+  "status": "draft"
+}
