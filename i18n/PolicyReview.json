@@ -83,9 +83,9 @@
     "staleVerdictHint": "La citation a changé depuis ce verdict (ré-analyse de la politique) : ton jugement portait sur un autre texte. À retrancher.",
     "keyQuoteKind": "Citation clé",
     "keyQuoteLabel": "Citation clé proposée par {a}",
-    "keyQuotesPublish": "Publier les citations clés",
+    "keyQuotesPublish": "Publier ce qui attend depuis 7 jours",
     "keyQuotesPublishFrom": "Sans relecture, publiables à partir du {d}",
-    "keyQuotesPublished": "Citations clés publiées",
+    "keyQuotesPublished": "Propositions publiées",
     "keyQuotesPending": "{n} citation(s) clé(s) à valider",
     "keyQuoteHigh": "très sensible",
     "keyQuoteMedium": "sensible",
@@ -101,7 +101,13 @@
     "plainHint": "Une phrase courte, factuelle, sans opinion, qui ne dit rien de plus que la citation.",
     "plainBy": "réécrit par {n}",
     "openFiche": "Voir la fiche",
-    "openPolicy": "Voir la politique sur {h}"
+    "openPolicy": "Voir la politique sur {h}",
+    "changeKind": "Changement de politique",
+    "changeLabel": "Changement repéré le {d}, résumé par {a}",
+    "changeDates": "Date affichée : {a} → {b}",
+    "changeQuotesMissing": "Citations clés disparues de la page :",
+    "changeMemo": "En clair",
+    "changesPending": "{n} changement(s) de politique à valider"
   },
   "en": {
     "eyebrow": "Human verification",
@@ -187,9 +193,9 @@
     "staleVerdictHint": "The citation changed after this verdict (the policy was re-analysed): you ruled on a different text. Please rule again.",
     "keyQuoteKind": "Key quote",
     "keyQuoteLabel": "Key quote proposed by {a}",
-    "keyQuotesPublish": "Publish the key quotes",
+    "keyQuotesPublish": "Publish what has waited 7 days",
     "keyQuotesPublishFrom": "Without review, publishable from {d}",
-    "keyQuotesPublished": "Key quotes published",
+    "keyQuotesPublished": "Proposals published",
     "keyQuotesPending": "{n} key quote(s) to validate",
     "keyQuoteHigh": "highly sensitive",
     "keyQuoteMedium": "sensitive",
@@ -205,6 +211,12 @@
     "plainHint": "One short, factual sentence, no opinion, saying nothing the quote does not.",
     "plainBy": "rewritten by {n}",
     "openFiche": "See the service page",
-    "openPolicy": "See the policy on {h}"
+    "openPolicy": "See the policy on {h}",
+    "changeKind": "Policy change",
+    "changeLabel": "Change found on {d}, summed up by {a}",
+    "changeDates": "Printed date: {a} → {b}",
+    "changeQuotesMissing": "Key quotes gone from the page:",
+    "changeMemo": "In plain words",
+    "changesPending": "{n} policy change(s) to validate"
   }
 }

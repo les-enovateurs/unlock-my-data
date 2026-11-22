@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T08:55:07.549Z",
+  "generated_at": "2026-11-13T17:18:21.027Z",
   "services": [
     {
       "slug": "action",
@@ -10,7 +10,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "airbnb-inc",
@@ -21,7 +23,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "alibaba",
@@ -32,7 +36,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "aliexpress",
@@ -43,7 +49,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "amazon",
@@ -54,7 +62,9 @@
       "review_status": "relu",
       "needs_count": 0,
       "key_quotes": 4,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "amazon-prime-video",
@@ -65,7 +75,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "app-store",
@@ -76,7 +88,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "badoo",
@@ -87,7 +101,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "bereal",
@@ -98,7 +114,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "bershka",
@@ -109,7 +127,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "bfm-tv",
@@ -120,7 +140,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "biogroup",
@@ -131,7 +153,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "blablacar",
@@ -142,7 +166,9 @@
       "review_status": "relecture_en_attente",
       "needs_count": 11,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "bluesky",
@@ -153,7 +179,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "bolt",
@@ -164,7 +192,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "booking",
@@ -175,7 +205,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "boulanger",
@@ -186,7 +218,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "boursorama",
@@ -197,7 +231,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "bumble",
@@ -208,7 +244,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "caisse-nationale-dassurance-maladie",
@@ -219,7 +257,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "candy-crush",
@@ -230,7 +270,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "canva",
@@ -241,7 +283,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "carte-vitale",
@@ -252,7 +296,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "cegedim",
@@ -263,7 +309,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "cerballiance",
@@ -274,7 +322,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "chatgpt",
@@ -285,7 +335,9 @@
       "review_status": "relu",
       "needs_count": 0,
       "key_quotes": 6,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "claude",
@@ -296,7 +348,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "commission-nationale-informatique-et-libertes",
@@ -307,7 +361,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "copilot",
@@ -318,7 +374,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "decathlon-coach",
@@ -329,7 +387,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "deliveroo",
@@ -340,7 +400,9 @@
       "review_status": "relecture_en_attente",
       "needs_count": 6,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "delko",
@@ -351,7 +413,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "discord",
@@ -362,7 +426,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "disneyplus",
@@ -373,7 +439,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "disons-demain",
@@ -384,7 +452,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "doctolib",
@@ -395,7 +465,9 @@
       "review_status": "publie",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "duolingo",
@@ -406,7 +478,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "elite-singles",
@@ -417,7 +491,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "epic-games-store",
@@ -428,7 +504,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "facebook",
@@ -439,7 +517,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "famileo",
@@ -450,7 +530,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "firefox",
@@ -461,7 +543,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "flo-health-inc",
@@ -472,7 +556,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "france-television",
@@ -483,7 +569,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "france-titres-ants",
@@ -494,7 +582,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "france-travail",
@@ -505,7 +595,9 @@
       "review_status": "relu",
       "needs_count": 18,
       "key_quotes": 1,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "fruitz",
@@ -516,7 +608,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "gemini",
@@ -527,7 +621,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "gogcom",
@@ -538,7 +634,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "google-drive",
@@ -549,7 +647,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "grindr",
@@ -560,7 +660,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "happn",
@@ -571,7 +673,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "heetch",
@@ -582,7 +686,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "icloud",
@@ -593,7 +699,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "impotsgouv",
@@ -604,7 +712,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "indeed",
@@ -615,7 +725,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "groupe-inovie-labosud",
@@ -626,7 +738,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "jetbrains",
@@ -637,7 +751,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "kahoot",
@@ -648,7 +764,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "klarna",
@@ -659,7 +777,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "identite-numerique",
@@ -670,7 +790,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "la-poste",
@@ -681,7 +803,9 @@
       "review_status": "relecture_en_attente",
       "needs_count": 9,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "leclerc",
@@ -692,7 +816,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "lidl",
@@ -703,7 +829,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "linkedin",
@@ -714,7 +842,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "maiia",
@@ -725,7 +855,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "mano-mano",
@@ -736,7 +868,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "marmiton",
@@ -747,7 +881,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "mastodon",
@@ -758,7 +894,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "mattermost",
@@ -769,7 +907,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "medadom",
@@ -780,7 +920,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "meetic",
@@ -791,7 +933,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "messenger",
@@ -802,7 +946,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "onedrive",
@@ -813,7 +959,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "microsoft-teams",
@@ -824,7 +972,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "mistral",
@@ -835,7 +985,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "mon-espace-sante",
@@ -846,7 +998,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "moodle",
@@ -857,7 +1011,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "myfitnesspal",
@@ -868,7 +1024,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "netflix",
@@ -879,7 +1037,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "nintendo",
@@ -890,7 +1050,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "nissan",
@@ -901,7 +1063,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "okcupid",
@@ -912,7 +1076,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "opodo",
@@ -923,7 +1089,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "osmand",
@@ -934,7 +1102,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "paypal",
@@ -945,7 +1115,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "perplexity",
@@ -956,7 +1128,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "pinterest",
@@ -967,7 +1141,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "playstation",
@@ -978,7 +1154,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "pokemon-go",
@@ -989,7 +1167,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "pronote",
@@ -1000,7 +1180,9 @@
       "review_status": "publie",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "proton-drive",
@@ -1011,7 +1193,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "qare",
@@ -1022,7 +1206,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "qwant",
@@ -1033,7 +1219,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "reddit",
@@ -1044,7 +1232,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "revolut",
@@ -1055,7 +1245,9 @@
       "review_status": "relu",
       "needs_count": 12,
       "key_quotes": 7,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "rocketchat",
@@ -1066,7 +1258,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "rockstar-games",
@@ -1077,7 +1271,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "rue-du-commerce",
@@ -1088,7 +1284,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "ryanair",
@@ -1099,7 +1297,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "shazam",
@@ -1110,7 +1310,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "signal",
@@ -1121,7 +1323,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "slack",
@@ -1132,7 +1336,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "snapchat",
@@ -1143,7 +1349,9 @@
       "review_status": "relu",
       "needs_count": 0,
       "key_quotes": 6,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "spotify",
@@ -1154,7 +1362,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "stade-rochelais",
@@ -1165,7 +1375,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "steam",
@@ -1176,7 +1388,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "strava",
@@ -1187,7 +1401,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "telegram",
@@ -1198,7 +1414,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "temu",
@@ -1209,7 +1427,9 @@
       "review_status": "relu",
       "needs_count": 0,
       "key_quotes": 4,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "tf1",
@@ -1220,7 +1440,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "threads",
@@ -1231,7 +1453,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "ticketmaster",
@@ -1242,7 +1466,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "tiktok",
@@ -1253,7 +1479,9 @@
       "review_status": "relu",
       "needs_count": 0,
       "key_quotes": 7,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "tinder",
@@ -1264,7 +1492,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "twitch",
@@ -1275,7 +1505,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "uber",
@@ -1286,7 +1518,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "vinted",
@@ -1297,7 +1531,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "waze",
@@ -1308,7 +1544,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "wechat",
@@ -1319,7 +1557,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "whatsapp",
@@ -1330,7 +1570,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 7,
-      "key_quotes_pending": 7
+      "key_quotes_pending": 7,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "wikimedia-foundation",
@@ -1341,7 +1583,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "x-twitter",
@@ -1352,7 +1596,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "youtube",
@@ -1363,7 +1609,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "zalando",
@@ -1374,7 +1622,9 @@
       "review_status": "relu",
       "needs_count": 0,
       "key_quotes": 5,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "zara",
@@ -1385,7 +1635,9 @@
       "review_status": "texte_indisponible",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     },
     {
       "slug": "zoom",
@@ -1396,7 +1648,9 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 0,
-      "key_quotes_pending": 0
+      "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
     }
   ]
 }

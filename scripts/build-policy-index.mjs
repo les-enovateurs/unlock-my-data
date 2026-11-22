@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { countEssentials, deriveStatus } from "./policyEssentials.mjs";
-import { pendingKeyQuotes, publishedKeyQuotes } from "./policyQuotes.mjs";
+import { pendingHistory, pendingKeyQuotes, publishedHistory, publishedKeyQuotes } from "./policyQuotes.mjs";
 
 // Not `__dirname`: jest transforms .mjs to CJS, where that name already exists.
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -33,8 +33,11 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
     vendors = JSON.parse(fs.readFileSync(path.join(paDir, "vendors.json"), "utf8"));
   } catch { /* no registry yet: nothing is settled, everything is asked */ }
 
-  let proposals = {};
-  try { proposals = JSON.parse(fs.readFileSync(path.join(root, "public", "data", "policy-quotes.json"), "utf8")); } catch {}
+  const readProposals = (file) => {
+    try { return JSON.parse(fs.readFileSync(path.join(root, "public", "data", file), "utf8")); } catch { return {}; }
+  };
+  const proposals = readProposals("policy-quotes.json");
+  const changes = readProposals("policy-history.json");
 
   // service JSONs → index rows
   const services = [];
@@ -62,6 +65,8 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
       needs_count: needsCount,
       key_quotes: proposals[slug]?.quotes.length || 0,
       key_quotes_pending: pendingKeyQuotes(proposals[slug], side),
+      history: changes[slug]?.length || 0,
+      history_pending: pendingHistory(changes[slug], side),
     });
   }
   services.sort((a, b) => a.service_name.localeCompare(b.service_name));
@@ -75,6 +80,13 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
     quotes[slug] = { name, agent, created_by, created_at, updated_by, updated_at, live_check, archive_url, en, quotes: shown };
   }
   fs.writeFileSync(path.join(paDir, "_quotes.json"), JSON.stringify(quotes, null, 2) + "\n");
+
+  const history = {};
+  for (const [slug, entries] of Object.entries(changes)) {
+    const shown = publishedHistory(entries, sidecars[slug]);
+    if (shown.length) history[slug] = shown;
+  }
+  fs.writeFileSync(path.join(paDir, "_history.json"), JSON.stringify(history, null, 2) + "\n");
   fs.writeFileSync(path.join(paDir, "_index.json"), JSON.stringify({ generated_at, services }, null, 2) + "\n");
   return { services };
 }
