@@ -14,6 +14,16 @@
       ],
       "comment_fr": "Adresse indiquée dans la politique de confidentialité de Maileva pour toute demande d'exercice des droits.",
       "comment_en": "Address given in the Maileva privacy policy for all requests to exercise your rights."
+    },
+    {
+      "type": "postal",
+      "value": "DOCAPOSTE, Pôle PRIVACY-RGPD, 45/47 boulevard Paul Vaillant Couturier, 94200 Ivry-sur-Seine",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale indiquée dans la politique de confidentialité de Maileva pour exercer vos droits.",
+      "comment_en": "Postal address given in the Maileva privacy policy for exercising your rights."
     }
   ],
   "easy_access_data": 3,
@@ -21,10 +31,10 @@
   "details_required_documents": "Non précisé dans la politique de confidentialité.",
   "confidentiality_policy_url": "https://www.maileva.com/politique-de-confidentialite/",
   "confidentiality_policy_url_en": "https://www.maileva.com/politique-de-confidentialite/",
-  "data_access_via_postal": false,
+  "data_access_via_postal": true,
   "data_access_via_form": false,
-  "data_access_type": "Envoyer un e-mail à privacy@docaposte.fr en précisant le droit exercé (accès, rectification, effacement, portabilité, opposition). Si vous avez seulement reçu un courrier envoyé via Maileva, adressez aussi votre demande à l'expéditeur du courrier, qui est responsable du traitement de vos données.",
-  "data_access_type_en": "Send an e-mail to privacy@docaposte.fr stating the right you are exercising (access, rectification, erasure, portability, objection). If you only received a letter sent through Maileva, also contact the sender of the letter, who is the controller of your data.",
+  "data_access_type": "Envoyer un e-mail à privacy@docaposte.fr ou un courrier à DOCAPOSTE, Pôle PRIVACY-RGPD, 45/47 boulevard Paul Vaillant Couturier, 94200 Ivry-sur-Seine, en précisant le droit exercé (accès, rectification, effacement, portabilité, opposition). Si vous avez seulement reçu un courrier envoyé via Maileva, adressez aussi votre demande à l'expéditeur du courrier, qui est responsable du traitement de vos données.",
+  "data_access_type_en": "Send an e-mail to privacy@docaposte.fr or a letter to DOCAPOSTE, Pôle PRIVACY-RGPD, 45/47 boulevard Paul Vaillant Couturier, 94200 Ivry-sur-Seine, stating the right you are exercising (access, rectification, erasure, portability, objection). If you only received a letter sent through Maileva, also contact the sender of the letter, who is the controller of your data.",
   "data_access_via_email": true,
   "data_access_via_other": false,
   "leaks": [
@@ -32,7 +42,7 @@
       "date": "2026-09-09",
       "type": "Intrusion via une faille logicielle dans le système de production dès le 9 septembre 2026, services suspendus le 23 septembre, résultats de l'enquête publiés le 13 novembre 2026. Environ 22 millions de destinataires de courriers concernés : nom, prénom, adresse postale, genre. Utilisateurs de la plateforme : nom du compte, identifiant, adresse e-mail, nom des fichiers envoyés. Contenu de certains courriers consulté.",
       "type_en": "Intrusion through a software flaw in the production system from 9 September 2026; services suspended on 23 September; investigation results published on 13 November 2026. About 22 million letter recipients affected: first and last name, postal address, gender. Platform users: account name, login, e-mail address, names of files sent. Content of some letters was accessed.",
-      "proof_url": "https://www.it-connect.fr/maileva-la-poste-fuite-donnees-22-millions-personnes/",
+      "proof_url": "https://www.lapostegroupe.com/fr/actualite/cyberattaque-de-maileva-ce-quil-faut-savoir",
       "media_link": "https://www.it-connect.fr/maileva-la-poste-fuite-donnees-22-millions-personnes/",
       "contributor": "wassym"
     }
@@ -47,5 +57,7 @@
   "better_alternative": false,
   "created_at": "2026-11-19",
   "created_by": "wassym",
-  "status": "draft"
+  "status": "draft",
+  "updated_at": "2026-11-22",
+  "updated_by": "Gildas Kiendrebéogo"
 }
