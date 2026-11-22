@@ -1,0 +1,52 @@
+{
+  "name": "Maileva",
+  "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/MAILEVA-RVB.png/960px-MAILEVA-RVB.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20170830142005",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "La Poste",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy@docaposte.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Toutes demandes relatives à l’exercice de vos droits."
+    },
+    {
+      "type": "postal",
+      "value": "DOCAPOSTE, Pôle PRIVACY-RGPD, 45/47 boulevard Paul Vaillant Couturier, 94200 Ivry-sur-Seine",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Pour toutes questions à propos de la politique de confidentialité, le traitement des données ou l'exercice de ses droits par rapport au RGPD."
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.maileva.com/politique-de-confidentialite/",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-09-18",
+      "type": "Exposition des données personnelles",
+      "proof_url": "https://www.lapostegroupe.com/fr/actualite/cyberattaque-de-maileva-ce-quil-faut-savoir",
+      "media_link": "https://www.cyberattaque.org/inovie-les-donnees-de-patients-de-plusieurs-laboratoires-compromises-apres-la-cyberattaque-de-maileva/",
+      "contributor": "Gildas Kiendrebéogo"
+    }
+  ],
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "En principe, vos Données personnelles ne font pas l’objet d’un Transfert en dehors de l’Espace Economique Européen.\n\nToutefois, dans certains cas, vos Données personnelles peuvent faire l’objet d’un Transfert en dehors de l’Espace Economique Européen, par l’intermédiaire de certains Sous-traitants de MAILEVA.",
+  "comments": "La cyberattaque de septembre 2026 concerne des milliers d'entreprises clientes de Maileva exposant les données personnelles d'environ de 22 millions de français (source : « Cyberattaque contre une filiale de La Poste : les données de 22 millions de Français dérobées », Clubic,‎ 13 novembre 2026).",
+  "better_alternative": false,
+  "created_at": "2026-11-22",
+  "created_by": "Gildas Kiendrebéogo",
+  "status": "draft"
+}
