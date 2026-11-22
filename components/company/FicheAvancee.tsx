@@ -33,6 +33,7 @@ import { firstEmail, type ServiceContact } from "@/lib/contacts";
 import PolicySourcePane from "@/components/review/PolicySourcePane";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
 import { resolveSpan } from "@/components/review/policyReviewModel";
+import PolicyHistory, { type PolicyChange } from "./PolicyHistory";
 import { KeyQuoteCard, quoteIn, type KeyQuote, type KeyQuoteEntry } from "./KeyQuotes";
 
 /* ---------- Types (props prepared server-side in manual.tsx) ---------- */
@@ -240,6 +241,8 @@ export type FicheProps = {
     quote?: string;
     /** Published key quotes (public/data/policy-analysis/_quotes.json). */
     keyQuotes?: KeyQuoteEntry | null;
+    /** Published policy changes, newest first (public/data/policy-analysis/_history.json). */
+    policyHistory?: PolicyChange[];
     /** Editorial reading of the fiche, shown at the end of the page. */
     notes?: string;
     sanctioned?: boolean;
@@ -2278,9 +2281,9 @@ function LegalGroupCard({ basisKey, items, lang, merge, onShow, t }: {
     );
 }
 
-function TabDonnees({ a, lang, merge, focus, keyQuotes, name, t }: {
+function TabDonnees({ a, lang, merge, focus, keyQuotes, history = [], name, t }: {
     a: FicheAnalysis; lang: string; merge: FicheMergeResult; focus: string;
-    keyQuotes?: KeyQuoteEntry | null; name: string; t: ReturnType<typeof useT>;
+    keyQuotes?: KeyQuoteEntry | null; history?: PolicyChange[]; name: string; t: ReturnType<typeof useT>;
 }) {
     const [policy, setPolicy] = useState<PolicyText | null>(null);
     const [policyEn, setPolicyEn] = useState<PolicyText | null>(null);
@@ -2323,15 +2326,16 @@ function TabDonnees({ a, lang, merge, focus, keyQuotes, name, t }: {
         );
     }
 
-    const quotesBlock = keyQuotes && (
-        <KeyQuotesSection entry={keyQuotes} name={name} lang={lang} t={t}
+    const quotesBlock = (keyQuotes || history.length > 0) && (<>
+        {keyQuotes && <KeyQuotesSection entry={keyQuotes} name={name} lang={lang} t={t}
             action={(q, i) => policy && (
                 <button type="button" className={"umd-btn umd-btn-sm w-fit " + (isShown(q) ? "umd-btn-primary" : "umd-btn-outline")}
                     aria-pressed={isShown(q)} onClick={() => showKey(q)} id={`quote-${i}`}>
                     <FileText aria-hidden="true" />{t("keyQuotesShow")}
                 </button>
-            )} />
-    );
+            )} />}
+        <PolicyHistory changes={history} lang={lang} />
+    </>);
     // Mobile: the text pane sticks under the site header (76px) and the list scrolls beneath it.
     const withPolicy = (content: React.ReactNode) => !paneText ? content : (
         <div className="grid gap-6 lg:grid-cols-2 items-start [--pane-top:84px] [--pane-h:42vh] lg:[--pane-h:calc(100vh-110px)]">
@@ -2609,7 +2613,7 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "fuites" && <TabGouv p={p} t={t} />}
-                {tab === "donnees" && analysis && hasPolicyAnalysis(p) && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} keyQuotes={p.keyQuotes} name={p.name} t={t} />}
+                {tab === "donnees" && analysis && hasPolicyAnalysis(p) && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} keyQuotes={p.keyQuotes} history={p.policyHistory} name={p.name} t={t} />}
                 {tab === "donnees" && p.memos.length > 0 && <TermsHistory p={p} t={t} first={!hasPolicyAnalysis(p)} />}
             </div>
 

@@ -4,6 +4,7 @@ import path from 'node:path';
 import slugs from '../../public/data/manual/slugs.json';
 import servicesData from '../../public/data/services.json';
 import publishedQuotes from '../../public/data/policy-analysis/_quotes.json';
+import publishedHistory from '../../public/data/policy-analysis/_history.json';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
@@ -25,6 +26,7 @@ import { localizedCountry } from '@/lib/geo/serviceGeo';
 import { EU_COUNTRIES } from '@/constants/euCountries';
 import { isHealthPermission, permissionLabel } from '@/data/permissionLabels';
 import type { KeyQuoteEntry } from './KeyQuotes';
+import type { PolicyChange } from './PolicyHistory';
 import FicheAvancee, {
     FicheAnalysis,
     FicheApk,
@@ -419,6 +421,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
     const review = await loadJsonFile<ReviewSidecar>(`public/data/policy-analysis/reviews/${slug}.json`);
 
     const keyQuotes = (publishedQuotes as Record<string, KeyQuoteEntry>)[slug] ?? null;
+    const policyHistory = (publishedHistory as Record<string, PolicyChange[]>)[slug] ?? [];
 
     const hasDeleteOption = Boolean(entreprise.url_delete) || contactsFor(entreprise, 'delete').length > 0;
     const documents: FicheDocument[] = ([
@@ -451,7 +454,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         updatedAt: entreprise.updated_at,
         // A new policy analysis, review or key quotes refresh the fiche too, without touching its JSON.
         // Not source.checked_at: the pipeline stamps it on every check, even when the text is unchanged.
-        lastChangeAt: [entreprise.updated_at, analysis?.analyzed_at, review?.updated_at, keyQuotes?.updated_at, keyQuotes?.created_at]
+        lastChangeAt: [entreprise.updated_at, analysis?.analyzed_at, review?.updated_at, keyQuotes?.updated_at, keyQuotes?.created_at, policyHistory[0]?.created_at]
             .filter((d): d is string => Boolean(d)).sort().at(-1),
         updatedBy: entreprise.updated_by,
         easy: toEasyAccess(entreprise.easy_access_data),
@@ -490,5 +493,6 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         analysis,
         review,
         keyQuotes,
+        policyHistory,
     };
 }

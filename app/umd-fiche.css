@@ -109,6 +109,17 @@
   .umd-tl-group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
   .umd-tl-group li { font-size: 13px; background: var(--slate-50); border: 1px solid var(--slate-200);
     border-radius: var(--umd-radius-md); padding: 4px 10px; }
+  /* Policy history (PolicyHistory.tsx): a memo per change, older ones folded. */
+  .umd-tl-memo { font-size: 14px; line-height: 1.55; color: var(--fg1); margin: 8px 0 0; max-width: 68ch; }
+  .umd-tl-gone { margin: 6px 0 0; padding: 8px 12px; font-size: 13px; line-height: 1.5; color: var(--fg2);
+    border-left: 3px solid var(--red-200); background: var(--red-50, #fef2f2); border-radius: 0 var(--umd-radius-md) var(--umd-radius-md) 0; }
+  .umd-tl-credit { font-size: 12px; color: var(--fg2); margin: 10px 0 0; }
+  .umd-tl-more { margin-top: 14px; }
+  .umd-tl-more > summary { list-style: none; cursor: pointer; width: fit-content; }
+  .umd-tl-more > summary::-webkit-details-marker { display: none; }
+  .umd-tl-more > .umd-tl { margin-top: 14px; }
+  .umd-tl-more-open, .umd-tl-more[open] .umd-tl-more-closed { display: none; }
+  .umd-tl-more[open] .umd-tl-more-open { display: inline; }
 
   .umd-speclist { display: grid; grid-template-columns: 210px 1fr; row-gap: 11px; column-gap: 18px; margin: 0; }
   .umd-speclist dt { font-size: 13.5px; color: var(--fg2); }
