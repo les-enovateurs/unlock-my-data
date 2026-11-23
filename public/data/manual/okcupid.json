@@ -12,7 +12,7 @@
   "data_access_via_email": false,
   "url_export": "https://okcupid-app.zendesk.com/hc/en-us/requests/new",
   "address_export": "Délégué à la protection des données, MTCH Technology Services Limited, OkCupid  1 Hatch Street Upper, Dublin 2   Dublin   D02 PY28  Irlande",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Étant donné que nous exploitons un service mondial, le partage de vos données décrit à la Section 5 implique des transferts transfrontaliers de données vers nos Sociétés affiliées et prestataires de services (autres tiers) qui peuvent être soumis à des lois différentes en matière de confidentialité. Lorsque nous transférons des données à caractère personnel vers un pays tiers, nous utilisons des mécanismes appropriés.",

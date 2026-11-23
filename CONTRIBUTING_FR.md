@@ -27,13 +27,15 @@ Voici la liste des champs et leur explication :
 | `data_access_via_form`           | Booléen : l’accès aux données est-il possible via un formulaire en ligne ?                                                          |
 | `data_access_type`               | Détails sur le type d’accès aux données (si non couvert ci-dessus).                                                                 |
 | `data_access_via_email`          | Booléen : l’accès aux données est-il possible par email ?                                                                           |
-| `response_format`                | Format de la réponse (fichier, zip, PDF, etc.).                                                                                     |
+| `response_format_en`             | Format de la réponse (file, zip, PDF, etc.).                                                                                        |
+| `response_format_fr`             | Format de la réponse (fichier, zip, PDF, etc.).                                                                                     |
 | `url_export`                     | URL pour demander l'export de vos données.                                                                                          |
 | `example_data_export`            | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
 | `example_form_export`            | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
 | `message_exchange`               | Tableau d'objets (voir par exemple carrefour.json) liste d'éléments contenant url, type, description et date.                       |
 | `address_export`                 | Adresse physique pour demander vos données.                                                                                         |
-| `response_delay`                 | Délai de réponse habituel (ex. : `Instantané`).                                                                                     |
+| `response_delay_en`              | Délai de réponse habituel (ex. : `Instant`).                                                                                        |
+| `response_delay_fr`              | Délai de réponse habituel (ex. : `Instantané`).                                                                                     |
 | `sanctioned_by_cnil`             | Booléen : l’entreprise a-t-elle été sanctionnée par la CNIL ?                                                                       |
 | `sanction_details`               | Détails et références aux sanctions de la CNIL.                                                                                     |
 | `data_transfer_policy`           | Booléen : l’entreprise a-t-elle une politique de transfert de données ?                                                             |
@@ -123,12 +125,14 @@ Voici la liste des champs et leur explication :
      "data_access_via_form": false,
      "data_access_type": "",
      "data_access_via_email": false,
-     "response_format": "",
+     "response_format_en": "",
+     "response_format_fr": "",
      "example_data_export": [],
      "example_form_export": [],
      "message_exchange": [],
      "address_export": "",
-     "response_delay": "",
+     "response_delay_en": "",
+     "response_delay_fr": "",
      "sanctioned_by_cnil": false,
      "sanction_details": "",
      "data_transfer_policy": false,

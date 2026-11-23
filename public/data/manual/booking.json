@@ -19,7 +19,7 @@
   "data_access_type": "Formulaire de contact",
   "data_access_type_en": "Contact form",
   "data_access_via_email": false,
-  "response_format": "Un fichier compressé au format ZIP contenant des fichiers en JSON",
+  "response_format_fr": "Un fichier compressé au format ZIP contenant des fichiers en JSON",
   "response_format_en": "A compressed ZIP file containing JSON files",
   "message_exchange": [
     {
@@ -46,7 +46,7 @@
   ],
   "url_export": "https://www.booking.com/content/dsar.fr.html",
   "url_export_en": "https://www.booking.com/content/dsar.en.html",
-  "response_delay": "J+1",
+  "response_delay_fr": "J+1",
   "response_delay_en": "D+1",
   "sanctioned_by_cnil": true,
   "sanction_details": "Cnil néerlandaise - Retard signalement d'une violation de données personnelles<br>[Source Usine Digital](https://www.usine-digitale.fr/article/booking-ecope-d-une-amende-de-475-000-euros-a-la-suite-d-une-violation-de-donnees-personnelles.N1078304)",

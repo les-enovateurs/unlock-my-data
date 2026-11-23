@@ -46,7 +46,7 @@
     }
   ],
   "address_export": "ORNIKAR, Protection des Données personnelles, 170 boulevard de la Villette, 75019 Paris",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "« Certains de ces prestataires peuvent se trouver en dehors de l’Union Européenne, impliquant un transfert de données, encadré conformément aux garanties prévues par le Chapitre V du RGPD. »",

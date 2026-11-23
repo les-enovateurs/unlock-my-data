@@ -21,7 +21,7 @@
   "data_access_type": "Cliquer sur exporter mes données dans la rubrique profil du compte Duolingo, un mail sera alors envoyé dans les 30 jours contenant un lien pour récupérer ses données",
   "data_access_type_en": "Click on export my data in the profile section of the Duolingo account, an email will then be sent within 30 days containing a link to retrieve its data",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/duolingo/duolingo.zip",
@@ -33,7 +33,7 @@
   ],
   "url_export": "https://www.duolingo.com/settings/profile",
   "address_export": "Duolingo, Inc. 141 Wardour Street London W1F 0UT United Kingdom",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Duolingo est basé aux États-Unis et traite les données dans ce pays, qui peut ne pas offrir des niveaux de protection des données équivalents à ceux de votre juridiction d’origine. Duolingo peut transférer les données des utilisateurs en dehors des États-Unis vers les États-Unis.",

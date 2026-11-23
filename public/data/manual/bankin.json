@@ -26,7 +26,7 @@
   "data_access_type_en": "Send an e-mail to the DPO at dpo@bankin.com stating the e-mail address used when subscribing to the Bankin' service. For data processed by the aggregator Powens: dpo@powens.com.",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vos Données Personnelles sont stockées au sein de l'Espace Économique Européen (ci-après « EEE ») dans le cadre des finalités envisagées. Le cas échéant, vous serez informés d'un transfert de vos Données Personnelles vers un destinataire situé dans un pays en dehors de l'EEE et des modalités de transfert en l'absence de mesures de protection appropriées.",

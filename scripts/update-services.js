@@ -155,7 +155,7 @@ function transformToServiceFormat(slug, manualData, compareData) {
         easy_access_data: baseData.easy_access_data || additional.easy_access_data || '',
         contacts: baseData.contacts || [],
         recipient_address: baseData.recipient_address || additional.address_export || null,
-        how_to_export: baseData.how_to_export || additional.response_format || '',
+        how_to_export: baseData.how_to_export || additional.response_format_fr || '',
         url_delete: baseData.url_delete || null,
         need_id_card: baseData.need_id_card || null,
         data_access_via_postal: baseData.data_access_via_postal || null,

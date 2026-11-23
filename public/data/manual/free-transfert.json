@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "data_access_via_other": false,
   "address_export": "Free – Informatique et Libertés – 75371 Paris Cedex 08",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "Sanction de Free mobile (27 millions d'euros) et Free (15 millions d'euros) en janvier 2026 suite à une cyberattaque compromettant 24 millions de contrats d'abonnés en septembre et octobre 2024.\n\nManquements concernées : défaut de sécurité, conservation excessive des données, information incomplète dans le communiquée aux abonnées concernant les risques et mesures à prendre.",
   "data_transfer_policy": true,

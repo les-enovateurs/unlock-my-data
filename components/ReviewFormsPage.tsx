@@ -52,11 +52,11 @@ interface FullServiceData extends ReviewService {
   data_access_via_form?: boolean;
   data_access_via_email?: boolean;
   data_access_via_other?: boolean;
-  response_format?: string;
+  response_format_fr?: string;
   response_format_en?: string;
   url_export?: string;
   address_export?: string;
-  response_delay?: string;
+  response_delay_fr?: string;
   response_delay_en?: string;
   sanctioned_by_cnil?: boolean;
   sanction_details?: string;
@@ -100,8 +100,8 @@ const FIELD_CATEGORIES = {
       "data_access_via_postal", "data_access_via_form", "data_access_via_email",
       "data_access_via_other",
       "data_access_type", "data_access_type_en",
-      "url_export", "address_export", "response_delay", "response_delay_autre", "response_delay_en",
-      "response_format", "response_format_autre", "response_format_en"]
+      "url_export", "address_export", "response_delay_fr", "response_delay_autre", "response_delay_en",
+      "response_format_fr", "response_format_autre", "response_format_en"]
   },
   privacy: {
     icon: Shield,
@@ -132,8 +132,8 @@ const CONDITIONAL_FIELDS: Record<string, (values: Record<string, any>, lang: str
 
   // Contact - "autre" variants
   details_required_documents_autre: (values) => values.details_required_documents === "Autre",
-  response_format_autre: (values) => values.response_format === "Autre",
-  response_delay_autre: (values) => values.response_delay === "Autre",
+  response_format_autre: (values) => values.response_format_fr === "Autre",
+  response_delay_autre: (values) => values.response_delay_fr === "Autre",
 
   // Bilingual fields
   // For details_required_documents_en, hide it when "Autre" is selected (replaced by _autre field)

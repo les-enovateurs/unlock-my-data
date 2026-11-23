@@ -36,7 +36,7 @@
       "contributor": "wassym"
     }
   ],
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les sociétés du groupe Meilleurtaux s'engagent à ne transférer les données personnelles hors Union Européenne que dans le strict respect du Règlement (UE) 2016/679 à la loi n°78-17 du 6 janvier 1978 modifiée notamment avec ses filiales et sous-traitants.",

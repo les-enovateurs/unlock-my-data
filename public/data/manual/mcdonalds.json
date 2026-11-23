@@ -15,7 +15,7 @@
   "need_id_card": false,
   "details_required_documents": "Confirmation d'identité possible si McDonald's la demande",
   "details_required_documents_en": "Identity confirmation possible if McDonald's asks for it",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
   "confidentiality_policy_url": "https://www.mcdonalds.fr/politique-protection-donnees-personnelles",
   "data_access_via_postal": true,

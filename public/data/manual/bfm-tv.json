@@ -15,7 +15,7 @@
   "data_access_via_email": false,
   "url_export": "https://cmacgm-privacy.my.onetrust.com/webform/828cae18-2ac4-4e7a-8996-40b79e5d44a4/155823b7-a2d5-4eba-a836-723421320d23",
   "address_export": "RMC-BFM Service DPO 2 rue du Général Alain de Boissieu 75015 PARIS",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vos données peuvent être transférées vers certains de nos sous-traitants situés en dehors de l’Espace Economique Européen (EEE). Elles peuvent également être traitées par nos employés opérant en dehors de l’EEE.\n\nPour chaque transfert, nous nous assurons qu'un niveau de protection suffisant et approprié, conformément à la réglementation en vigueur est garanti. &#x20;",

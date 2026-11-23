@@ -18,7 +18,7 @@
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_via_email": true,
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,

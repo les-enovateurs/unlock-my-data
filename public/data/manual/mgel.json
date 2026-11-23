@@ -36,7 +36,7 @@
   "data_access_type_en": "Send a written request by post to MGEL – Protection des Données, 35 cours Léopold, 54000 Nancy, or by e-mail to protectiondesdonnees@mgel.fr, with a signed copy of the requester's ID card.",
   "data_access_via_email": true,
   "data_access_via_other": false,
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "comments": "Mutuelle Générale des Étudiants de l'Est (Groupe MGEL), mutuelle relevant du Livre III du Code de la mutualité, SIREN 930 749 056, 35 cours Léopold, 54000 Nancy. La charte ne précise pas si des données sont transférées hors UE : champ laissé vide. Réponse « dans les conditions et délais légaux ». En septembre 2026, un cybercriminel a revendiqué le vol de bases de données du Groupe MGEL (dont plus de 450 000 IBAN), mais la MGEL n'a pas confirmé publiquement l'attaque : non ajouté comme fuite avérée (source : lebigdata.fr, 16/09/2026).",

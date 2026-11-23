@@ -22,7 +22,7 @@
   "data_access_via_email": true,
   "url_export": "https://securetransfert.biogroup.fr",
   "address_export": "BIOGROUP, 79-83 rue Baudin, Immeuble la Chocolaterie, 92300 Levallois-Perret",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "BIOGROUP vous informe que ni le groupe ni aucune de ses entités affiliées ne transfèrent aucune donnée personnelle en dehors de l’Union Européenne. Si des transferts devaient avoir lieu, nous nous engagerions que ceux-ci respectent le RGPD.",

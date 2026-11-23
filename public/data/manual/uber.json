@@ -22,7 +22,7 @@
   "data_access_via_email": true,
   "url_export": "https://myprivacy.uber.com/exploreyourdata/download",
   "address_export": "Burgerweeshuispad 301, 1076 HR Amsterdam, Pays-Bas",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": true,
   "sanction_details": "Uber a reçu une amende record de 290 millions d'euros en 2024 pour des transferts illégaux de données de chauffeurs européens vers les États-Unis sans garanties suffisantes.",
   "data_transfer_policy": true,

@@ -31,7 +31,7 @@
   ],
   "url_export": "https://www.chronopost.fr/fr/exercice-des-droits-sur-les-donnees-personnelles",
   "address_export": "Le Délégué à la Protection des Données Chronopost 3 Boulevard Romain Rolland 75014 PARIS",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "En tant qu’acteur français, nous faisons notre possible pour limiter autant que possible les transferts de Données en dehors de l’Union Européenne. \nNous sommes néanmoins amenés à transférer certaines données en dehors de l’UE, ne serait-ce que pour permettre l'acheminement de votre colis vers son pays de destination.",

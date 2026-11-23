@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "url_export": "https://account.microsoft.com/privacy",
   "address_export": "39, quai du Président Roosevelt 92130 Issy-les-Moulineaux",
-  "response_delay": "1 mois conformément ou RGPD",
+  "response_delay_fr": "1 mois conformément ou RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "Sur certains marchés, nous utilisons les données de conversation pour entraîner les modèles d’IA générative dans Copilot, sauf si vous choisissez de refuser cet entraînement.",

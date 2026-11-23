@@ -18,7 +18,7 @@
   "data_access_via_form": false,
   "data_access_via_email": true,
   "address_export": "Data Protection Officer, Clementoni S.p.A., Zona Ind.le Fontenoce scn, 62019 Recanati (MC), Italie",
-  "response_delay": "Non indiqué (délai RGPD d'un mois applicable)",
+  "response_delay_fr": "Non indiqué (délai RGPD d'un mois applicable)",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "The app collects the following personal data: Location data; Images and videos; Device ID. Location data are required to allow the functioning of Bluetooth technology, which is necessary for app usage. In particular, AIRO® App collects location data to enable communication with the robot, even when the app is closed or not in use.",

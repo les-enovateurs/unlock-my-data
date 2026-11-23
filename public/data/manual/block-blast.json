@@ -27,7 +27,7 @@
       "date": "2026-08-13"
     }
   ],
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "privacy_policy_quote": "&#x20;Les données collectées servent à :\n\n* Optimiser nos services et contenus\n* Assurer la sécurité et la vérification d’âge\n* Vous informer sur de nouveaux jeux ou services (si vous y avez consenti)\n* Analyser les statistiques d’utilisation et améliorer l’expérience utilisateur\n\nNotez que des tiers (comme Google ou des partenaires publicitaires) peuvent également collecter certaines données via des cookies ou des balises web.\nPour plus de détails, consultez la section **Cookies**.",

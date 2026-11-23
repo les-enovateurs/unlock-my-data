@@ -12,7 +12,7 @@ describe("review field definitions", () => {
   });
 
   test("maps select fields correctly", () => {
-    expect(getReviewFieldDefinition("response_format").type).toBe("select");
+    expect(getReviewFieldDefinition("response_format_fr").type).toBe("select");
     expect(getReviewFieldDefinition("transfer_destination_countries").type).toBe("multiselect");
   });
 

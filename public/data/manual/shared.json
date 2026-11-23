@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "data_access_via_other": false,
   "address_export": "7 allée Cérès, 67200 Strasbourg",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
   "outside_eu_storage": false,

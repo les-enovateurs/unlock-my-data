@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "url_export": "https://contact.aide.laposte.fr/kb/guide/fr/formulaire-dexercice-des-droits-rgpd-87mPvleQtf/Steps/5184728",
   "address_export": "La Poste - BP 10245 – 33056 LIBOURNE CEDEX",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les Données Personnelles traitées par La Poste sont hébergées au sein de l’Union Européenne (UE) ou de l’Espace Economique Européen (EEE). Toutefois, pour certaines prestations spécifiques, La Poste peut avoir recours à des sous-traitants établis en dehors de l’UE ou de l’EEE, dont certains sont situés dans des pays ne faisant pas l’objet d’une décision d’adéquation rendue par la Commission européenne (exemples : Maroc, Inde, Sénégal, Tunisie, Ile Maurice).",

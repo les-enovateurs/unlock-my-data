@@ -19,7 +19,7 @@
   "data_access_via_form": true,
   "data_access_type": "Être connecté à son compte",
   "data_access_via_email": true,
-  "response_format": "zip",
+  "response_format_fr": "zip",
   "example_data_export": [
     {
       "url": "/export/aliexpress/322277x.zip",
@@ -30,7 +30,7 @@
     }
   ],
   "url_export": "https://privacy.aliexpress.com/home#/request/backup",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "**Concernant la fourniture de services à travers notre Plateforme, nous stockerons vos données à caractère personnel via la Plateforme aux États-Unis, en Russie, en Allemagne, Corée du Sud, en Chine et/ou à Singapour, en fonction de votre pays de résidence, principalement pour le stockage de sauvegarde et des centres de données.**",

@@ -20,7 +20,7 @@
   "data_access_via_email": true,
   "data_access_via_other": false,
   "address_export": "Lydia Solutions, Délégué à la Protection des Données, 14 avenue de l’Opéra, 75001 Paris, France.",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "sanction_details": "Aucune sanction CNIL mais une plainte d'un particulier a été déposé auprès de la CNIL concernant les conditions de sécurisation des données. La Cnil a clôturé cette plainte et le Conseil d'Etat a rejeté le recours du particulier, validant ainsi la position de la CNIL. En 2026, Lydia a annoncé l'abandon progressif des numéros de téléphone pour ses virements instantanés, justifiant ce choix par la volonté de mieux sécuriser cette donnée personnelle sensible face aux arnaques.",
   "data_transfer_policy": true,
