@@ -7,7 +7,10 @@
     {
       "type": "email",
       "value": "dpo@uniscite.fr",
-      "purposes": ["delete", "export"]
+      "purposes": [
+        "delete",
+        "export"
+      ]
     }
   ],
   "easy_access_data": 3,
@@ -17,8 +20,6 @@
   "confidentiality_policy_url_en": "https://www.uniscite.fr/mentions-legales/",
   "data_access_via_postal": false,
   "data_access_via_form": false,
-  "data_access_type": "Envoyer email au dpo",
-  "data_access_type_en": "Send email to the dpo",
   "data_access_via_email": true,
   "data_access_via_other": false,
   "leaks": [
@@ -31,12 +32,12 @@
     }
   ],
   "sanctioned_by_cnil": false,
-  "data_transfer_policy": true,
+  "data_transfer_policy": false,
   "privacy_policy_quote": "Nous sommes également susceptibles de partager vos Données Personnelles avec certains prestataires de services intervenant dans notre processus de recrutement, avec nos prestataires techniques ou avec des tiers pour des motifs juridiques dans les cas où cela est exigé par la loi.\n\nNous exigeons toujours de ces tiers qu’ils présentent des garanties de confidentialité et de sécurité suffisantes, et prêtons attention à ce que vos données ne soient pas transférées ou accessibles depuis un pays tiers à l’Union Européenne. Si toutefois l’hypothèse devait se présenter, nous nous assurons qu’il réponde aux exigences fixées par la Règlementation applicable afin de garantir la sécurité de vos Données Personnelles.",
   "better_alternative": false,
   "created_at": "2026-10-16",
   "created_by": "dominique_usa",
-  "status": "draft",
+  "status": "published",
   "data_breaches": [
     {
       "date": "2026-02-23",
@@ -58,5 +59,8 @@
       "verified_by_manual": true,
       "manual_contributor": "dominique_usa"
     }
-  ]
+  ],
+  "privacy_policy_quote_en": "We may also share your Personal Data with certain service providers involved in our recruitment process, with our technical service providers, or with third parties for legal reasons in cases where required by law.\n\nWe always require these third parties to provide adequate confidentiality and security safeguards, and we take care to ensure that your data is not transferred to or accessible from a country outside the European Union. Should such a situation arise, however, we ensure that it meets the requirements set forth in applicable regulations to guarantee the security of your Personal Data.",
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-11-23"
 }
