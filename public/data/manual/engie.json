@@ -48,7 +48,7 @@
   ],
   "url_export": "https://particuliers.engie.fr/formulaire-stop.html",
   "address_export": "ENGIE - Service Clients, TSA 87494, 76934 ROUEN CEDEX 09",
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vos données sont stockées au sein de l'Union européenne, soit par ENGIE soit par ses prestataires. Certaines données font l'objet d'un traitement par certains prestataires situés en dehors de l'Union européenne, dans un pays ne bénéficiant pas d'une décision d'adéquation rendue par la Commission européenne.",

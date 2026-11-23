@@ -47,7 +47,7 @@
       "contributor": "wassym"
     }
   ],
-  "response_delay": "1 mois conformément au RGPD",
+  "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Vos données ne sont pas : vendues ou utilisées pour une finalité autre que celle évoquée précédemment ; transférées vers un pays tiers à l'Union Européenne ou une organisation internationale.",

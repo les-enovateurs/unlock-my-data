@@ -1715,7 +1715,7 @@ export default function ServiceForm({
                                                     </span>
                                                 </label>
                                                 <select
-                                                    name="response_format"
+                                                    name="response_format_fr"
                                                     value={formData?.response_format_fr || ""}
                                                     onChange={(e) => {
                                                         const value = e.target.value;
@@ -1756,7 +1756,7 @@ export default function ServiceForm({
                                                     </span>
                                                 </label>
                                                 <select
-                                                    name="response_delay"
+                                                    name="response_delay_fr"
                                                     value={formData?.response_delay_fr || ""}
                                                     onChange={(e) => {
                                                         const value = e.target.value;

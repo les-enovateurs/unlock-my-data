@@ -45,12 +45,12 @@ const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {
     options: FORM_OPTIONS.requiredDocuments as Array<Record<string, string>>,
     allowCustom: true
   },
-  response_format: {
+  response_format_fr: {
     type: "select",
     options: FORM_OPTIONS.responseFormats as Array<Record<string, string>>,
     allowCustom: true
   },
-  response_delay: {
+  response_delay_fr: {
     type: "select",
     options: FORM_OPTIONS.responseDelays as Array<Record<string, string>>,
     allowCustom: true

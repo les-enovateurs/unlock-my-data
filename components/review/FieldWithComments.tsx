@@ -321,7 +321,7 @@ export default memo(function FieldWithComments({
       );
     }
 
-    if (field === "response_format") {
+    if (field === "response_format_fr") {
       const currentValue = String(normalizedValue || "");
       const isCustom = currentValue && !FORM_OPTIONS.responseFormats.find(opt => opt.value === currentValue) && currentValue !== "Autre";
       const selectValue = isCustom ? "Autre" : currentValue;
@@ -358,7 +358,7 @@ export default memo(function FieldWithComments({
       );
     }
 
-    if (field === "response_delay") {
+    if (field === "response_delay_fr") {
       const currentValue = String(normalizedValue || "");
       const isCustom = currentValue && !FORM_OPTIONS.responseDelays.find(opt => opt.value === currentValue) && currentValue !== "Autre";
       const selectValue = isCustom ? "Autre" : currentValue;
