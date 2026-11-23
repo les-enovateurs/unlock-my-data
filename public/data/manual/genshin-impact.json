@@ -1,14 +1,17 @@
 {
   "name": "Genshin Impact",
   "logo": "/img/logos/genshin-impact.webp",
-  "country_code": "cn",
+  "country_code": "sg",
   "belongs_to_group": true,
   "group_name": "MiHoYo Co.",
   "contacts": [
     {
       "type": "email",
       "value": "privacy@hoyoverse.com",
-      "purposes": ["delete", "export"]
+      "purposes": [
+        "delete",
+        "export"
+      ]
     }
   ],
   "easy_access_data": 4,
@@ -23,12 +26,20 @@
   "address_export": "COGNOSPHERE PTE. LTD., 1 One-North Crescent, #06-01/02, Singapore (138538)",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Transferts de données transfrontaliers\n\nEn tant que société internationale, nous pouvons transférer vos données personnelles à nos sociétés affiliées, nos prestataires de services tiers et nos partenaires opérant dans le monde entier et situés dans des pays autres que votre pays ou région de résidence (Ex. : Singapour). Les lois sur la protection des données desdits pays peuvent différer de celles du vôtre.\n\nLorsque nous transférons vos informations personnelles vers des pays et territoires en dehors de l'Espace économique européen et du Royaume-Uni, et que lesdits pays et territoires ont été officiellement reconnus par la Commission européenne comme offrant un niveau de protection adéquat des données personnelles, nous procédons au traitement conformément aux « décisions d'adéquation » de la Commission européenne (le cas échéant).\n\nLorsque le transfert ne fait pas l'objet d'une décision d'adéquation, nous avons mis en place des mesures de sécurité adaptées afin de garantir la protection de vos données personnelles conformément à la présente Politique de confidentialité. Nos mesures de protection incluent les clauses contractuelles types publiées par la Commission européenne le 4 juin 2021, y compris l'addendum pour le Royaume-Uni, et/ou l'accord international de transfert de données autorisé par l'article 46 du RGPD du Royaume-Uni. Il s'agit d'une protection dont relève le transfert de données personnelles entre d'autres entreprises et nous. Toutes les entreprises sont tenues de protéger les données personnelles qu'elles traitent en provenance d'Europe, conformément à la législation européenne en matière de protection des données. Les données personnelles transférées comprennent des informations de base, comme votre nom, ou des coordonnées, comme votre adresse e-mail.",
+  "privacy_policy_quote": "Transferts de données transfrontaliers\n\nEn tant que société internationale, nous pouvons transférer vos données personnelles à nos sociétés affiliées, nos prestataires de services tiers et nos partenaires opérant dans le monde entier et situés dans des pays autres que votre pays ou région de résidence (Ex. : Singapour). Les lois sur la protection des données desdits pays peuvent différer de celles du vôtre.",
   "outside_eu_storage": true,
   "better_alternative": false,
   "created_at": "2026-11-03",
   "created_by": "noel.b",
-  "status": "draft",
+  "status": "published",
+  "details_required_documents_en": "To ensure the security of your account and your personal data, we may ask you to provide certain additional information before responding to your request. In some cases, we may refuse to comply with your request in accordance with applicable laws and regulations. We may also charge a reasonable fee to respond to your request in accordance with applicable law (e.g., if your request is manifestly repetitive or excessive).",
+  "privacy_policy_quote_en": "Cross-Border Data Transfers\n\nAs an international company, we may transfer your personal data to our affiliates, third-party service providers, and partners operating worldwide and located in countries other than your country or region of residence (e.g., Singapore). Data protection laws in those countries may differ from those in your country.",
+  "transfer_destination_countries": [
+    "gb",
+    "sg"
+  ],
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-11-23",
   "playstore": {
     "id": "com.miHoYo.GenshinImpact",
     "name": "Genshin Impact"
