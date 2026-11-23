@@ -13,7 +13,7 @@
   "data_access_type": "Contacter le support Deezer via le formulaire en ligne pour demander l’accès ou la copie de ses données. La suppression du compte peut aussi se faire directement et en autonomie depuis les paramètres du compte (deezer.com/account).",
   "data_access_type_en": "Contact Deezer Customer Care via the online request form to ask for access to or a copy of your data. Account deletion is also available directly and immediately from account settings (deezer.com/account).",
   "data_access_via_email": false,
-  "data_access_via_other": false,
+  "data_access_via_other": true,
   "response_format_fr": "zip",
   "url_export": "https://support.deezer.com/hc/en-gb/requests/new?ticket_form_id=360000057869",
   "response_delay_fr": "1 mois conformément au RGPD",
@@ -24,7 +24,7 @@
   "better_alternative": false,
   "created_at": "2026-11-09",
   "created_by": "wassym",
-  "status": "changes_requested",
+  "status": "published",
   "review": [
     {
       "field": "data_access_via_other",
@@ -69,6 +69,12 @@
       "resolved": false
     }
   ],
-  "updated_by": "dominique_usa",
-  "updated_at": "2026-11-13"
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-11-23",
+  "privacy_policy_quote_en": "Some of these recipients may be located in countries other than the one you are in, and these countries may not guarantee a level of personal data protection equivalent to that of your country. In such cases, we take all necessary measures to ensure that these recipients provide appropriate safeguards, such as the execution of standard data protection clauses and the implementation of adequate security measures.",
+  "response_delay_en": "1 month in accordance with the GDPR",
+  "playstore": {
+    "id": "deezer.android.app",
+    "name": "Deezer - Musique & Podcast"
+  }
 }
