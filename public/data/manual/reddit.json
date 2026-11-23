@@ -34,11 +34,7 @@
     "exodus": true
   },
   "alternatives": [
-    "instagram",
-    "snapchat",
-    "mastodon",
-    "pinterest",
-    "facebook"
+    "mastodon"
   ],
   "confidentiality_policy_url": "https://www.redditinc.com/policies/privacy-policy",
   "policy_analysis": "policy-analysis/reddit.json",

@@ -40,10 +40,6 @@
     "name": "Grindr- social gay et le chat",
     "exodus": true
   },
-  "alternatives": [
-    "tinder",
-    "bumble"
-  ],
   "policy_analysis": "policy-analysis/grindr.json",
   "enforcement_aliases": [
     "Grindr LLC"

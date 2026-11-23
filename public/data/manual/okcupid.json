@@ -31,10 +31,6 @@
     "name": "Okcupid : application de rencontres",
     "exodus": true
   },
-  "alternatives": [
-    "tinder",
-    "bumble"
-  ],
   "data_breaches": [
     {
       "date": "2026-01-29",

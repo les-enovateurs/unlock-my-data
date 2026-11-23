@@ -32,7 +32,6 @@
     "exodus": true
   },
   "alternatives": [
-    "osmand",
-    "waze"
+    "osmand"
   ]
 }

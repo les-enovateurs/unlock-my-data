@@ -36,9 +36,5 @@
     "id": "fr.leboncoin",
     "name": "leboncoin, petites annonces",
     "exodus": true
-  },
-  "alternatives": [
-    "vinted",
-    "carrefour"
-  ]
+  }
 }

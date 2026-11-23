@@ -29,11 +29,5 @@
     "name": "Meetic - Amour et Rencontre",
     "exodus": true
   },
-  "alternatives": [
-    "tinder",
-    "badoo",
-    "okcupid",
-    "happn"
-  ],
   "policy_analysis": "policy-analysis/meetic.json"
 }

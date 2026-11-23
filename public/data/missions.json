@@ -477,6 +477,11 @@
       {
         "name": "Pixelfed",
         "slug": "pixelfed"
+      },
+      {
+        "name": "Lemmy",
+        "slug": "lemmy",
+        "url": "https://join-lemmy.org"
       }
     ]
   },
@@ -1011,6 +1016,11 @@
           "sensitive": false,
           "last": "2025-04-18"
         }
+      },
+      {
+        "name": "Organic Maps",
+        "slug": "organic-maps",
+        "url": "https://organicmaps.app"
       }
     ]
   },
@@ -1218,6 +1228,11 @@
           "amount_eur": 79510000,
           "last": "2024-05-16"
         }
+      },
+      {
+        "name": "Lumo",
+        "slug": "lumo",
+        "url": "https://lumo.proton.me"
       }
     ]
   },
@@ -1350,6 +1365,16 @@
       {
         "name": "Starlink",
         "slug": "starlink"
+      },
+      {
+        "name": "Nextcloud",
+        "slug": "nextcloud",
+        "url": "https://nextcloud.com"
+      },
+      {
+        "name": "Cozy Cloud",
+        "slug": "cozy-cloud",
+        "url": "https://cozy.io"
       }
     ]
   },
@@ -1437,6 +1462,11 @@
       {
         "name": "Mojeek",
         "slug": "mojeek"
+      },
+      {
+        "name": "Startpage",
+        "slug": "startpage",
+        "url": "https://www.startpage.com"
       }
     ]
   },
@@ -1671,6 +1701,21 @@
       {
         "name": "Element",
         "slug": "element"
+      },
+      {
+        "name": "Olvid",
+        "slug": "olvid",
+        "url": "https://www.olvid.io"
+      },
+      {
+        "name": "Tuta",
+        "slug": "tuta",
+        "url": "https://tuta.com"
+      },
+      {
+        "name": "Mailo",
+        "slug": "mailo",
+        "url": "https://www.mailo.com"
       }
     ]
   },

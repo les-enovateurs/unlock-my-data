@@ -29,10 +29,5 @@
     "name": "Mon espace santé",
     "exodus": true
   },
-  "alternatives": [
-    "doctolib",
-    "caisse-nationale-dassurance-maladie",
-    "maiia"
-  ],
   "policy_analysis": "policy-analysis/mon-espace-sante.json"
 }

@@ -50,10 +50,6 @@
     "name": "france.tv",
     "exodus": true
   },
-  "alternatives": [
-    "amazon-prime-video",
-    "netflix"
-  ],
   "policy_analysis": "policy-analysis/france-television.json",
   "data_access_via_other": false,
   "better_alternative": false

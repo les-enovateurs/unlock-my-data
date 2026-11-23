@@ -35,9 +35,5 @@
     "name": "Qare",
     "exodus": true
   },
-  "alternatives": [
-    "doctolib",
-    "maiia"
-  ],
   "policy_analysis": "policy-analysis/qare.json"
 }

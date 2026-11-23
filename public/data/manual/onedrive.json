@@ -21,8 +21,7 @@
     "exodus": true
   },
   "alternatives": [
-    "proton-drive",
-    "google-drive"
+    "proton-drive"
   ],
   "volume_guide_fr": "/data/cleanup/microsoft/volume.fr.md",
   "volume_guide_en": "/data/cleanup/microsoft/volume.en.md",
