@@ -8,7 +8,10 @@
     {
       "type": "email",
       "value": "dpo@auchan.com",
-      "purposes": ["delete", "export"]
+      "purposes": [
+        "delete",
+        "export"
+      ]
     }
   ],
   "easy_access_data": 3,
@@ -44,15 +47,15 @@
       "contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "address_export": "Délégué à la protection des données, 40 avenue de Flandre, BP 139, 59 964 Croix Cedex",
+  "address_export": "Service Client Auchan – 200, rue de la Recherche – CS 10636 – 59656 VILLENEUVE D’ASCQ CEDEX",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Les publications et échanges publics sont susceptibles d’être accessibles, du fait de leur présence sur le réseau social, hors de l’Union européenne.\n\nLes données nécessaires à l’élaboration des statistiques sont susceptibles d’être traitées hors de l’Union européenne, conformément à la politique de confidentialité mise en place par le réseau social.",
   "better_alternative": false,
   "created_at": "2026-10-18",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "2026-10-18",
-  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-22",
+  "updated_by": "Gildas Kiendrebéogo",
   "status": "changes_requested",
   "review": [
     {
