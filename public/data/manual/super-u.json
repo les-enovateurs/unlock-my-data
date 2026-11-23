@@ -20,7 +20,7 @@
   "confidentiality_policy_url": "https://www.magasins-u.com/donnees-personnelles",
   "data_access_via_postal": false,
   "data_access_via_form": true,
-  "data_access_type": "Envoyer un email, écrire à l'adresse postale, demande à l'accueil d'un magasin, formulaire web : https://www.magasins-u.com/contact il faut préciser \" Demande liée aux données personnelles\" dans le sujet.",
+  "data_access_type": "Envoyer un email, remplir le formulaire ou également accéder et modifier certaines données en vous connectant à votre Espace Client",
   "data_access_via_email": true,
   "data_access_via_other": true,
   "leaks": [
@@ -39,9 +39,9 @@
   "better_alternative": false,
   "created_at": "2026-10-17",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "2026-11-22",
-  "updated_by": "Gildas Kiendrebéogo",
-  "status": "changes_requested",
+  "updated_at": "2026-11-23",
+  "updated_by": "Charlotte L",
+  "status": "published",
   "review": [
     {
       "field": "data_access_via_postal",
@@ -65,5 +65,11 @@
       "resolved": false
     }
   ],
-  "privacy_policy_quote_en": "If, for technical reasons or for specific needs related to the maintenance of certain applications, personal data is accessible by third parties located outside the European Economic Area, Coopérative U ensures beforehand that these guarantee a sufficient level of protection of this data, by having them sign the standard contractual clauses of the European Commission."
+  "privacy_policy_quote_en": "If, for technical reasons or for specific needs related to the maintenance of certain applications, personal data is accessible by third parties located outside the European Economic Area, Coopérative U ensures beforehand that these guarantee a sufficient level of protection of this data, by having them sign the standard contractual clauses of the European Commission.",
+  "data_access_type_en": "Send an email, fill out the form, or log in to your Customer Portal to view and edit certain information",
+  "url_export": "https://www.magasins-u.com/contact",
+  "playstore": {
+    "id": "fr.magasinsu.app",
+    "name": "Mon Magasin U Carte U Cagnotte"
+  }
 }
