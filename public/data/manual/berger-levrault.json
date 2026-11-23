@@ -1,0 +1,63 @@
+{
+  "name": "Berger-Levrault",
+  "logo": "/img/logos/berger-levrault.webp",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "postal",
+      "value": "Berger‑Levrault, Direction juridique, 64 rue Jean Rostand, 31670 Labège",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Droit d’accès, de rectification, d’effacement, de limitation, de portabilité et d’opposition pour motifs légitimes à ses données."
+    },
+    {
+      "type": "postal",
+      "value": "Berger-Levrault Canada Ltd., To the attention of the Data Protection Officer, 2130 Dagenais Boulevard West, Suite 200, City of Laval, Quebec H7L5X9, Canada",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_en": "The Quebec law relating to the processing and protection of personal data, a right of access and rectification, and opposition to the information that concerns him or her."
+    },
+    {
+      "type": "email",
+      "value": "dpo@xn--bergerlevrault-b72h.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Droit d’accès, de rectification, d’effacement, de limitation, de portabilité et d’opposition pour motifs légitimes à ses données."
+    },
+    {
+      "type": "email",
+      "value": "piprotection@berger-levrault.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_en": "The Quebec law relating to the processing and protection of personal data, a right of access and rectification, and opposition to the information that concerns him or her."
+    }
+  ],
+  "easy_access_data": 3,
+  "need_id_card": false,
+  "details_required_documents": "Aucun",
+  "confidentiality_policy_url": "https://www.berger-levrault.com/fr/mentions-legales-donnees-personnelles/",
+  "confidentiality_policy_url_en": "https://www.berger-levrault.com/ca/en/privacy-policy/",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail avec ID",
+  "data_access_type_en": "Send an email with ID",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": false,
+  "privacy_policy_quote": "Les données personnelles collectées sont réservées à l’usage des personnes habilitées au sein de Berger‑Levrault et de ses filiales, ainsi qu’aux prestataires autorisés intervenant pour leur compte. Elles ne font pas l’objet de transfert vers un pays tiers à l’Union européenne en dehors des cas prévus par la réglementation applicable et assortis de garanties appropriées.",
+  "comments": "Berger-Levrault a été impliqué dans un incident de sécurité informatique touchant plusieurs dizaines d'hôpitaux en 2013.  Son logiciel ResUrgences a relevé qu'un fichier contenait des identifiants permettant d'accéder à distance aux systèmes informatiques de plusieurs dizaines d'hôpitaux. (sources : Piratage.fr et Observatoire SansTrace).",
+  "better_alternative": false,
+  "created_at": "2026-11-22",
+  "created_by": "Gildas Kiendrebéogo",
+  "status": "draft"
+}

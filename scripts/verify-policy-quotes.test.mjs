@@ -68,3 +68,23 @@ test("a plain line rewritten in the review tool replaces the proposed one", () =
     assert.deepEqual(publishedKeyQuotes(proposal, side)[0].plain, { fr: "neuf", en: "new" });
     assert.equal(publishedKeyQuotes(proposal, side)[0].plain_by, "Théo");
 });
+
+import { pendingHistory, publishedHistory } from "./policyQuotes.mjs";
+
+const history = [
+    { detected_at: "2026-11-02", created_at: "2026-11-03", memo: { fr: "un", en: "one" } },
+    { detected_at: "2026-11-09", created_at: "2026-11-10", memo: { fr: "deux", en: "two" } },
+];
+test("a policy change follows the key-quote rule, newest first", () => {
+    assert.deepEqual(publishedHistory(history, null), []);
+    assert.equal(pendingHistory(history, null), 2);
+    const side = { items: { "history/0": verdict("validated", "Théo"), "history/1": verdict("validated", "Léa") } };
+    assert.deepEqual(publishedHistory(history, side).map((e) => e.validated_by), ["Léa", "Théo"]);
+    assert.equal(pendingHistory(history, side), 0);
+});
+test("the publish button covers each change by its own date", () => {
+    const side = { items: { "history/0": verdict("rejected", "Théo") }, ...publish("2026-11-12") };
+    assert.deepEqual(publishedHistory(history, side), []);
+    assert.equal(pendingHistory(history, side), 1);
+    assert.deepEqual(publishedHistory(history, { ...publish("2026-11-17") }).map((e) => e.memo.fr), ["deux", "un"]);
+});

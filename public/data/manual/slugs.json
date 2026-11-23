@@ -39,10 +39,16 @@
     "slug": "badoo"
   },
   {
+    "slug": "bankin"
+  },
+  {
     "slug": "basic-fit"
   },
   {
     "slug": "bereal"
+  },
+  {
+    "slug": "berger-levrault"
   },
   {
     "slug": "bershka"
@@ -96,6 +102,9 @@
     "slug": "carrefour"
   },
   {
+    "slug": "carte-jeune-region-occitanie"
+  },
+  {
     "slug": "carte-vitale"
   },
   {
@@ -144,6 +153,9 @@
     "slug": "curio"
   },
   {
+    "slug": "cursor"
+  },
+  {
     "slug": "decathlon-coach"
   },
   {
@@ -178,6 +190,9 @@
   },
   {
     "slug": "elite-singles"
+  },
+  {
+    "slug": "engie"
   },
   {
     "slug": "epic-games"
@@ -345,6 +360,9 @@
     "slug": "maiia"
   },
   {
+    "slug": "maileva"
+  },
+  {
     "slug": "mano-mano"
   },
   {
@@ -375,7 +393,13 @@
     "slug": "meetic"
   },
   {
+    "slug": "meilleurtaux"
+  },
+  {
     "slug": "messenger"
+  },
+  {
+    "slug": "mgel"
   },
   {
     "slug": "microsoft-teams"
@@ -619,6 +643,9 @@
   },
   {
     "slug": "urssaf"
+  },
+  {
+    "slug": "viamedis"
   },
   {
     "slug": "vinted"

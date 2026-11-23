@@ -3,7 +3,10 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
-import { forceAllowedFrom, isForced, keyQuoteKey, KEY_QUOTE_TOPICS, plainOf, PUBLISH_ACTION } from "@/scripts/policyQuotes.mjs";
+import {
+  forceAllowedFrom, historyKey, isForcedSince, keyQuoteKey, keyQuotesProposedAt, KEY_QUOTE_TOPICS, plainOf, PUBLISH_ACTION,
+} from "@/scripts/policyQuotes.mjs";
+import type { PolicyChange } from "@/components/company/PolicyHistory";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
 import { REJECT_REASONS } from "@/components/review/reviewTypes";
 import {
@@ -34,6 +37,7 @@ type IndexRow = {
   slug: string; service_name: string; ia_status: string; has_inventory: boolean;
   analyzed_at: string | null; review_status: ReviewSidecar["status"]; needs_count: number;
   key_quotes?: number; key_quotes_pending?: number;
+  history?: number; history_pending?: number;
 };
 
 const CAT_META_INPUT = { CATEGORY_ORDER: [...CATEGORY_ORDER], CATEGORY_META };
@@ -50,6 +54,8 @@ const avatarLetter = (n: string) => (n?.trim()?.[0] || "?").toUpperCase();
 function policyHost(url: string): string {
   try { return new URL(url).hostname.replace("www.", ""); } catch { return url; }
 }
+
+const isChange = (key: string) => key.startsWith("history/");
 
 function cleanQuote(q: string): string {
   return (q || "").replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
@@ -72,6 +78,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const { name, setName } = useReviewer();
   /** This service's key-quote proposal (policy-quotes.json), reviewed as cards like the rest. */
   const [keyQuotes, setKeyQuotes] = useState<{ agent?: string; created_by: string; created_at: string; updated_at?: string; quotes: { quote: string; topic: keyof typeof KEY_QUOTE_TOPICS; plain: { fr: string; en: string } }[] } | null>(null);
+  /** This service's policy changes found by the weekly watch (policy-history.json), reviewed the same way. */
+  const [changes, setChanges] = useState<PolicyChange[]>([]);
 
   const [services, setServices] = useState<IndexRow[]>([]);
   const [tab, setTab] = useState<"queue" | "published">("queue");
@@ -126,13 +134,15 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     setSaved(null); setAuthError(false); setNameError(false);
     const grab = <T,>(url: string, fallback: T): Promise<T> =>
       fetch(url).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
-    const [a, s, kq] = await Promise.all([
+    const [a, s, kq, h] = await Promise.all([
       grab<any>(`/data/policy-analysis/${slug}.json`, null),
       grab<ReviewSidecar | null>(`/data/policy-analysis/reviews/${slug}.json`, null),
       grab<Record<string, any>>("/data/policy-quotes.json", {}),
+      grab<Record<string, PolicyChange[]>>("/data/policy-history.json", {}),
     ]);
     setSvc(a);
     setKeyQuotes(kq[slug] || null);
+    setChanges(h[slug] || []);
     // A draft left by an earlier visit wins over the file on disk: it holds
     // verdicts that were never sent.
     let restored: ReviewSidecar | null = null;
@@ -154,7 +164,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   const backToQueue = useCallback((syncUrl = true) => {
     if (syncUrl) window.history.pushState({}, "", window.location.pathname);
-    setView("queue"); setSelected(null); setSvc(null); setSidecar(null); setKeyQuotes(null);
+    setView("queue"); setSelected(null); setSvc(null); setSidecar(null); setKeyQuotes(null); setChanges([]);
     setPolicyText(null); setActiveKey(null);
   }, []);
 
@@ -188,8 +198,14 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         // verify-policy-quotes already proved it verbatim on the committed text.
         origVerified: true, span: null, verifyReason: null,
       })),
+      // The memo is what the reviewer rules on: a rewritten memo makes the verdict stale.
+      ...changes.map((c, i): InvItem => ({
+        key: historyKey(i), axis: "signalement", kind: tt("changeKind"),
+        label: t.t("changeLabel", { a: c.agent || tt("keyQuoteAgentUnknown"), d: c.detected_at }),
+        quote: `${c.memo.fr}\n${c.memo.en}`, origVerified: true, span: null, verifyReason: null,
+      })),
     ] : []),
-    [sidecar, keyQuotes, lang, t, tt]);
+    [sidecar, keyQuotes, changes, lang, t, tt]);
 
   // What the screen opens on. A company settled on an earlier service drops out
   // of the essentials here — that is what makes the workload fall from one
@@ -227,7 +243,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   const unlocatable = useMemo(() => {
     if (!policyText) return new Set<string>();
     return new Set(items
-      .filter((it) => !resolveSpan(
+      .filter((it) => !isChange(it.key) && !resolveSpan(
         { quote: shownQuote(it.key, it.quote, sidecar), span: it.span }, policyText.text))
       .map((it) => it.key));
   }, [items, policyText, sidecar]);
@@ -441,13 +457,23 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
 
+  /** Earliest day the publish button may cover something still waiting, or
+   *  null when everything proposed here is already published or ruled on. */
+  const publishFrom = useMemo(() => {
+    const waiting = [
+      ...(keyQuotes && !isForcedSince(keyQuotesProposedAt(keyQuotes), sidecar) ? [keyQuotesProposedAt(keyQuotes)] : []),
+      ...changes.filter((c, i) => !sidecar?.items[historyKey(i)] && !isForcedSince(c.created_at, sidecar)).map((c) => c.created_at),
+    ];
+    return waiting.length ? forceAllowedFrom(waiting.sort()[0]) : null;
+  }, [keyQuotes, changes, sidecar]);
+
 
   // ---- queue ----
   // Basic mode only for now: the queue is the key quotes. A validated quote is
   // published — there is no separate "publish" step.
-  const withQuotes = services.filter((q) => q.key_quotes);
-  const toReviewRows = withQuotes.filter((q) => q.key_quotes_pending);
-  const publishedRows = withQuotes.filter((q) => !q.key_quotes_pending);
+  const withQuotes = services.filter((q) => q.key_quotes || q.history);
+  const toReviewRows = withQuotes.filter((q) => q.key_quotes_pending || q.history_pending);
+  const publishedRows = withQuotes.filter((q) => !q.key_quotes_pending && !q.history_pending);
 
   const renderQueueRow = (q: IndexRow) => (
     <button key={q.slug} className="umd-card umd-card-hover" onClick={() => openService(q.slug)}
@@ -459,6 +485,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           {q.key_quotes_pending
             ? t.t("keyQuotesPending", { n: String(q.key_quotes_pending) })
             : t.t("keyQuotesAllPublished", { n: String(q.key_quotes) })}
+          {q.history_pending ? ` · ${t.t("changesPending", { n: String(q.history_pending) })}` : ""}
         </p>
       </div>
     </button>
@@ -499,6 +526,30 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         {sidecar?.key_quote_plain?.[key] && <span className="prv-hint"> — {t.t("plainBy", { n: sidecar.key_quote_plain[key].by })} </span>}
         <button type="button" className="prv-linkbtn" onClick={() => setPlainEdit({ key, ...plain })}>{tt("plainEdit")}</button>
       </p>
+    );
+  };
+
+  /** A policy change: what the watch measured, then the memo to rule on. */
+  const renderChange = (key: string) => {
+    const c = changes[Number(key.split("/")[1])];
+    return (
+      <div style={{ display: "flex", flexDirection: "column", gap: 6, fontSize: 12.5, color: "var(--slate-700)" }}>
+        <p style={{ margin: 0 }}>
+          {t.t("changeDates", { a: c.policy_date_before || "—", b: c.policy_date_after || "—" })}
+          {" · "}{c.langs.map((l) => `${l} +${c.added[l] ?? 0} / −${c.removed[l] ?? 0}`).join(" · ")}
+        </p>
+        {c.quotes_missing.length > 0 && (
+          <div>
+            <b style={{ color: "var(--red-700, #b91c1c)" }}>{tt("changeQuotesMissing")}</b>
+            {c.quotes_missing.map((q) => (
+              <blockquote key={q} className="umd-quotebox" style={{ margin: "6px 0 0", fontSize: 12 }}>« {cleanQuote(q)} »</blockquote>
+            ))}
+          </div>
+        )}
+        {(["fr", "en"] as const).map((l) => (
+          <p key={l} style={{ margin: 0 }}><b>{tt("changeMemo")} ({l}) :</b> {c.memo[l]}</p>
+        ))}
+      </div>
     );
   };
 
@@ -556,7 +607,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         ) : (
           // Clicking the quote — not the whole card — drives the highlight:
           // on the card, every button press would move it as a side effect.
-          <blockquote className="umd-quotebox" onClick={() => setActiveKey(it.key)}
+          isChange(it.key) ? renderChange(it.key) : <blockquote className="umd-quotebox" onClick={() => setActiveKey(it.key)}
             style={{ margin: 0, fontSize: 13, cursor: "pointer",
                      outline: activeKey === it.key ? "2px solid var(--indigo-300)" : "none" }}>
             « {cleanQuote(shown)} »
@@ -630,7 +681,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 12px", fontSize: 12, color: "var(--red-600)" }}
               onClick={() => { setRejectingKey(it.key); setNoteDraft(v?.note || ""); setEditingKey(null); }}>{tt("markFalse")}</button>
             {/* A key quote is published verbatim: a wrong one is rejected and re-proposed, never reworded. */}
-            {!it.key.startsWith("keyquote/") && <button type="button" className="prv-linkbtn"
+            {!it.key.startsWith("keyquote/") && !isChange(it.key) && <button type="button" className="prv-linkbtn"
               onClick={() => (editing ? setEditingKey(null) : startEdit(it))}>{editing ? tt("cancelEdit") : tt("editQuote")}</button>}
           </div>
         )}
@@ -724,11 +775,11 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                   </p>
                 )}
               </div>
-              {sidecar && keyQuotes && (isForced(keyQuotes, sidecar)
+              {sidecar && (keyQuotes || changes.length > 0) && (!publishFrom
                 ? <span className="umd-chip umd-chip-safe">{tt("keyQuotesPublished")}</span>
-                : todayIso() >= forceAllowedFrom(keyQuotes.updated_at || keyQuotes.created_at)
+                : todayIso() >= publishFrom
                   ? <button className="umd-btn umd-btn-outline umd-btn-sm" disabled={saving} onClick={() => setStatus(sidecar.status, PUBLISH_ACTION)}>{tt("keyQuotesPublish")}</button>
-                  : <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{t.t("keyQuotesPublishFrom", { d: new Date(`${forceAllowedFrom(keyQuotes.updated_at || keyQuotes.created_at)}T00:00:00Z`).toLocaleDateString(lang, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) })}</span>)}
+                  : <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{t.t("keyQuotesPublishFrom", { d: new Date(`${publishFrom}T00:00:00Z`).toLocaleDateString(lang, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) })}</span>)}
               <div ref={nameFieldRef}>
                 <ReviewerNameField lang={lang} value={name} onChange={setName} />
               </div>
@@ -736,13 +787,13 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           </div>
 
           <main className="umd-wrap" style={{ padding: "16px 24px 90px" }}>
-            {!keyQuotes && (
+            {!keyQuotes && !changes.length && (
               <div className="umd-card" style={{ padding: "22px 24px", marginBottom: 20 }}>
                 <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("noKeyQuotes")}</p>
               </div>
             )}
 
-            {keyQuotes && sidecar && (
+            {(keyQuotes || changes.length > 0) && sidecar && (
               <>
                 <h2 className="umd-heading-3" style={{ fontSize: 17, margin: "0 0 4px" }}>{tt("keyQuotesReviewTitle")}</h2>
                 <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("keyQuotesReviewHint")}</p>
