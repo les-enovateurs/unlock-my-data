@@ -6,14 +6,12 @@
   "group_name": "Altice France & E.Leclerc",
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Non précisé mais on peut être contacté par Leclerc",
+  "details_required_documents": "Non précisé",
   "confidentiality_policy_url": "https://www.reglomobile.fr/document/charte_protection_DCP_titulaires_offre_RM.pdf?version=26.09.1",
   "confidentiality_policy_url_en": "https://www.reglomobile.fr/document/charte_protection_DCP_titulaires_offre_RM.pdf?version=26.09.1",
-  "data_access_via_postal": false,
+  "data_access_via_postal": true,
   "data_access_via_form": true,
-  "data_access_type": "Remplir le formulaire (HTTP seulement)",
-  "data_access_type_en": "Fill in the form (HTTP only)",
-  "data_access_via_email": false,
+  "data_access_via_email": true,
   "data_access_via_other": false,
   "leaks": [
     {
@@ -29,12 +27,12 @@
   "address_export": "Service Clients Allô E.Leclerc - 26 quai Marcel Boyer - 94200 Ivry sur Seine.",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "comments": "Il y a aussi cela:\nLe Client peut exercer ces droits en écrivant à l’adresse postale suivante : Réglo Mobile / co\n\nAfone Participations, Service Données Personnelles, BP 90530, 49105 Angers Cedex 02 ou\n\nà l’adresse électronique suivante : [serviceclient@reglomobile.fr](mailto:serviceclient@reglomobile.fr)",
-  "comments_en": "There is also this:\nClient may exercise his/her rights by writing to the following postal address: Réglo Mobile / co Afone Participations, Personal Data Department, BP 90530, 49105 Angers Cedex 02 or at the following email address: [serviceclient@reglomobile.fr](mailto:serviceclient@reglomobile.fr)",
+  "comments": "La demande varie selon si vous être titulaires d'une offre réglo mobile ou titulaire d'un espace sur le site reglomobile.Fr ou encore acheteurs de téléphone mobile. Les voies indiquées dans la fiche concernent les titulaire d'une espace sur le site ou acheteurs de téléphone mobile.\n\n\n\nPour les titulaires d'une offre réglo mobile voici les voies pour exercer ses droits :&#x20;\n\\- adresse postale : Réglo Mobile / co Afone Participations, Service Données Personnelles, BP 90530, 49105 Angers Cedex 02&#x20;\n\n\\- adresse électronique : [serviceclient@reglomobile.fr](mailto:serviceclient@reglomobile.fr)",
+  "comments_en": "The process varies depending on whether you are a Réglo Mobile subscriber, a user with an account on the reglomobile.fr website, or a mobile phone purchaser. The procedures outlined in this document apply to users with an account on the website or mobile phone purchasers.\n\n\n\nFor Réglo Mobile subscribers, here are the ways to exercise your rights:\n\n\\- Mailing address: Réglo Mobile / co Afone Participations, Personal Data Department, P.O. Box 90530, 49105 Angers Cedex 02\n\n\\- Email address: [serviceclient@reglomobile.fr](mailto:serviceclient@reglomobile.fr)",
   "better_alternative": false,
   "created_at": "2026-10-16",
   "created_by": "dominique_usa",
-  "status": "draft",
+  "status": "published",
   "data_breaches": [
     {
       "date": "2026-02-21",
@@ -60,5 +58,10 @@
       "verified_by_manual": true,
       "manual_contributor": "dominique_usa"
     }
-  ]
+  ],
+  "details_required_documents_en": "Not mentionned",
+  "privacy_policy_quote": "Les données sont conservées pendant toute la durée de la souscription du Client à l’Offre. Elles sont archivées pendant toute la durée de prescription légale. Les données nécessaires pour établir la preuve d’un droit ou d’un contrat seront par ailleurs conservées pour la durée nécessaire permettant au Fournisseur de respecter ses obligations légales et/ou réglementaires. Les données justificatives liées à la fourniture de l’Offre sont archivées pendant un délai de 10 ans à des fins de preuve comptable conformément à l’article L 123-22 du Code de commerce. Les données du Client traitées à des fins de prospection commerciale, par le Fournisseur ou ses partenaires commerciaux (et particulièrement les Centres E.LECLERC) sont supprimées dans un délai de 3 ans maximum courant à compter du dernier contact avec le Client. Les enregistrements des appels téléphoniques du Client au Service Client sont conservés, à des fins de formation des téléopérateurs, ainsi que de contrôle et d’amélioration de la qualité de service, pendant un délai maximal de 6 mois.",
+  "privacy_policy_quote_en": "Data is retained for the duration of the Customer’s subscription to the Offer. It is archived for the entire statutory limitation period. Data necessary to establish proof of a right or a contract will also be retained for as long as necessary to enable the Provider to comply with its legal and/or regulatory obligations. Supporting data related to the provision of the Offer is archived for a period of 10 years for accounting purposes in accordance with Article L 123-22 of the Commercial Code. Customer data processed for marketing purposes by the Supplier or its business partners (particularly E.LECLERC Centers) is deleted within a maximum of 3 years from the date of the last contact with the Customer. Recordings of the Customer’s phone calls to Customer Service are retained for a maximum of 6 months for the purposes of training call center agents, as well as monitoring and improving service quality.",
+  "updated_by": "Charlotte L",
+  "updated_at": "2026-11-23"
 }
