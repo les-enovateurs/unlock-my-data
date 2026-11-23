@@ -35,11 +35,6 @@
     "name": "Netflix",
     "exodus": true
   },
-  "alternatives": [
-    "youtube",
-    "amazon-prime-video",
-    "disneyplus"
-  ],
   "confidentiality_policy_url": "https://help.netflix.com/legal/privacy",
   "policy_analysis": "policy-analysis/netflix.json",
   "enforcement_aliases": [

@@ -69,13 +69,6 @@
     "name": "Booking",
     "exodus": true
   },
-  "alternatives": [
-    "opodo",
-    "airbnb-inc",
-    "blablacar",
-    "sncf-connect",
-    "ryanair"
-  ],
   "data_breaches": [
     {
       "date": "2026-04-12",

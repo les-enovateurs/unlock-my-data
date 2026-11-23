@@ -33,10 +33,6 @@
     "name": "Mon E.Leclerc",
     "exodus": true
   },
-  "alternatives": [
-    "carrefour",
-    "boulanger"
-  ],
   "data_breaches": [
     {
       "date": "2025-01-24",

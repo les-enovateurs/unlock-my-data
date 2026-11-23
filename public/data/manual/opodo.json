@@ -32,13 +32,6 @@
     "name": "Opodo: Vols, Hôtels et Voiture",
     "exodus": true
   },
-  "alternatives": [
-    "booking",
-    "airbnb-inc",
-    "blablacar",
-    "sncf-connect",
-    "ryanair"
-  ],
   "confidentiality_policy_url": "https://www.opodo.fr/politique-confidencialite/",
   "policy_analysis": "policy-analysis/opodo.json"
 }

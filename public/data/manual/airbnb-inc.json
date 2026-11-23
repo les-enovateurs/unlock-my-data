@@ -52,12 +52,5 @@
     "name": "Airbnb",
     "exodus": true
   },
-  "alternatives": [
-    "booking",
-    "opodo",
-    "blablacar",
-    "sncf-connect",
-    "ryanair"
-  ],
   "policy_analysis": "policy-analysis/airbnb-inc.json"
 }

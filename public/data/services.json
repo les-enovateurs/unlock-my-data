@@ -28,10 +28,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "lidl",
-      "carrefour"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -62,13 +59,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "booking",
-      "opodo",
-      "blablacar",
-      "sncf-connect",
-      "ryanair"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -123,14 +114,8 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "amazon",
-      "temu",
-      "shein",
-      "ebay",
       "rue-du-commerce",
-      "boulanger",
-      "ikea",
-      "carrefour"
+      "boulanger"
     ]
   },
   {
@@ -164,14 +149,8 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "amazon",
-      "temu",
-      "shein",
-      "ebay",
       "rue-du-commerce",
-      "boulanger",
-      "ikea",
-      "carrefour"
+      "boulanger"
     ]
   },
   {
@@ -237,11 +216,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "youtube",
-      "netflix",
-      "disneyplus"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -360,11 +335,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "happn",
-      "tinder",
-      "okcupid"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -714,13 +685,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "opodo",
-      "airbnb-inc",
-      "blablacar",
-      "sncf-connect",
-      "ryanair"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -751,16 +716,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "amazon",
-      "alibaba",
-      "temu",
-      "shein",
-      "ebay",
-      "rue-du-commerce",
-      "ikea",
-      "carrefour"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -878,11 +834,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "doctolib",
-      "mon-espace-sante",
-      "maiia"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -975,10 +927,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "lidl",
-      "temu"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1594,11 +1543,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "youtube",
-      "netflix",
-      "amazon-prime-video"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -1661,11 +1606,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "caisse-nationale-dassurance-maladie",
-      "mon-espace-sante",
-      "maiia"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2017,10 +1958,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "amazon-prime-video",
-      "netflix"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2277,8 +2215,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "proton-drive",
-      "onedrive"
+      "proton-drive"
     ]
   },
   {
@@ -2303,8 +2240,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "osmand",
-      "waze"
+      "osmand"
     ]
   },
   {
@@ -2336,10 +2272,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "tinder",
-      "bumble"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2402,10 +2335,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "tinder",
-      "bumble"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2731,7 +2661,6 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "pronote",
       "moodle"
     ]
   },
@@ -2956,10 +2885,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "vinted",
-      "carrefour"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -2991,10 +2917,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "carrefour",
-      "boulanger"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3089,10 +3012,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "carrefour",
-      "leboncoin"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3210,11 +3130,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "doctolib",
-      "caisse-nationale-dassurance-maladie",
-      "mon-espace-sante"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3364,13 +3280,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "instagram",
-      "snapchat",
-      "reddit",
-      "pinterest",
-      "facebook"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3401,12 +3311,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "slack",
-      "microsoft-teams",
-      "discord",
-      "rocketchat"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3525,12 +3430,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "tinder",
-      "badoo",
-      "okcupid",
-      "happn"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3611,8 +3511,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "proton-drive",
-      "google-drive"
+      "proton-drive"
     ]
   },
   {
@@ -3717,11 +3616,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "doctolib",
-      "caisse-nationale-dassurance-maladie",
-      "maiia"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3816,10 +3711,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "pronote",
-      "kahoot"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3882,11 +3774,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "youtube",
-      "amazon-prime-video",
-      "disneyplus"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3973,10 +3861,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "tinder",
-      "bumble"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3999,13 +3884,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "booking",
-      "airbnb-inc",
-      "blablacar",
-      "sncf-connect",
-      "ryanair"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4028,10 +3907,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "google-maps",
-      "waze"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4196,11 +4072,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "instagram",
-      "snapchat",
-      "mastodon",
-      "reddit",
-      "facebook"
+      "mastodon"
     ]
   },
   {
@@ -4232,10 +4104,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "steam",
-      "epic-games-store"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4337,8 +4206,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "moodle",
-      "kahoot"
+      "moodle"
     ]
   },
   {
@@ -4370,12 +4238,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "google-drive",
-      "onedrive",
-      "icloud",
-      "dropbox"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4406,10 +4269,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "doctolib",
-      "maiia"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4473,12 +4333,7 @@
     "better_alternative": true,
     "better_alternative_explication_fr": "Service français et avec une politique de confidentialité bien détaillée.",
     "better_alternative_explication_en": "A French service with a comprehensive privacy policy.",
-    "alternatives": [
-      "perplexity",
-      "google-search",
-      "bing",
-      "duckduckgo"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4542,11 +4397,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "instagram",
-      "snapchat",
-      "mastodon",
-      "pinterest",
-      "facebook"
+      "mastodon"
     ]
   },
   {
@@ -4610,12 +4461,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "slack",
-      "microsoft-teams",
-      "discord",
-      "mattermost"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4669,16 +4515,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "amazon",
-      "alibaba",
-      "temu",
-      "shein",
-      "ebay",
-      "boulanger",
-      "ikea",
-      "carrefour"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4709,13 +4546,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "booking",
-      "opodo",
-      "airbnb-inc",
-      "blablacar",
-      "sncf-connect"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -4966,11 +4797,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "instagram",
-      "mastodon",
-      "reddit",
-      "pinterest",
-      "facebook"
+      "mastodon"
     ]
   },
   {
@@ -5067,10 +4894,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "playstation",
-      "epic-games-store"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -5230,14 +5054,8 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "amazon",
-      "alibaba",
-      "shein",
-      "ebay",
       "rue-du-commerce",
-      "boulanger",
-      "ikea",
-      "carrefour"
+      "boulanger"
     ]
   },
   {
@@ -5403,10 +5221,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "youtube",
-      "instagram"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -5674,9 +5489,7 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "leboncoin"
-    ]
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -5809,8 +5622,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "osmand",
-      "google-maps"
+      "osmand"
     ]
   },
   {
@@ -6014,8 +5826,7 @@
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
     "alternatives": [
-      "peertube",
-      "twitch"
+      "peertube"
     ]
   },
   {
@@ -6110,8 +5921,6 @@
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
-    "alternatives": [
-      "skype"
-    ]
+    "alternatives": []
   }
 ]

@@ -54,14 +54,8 @@
   },
   "better_alternative": false,
   "alternatives": [
-    "amazon",
-    "temu",
-    "shein",
-    "ebay",
     "rue-du-commerce",
-    "boulanger",
-    "ikea",
-    "carrefour"
+    "boulanger"
   ],
   "policy_analysis": "policy-analysis/aliexpress.json"
 }

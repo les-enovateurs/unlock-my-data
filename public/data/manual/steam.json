@@ -41,10 +41,6 @@
     "name": "Steam",
     "exodus": true
   },
-  "alternatives": [
-    "playstation",
-    "epic-games-store"
-  ],
   "confidentiality_policy_url": "https://store.steampowered.com/privacy_agreement/?l=english",
   "policy_analysis": "policy-analysis/steam.json",
   "data_breaches": [

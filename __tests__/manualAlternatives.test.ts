@@ -27,6 +27,15 @@ describe('manual alternatives', () => {
         expect(selfRefs).toEqual([]);
     });
 
+    // An alternative must protect data better than the service it replaces:
+    // recommending one of these discredits the whole site.
+    it('never recommends a service known to be worse', () => {
+        const NEVER = ['temu', 'shein', 'alibaba', 'aliexpress', 'amazon', 'facebook', 'instagram', 'tiktok',
+            'google-maps', 'google-drive', 'google-search', 'youtube', 'waze', 'bing', 'skype', 'onedrive', 'icloud'];
+        const offenders = entries.flatMap(e => e.alternatives.filter(a => NEVER.includes(a)).map(a => `${e.slug} -> ${a}`));
+        expect(offenders).toEqual([]);
+    });
+
     // Uncatalogued alternatives render unlinked, so they need a display label:
     // an auto title-cased slug ("Ebay", "Duckduckgo") is not a brand name.
     it('labels every alternative that has no fiche', () => {

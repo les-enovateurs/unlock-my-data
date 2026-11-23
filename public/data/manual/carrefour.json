@@ -77,10 +77,6 @@
     "name": "Carrefour",
     "exodus": true
   },
-  "alternatives": [
-    "lidl",
-    "temu"
-  ],
   "confidentiality_policy_url": "https://www.carrefour.fr/articles/politique-generale-protection-donnees-personnelles",
   "enforcement_group_aliases": [
     "CENTROS COMERCIALES CARREFOUR, S.A.",

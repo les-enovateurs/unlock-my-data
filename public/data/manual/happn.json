@@ -38,9 +38,5 @@
     "name": "Happn : appli de rencontre",
     "exodus": true
   },
-  "alternatives": [
-    "tinder",
-    "bumble"
-  ],
   "policy_analysis": "policy-analysis/happn.json"
 }

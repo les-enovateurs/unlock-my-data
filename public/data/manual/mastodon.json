@@ -17,13 +17,6 @@
     "name": "Mastodon",
     "exodus": true
   },
-  "alternatives": [
-    "instagram",
-    "snapchat",
-    "reddit",
-    "pinterest",
-    "facebook"
-  ],
   "confidentiality_policy_url": "https://mastodon.social/terms",
   "policy_analysis": "policy-analysis/mastodon.json"
 }
