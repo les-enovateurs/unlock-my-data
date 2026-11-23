@@ -8,16 +8,19 @@
     {
       "type": "email",
       "value": "contact_donnees_personnelles@systeme-u.fr",
-      "purposes": ["delete", "export"]
+      "purposes": [
+        "delete",
+        "export"
+      ]
     }
   ],
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
   "confidentiality_policy_url": "https://www.magasins-u.com/donnees-personnelles",
-  "data_access_via_postal": true,
-  "data_access_via_form": false,
-  "data_access_type": "Envoyer un email, écrire à l'adresse postale, demande à l'accueil d'un magasin",
+  "data_access_via_postal": false,
+  "data_access_via_form": true,
+  "data_access_type": "Envoyer un email, remplir le formulaire ou également accéder et modifier certaines données en vous connectant à votre Espace Client",
   "data_access_via_email": true,
   "data_access_via_other": true,
   "leaks": [
@@ -29,7 +32,6 @@
       "contributor": "Gildas Kiendrebéogo"
     }
   ],
-  "address_export": "Coopérative U - DPO - 20 rue d'Arcueil – CS 10043 – 94533 Rungis Cedex",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
   "privacy_policy_quote": "Si, pour des raisons techniques ou pour des besoins spécifiques liés à la maintenance de certaines applications, des données personnelles sont accessibles par des tiers situés en dehors de l’Espace Économique Européen, Coopérative U s’assure au préalable que ces derniers garantissent un niveau de protection suffisant de ces données, en leur faisant signer les clauses contractuelles types de la Commission Européenne.",
@@ -37,9 +39,9 @@
   "better_alternative": false,
   "created_at": "2026-10-17",
   "created_by": "Gildas Kiendrebéogo",
-  "updated_at": "2026-10-18",
-  "updated_by": "dominique_usa",
-  "status": "changes_requested",
+  "updated_at": "2026-11-23",
+  "updated_by": "Charlotte L",
+  "status": "published",
   "review": [
     {
       "field": "data_access_via_postal",
@@ -63,5 +65,11 @@
       "resolved": false
     }
   ],
-  "privacy_policy_quote_en": "If, for technical reasons or for specific needs related to the maintenance of certain applications, personal data is accessible by third parties located outside the European Economic Area, Coopérative U ensures beforehand that these guarantee a sufficient level of protection of this data, by having them sign the standard contractual clauses of the European Commission."
+  "privacy_policy_quote_en": "If, for technical reasons or for specific needs related to the maintenance of certain applications, personal data is accessible by third parties located outside the European Economic Area, Coopérative U ensures beforehand that these guarantee a sufficient level of protection of this data, by having them sign the standard contractual clauses of the European Commission.",
+  "data_access_type_en": "Send an email, fill out the form, or log in to your Customer Portal to view and edit certain information",
+  "url_export": "https://www.magasins-u.com/contact",
+  "playstore": {
+    "id": "fr.magasinsu.app",
+    "name": "Mon Magasin U Carte U Cagnotte"
+  }
 }
