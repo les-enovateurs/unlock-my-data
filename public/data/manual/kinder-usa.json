@@ -4,7 +4,13 @@
   "country_code": "us",
   "belongs_to_group": true,
   "group_name": "Ferrero",
-  "easy_access_data": 3,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "privacy.us@ferrero.com.",
+      "purposes": ["delete", "export"]
+    }
+  ],"easy_access_data": 3,
   "need_id_card": false,
   "confidentiality_policy_url": "https://www.ferrero.com/us/en/privacy-policy",
   "confidentiality_policy_url_en": "https://www.ferrero.com/us/en/privacy-policy",
@@ -12,7 +18,7 @@
   "data_access_via_form": true,
   "data_access_type": "Remplir un formulaire",
   "data_access_type_en": "Fill a form",
-  "data_access_via_email": false,
+  "data_access_via_email": true,
   "data_access_via_other": false,
   "url_export": "https://carewebform-uix.ferrero.com/?site=fr-ca",
   "sanctioned_by_cnil": false,
