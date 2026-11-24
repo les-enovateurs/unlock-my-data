@@ -1,6 +1,6 @@
 {
   "name": "Orkyn",
-  "logo": "https://www.orkyn.fr/sites/orkyn/files/copie-de-logo_orkyn_ardoise_baseline_rvb.svg",
+  "logo": "/img/logos/orkyn.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "Air Liquide",
