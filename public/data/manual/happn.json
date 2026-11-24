@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": true,
-  "confidentiality_policy_url": "https://support.happn.fr/hc/fr/p/privacy",
+  "confidentiality_policy_url_fr": "https://support.happn.fr/hc/fr/p/privacy",
   "confidentiality_policy_url_en": "https://support.happn.fr/hc/en-us/p/privacy",
   "data_access_via_postal": true,
   "data_access_via_form": false,

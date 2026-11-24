@@ -17,7 +17,7 @@
   "details_required_documents_en": "Send the request from the account's email address",
   "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "confidentiality_policy_url": "https://www.songkick.com/info/privacy",
+  "confidentiality_policy_url_fr": "https://www.songkick.com/info/privacy",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,

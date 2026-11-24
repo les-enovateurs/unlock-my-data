@@ -7,7 +7,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.bfmtv.com/politique-donnees-personnelles/",
+  "confidentiality_policy_url_fr": "https://www.bfmtv.com/politique-donnees-personnelles/",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Remplir le formulaire afin de demander d'exercer ses droits sur les données personnelles",

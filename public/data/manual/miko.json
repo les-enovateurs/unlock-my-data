@@ -37,7 +37,7 @@
     "name": "Miko - Play, Learn, & Connect",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://miko.ai/pages/privacy-policy",
+  "confidentiality_policy_url_fr": "https://miko.ai/pages/privacy-policy",
   "review": [
     {
       "field": "group_name",
@@ -96,7 +96,7 @@
       "resolved": false
     },
     {
-      "field": "confidentiality_policy_url",
+      "field": "confidentiality_policy_url_fr",
       "message": "Politique disponible en anglais uniquement, sur https://miko.ai/pages/privacy-policy ; aucune version française ni de sous-domaine localisé accessible au 2026-09-18. Section XI : « In the event of any inconsistency or conflict between a translated version and the English version, the English version shall prevail. » Miko Chess dispose d'une politique distincte (https://miko.ai/pages/miko-chess-privacy-policy).",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",

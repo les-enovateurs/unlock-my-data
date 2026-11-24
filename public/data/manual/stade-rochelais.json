@@ -13,7 +13,7 @@
   "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "nom, prénom, e-mail, nunémro de téléphone, année de naissance, carte d'identité",
-  "confidentiality_policy_url": "https://www.staderochelais.com/protection-des-donnees",
+  "confidentiality_policy_url_fr": "https://www.staderochelais.com/protection-des-donnees",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "En bas de la page du site, cliquez sur \"contact\" et remplissez le formulaire",

@@ -18,7 +18,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://wise.com/fr/legal/privacy-notice-personal",
+  "confidentiality_policy_url_fr": "https://wise.com/fr/legal/privacy-notice-personal",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un e-mail à privacy@wise.com pour exercer ses droits (copie des données, rectification, suppression...). Certains droits peuvent aussi s'exercer via les canaux indiqués dans la politique. Certaines données (tiers, prévention de la criminalité) sont exclues de la copie",

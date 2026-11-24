@@ -38,7 +38,7 @@
     "name": "Twitch",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.twitch.tv/p/legal/privacy-notice/",
+  "confidentiality_policy_url_fr": "https://www.twitch.tv/p/legal/privacy-notice/",
   "policy_analysis": "policy-analysis/twitch.json",
   "leaks": [
     {

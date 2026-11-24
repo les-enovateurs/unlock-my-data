@@ -14,7 +14,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://static.zara.net/static/pdfs/FR/privacy-policy/privacy-policy-fr_FR-20260120.pdf",
+  "confidentiality_policy_url_fr": "https://static.zara.net/static/pdfs/FR/privacy-policy/privacy-policy-fr_FR-20260120.pdf",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Il suffit d'être connecté à son compte",

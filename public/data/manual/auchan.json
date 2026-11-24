@@ -17,7 +17,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.auchan.fr/politique-de-confidentialite/ep-politique-de-confidentialite",
+  "confidentiality_policy_url_fr": "https://www.auchan.fr/politique-de-confidentialite/ep-politique-de-confidentialite",
   "confidentiality_policy_url_en": "https://www.auchan.fr/politique-de-confidentialite/ep-politique-de-confidentialite",
   "data_access_via_postal": true,
   "data_access_via_form": false,

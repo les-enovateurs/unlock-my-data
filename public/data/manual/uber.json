@@ -14,7 +14,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.uber.com/legal/fr/document/?name=privacy-notice",
+  "confidentiality_policy_url_fr": "https://www.uber.com/legal/fr/document/?name=privacy-notice",
   "confidentiality_policy_url_en": "https://www.uber.com/legal/en/document/?name=privacy-notice",
   "data_access_via_postal": true,
   "data_access_via_form": true,

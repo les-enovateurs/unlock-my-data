@@ -44,7 +44,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.berger-levrault.com/fr/mentions-legales-donnees-personnelles/",
+  "confidentiality_policy_url_fr": "https://www.berger-levrault.com/fr/mentions-legales-donnees-personnelles/",
   "confidentiality_policy_url_en": "https://www.berger-levrault.com/ca/en/privacy-policy/",
   "data_access_via_postal": true,
   "data_access_via_form": false,

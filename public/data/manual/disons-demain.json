@@ -14,7 +14,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.disonsdemain.fr/pages/misc/privacy?styled=1",
+  "confidentiality_policy_url_fr": "https://www.disonsdemain.fr/pages/misc/privacy?styled=1",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,

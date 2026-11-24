@@ -13,7 +13,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Vérification d'identité",
-  "confidentiality_policy_url": "https://www.lesmartines.app/politique-de-confidentialite/#hors-eee",
+  "confidentiality_policy_url_fr": "https://www.lesmartines.app/politique-de-confidentialite/#hors-eee",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_via_email": true,

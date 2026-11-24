@@ -7,7 +7,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.meetic.fr/pages/misc/privacy?styled=1#CH8",
+  "confidentiality_policy_url_fr": "https://www.meetic.fr/pages/misc/privacy?styled=1#CH8",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": false,

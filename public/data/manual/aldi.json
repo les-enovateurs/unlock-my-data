@@ -7,7 +7,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.aldi.fr/services/politique-confidentialite.html",
+  "confidentiality_policy_url_fr": "https://www.aldi.fr/services/politique-confidentialite.html",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": false,

@@ -49,6 +49,6 @@
     "name": "IKEA",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.ikea.com/fr/fr/customer-service/privacy-policy",
+  "confidentiality_policy_url_fr": "https://www.ikea.com/fr/fr/customer-service/privacy-policy",
   "confidentiality_policy_url_en": "https://www.ikea.com/gb/en/customer-service/privacy-policy"
 }

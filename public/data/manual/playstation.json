@@ -56,6 +56,6 @@
       "reporter": "Jérémy Pastouret"
     }
   ],
-  "confidentiality_policy_url": "https://www.playstation.com/en-ie/legal/privacy-policy/",
+  "confidentiality_policy_url_fr": "https://www.playstation.com/en-ie/legal/privacy-policy/",
   "policy_analysis": "policy-analysis/playstation.json"
 }

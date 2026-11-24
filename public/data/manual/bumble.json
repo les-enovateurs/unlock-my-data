@@ -14,7 +14,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://bumble.com/privacy-policy/fr/print",
+  "confidentiality_policy_url_fr": "https://bumble.com/privacy-policy/fr/print",
   "confidentiality_policy_url_en": "https://bumble.com/privacy-policy/en/print",
   "data_access_via_postal": true,
   "data_access_via_form": true,

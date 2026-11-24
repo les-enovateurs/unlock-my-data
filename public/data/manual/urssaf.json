@@ -29,7 +29,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Justificatif d'identité",
-  "confidentiality_policy_url": "https://www.urssaf.org/accueil/politique-de-confidentialite/politique-de-confidentialite-com.html",
+  "confidentiality_policy_url_fr": "https://www.urssaf.org/accueil/politique-de-confidentialite/politique-de-confidentialite-com.html",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "E-mail ou courrier au Délégué à la protection des données, en justifiant de son identité (article 77 du décret n°2019-536). Seules les demandes liées au RGPD / loi Informatique et Libertés sont traitées par cette adresse",

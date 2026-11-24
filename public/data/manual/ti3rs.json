@@ -13,7 +13,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://ti3rs.fr/mentions-legales/",
+  "confidentiality_policy_url_fr": "https://ti3rs.fr/mentions-legales/",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": true,

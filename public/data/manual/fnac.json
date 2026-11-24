@@ -17,7 +17,7 @@
   "need_id_card": false,
   "details_required_documents": "Nom, prénom, une de vos 3 dernières commandes sur fnac.com, ou votre adresse postale (si aucun achat).",
   "details_required_documents_en": "First name, last name, one of your last 3 orders on fnac.com, or your postal address (if no purchase).",
-  "confidentiality_policy_url": "https://www.fnac.com/Help/donneesPersonnelles",
+  "confidentiality_policy_url_fr": "https://www.fnac.com/Help/donneesPersonnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Il suffit d'être connecté à son compte et contacter l'agent conversationnel (chatbot) plusieurs réponses automatiques sont possible afin de faciliter votre demande, tout cela est préciser dans l'onglet \"comment exprimer mes choix sur l'usage de mes données\" sur le lien suivant : https://www.fnac.com/Help/donneesPersonnelles. Il est également possible d'envoyer un courrier à l'adresse suivante :  FNAC DARTY service consommateur, le Flavia – 9 rue des Bateaux Lavoirs, 94768 Ivry-sur-Seine, en fournissant nom, prénom, e-mail du compte et adresse postale en précisant l'objet de votre demande. Une copie d'un titre d'identité portant votre signature pourra être demandée pour vérification. Le format de la réponse n'est néanmoins pas indiqué.",

@@ -14,7 +14,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.mozilla.org/fr/privacy/firefox/",
+  "confidentiality_policy_url_fr": "https://www.mozilla.org/fr/privacy/firefox/",
   "confidentiality_policy_url_en": "https://www.mozilla.org/en-US/privacy/firefox/",
   "data_access_via_postal": true,
   "data_access_via_form": true,

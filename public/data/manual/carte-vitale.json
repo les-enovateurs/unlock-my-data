@@ -7,7 +7,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "La demande se fait à partir du compte de l'utilisateur qui est donc identifié.",
-  "confidentiality_policy_url": "https://www.ameli.fr/assure/protection-donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.ameli.fr/assure/protection-donnees-personnelles",
   "confidentiality_policy_url_en": "https://www.ameli.fr/assure/protection-donnees-personnelles",
   "data_access_via_postal": false,
   "data_access_via_form": true,

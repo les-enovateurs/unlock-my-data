@@ -16,7 +16,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.leboncoin.fr/dc/cookies",
+  "confidentiality_policy_url_fr": "https://www.leboncoin.fr/dc/cookies",
   "confidentiality_policy_url_en": "https://www.leboncoin.fr/dc/cookies",
   "data_access_via_postal": true,
   "data_access_via_form": true,

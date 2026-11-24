@@ -25,7 +25,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Pour protéger vos données et s’assurer d’une gestion confidentielle de vos données en toute sécurité, SNCF Connect pourra vous demander les informations nécessaires à la vérification de votre identité en cas de doute raisonnable sur celle-ci. Une copie d’un justificatif d’identité ne vous sera demandée que si nous ne pouvons pas vous identifier par d’autres moyens.  Vos droits sont personnels. Vous pouvez néanmoins mandater un tiers pour les exercer en votre nom, à condition qu’il nous fournisse un mandat écrit et les éléments nécessaires à la vérification de votre identité et de sa qualité de mandataire.",
-  "confidentiality_policy_url": "https://www.sncf-connect.com/informations-legales/confidentialite/partage-donnees",
+  "confidentiality_policy_url_fr": "https://www.sncf-connect.com/informations-legales/confidentialite/partage-donnees",
   "confidentiality_policy_url_en": "https://www.sncf-connect.com/en-en/legal-information/privacy/transfer-of-data",
   "data_access_via_postal": true,
   "data_access_via_form": true,

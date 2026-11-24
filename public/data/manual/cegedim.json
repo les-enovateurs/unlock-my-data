@@ -13,7 +13,7 @@
   "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "https://www.cegedim.fr/Pages/Politique-de-donnees-personnelles.aspx",
+  "confidentiality_policy_url_fr": "https://www.cegedim.fr/Pages/Politique-de-donnees-personnelles.aspx",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Email ou courrier avec copie de la pièce d'identité",

@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "confidentiality_policy_url": "https://www.famileo.com/fr-FR/politique-de-confidentialite",
+  "confidentiality_policy_url_fr": "https://www.famileo.com/fr-FR/politique-de-confidentialite",
   "confidentiality_policy_url_en": "https://www.famileo.com/en-US/privacy-policy",
   "data_access_via_postal": true,
   "data_access_via_form": false,
@@ -73,7 +73,7 @@
       "resolved": false
     },
     {
-      "field": "confidentiality_policy_url",
+      "field": "confidentiality_policy_url_fr",
       "message": "https://www.famileo.com/fr/politique-de-confidentialite",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:13:33.855Z",

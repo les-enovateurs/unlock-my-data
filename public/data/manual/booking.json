@@ -88,7 +88,7 @@
       "processor": "Booking"
     }
   ],
-  "confidentiality_policy_url": "https://www.booking.com/content/privacy.html",
+  "confidentiality_policy_url_fr": "https://www.booking.com/content/privacy.html",
   "policy_analysis": "policy-analysis/booking.json",
   "enforcement_aliases": [
     "Booking.com B.V."

@@ -37,6 +37,6 @@
     "name": "Candy Crush Saga",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.king.com/privacyPolicy",
+  "confidentiality_policy_url_fr": "https://www.king.com/privacyPolicy",
   "policy_analysis": "policy-analysis/candy-crush.json"
 }
