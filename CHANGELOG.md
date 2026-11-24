@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.2.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.1.0...v1.2.0) (2026-11-24)
+
+
+### Features
+
+* policy change history on fiches ([1fb4b75](https://github.com/les-enovateurs/unlock-my-data/commit/1fb4b75323c6e09736fb30144eb99b71a5da2d76))
+* **press:** add monochrome logo symbol for print and engraving ([9cf6713](https://github.com/les-enovateurs/unlock-my-data/commit/9cf671303ae408af513d6f45bf013c3259053d7d))
+
+
+### Bug Fixes
+
+* drop alternatives that are not better for privacy, add candidates to missions ([d00684e](https://github.com/les-enovateurs/unlock-my-data/commit/d00684e6f6db7fe0ed01b91b8997935bbc6d927b))
+* **form:** derive response_delay_en/response_format_en from the chosen option ([9e078c7](https://github.com/les-enovateurs/unlock-my-data/commit/9e078c72c4af7741042273bb1578e13445186cdc))
+* local webp logo and response_delay_fr for Maileva ([b3b1a03](https://github.com/les-enovateurs/unlock-my-data/commit/b3b1a0331fbf73e93d9131ed0710746f89807ee8))
+* local webp logo and response_delay_fr for Viamedis ([efbd358](https://github.com/les-enovateurs/unlock-my-data/commit/efbd358a6d75697e5085b144525121e8d7561200))
+* rename better_alternative_explication in services.json, reject the old key in the schema ([8b11f2a](https://github.com/les-enovateurs/unlock-my-data/commit/8b11f2a98d01cfeb097cb790296886f9909835c6))
+* rename response_delay/response_format in new fiches and review field definitions ([3330e81](https://github.com/les-enovateurs/unlock-my-data/commit/3330e81c2a5376d5c4a126173badd0bb0b36a258))
+
 ## [1.1.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.0.0...v1.1.0) (2026-11-13)
 
 
