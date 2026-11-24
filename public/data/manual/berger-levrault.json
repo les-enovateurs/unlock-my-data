@@ -59,5 +59,23 @@
   "better_alternative": false,
   "created_at": "2026-11-22",
   "created_by": "Gildas Kiendrebéogo",
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "contacts",
+      "message": "L'adresse dpo@ est enregistrée en « xn--bergerlevrault-b72h.com » : le tiret copié depuis la page est un tiret insécable (U+2011), ce qui donne un domaine invalide. Il faut retaper dpo@berger-levrault.com avec un tiret normal.",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-24T18:29:22.323Z",
+      "resolved": false
+    },
+    {
+      "field": "details_required_documents",
+      "message": "La politique FR dit que la demande doit être « accompagnée d'un justificatif d'identité » : « Aucun » est donc incorrect (mettre Autre / justificatif d'identité). La facilité d'accès est à ajuster en conséquence.",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-24T18:29:23.630Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "wassym",
+  "updated_at": "2026-11-24"
 }
