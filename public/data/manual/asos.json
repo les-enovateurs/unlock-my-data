@@ -1,0 +1,64 @@
+{
+  "name": "ASOS",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Asos.svg",
+  "country_code": "gb",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dataprotection@asos.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Équipe protection des données d'ASOS (exercice des droits, réclamations).",
+      "comment_en": "ASOS data protection team (rights requests, complaints)."
+    },
+    {
+      "type": "postal",
+      "value": "ASOS Data Protection Officer, Greater London House, Hampstead Road, London NW1 7FB, Royaume-Uni",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale du DPO indiquée dans la politique.",
+      "comment_en": "DPO postal address given in the policy."
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "confidentiality_policy_url": "https://www.asos.com/fr/confidentialite/",
+  "confidentiality_policy_url_en": "https://www.asos.com/privacy-policy/",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Contacter l'équipe protection des données par e-mail à dataprotection@asos.com, passer par le service client via les pages d'aide, ou écrire à ASOS Data Protection Officer, Greater London House, Hampstead Road, London NW1 7FB, Royaume-Uni. ASOS indique avoir 30 jours pour répondre.",
+  "data_access_type_en": "Contact the data protection team by e-mail at dataprotection@asos.com, use customer service via the help pages, or write to ASOS Data Protection Officer, Greater London House, Hampstead Road, London NW1 7FB, United Kingdom. ASOS states it has 30 days to reply.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-10-06",
+      "type": "Ingénierie sociale : identifiants d'un salarié volés puis utilisés pour accéder à des plateformes tierces utilisées par ASOS. Le 6 octobre 2026, les pirates ont envoyé une notification push via l'appli ASOS. Données exposées selon ASOS : nom complet, coordonnées et certaines informations de compte non personnelles. Pas de cartes bancaires ni de mots de passe.",
+      "type_en": "Social engineering: an employee's credentials were stolen and used to access third-party platforms used by ASOS. On 6 October 2026 the attackers sent a push notification through the ASOS app. Data exposed according to ASOS: full names, contact details and certain non-personal account information. No payment cards or passwords.",
+      "proof_url": "https://www.bleepingcomputer.com/news/security/asos-links-data-breach-to-social-engineering-attack-credential-theft/",
+      "media_link": "https://www.bleepingcomputer.com/news/security/asos-links-data-breach-to-social-engineering-attack-credential-theft/",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay_fr": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month according to GDPR",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "ASOS est une entreprise mondiale opérant à l'intérieur et à l'extérieur du Royaume-Uni. Nous utilisons des fournisseurs et des centres de distribution situés à travers le monde. Certains de ces sites n'offrent pas le même niveau de protection de vos données personnelles que le Royaume-Uni ou l'UE [...]",
+  "comments": "Responsable du traitement pour tous les services ASOS : ASOS.com Limited (Royaume-Uni). Autorité de contrôle citée : ICO (Royaume-Uni). La politique ne précise pas de pièce d'identité requise. Transferts possibles hors Royaume-Uni/UE via des fournisseurs et centres de distribution dans le monde, pays non nommés.",
+  "comments_en": "Controller for all ASOS services: ASOS.com Limited (United Kingdom). Supervisory authority cited: ICO (UK). The policy does not state an ID requirement. Possible transfers outside the UK/EU through suppliers and fulfilment centres worldwide, countries not named.",
+  "better_alternative": false,
+  "created_at": "2026-11-24",
+  "created_by": "wassym",
+  "status": "draft",
+  "playstore": {
+    "id": "com.asos.app",
+    "name": "ASOS"
+  }
+}
