@@ -57,5 +57,37 @@
   "better_alternative": false,
   "created_at": "2026-11-19",
   "created_by": "wassym",
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "confidentiality_policy_url_en",
+      "message": "Elle n'existe pas en anglais.",
+      "reviewer_name": "Claire",
+      "timestamp": "2026-11-24T07:28:29.295Z",
+      "resolved": false
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "Il s'agit d'une déclaration de non-transfert hors UE, et non un intitulé « Politique de transfert de données ».",
+      "reviewer_name": "Claire",
+      "timestamp": "2026-11-24T07:28:51.459Z",
+      "resolved": false
+    },
+    {
+      "field": "transfer_destination_countries",
+      "message": "Les seuls destinataires nommés sont Dataetic (développement et maintenance) et Systonic (hébergement), tous deux situés en France selon les coordonnées publiées sur la page.",
+      "reviewer_name": "Claire",
+      "timestamp": "2026-11-24T07:29:06.067Z",
+      "resolved": false
+    },
+    {
+      "field": "sanctioned_by_cnil",
+      "message": "Elle indique seulement que les cookies de mesure d’audience Piwik bénéficient de l’exemption prévue par la CNIL. Le lien vers la page officielle de Piwik dans la pop-up est en erreur 404.",
+      "reviewer_name": "Claire",
+      "timestamp": "2026-11-24T07:30:07.087Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "Claire",
+  "updated_at": "2026-11-24"
 }
