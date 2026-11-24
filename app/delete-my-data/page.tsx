@@ -4,7 +4,7 @@ import { localizedMetadata } from "@/lib/metadata";
 
 export const metadata = localizedMetadata({
     lang: "en",
-    title: "Delete my data | Unlock My Data",
+    title: "Delete your personal data: GDPR email templates | Unlock My Data",
     description: "Prepare GDPR erasure requests (article 17) for the services you want to leave, and send them from your own mailbox.",
     paths: { fr: "/supprimer-mes-donnees", en: "/delete-my-data" },
 });

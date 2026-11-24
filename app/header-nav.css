@@ -15,6 +15,9 @@
 .nav-link { padding: 9px 14px; border-radius: var(--umd-radius-md); font-size: 14.5px; font-weight: 600; color: var(--fg2); white-space: nowrap; cursor: pointer; }
 .nav-link:hover { color: var(--indigo-700); background: var(--indigo-50); }
 .nav-link.active { color: var(--indigo-800); background: var(--indigo-50); }
+.nav-link.nav-support { color: #7a5a00; background: var(--gold-100); }
+.nav-link.nav-support:hover, .nav-link.nav-support.active { color: #5c4300; background: var(--gold-300); }
+.mnav-row.mnav-support { color: #7a5a00; }
 .nav-link:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
 
 .lang { margin-left: 8px; border: 1.5px solid var(--slate-200); background: #fff; border-radius: var(--umd-radius-pill); font-weight: 700; font-size: 13px; color: var(--indigo-700); padding: 7px 13px; cursor: pointer; font-family: inherit; }
@@ -100,6 +103,12 @@
 .subnav-menu .mi-txt { flex: 1; min-width: 0; }
 .subnav-menu .mi-sub { display: block; font-size: 11.5px; font-weight: 500; color: var(--fg3); margin-top: 1px; }
 .subnav-sep { height: 1px; background: var(--slate-100); margin: 6px 10px; }
+/* Scrolling tabs hid the active one ("Classement") off-screen on phones: wrap them instead. */
+@media (max-width: 640px) {
+  .subnav-in { flex-wrap: wrap; padding: 0 12px; }
+  .subnav-tabs { flex-wrap: wrap; overflow-x: visible; }
+  .subnav-in a, .subnav-trigger { padding: 10px; }
+}
 
 /* ---- Responsive switch ---- */
 @media (max-width: 880px) {

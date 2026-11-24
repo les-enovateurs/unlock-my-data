@@ -124,7 +124,7 @@ export default function EngagementCertificateTool({ lang }: Props) {
     const deliveredParts: string[] = String(t.t("deliveredTo")).split("{name}");
 
     return (
-        <main className="min-h-screen bg-white text-umd-slate-900">
+        <div className="min-h-screen bg-white text-umd-slate-900">
             {/* ---- Hero ---- */}
             <section className="border-b border-umd-slate-200 bg-gradient-to-b from-umd-indigo-50 to-white print:hidden">
                 <div className="mx-auto max-w-5xl px-6 pb-10 pt-12">
@@ -334,6 +334,6 @@ export default function EngagementCertificateTool({ lang }: Props) {
                     }
                 }
             `}</style>
-        </main>
+        </div>
     );
 }

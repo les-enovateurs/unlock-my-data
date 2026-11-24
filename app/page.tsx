@@ -1,10 +1,16 @@
-"use client";
-import { useLanguage } from "@/context/LanguageContext";
+import type { Metadata } from "next";
 import HomePageContent from "@/components/HomePageContent";
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+    languages: {
+      "fr-FR": "https://unlock-my-data.com",
+      "en-US": "https://unlock-my-data.com/en",
+    },
+  },
+};
+
 export default function Home() {
-  const { setLang } = useLanguage();
-  setLang("fr");
   return <HomePageContent lang="fr" />;
 }
-

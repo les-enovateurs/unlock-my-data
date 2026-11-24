@@ -22,6 +22,7 @@ import {
     Zap,
     GraduationCap,
     HeartHandshake,
+    Heart,
     FilePlus2,
     FileSearch,
     FilePen,
@@ -60,6 +61,7 @@ type NavigationItem = {
     leaves?: NavLeaf[];
     submenuGroups?: NavigationGroup[];
     routes?: string[];
+    highlight?: boolean;
 };
 
 type ContribTab = { name: string; href: string };
@@ -89,7 +91,8 @@ const FR_TO_EN_MAPPING: Record<string, string> = {
     '/politique-confidentialite': '/privacy-policy',
     '/ateliers/urgence-fuite': '/workshops/data-leak-emergency',
     '/ateliers': '/workshops',
-    '/nettoyage-numerique': '/digital-clean-up'
+    '/nettoyage-numerique': '/digital-clean-up',
+    '/soutenir': '/support'
 };
 
 const EN_TO_FR_MAPPING = Object.entries(FR_TO_EN_MAPPING).reduce((acc, [fr, en]) => {
@@ -176,6 +179,7 @@ export default function Header() {
             icon: HeartHandshake,
             routes: isFr ? ["/contribuer", "/contributeurs"] : ["/contribute", "/contributors"],
         },
+        { name: ht.t("support"), href: isFr ? "/soutenir" : "/support", icon: Heart, highlight: true },
     ], [ht, isFr]);
 
     const currentPathname = usePathname() || '/';
@@ -284,7 +288,7 @@ export default function Header() {
                                 <Link
                                     key={item.name}
                                     href={item.href || "#"}
-                                    className={`nav-link${isActive ? " active" : ""}`}
+                                    className={`nav-link${item.highlight ? " nav-support" : ""}${isActive ? " active" : ""}`}
                                     onClick={() => setOpenDesktopMenu(null)}
                                 >
                                     {item.name}
@@ -452,7 +456,7 @@ export default function Header() {
                                     <Link
                                         key={item.name}
                                         href={item.href || "#"}
-                                        className={`mnav-row${isActive ? " active" : ""}`}
+                                        className={`mnav-row${item.highlight ? " mnav-support" : ""}${isActive ? " active" : ""}`}
                                         onClick={() => setMobileOpen(false)}
                                     >
                                         <span className="mnav-ic"><Ic className="w-[19px] h-[19px]" aria-hidden="true" /></span>

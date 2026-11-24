@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Directory of referenced services | Unlock My Data",
+  title: "Apps and privacy: the catalogue of analysed services | Unlock My Data",
   description:
     "Browse the Unlock My Data directory of online services to discover and compare how they handle your personal data: privacy score, permissions, trackers, country and more.",
 };

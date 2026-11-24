@@ -6,6 +6,7 @@ import servicesData from '../../public/data/services.json';
 import publishedQuotes from '../../public/data/policy-analysis/_quotes.json';
 import publishedHistory from '../../public/data/policy-analysis/_history.json';
 import { notFound } from 'next/navigation';
+import SupportCallout from '@/components/support/SupportCallout';
 import { Metadata } from 'next';
 
 import {
@@ -143,7 +144,14 @@ async function loadJsonFile<T>(relativePath: string): Promise<T | null> {
 }
 
 export default async function Manual({ slug, lang = 'fr', tab = 'ess' }: { slug: string, lang: string, tab?: FicheTabId }) {
-    return <FicheAvancee {...await buildFicheProps(slug, lang)} tab={tab} />;
+    return (
+        <>
+            <FicheAvancee {...await buildFicheProps(slug, lang)} tab={tab} />
+            <div className="mx-auto max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+                <SupportCallout lang={lang} />
+            </div>
+        </>
+    );
 }
 
 const TAB_DESCRIPTIONS: Record<Exclude<FicheTabId, 'ess'>, { fr: (n: string) => string; en: (n: string) => string }> = {

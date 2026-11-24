@@ -4,7 +4,7 @@ import statsData from "../public/data/contributors-stats.json";
 import { useState, useMemo, useEffect } from 'react';
 import {
     Trophy, Users, Crown, Sparkles, PenLine, ShieldCheck,
-    FilePlus2, Target, AlertTriangle,
+    FilePlus2, Target, AlertTriangle, BadgeCheck,
 } from 'lucide-react';
 import Link from "next/link";
 import Translator from "./tools/t";
@@ -226,7 +226,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                                         <div className="mb-2 mt-1.5 flex justify-center"><ContribAvatar name={s.c.name} size={46} /></div>
                                         <div className="text-[15px] font-bold text-umd-slate-900">{s.c.name}</div>
                                         <div className="data mt-1.5 text-2xl font-bold text-umd-indigo-700">
-                                            {s.c.points} <span className="text-xs font-medium text-umd-slate-400">{t.t("points")}</span>
+                                            {s.c.points} <span className="text-xs font-medium text-umd-slate-600">{t.t("points")}</span>
                                         </div>
                                     </div>
                                     <div
@@ -242,7 +242,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                         <div className="mx-auto mt-8 flex max-w-3xl flex-col gap-2">
                             {rest.map((c, i) => (
                                 <div key={c.name} className="umd-card flex items-center gap-4 p-3">
-                                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-umd-slate-100 text-sm font-bold text-umd-slate-500">
+                                    <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-umd-slate-100 text-sm font-bold text-umd-slate-600">
                                         {i + 4}
                                     </span>
                                     <ContribAvatar name={c.name} size={32} />
@@ -256,7 +256,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                                         </div>
                                     </div>
                                     <span className="data flex-shrink-0 text-[15px] font-bold text-umd-indigo-700">
-                                        {c.points}<span className="text-[11px] font-medium text-umd-slate-400"> {t.t("points")}</span>
+                                        {c.points}<span className="text-[11px] font-medium text-umd-slate-600"> {t.t("points")}</span>
                                     </span>
                                 </div>
                             ))}
@@ -269,7 +269,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
             <section className="border-y border-umd-slate-200 bg-umd-slate-50 px-6 py-16">
                 <div className="mx-auto max-w-5xl">
                     <h2 className="umd-heading-2 mb-2 text-center">{t.t("familiesTitle")}</h2>
-                    <p className="mx-auto mb-9 max-w-xl text-center text-umd-slate-500">{t.t("familiesSubtitle")}</p>
+                    <p className="mx-auto mb-9 max-w-xl text-center text-umd-slate-600">{t.t("familiesSubtitle")}</p>
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                         {families.map(f => {
                             const isOpen = openFamily === f.key;
@@ -281,18 +281,18 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                                             <f.Icon className="h-5 w-5" aria-hidden="true" />
                                         </span>
                                         <h3 className="flex-1 text-[16.5px] font-bold">{f.title}</h3>
-                                        <span className="umd-pill umd-pill-gold text-xs">{f.pts}</span>
                                     </div>
+                                    <span className="umd-pill umd-pill-gold self-start text-xs">{f.pts}</span>
                                     <p className="m-0 text-[13.5px] leading-relaxed text-umd-slate-500">{f.desc}</p>
-                                    <ul className="flex flex-col gap-1.5 border-t border-umd-slate-100 pt-3">
+                                    <ul className="m-0 flex list-none flex-col gap-1.5 border-t border-umd-slate-100 p-0 pt-3">
                                         {visible.map((p, i) => (
                                             <li key={p.name} className="flex items-center gap-2.5 text-[13.5px]">
-                                                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-umd-slate-100 text-[11.5px] font-bold text-umd-slate-500">
+                                                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-umd-slate-100 text-[11.5px] font-bold text-umd-slate-600">
                                                     {i + 1}
                                                 </span>
                                                 <span className="min-w-0 flex-1 truncate font-semibold text-umd-slate-900" title={p.name}>{p.name}</span>
                                                 {p.autonomyScore !== undefined && p.autonomyScore >= 95 && (
-                                                    <span className="umd-chip umd-chip-safe flex-shrink-0 px-2 py-0.5 text-[11px]">{t.t("autonomous")}</span>
+                                                    <BadgeCheck role="img" aria-label={t.t("autonomous")} className="h-4 w-4 flex-shrink-0 text-umd-green-600"><title>{t.t("autonomous")}</title></BadgeCheck>
                                                 )}
                                                 <span className="data flex-shrink-0 text-[13px] text-umd-slate-600" title={`${p.count} ${f.unit}`}>{p.count}</span>
                                             </li>
@@ -304,7 +304,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                                             onClick={() => setOpenFamily(isOpen ? null : f.key)}
                                             className="umd-btn umd-btn-ghost umd-btn-sm self-start"
                                         >
-                                            {isOpen ? "−" : "+"} {f.list.length - 5}
+                                            {isOpen ? t.t("showLess") : t.t("showMore", { n: String(f.list.length - 5) })}
                                         </button>
                                     )}
                                 </div>
@@ -319,7 +319,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                 <div className="mx-auto max-w-5xl">
                     <div className="mb-4 flex flex-wrap items-baseline justify-between gap-4">
                         <h2 className="umd-heading-3">{t.t("recentTitle")}</h2>
-                        <span className="data text-[13px] text-umd-slate-400">{t.t("updatedAt")} {formatDate(stats.lastContributionAt)}</span>
+                        <span className="data text-[13px] text-umd-slate-600">{t.t("updatedAt")} {formatDate(stats.lastContributionAt)}</span>
                     </div>
                     <div className="flex flex-wrap gap-2.5">
                         {recent.map(r => {
@@ -328,7 +328,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
                             const inner = (
                                 <>
                                     <span className="text-[13.5px] font-bold">{r.service}</span>
-                                    <span className="text-xs text-umd-slate-400">{t.t("recentBy")} {r.by} · {formatDate(r.date)}</span>
+                                    <span className="text-xs text-umd-slate-600">{t.t("recentBy")} {r.by} · {formatDate(r.date)}</span>
                                 </>
                             );
                             if (!link) {
@@ -405,7 +405,7 @@ export default function ContributorsHallOfFame({ lang = "fr" }: Props) {
             </section>
 
             {lang === 'en' && (
-                <div className="mx-auto max-w-5xl px-6 pb-10 text-center text-sm text-umd-slate-400">
+                <div className="mx-auto max-w-5xl px-6 pb-10 text-center text-sm text-umd-slate-600">
                     <p>{t.t("thankYou")}</p>
                     <p className="mt-2">
                         {t.t("toContributeMore")}{" "}

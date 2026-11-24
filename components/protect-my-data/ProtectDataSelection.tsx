@@ -88,7 +88,7 @@ export default function ProtectDataSelection({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-umd-slate-400" />
+            <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-umd-slate-500" />
           </div>
         </div>
 
@@ -163,7 +163,7 @@ export default function ProtectDataSelection({
             <ArrowRight className="h-5 w-5" />
           </button>
 
-          <p className="mt-2.5 flex items-center justify-center gap-1.5 text-center text-xs text-umd-slate-400">
+          <p className="mt-2.5 flex items-center justify-center gap-1.5 text-center text-xs text-umd-slate-500">
             {count > 0 ? (
               <>
                 <CornerDownLeft className="h-3.5 w-3.5" />

@@ -15,3 +15,15 @@ declare module '*.svg' {
     const content: StaticImageData;
     export default content;
 }
+
+// Donorbox donation widget (custom element registered by donorbox.org/widgets.js).
+declare namespace React.JSX {
+    interface IntrinsicElements {
+        'dbox-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+            campaign: string;
+            type: string;
+            interval?: string;
+            'enable-auto-scroll'?: string;
+        };
+    }
+}

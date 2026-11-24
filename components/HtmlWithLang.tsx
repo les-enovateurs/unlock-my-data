@@ -51,7 +51,7 @@ export function HtmlWithLang({children, isProd}: HtmlWithLangProps) {
         {isEmbed ? children : (
             <>
                 <Header/>
-                <main role="main" className="flex flex-col bg-white min-h-screen">
+                <main role="main" className="flex flex-col bg-white min-h-screen [&>*]:w-full">
                     {children}
                 </main>
                 <ScrollToTop/>

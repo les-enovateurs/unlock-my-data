@@ -114,7 +114,7 @@ function Block({ b, newWindow }: { b: PressBlock; newWindow: string }) {
         return (
             <blockquote className="my-6 border-l-4 border-umd-indigo-300 pl-5">
                 <p className="text-lg italic leading-relaxed text-umd-slate-700">{glue(`« ${b.text} »`)}</p>
-                <cite className="mt-2 block text-sm not-italic text-umd-slate-400">{b.cite}</cite>
+                <cite className="mt-2 block text-sm not-italic text-umd-slate-500">{b.cite}</cite>
             </blockquote>
         );
     }
@@ -238,7 +238,7 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
                             {t.flag}
                         </span>
                         <h1 className="umd-heading-1 mb-4">{c.title}</h1>
-                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-umd-slate-400">
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-umd-slate-500">
                             <span className="data">{c.date}</span>
                             <span aria-hidden="true">·</span>
                             <span>{c.loc}</span>
@@ -263,7 +263,7 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
                             <p className="m-0 text-sm leading-relaxed text-umd-slate-600">{BOILER[lang]}</p>
                         </div>
 
-                        <p className="mt-8 text-center text-sm font-bold tracking-widest text-umd-slate-400">{t.end}</p>
+                        <p className="mt-8 text-center text-sm font-bold tracking-widest text-umd-slate-500">{t.end}</p>
                     </div>
                 </article>
 
@@ -276,7 +276,7 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
                         </button>
                         <CopyButton text={`${c.title}\n\n${c.chapo}`} label={t.copyText} copied={t.copied} />
                         <div className="umd-divider" />
-                        <p className="text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{t.share}</p>
+                        <p className="text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{t.share}</p>
                         <div className="flex gap-2">
                             <button type="button" onClick={copyLink} title={t.copyLink} aria-label={t.copyLink} className="umd-btn umd-btn-outline umd-btn-sm flex-1 justify-center">
                                 <LinkIcon className="h-4 w-4" aria-hidden="true" />
@@ -292,7 +292,7 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
 
                     {assets.length > 0 && (
                         <div className="umd-card p-4">
-                            <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{t.assetsTitle}</p>
+                            <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{t.assetsTitle}</p>
                             <div className="flex flex-col gap-1.5">
                                 {assets.map((a) => (
                                     <a key={a.href} href={a.href} download className="flex items-center gap-2 text-sm text-umd-indigo-700 hover:underline">
@@ -301,23 +301,23 @@ export default function PressReleaseDetail({ slug, lang = "fr" }: { slug: string
                                     </a>
                                 ))}
                             </div>
-                            <p className="mt-2.5 text-xs leading-snug text-umd-slate-400">{t.assetsNote}</p>
+                            <p className="mt-2.5 text-xs leading-snug text-umd-slate-500">{t.assetsNote}</p>
                         </div>
                     )}
 
                     <div className="umd-card p-4">
-                        <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{t.contactTitle}</p>
+                        <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{t.contactTitle}</p>
                         <a href={`mailto:${PRESS_EMAIL}`} className="block text-sm font-bold text-umd-indigo-700">{PRESS_EMAIL}</a>
-                        <p className="mt-1.5 text-xs text-umd-slate-400">{t.contactDelay}</p>
+                        <p className="mt-1.5 text-xs text-umd-slate-500">{t.contactDelay}</p>
                     </div>
 
                     {others.length > 0 && (
                         <div className="umd-card p-4">
-                            <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{t.others}</p>
+                            <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{t.others}</p>
                             <div className="flex flex-col gap-3">
                                 {others.map((o) => (
                                     <Link key={o.slug} href={`${t.basePath}/${o.slug}`} className="block text-left hover:opacity-80">
-                                        <span className="data block text-xs text-umd-slate-400">{o[lang].date}</span>
+                                        <span className="data block text-xs text-umd-slate-500">{o[lang].date}</span>
                                         <span className="block text-sm font-bold leading-snug text-umd-slate-800">{o[lang].title}</span>
                                     </Link>
                                 ))}

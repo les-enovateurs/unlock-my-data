@@ -11,6 +11,7 @@ import { PROTECT_DATA_SELECTION_KEY } from "@/constants/protectData";
 import { webmailLinks } from "@/constants/emailTemplates";
 import { flagEmoji, localizedCountry } from "@/lib/geo/serviceGeo";
 import { contactsFor, firstEmail, type ServiceContact } from "@/lib/contacts";
+import SupportCallout from "@/components/support/SupportCallout";
 
 interface Service {
     slug: string;
@@ -24,6 +25,7 @@ const TR: Record<string, Record<string, string>> = {
     fr: {
         pill: "Droit à l'effacement · RGPD article 17",
         title: "Supprimer mes données",
+        titleFor: "Supprimer mes données {name}",
         lead: "Sélectionnez les services à quitter. Nous préparons des demandes d'effacement ; vous les envoyez <strong>une par une depuis votre propre messagerie</strong> (l'envoi vous appartient, nous ne collectons rien).",
         infoChip: "Chaque bouton ouvre l'e-mail pré-rédigé dans votre application de messagerie.",
         auditTitle: "Sélection de votre audit disponible",
@@ -68,6 +70,7 @@ Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distin
     en: {
         pill: "Right to erasure · GDPR article 17",
         title: "Delete my data",
+        titleFor: "Delete my {name} data",
         lead: "Select the services you want to leave. We prepare the erasure requests; you send them <strong>one by one from your own mailbox</strong> (sending is yours — we collect nothing).",
         infoChip: "Each button opens the pre-written email in your mail application.",
         auditTitle: "Your audit selection is available",
@@ -133,6 +136,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
         () => (services as unknown as Service[]).slice().sort((a, b) => a.name.localeCompare(b.name, locale)),
         [locale]
     );
+    const preselectedName = preselectedSlug && allServices.find((s) => s.slug === preselectedSlug)?.name;
 
     const [searchTerm, setSearchTerm] = useState("");
     const [selected, setSelected] = useState<string[]>([]);
@@ -206,9 +210,11 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
     const ficheBase = locale === "fr" ? "/liste-applications" : "/list-app";
 
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
             <span className="umd-pill umd-pill-indigo mb-3.5"><Shield aria-hidden="true" />{t("pill")}</span>
-            <h1 className="umd-heading-1 mb-1.5">{t("title")}</h1>
+            <h1 className="umd-heading-1 mb-1.5">
+                {preselectedName ? t("titleFor", { name: preselectedName }) : t("title")}
+            </h1>
             <p
                 className="umd-lead-text mt-0 mb-4 max-w-3xl [&_strong]:text-umd-slate-900"
                 dangerouslySetInnerHTML={{ __html: t("lead") }}
@@ -228,7 +234,7 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                 </div>
             )}
 
-            <div className="grid lg:grid-cols-2 gap-7 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-start">
                 {/* 1 · Selector (left, scrollable) */}
                 <div className="lg:sticky lg:top-24">
                     <div className="flex items-baseline justify-between gap-3 mb-3">
@@ -376,8 +382,9 @@ export default function SupprimerMesDonnees({ preselectedSlug, locale = 'fr' }: 
                             })}
                         </div>
                     )}
+                    {chosen.length > 0 && <SupportCallout lang={locale} className="mt-5" />}
                 </div>
             </div>
-        </main>
+        </div>
     );
 }

@@ -98,7 +98,7 @@ export default function CatalogContent({ lang, services }: Props) {
     const shown = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
             <h1 className="umd-heading-1 mb-1.5">{t("title")}</h1>
             <p className="umd-lead-text mt-0 mb-6">{t("lead")}</p>
 
@@ -210,6 +210,6 @@ export default function CatalogContent({ lang, services }: Props) {
                     </button>
                 </nav>
             )}
-        </main>
+        </div>
     );
 }

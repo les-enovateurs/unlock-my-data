@@ -185,7 +185,7 @@ export default function EmbedBuilder({ lang, services }: { lang: "fr" | "en"; se
     };
 
     return (
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
             <h1 className="umd-heading-1 mb-1.5">{t.title}</h1>
             <p className="umd-lead-text mt-0 mb-10 max-w-3xl">{t.lead}</p>
 
@@ -316,7 +316,7 @@ export default function EmbedBuilder({ lang, services }: { lang: "fr" | "en"; se
                         <h2 className="font-display font-bold text-xl m-0">3. {t.step3}</h2>
                         <p className="text-umd-slate-600 text-sm m-0">{t.step3Help}</p>
                         <div className="flex flex-col gap-2">
-                            <textarea id="embed-code" readOnly value={scriptSnippet} rows={4}
+                            <textarea id="embed-code" aria-label={t.step3} readOnly value={scriptSnippet} rows={4}
                                 className="umd-input font-mono text-xs !h-auto" onFocus={(e) => e.target.select()} />
                             <button type="button" className="umd-btn umd-btn-primary self-start" onClick={(e) => copy(e, scriptSnippet)}>
                                 {copied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />} {copied ? t.copied : t.copy}
@@ -326,7 +326,7 @@ export default function EmbedBuilder({ lang, services }: { lang: "fr" | "en"; se
                             <summary className="cursor-pointer text-umd-slate-700 font-semibold">{t.noScript}</summary>
                             <p className="text-umd-slate-600 mt-2 mb-2">{t.noScriptHelp}</p>
                             <div className="flex flex-col gap-2">
-                                <textarea id="embed-code-iframe" readOnly value={iframeSnippet} rows={3}
+                                <textarea id="embed-code-iframe" aria-label={t.noScript} readOnly value={iframeSnippet} rows={3}
                                     className="umd-input font-mono text-xs !h-auto" onFocus={(e) => e.target.select()} />
                                 <button type="button" className="umd-btn umd-btn-outline umd-btn-sm self-start" onClick={(e) => copy(e, iframeSnippet)}>
                                     <Copy aria-hidden="true" /> {t.copy}
@@ -369,6 +369,6 @@ export default function EmbedBuilder({ lang, services }: { lang: "fr" | "en"; se
                     ))}
                 </div>
             </section>
-        </main>
+        </div>
     );
 }

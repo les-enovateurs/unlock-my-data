@@ -103,7 +103,7 @@ export default function ProtectDataHero({
           >
             <button
               onClick={() => setShowResetModal(false)}
-              className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full text-umd-slate-400 transition-colors hover:bg-umd-slate-100 hover:text-umd-slate-700"
+              className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full text-umd-slate-500 transition-colors hover:bg-umd-slate-100 hover:text-umd-slate-700"
               aria-label={t.t("resetDataCancel")}
             >
               <X className="h-5 w-5" />

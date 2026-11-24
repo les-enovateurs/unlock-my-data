@@ -3,7 +3,7 @@ import { CleanUpProvider } from "@/context/CleanUpContext";
 import dict from "@/i18n/DigitalCleanUp.json";
 
 export const metadata: Metadata = {
-    title: `${dict.en.title} | Unlock My Data`,
+    title: "Digital clean-up: tidy up your online accounts | Unlock My Data",
     description: dict.en.description,
 };
 

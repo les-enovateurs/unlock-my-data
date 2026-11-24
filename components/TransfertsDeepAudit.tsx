@@ -120,13 +120,13 @@ function MigrationCard({ s, lang }: { s: Service; lang: Lang }) {
 
             {alts.length > 0 && (
                 <>
-                    <p className="mb-2 text-xs font-bold uppercase tracking-widest text-umd-slate-400">{c.alternatives}</p>
+                    <p className="mb-2 text-xs font-bold uppercase tracking-widest text-umd-slate-500">{c.alternatives}</p>
                     <div className="mb-3 flex flex-col gap-2">
                         {alts.map((a) => (
                             <button key={a.slug} type="button" onClick={() => setDrawer({ mode: "compare", alt: a })} className="flex items-center gap-2.5 rounded-lg border border-umd-slate-200 p-2 text-left hover:border-umd-indigo-300 hover:bg-umd-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300">
                                 <Avatar s={a} size={26} />
                                 <span className="flex-1 text-sm font-semibold">{a.name}</span>
-                                <ArrowRight className="h-4 w-4 text-umd-slate-400" aria-hidden="true" />
+                                <ArrowRight className="h-4 w-4 text-umd-slate-500" aria-hidden="true" />
                             </button>
                         ))}
                     </div>

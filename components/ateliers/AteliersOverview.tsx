@@ -125,7 +125,7 @@ export default function AteliersOverview({ lang }: { lang: string }) {
                                 {t.t('leakDesc')}
                             </p>
                             <div className="mb-8 rounded-xl bg-umd-slate-50 p-5">
-                                <p className="mb-3 text-xs font-bold uppercase tracking-widest text-umd-slate-400">{t.t('inThisWorkshop')}</p>
+                                <p className="mb-3 text-xs font-bold uppercase tracking-widest text-umd-slate-500">{t.t('inThisWorkshop')}</p>
                                 <ul className="space-y-2 text-sm text-umd-slate-700">
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-umd-green-600" aria-hidden="true" /> {t.t('leakItem1')}</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-umd-green-600" aria-hidden="true" /> {t.t('leakItem2')}</li>
@@ -144,7 +144,7 @@ export default function AteliersOverview({ lang }: { lang: string }) {
                             return (
                                 <div key={w.title} className="umd-card flex h-full flex-col p-6 md:p-8">
                                     <div className="mb-6 flex items-start justify-between">
-                                        <div className="rounded-xl bg-umd-slate-100 p-4 text-umd-slate-400">
+                                        <div className="rounded-xl bg-umd-slate-100 p-4 text-umd-slate-500">
                                             <Ic className="h-8 w-8" aria-hidden="true" />
                                         </div>
                                         <span className="umd-chip umd-chip-neutral">{t.t('comingSoon')}</span>
@@ -152,10 +152,10 @@ export default function AteliersOverview({ lang }: { lang: string }) {
                                     <h2 className="umd-heading-3 mb-4 text-2xl text-umd-slate-600">{w.title}</h2>
                                     <p className="mb-6 min-h-14 text-umd-slate-500">{w.desc}</p>
                                     <div className="mb-8 rounded-xl bg-umd-slate-50 p-5">
-                                        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-umd-slate-400">{t.t('inThisWorkshop')}</p>
+                                        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-umd-slate-500">{t.t('inThisWorkshop')}</p>
                                         <ul className="space-y-2 text-sm text-umd-slate-500">
                                             {w.items.map((it) => (
-                                                <li key={it} className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-umd-slate-400" aria-hidden="true" /> {it}</li>
+                                                <li key={it} className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-umd-slate-500" aria-hidden="true" /> {it}</li>
                                             ))}
                                         </ul>
                                     </div>
@@ -167,6 +167,22 @@ export default function AteliersOverview({ lang }: { lang: string }) {
                         })}
 
                     </div>
+                </div>
+            </section>
+
+            <section className="border-b border-umd-slate-200 bg-umd-indigo-50 py-16">
+                <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-6 text-center md:flex-row md:text-left">
+                    <div className="flex-1">
+                        <h2 className="umd-heading-2 mb-3">{t.t('bookHeading')}</h2>
+                        <p className="m-0 text-umd-slate-600">{t.t('bookLead')}</p>
+                    </div>
+                    <a
+                        href={`mailto:contact@les-enovateurs.com?subject=${encodeURIComponent(t.t('bookSubject'))}`}
+                        className="umd-btn umd-btn-primary umd-btn-lg flex-shrink-0"
+                    >
+                        <Mail className="h-5 w-5" aria-hidden="true" />
+                        {t.t('bookButton')}
+                    </a>
                 </div>
             </section>
 

@@ -61,7 +61,7 @@ export default function CleanUpStepper({ current }: { current: Stage }) {
                     ? "bg-umd-green-700 text-white border-umd-green-700"
                     : done
                         ? "bg-white text-umd-green-700 border-umd-green-300"
-                        : "bg-white text-umd-slate-400 border-umd-slate-200";
+                        : "bg-white text-umd-slate-500 border-umd-slate-200";
 
                 const badge = active
                     ? "bg-white/20 text-white"

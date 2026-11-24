@@ -48,6 +48,10 @@ export default function Footer() {
             href: isFr ? "/contribuer" : "/contribute",
         },
         {
+            label: isFr ? "Soutenir l'association" : "Support the association",
+            href: isFr ? "/soutenir" : "/support",
+        },
+        {
             label: isFr ? "Espace presse" : "Press room",
             href: isFr ? "/presse" : "/press",
         },

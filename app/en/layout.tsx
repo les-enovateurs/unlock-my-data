@@ -43,25 +43,7 @@ export default function EnglishLayout({
                                       }: {
     children: React.ReactNode;
 }) {
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Unlock My Data",
-        "url": "https://unlock-my-data.com/en",
-        "logo": "https://unlock-my-data.com/icon-512.png",
-        "sameAs": [
-            "https://github.com/les-enovateurs/unlock-my-data"
-        ],
-        "description": "Civic platform to analyze your services, compare ethical alternatives and bulk delete your online traces."
-    };
-
     return (
-        <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-            />
-            {children}
-        </>
+        <>{children}</>
     );
 }
