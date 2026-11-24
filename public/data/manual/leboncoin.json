@@ -8,7 +8,9 @@
     {
       "type": "email",
       "value": "dpo@leboncoin.fr",
-      "purposes": ["export"]
+      "purposes": [
+        "export"
+      ]
     }
   ],
   "easy_access_data": 5,
@@ -36,5 +38,15 @@
     "id": "fr.leboncoin",
     "name": "leboncoin, petites annonces",
     "exodus": true
-  }
+  },
+  "leaks": [
+    {
+      "date": "2024-03-16",
+      "type": "Adresses e-mail, Téléphones, Nom et prénom",
+      "type_en": "Email addresses, Phone numbers, Nom et prénom",
+      "proof_url": "/proofs/proof-leboncoin-1795544260764.png",
+      "contributor": "wassym",
+      "media_link": "https://www.tomsguide.fr/leboncoin-une-fuite-de-donnees-devoile-ladresse-et-le-numero-des-acheteurs/"
+    }
+  ]
 }
