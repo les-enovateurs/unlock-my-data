@@ -76,5 +76,15 @@
   "playstore": {
     "id": "deezer.android.app",
     "name": "Deezer - Musique & Podcast"
-  }
+  },
+  "leaks": [
+    {
+      "date": "2023-01-04",
+      "type": "Adresses e-mail, Nom, date de naissance",
+      "type_en": "Email addresses, Nom, date de naissance",
+      "proof_url": "/proofs/proof-deezer-1795544408880.png",
+      "contributor": "wassym",
+      "media_link": "https://siecledigital.fr/2023/01/04/deezer-les-donnees-de-250-millions-dutilisateurs-ont-fuite/"
+    }
+  ]
 }
