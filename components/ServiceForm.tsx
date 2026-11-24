@@ -810,6 +810,27 @@ export default function ServiceForm({
                 }),
             );
 
+            const responseFormat =
+                formData.response_format_fr === "Autre" && formData.response_format_autre !== ""
+                    ? formData.response_format_autre
+                    : formData.response_format_fr;
+            const responseDelay =
+                formData.response_delay_fr === "Autre" && formData.response_delay_autre !== ""
+                    ? formData.response_delay_autre
+                    : formData.response_delay_fr;
+            // The form only edits the French value: once it changes, the stored English
+            // one is stale. Take the option's English label, or drop it so the page
+            // falls back to French (#456).
+            const stored = (formData.originalData || {}) as Record<string, string | undefined>;
+            const englishFor = (
+                field: string,
+                options: ReadonlyArray<{ value: string; label_en?: string }>,
+                french: string,
+            ) =>
+                french === (stored[`${field}_fr`] ?? "")
+                    ? stored[`${field}_en`]
+                    : options.find((opt) => opt.value !== "" && opt.value === french)?.label_en;
+
             const jsonData = {
                 ...(mode === "update" && formData.originalData
                     ? formData.originalData
@@ -835,11 +856,8 @@ export default function ServiceForm({
                 data_access_type_en: formData.data_access_type_en,
                 data_access_via_email: formData.data_access_via_email,
                 data_access_via_other: formData.data_access_via_other,
-                response_format_fr:
-                    formData.response_format_fr === "Autre" &&
-                        formData.response_format_autre !== ""
-                        ? formData.response_format_autre
-                        : formData.response_format_fr,
+                response_format_fr: responseFormat,
+                response_format_en: englishFor("response_format", responseFormatOptions, responseFormat),
                 example_data_export: processedExamples,
                 leaks: (formData.leaks || [])
                     .filter((l) => (l.date || "").trim() || (l.type || "").trim() || (l.proof_url || "").trim())
@@ -849,11 +867,8 @@ export default function ServiceForm({
                     })),
                 url_export: formData.url_export,
                 address_export: formData.address_export,
-                response_delay_fr:
-                    formData.response_delay_fr === "Autre" &&
-                        formData.response_delay_autre !== ""
-                        ? formData.response_delay_autre
-                        : formData.response_delay_fr,
+                response_delay_fr: responseDelay,
+                response_delay_en: englishFor("response_delay", responseDelayOptions, responseDelay),
                 sanctioned_by_cnil: formData.sanctioned_by_cnil,
                 sanction_details: formData.sanction_details,
                 data_transfer_policy: formData.data_transfer_policy,
