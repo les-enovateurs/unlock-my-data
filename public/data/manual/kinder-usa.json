@@ -7,7 +7,7 @@
   "contacts": [
     {
       "type": "email",
-      "value": "privacy.us@ferrero.com.",
+      "value": "privacy.us@ferrero.com",
       "purposes": ["delete", "export"]
     }
   ],"easy_access_data": 3,
