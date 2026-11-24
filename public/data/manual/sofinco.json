@@ -28,7 +28,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents": "Vérification d'identité : la demande doit indiquer au minimum nom, prénom et adresse de réponse (pièce justificative non précisée).",
   "confidentiality_policy_url": "https://www.sofinco.fr/a-propos/sofinco-informations-legales#politique-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": false,
@@ -67,8 +67,10 @@
       "resolved": false
     }
   ],
-  "updated_by": "dominique_usa",
-  "updated_at": "2026-11-16",
+  "updated_by": "wassym",
+  "updated_at": "2026-11-24",
+  "details_required_documents_en": "Identity check: the request must state at least first name, last name and reply address (supporting document not specified).",
+  "privacy_policy_quote_en": "\"We carry out all processing of your personal data within the European Union (EU). However, for certain specific services, we may have to use service providers and subcontractors established outside the EU. \\[...] To secure transfers of information or personal data outside the European Union (for example to the United States or Morocco) \\[...]\"",
   "playstore": {
     "id": "fr.sofinco.android",
     "name": "Sofinco"
