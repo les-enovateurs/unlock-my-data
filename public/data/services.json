@@ -307,6 +307,38 @@
   },
   {
     "mode": 1,
+    "slug": "auchan",
+    "name": "Auchan",
+    "logo": "/img/logos/auchan.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@auchan.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "badoo",
     "name": "Badoo",
     "logo": "/img/logos/badoo.webp",
@@ -1930,6 +1962,38 @@
   },
   {
     "mode": 1,
+    "slug": "fortnite",
+    "name": "Fortnite",
+    "logo": "/img/logos/fortnite.webp",
+    "easy_access_data": 5,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@support.epicgames.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "https://www.epicgames.com/id/login",
+    "last_update_breach": null,
+    "country_code": "us",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "france-television",
     "name": "France Télévision",
     "logo": "/img/logos/france-television.webp",
@@ -2720,6 +2784,38 @@
     "data_access_via_form": true,
     "data_access_via_email": true,
     "url_export": "https://legal.kickstarter.com/policies/",
+    "last_update_breach": null,
+    "country_code": "us",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "kinder-usa",
+    "name": "Kinder (USA)",
+    "logo": "/img/logos/kinder-usa.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy.us@ferrero.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://carewebform-uix.ferrero.com/?site=fr-ca",
     "last_update_breach": null,
     "country_code": "us",
     "exodus": false,
@@ -4402,6 +4498,29 @@
   },
   {
     "mode": 1,
+    "slug": "rglo-mobile",
+    "name": "Réglo Mobile",
+    "logo": "/img/logos/rglo-mobile.webp",
+    "easy_access_data": 4,
+    "contacts": [],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://www.e.leclerc/contactez-nous/donnees-personnelles",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "revolut",
     "name": "Revolut",
     "logo": "/img/logos/revolut.webp",
@@ -4961,6 +5080,38 @@
   },
   {
     "mode": 1,
+    "slug": "super-u",
+    "name": "Super U",
+    "logo": "/img/logos/super-u.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "contact_donnees_personnelles@systeme-u.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://www.magasins-u.com/contact",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "swisstransfert",
     "name": "SwissTransfert",
     "logo": "/img/logos/swisstransfert.webp",
@@ -5462,6 +5613,38 @@
   },
   {
     "mode": 1,
+    "slug": "uniscit",
+    "name": "UnisCité",
+    "logo": "/img/logos/uniscit.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "dpo@uniscite.fr",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "vinted",
     "name": "Vinted",
     "logo": "/img/logos/vinted.webp",
@@ -5742,6 +5925,38 @@
     "last_update_breach": null,
     "country_code": "us",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "withings",
+    "name": "Withings",
+    "logo": "/img/logos/withings.webp",
+    "easy_access_data": 5,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@withings.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "https://support.withings.com/hc/fr/articles/201491377-Health-Mate-Tableau-de-bord-en-ligne-Exporter-mes-donn%C3%A9es",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",
