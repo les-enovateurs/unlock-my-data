@@ -1,6 +1,6 @@
 {
   "name": "Relais Colis",
-  "logo": "https://relaiscolis.com/assets/front/img/logo.png",
+  "logo": "/img/logos/relais-colis.webp",
   "country_code": "fr",
   "belongs_to_group": true,
   "group_name": "GLS (General Logistics Systems)",
