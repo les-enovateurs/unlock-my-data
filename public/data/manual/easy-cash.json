@@ -1,0 +1,48 @@
+{
+  "name": "Easy Cash",
+  "logo": "/img/logos/easy-cash.webp",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "serviceclient@easycash.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse indiquée dans les mentions légales, avec une copie signée d'un titre d'identité.",
+      "comment_en": "Address given in the legal notice, with a signed copy of an ID document."
+    }
+  ],
+  "easy_access_data": 2,
+  "need_id_card": false,
+  "details_required_documents": "Copie signée d'un titre d'identité.",
+  "confidentiality_policy_url": "https://www.easycash.fr/mentions-et-conditions/mentions-legales",
+  "data_access_via_postal": false,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer la demande au responsable du traitement désigné (EASY CASH SAS) par e-mail à serviceclient@easycash.fr, accompagnée d'une copie signée d'un titre d'identité.",
+  "data_access_type_en": "Send the request to the designated controller (EASY CASH SAS) by e-mail to serviceclient@easycash.fr, with a signed copy of an ID document.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2025-04-25",
+      "type": "Fuite survenue « sur le poste d'un magasin », annoncée aux clients en avril 2025 : environ 92 000 clients concernés, plus des collaborateurs du magasin. Données : nom, prénom, date de naissance. Pas de données bancaires ni de mots de passe selon l'enseigne.",
+      "type_en": "Breach that occurred 'on a store computer', announced to customers in April 2025: about 92,000 customers affected, plus store employees. Data: first name, last name, date of birth. No bank data or passwords according to the company.",
+      "proof_url": "https://next.ink/brief-article/easy-cash-victime-dun-vol-de-donnees-92-000-clients-concernes/",
+      "media_link": "https://next.ink/brief-article/easy-cash-victime-dun-vol-de-donnees-92-000-clients-concernes/",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay_fr": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month according to GDPR",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": false,
+  "comments": "EASY CASH SAS (SIRET 434 075 602 00053), 8-10 avenue Ariane, Parc Cadera 2.0, Bât F8, 33700 Mérignac. Les informations sur les données personnelles figurent dans les mentions légales (pas de politique de confidentialité séparée trouvée). Elles ne mentionnent ni DPO, ni délai, ni transferts hors UE : champs transferts laissés vides. Seule la fuite d'avril 2025 a pu être vérifiée dans la presse ; d'autres incidents éventuels n'ont pas été ajoutés faute de source.",
+  "comments_en": "EASY CASH SAS (SIRET 434 075 602 00053), 8-10 avenue Ariane, Parc Cadera 2.0, Bldg F8, 33700 Mérignac. Personal data information is in the legal notice (no separate privacy policy found). It does not mention a DPO, response time or transfers outside the EU: transfer fields left empty. Only the April 2025 breach could be verified in the press; other possible incidents were not added for lack of a source.",
+  "better_alternative": false,
+  "created_at": "2026-11-24",
+  "created_by": "wassym",
+  "status": "draft"
+}
