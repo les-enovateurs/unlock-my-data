@@ -5,8 +5,8 @@ import {
 import type { LucideIcon } from "lucide-react";
 import DonationWidget from "./DonationWidget";
 
-const DONATION_URL = "https://les-enovateurs.com/dons";
-const CONTACT_EMAIL = "contact@les-enovateurs.com";
+const JOIN_URL = "https://nousrejoindre.les-enovateurs.com/";
+const CONTACT_EMAIL = "contact@unlock-my-data.com";
 
 const T = {
     fr: {
@@ -24,7 +24,7 @@ const T = {
         donateNote: "66 % de votre don est déductible de vos impôts : un don de 10 € par mois vous revient à 3,40 €. Le reçu fiscal est envoyé automatiquement par J'aime l'info, notre partenaire de gestion des dons. Don mensuel sans engagement, arrêt en un clic.",
         waysTitle: "Autres façons d'aider",
         ways: {
-            member: { title: "Devenir adhérent", text: "Rejoignez l'association et suivez ses projets de près.", cta: "Adhérer" },
+            member: { title: "Devenir adhérent", text: "Découvrez l'association, ses projets et comment la rejoindre, comme bénévole ou comme adhérent.", cta: "Nous rejoindre" },
             company: { title: "Mécénat d'entreprise", text: "Votre entreprise partage nos valeurs ? Soutenez un outil d'intérêt public. Nous refusons tout soutien d'un service que nous analysons.", cta: "Nous écrire" },
             grants: { title: "Fondations et appels à projets", text: "Votre fondation soutient le numérique responsable, la vie privée ou l'éducation aux médias ? Parlons-en.", cta: "Nous écrire" },
             workshop: { title: "Organiser un atelier", text: "Pour votre entreprise, votre école, votre médiathèque ou votre collectivité.", cta: "Voir les ateliers" },
@@ -52,7 +52,7 @@ const T = {
         donateNote: "For French taxpayers, 66% of your donation is tax-deductible: €10 a month costs you €3.40. The tax receipt is sent automatically by J'aime l'info, our donation partner. Monthly giving with no commitment, cancel in one click.",
         waysTitle: "Other ways to help",
         ways: {
-            member: { title: "Become a member", text: "Join the association and follow its projects closely.", cta: "Join" },
+            member: { title: "Become a member", text: "Discover the association, its projects and how to join, as a volunteer or a member.", cta: "Join us" },
             company: { title: "Corporate sponsorship", text: "Does your company share our values? Support a public-interest tool. We refuse support from any service we analyse.", cta: "Write to us" },
             grants: { title: "Foundations and grants", text: "Does your foundation support responsible tech, privacy or media literacy? Let's talk.", cta: "Write to us" },
             workshop: { title: "Book a workshop", text: "For your company, school, library or local authority.", cta: "See workshops" },
@@ -72,7 +72,7 @@ const mailto = (subject: string) => `mailto:${CONTACT_EMAIL}?subject=${encodeURI
 export default function SupportPage({ lang }: { lang: string }) {
     const t = T[lang === "en" ? "en" : "fr"];
     const ways: { icon: LucideIcon; title: string; text: string; cta: string; href: string }[] = [
-        { icon: Users, ...t.ways.member, href: DONATION_URL },
+        { icon: Users, ...t.ways.member, href: JOIN_URL },
         { icon: Building2, ...t.ways.company, href: mailto(t.mailSubjectCompany) },
         { icon: Landmark, ...t.ways.grants, href: mailto(t.mailSubjectGrants) },
         { icon: GraduationCap, ...t.ways.workshop, href: t.workshopsHref },
