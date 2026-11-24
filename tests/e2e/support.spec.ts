@@ -5,7 +5,7 @@ test.describe('Support the association', () => {
     test('/soutenir has one h1 and a donation link', async ({ page }) => {
         await page.goto('/soutenir');
         await expect(page.locator('h1')).toHaveCount(1);
-        await expect(page.locator('a[href^="https://les-enovateurs.com/dons"]').first()).toBeVisible();
+        await expect(page.locator('a[href="https://donorbox.org/les-enovateurs"]').first()).toBeVisible();
     });
 
     test('Donorbox loads only after the visitor asks for the form', async ({ page }) => {
