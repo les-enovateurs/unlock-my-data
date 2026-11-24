@@ -6,6 +6,24 @@ const manualDataPath = path.join(__dirname, '../public/data/manual');
 const reviewsPath = path.join(__dirname, '../public/data/reviews.json');
 const outputPath = path.join(__dirname, '../public/data/contributors-stats.json');
 
+// One person, several spellings across forms and years: credit them once.
+const NAME_ALIASES = {
+  'Unlock My Data Team': 'Jérémy Pastouret',
+  'Charlotte L': 'Charlotte Leriche',
+  'Charlotte.L': 'Charlotte Leriche',
+  'gildas.kiendrebeogo': 'Gildas Kiendrebéogo',
+  'Le Meut': 'Eléonore Le Meut',
+  'safaa_lboukili': 'LBOUKILI Safaa',
+  'manolo79': 'Manolo BREZILLON',
+  'Sam.lki': 'Samantha Luaki',
+};
+
+function canonicalName(name) {
+  if (!name) return name;
+  const trimmed = name.trim();
+  return NAME_ALIASES[trimmed] || trimmed;
+}
+
 function latestContributionDate(allContributions) {
   const dates = allContributions.flatMap((c) => [c.createdAt, c.updatedAt]).filter(Boolean);
   return dates.sort().pop() || '';
@@ -19,7 +37,7 @@ function addSidecarReviewers(reviewerStats, reviewsDir, serviceNames) {
     const slug = file.replace('.json', '');
     const serviceName = serviceNames[slug] || slug;
     (side.reviewers || []).forEach((r) => {
-      const nm = r.name;
+      const nm = canonicalName(r.name);
       if (!nm) return;
       if (!reviewerStats[nm]) reviewerStats[nm] = { name: nm, count: 0, companies: [] };
       reviewerStats[nm].count++;
@@ -37,7 +55,8 @@ function analyzeContributors() {
   try {
     const contributions = {};
     fs.readdirSync(historyDir).filter((f) => f.endsWith('.json')).forEach((f) => {
-      contributions[f.replace('.json', '')] = JSON.parse(fs.readFileSync(path.join(historyDir, f), 'utf8'));
+      contributions[f.replace('.json', '')] = JSON.parse(fs.readFileSync(path.join(historyDir, f), 'utf8'))
+        .map((c) => ({ ...c, author: canonicalName(c.author) }));
     });
     history = { contributions };
   } catch (error) {
@@ -77,7 +96,7 @@ function analyzeContributors() {
 
   // Process reviews to gather reviewer and reviewee stats
   reviewsData.forEach(service => {
-    const creator = service.created_by;
+    const creator = canonicalName(service.created_by);
     const serviceName = service.name;
 
     if (creator && service.review && service.review.length > 0) {
@@ -89,7 +108,7 @@ function analyzeContributors() {
 
       // Track reviewer stats
       service.review.forEach(review => {
-        const reviewerName = review.reviewer_name || review.reviewer;
+        const reviewerName = canonicalName(review.reviewer_name || review.reviewer);
         if (reviewerName) {
           if (!reviewerStats[reviewerName]) {
             reviewerStats[reviewerName] = {
@@ -271,8 +290,8 @@ function analyzeFromManualFiles() {
       const filePath = path.join(manualDataPath, file);
       const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-      const createdBy = data.created_by || 'Unknown';
-      const updatedBy = data.updated_by || data.created_by || 'Unknown';
+      const createdBy = canonicalName(data.created_by) || 'Unknown';
+      const updatedBy = canonicalName(data.updated_by || data.created_by) || 'Unknown';
       const createdAt = data.created_at || '';
       const updatedAt = data.updated_at || '';
 

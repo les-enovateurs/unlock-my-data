@@ -433,7 +433,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                             {t.alertLead}
                         </p>
 
-                        <div className="grid grid-cols-3 gap-[14px] max-md:grid-cols-1">
+                        <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
                             {shownAlerts.map(({ app, mission, alert }) => {
                                 const isFine = alert.kind === 'fine';
                                 const pendingPR = getPendingPR(app.name);
@@ -526,13 +526,13 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                     }`}
                             >
                                 {prioLabel(p)}
-                                <span className="umd-data text-[11px] opacity-75">{prioCount(p)}</span>
+                                <span className="umd-data text-[11px]">{prioCount(p)}</span>
                             </button>
                         ))}
                     </div>
 
                     {/* Category cards */}
-                    <div className="grid grid-cols-3 gap-[14px] max-md:grid-cols-1">
+                    <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 lg:grid-cols-3">
                         {list.map(m => {
                             const { done, total } = getCategoryStats(m);
                             const todo = total - done;
@@ -550,7 +550,7 @@ export default function MissionsComponent({ lang }: MissionsComponentProps) {
                                         <span className={`flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[10px] ${high ? 'bg-umd-red-50 text-umd-red-600' : 'bg-umd-indigo-50 text-umd-indigo-700'}`}>
                                             <Icon className="h-[19px] w-[19px]" aria-hidden="true" />
                                         </span>
-                                        <h3 className="flex-1 text-[15.5px] font-bold leading-[1.25] font-display">{getCategoryName(m)}</h3>
+                                        <h3 className="min-w-0 flex-1 break-words text-[15.5px] font-bold leading-[1.25] font-display">{getCategoryName(m)}</h3>
                                         <PriorityBadge priority={m.priority} />
                                     </div>
                                     <p className="m-0 flex-1 text-[13px] leading-[1.5] text-umd-slate-500">{getCategoryDescription(m)}</p>

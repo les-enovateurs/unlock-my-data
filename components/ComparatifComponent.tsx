@@ -151,11 +151,12 @@ function CmpRow({ label, a, b, detailed }: {
         </div>
     );
     return (
-        <div style={{ display: "flex", alignItems: "center", padding: "13px 0", borderBottom: "1px solid var(--slate-100)" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", padding: "13px 0", borderBottom: "1px solid var(--slate-100)" }}>
             <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
                 <div style={{ background: detailed && winA ? "var(--green-50)" : "transparent", borderRadius: "var(--umd-radius-pill)", display: "inline-flex" }}>{cell(a.v, a.g, winA)}</div>
             </div>
-            <div style={{ width: 184, textAlign: "center", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em", color: "var(--fg3)", flexShrink: 0 }}>{label}</div>
+            {/* Below sm the label takes its own line: a fixed 184px column left ~50px per value on a phone. */}
+            <div className="w-full sm:w-[184px] shrink-0 order-first sm:order-none mb-1.5 sm:mb-0" style={{ textAlign: "center", fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".05em", color: "var(--fg3)" }}>{label}</div>
             <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
                 <div style={{ background: detailed && winB ? "var(--green-50)" : "transparent", borderRadius: "var(--umd-radius-pill)", display: "inline-flex" }}>{cell(b.v, b.g, winB)}</div>
             </div>
@@ -366,7 +367,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
     }, []);
 
     if (!a || !b) {
-        return <div className="mx-auto max-w-3xl px-4 py-10 text-center text-umd-slate-400">…</div>;
+        return <div className="mx-auto max-w-3xl px-4 py-10 text-center text-umd-slate-500">…</div>;
     }
 
     const winner = a.score === b.score ? null : (a.score < b.score ? a : b);
@@ -469,7 +470,7 @@ export default function ComparatifComponent({ locale }: ComparatifComponentProps
             )}
 
             {/* Head cards */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16, marginTop: 18 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", gap: 16, marginBottom: 16, marginTop: 18 }}>
                 <CmpHead m={a} win={winner === a} label={isFr ? "Plus respectueux" : "More respectful"} locale={locale} />
                 <CmpHead m={b} win={winner === b} label={isFr ? "Plus respectueux" : "More respectful"} locale={locale} />
             </div>

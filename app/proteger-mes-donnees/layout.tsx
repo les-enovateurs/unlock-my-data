@@ -3,7 +3,7 @@ import { localizedMetadata } from "@/lib/metadata";
 
 export const metadata = localizedMetadata({
   lang: "fr",
-  title: "Protéger mes données | Unlock My Data",
+  title: "Protéger ses données personnelles : votre plan d'action | Unlock My Data",
   description:
     "Faites le point sur vos applications : diagnostic express de vos habitudes ou analyse détaillée des services que vous utilisez. Tout reste dans votre navigateur.",
   paths: { fr: "/proteger-mes-donnees", en: "/protect-my-data" },

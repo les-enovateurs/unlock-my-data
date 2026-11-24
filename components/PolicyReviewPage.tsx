@@ -786,7 +786,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             </div>
           </div>
 
-          <main className="umd-wrap" style={{ padding: "16px 24px 90px" }}>
+          <div className="umd-wrap" style={{ padding: "16px 24px 90px" }}>
             {!keyQuotes && !changes.length && (
               <div className="umd-card" style={{ padding: "22px 24px", marginBottom: 20 }}>
                 <p style={{ margin: 0, fontSize: 13, color: "var(--slate-700)" }}>{tt("noKeyQuotes")}</p>
@@ -848,7 +848,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
                   onBlur={() => sidecar && persist(sidecar)} />
               </details>
             )}
-          </main>
+          </div>
         </div>
       )}
     </div>

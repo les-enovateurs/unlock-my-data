@@ -26,7 +26,11 @@
     cursor: pointer;
     text-decoration: none;
   }
-  .umd-btn svg { width: 18px; height: 18px; }
+  .umd-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  /* Long labels ("presse@les-enovateurs.com", "Soumettre ma contribution") overflowed 320px screens. */
+  @media (max-width: 480px) {
+    .umd-btn { white-space: normal; max-width: 100%; text-align: center; }
+  }
   .umd-btn:focus-visible { outline: none; box-shadow: var(--umd-shadow-focus); }
   .umd-btn-primary { background: var(--indigo-800); color: #fff; }
   .umd-btn-primary:hover { background: var(--indigo-900); }
@@ -58,7 +62,8 @@
     line-height: 1.2;
   }
   .umd-pill svg { width: 15px; height: 15px; }
-  .umd-pill-gold { background: var(--gold-100); color: var(--gold-600); }
+  /* --gold-600 scored 2.85:1 on --gold-100, below the 4.5:1 WCAG AA floor. */
+  .umd-pill-gold { background: var(--gold-100); color: #7a5a00; }
   .umd-pill-indigo { background: var(--indigo-50); color: var(--indigo-700); border: 1px solid var(--indigo-200); }
 
   /* ---- Status chips ---- */

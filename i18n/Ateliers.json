@@ -50,7 +50,11 @@
         "workshop5Item2": "Nettoyage des empreintes",
         "ctaHeading": "Vous ne savez pas par où commencer ?",
         "ctaLead": "Le plus important est de faire le premier pas. L'audit de sécurité est souvent un excellent point de départ.",
-        "ctaButton": "Je commence par mon bilan"
+        "ctaButton": "Je commence par mon bilan",
+        "bookHeading": "Un atelier pour votre structure",
+        "bookLead": "Entreprise, école, médiathèque, collectivité : écrivez-nous pour organiser un atelier adapté à votre public et recevoir un devis.",
+        "bookButton": "Demander un atelier ou un devis",
+        "bookSubject": "Demande d'atelier Unlock My Data"
     },
     "en": {
         "heroPill": "Learning by doing",
@@ -103,6 +107,10 @@
         "workshop5Item2": "Cleaning up your footprint",
         "ctaHeading": "Not sure where to start?",
         "ctaLead": "The most important thing is to take the first step. The security audit is often an excellent starting point.",
-        "ctaButton": "I'll start with my checkup"
+        "ctaButton": "I'll start with my checkup",
+        "bookHeading": "A workshop for your organisation",
+        "bookLead": "Company, school, library, local authority: write to us to set up a workshop for your audience and get a quote.",
+        "bookButton": "Request a workshop or a quote",
+        "bookSubject": "Unlock My Data workshop request"
     }
 }

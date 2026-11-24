@@ -61,7 +61,7 @@ export default function HomePageContent({ lang }: Props) {
     ];
 
     return (
-        <main>
+        <div>
             {/* ── HERO ─────────────────────────────────────────────── */}
             <section
                 aria-label="Introduction"
@@ -281,6 +281,6 @@ export default function HomePageContent({ lang }: Props) {
                     </div>
                 </div>
             </section>
-        </main>
+        </div>
     );
 }

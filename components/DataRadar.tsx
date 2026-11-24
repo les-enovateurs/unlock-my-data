@@ -85,7 +85,7 @@ const COPY = {
     colon: " : ",
     legendEu: "Union européenne (RGPD)",
     legendWidth: "épaisseur : nombre d'applications",
-    countryLabel: (name: string, n: number) => `${name}, ${n} application${n > 1 ? "s" : ""}`,
+    countryLabel: (name: string, n: number) => `${name} ${n} application${n > 1 ? "s" : ""}`,
     caption: "Pays d'un traceur : siège de la société qui l'édite, d'après une source officielle.",
   },
   en: {
@@ -121,7 +121,7 @@ const COPY = {
     colon: ": ",
     legendEu: "European Union (GDPR)",
     legendWidth: "thickness: number of apps",
-    countryLabel: (name: string, n: number) => `${name}, ${n} app${n > 1 ? "s" : ""}`,
+    countryLabel: (name: string, n: number) => `${name} ${n} app${n > 1 ? "s" : ""}`,
     caption: "Tracker country: seat of the company that publishes it, from an official source.",
   },
 } as const;
@@ -371,7 +371,7 @@ export default function DataRadar({
             )}
             <ArrowUpRight className="absolute -right-1.5 -top-1.5 h-4 w-4 rounded-full bg-umd-indigo-700 p-0.5 text-white" aria-hidden="true" />
           </a>
-          <button type="button" aria-pressed={open} aria-label={c.focus(s.name)} onClick={() => toggle({ type: "app", id: s.slug })}
+          <button type="button" aria-pressed={open} title={c.focus(s.name)} onClick={() => toggle({ type: "app", id: s.slug })}
             className={`min-w-0 flex-1 rounded-lg px-1.5 py-1 text-left hover:bg-umd-slate-50 ${focusRing}`}>
             <span className="block truncate text-sm font-semibold text-umd-slate-900">{s.name}</span>
             <span className="flex items-center gap-1 text-xs text-umd-slate-700">
@@ -499,8 +499,8 @@ export default function DataRadar({
                   <rect x={b.x0} y={b.y0} width={b.x1 - b.x0} height={b.y1 - b.y0} rx={14}
                     fill="rgba(11,14,26,0.9)" stroke={pressed ? C.gold : "rgba(244,168,182,0.6)"} strokeWidth={pressed ? 2 : 1} />
                   <text x={b.x0 + 13} y={b.y0 + 19.5} fontSize={16} fontWeight={700} fill="#fff">
-                    {name(it.code)}
-                    <tspan dx={8} fill={C.red200} fontFamily="ui-monospace, monospace" fontSize={15}>{k}</tspan>
+                    {name(it.code)}{" "}
+                    <tspan dx={4} fill={C.red200} fontFamily="ui-monospace, monospace" fontSize={15}>{k}</tspan>
                   </text>
                 </g>
               );

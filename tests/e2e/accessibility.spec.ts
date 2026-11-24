@@ -11,6 +11,16 @@ test.describe('Accessibility Checks', () => {
         { name: 'Comparatif', url: '/comparer' },
         { name: 'Politique de confidentialité', url: '/politique-confidentialite' },
         { name: 'Nouvelle fiche (contribution)', url: '/contribuer/nouvelle-fiche' },
+        { name: 'Classement contributeurs', url: '/contributeurs' },
+        { name: 'Supprimer mes données', url: '/supprimer-mes-donnees' },
+        { name: 'Catalogue', url: '/liste-applications' },
+        { name: 'Fiche WhatsApp', url: '/liste-applications/whatsapp' },
+        { name: 'Presse', url: '/presse' },
+        { name: 'Ateliers', url: '/ateliers' },
+        { name: 'Contribuer', url: '/contribuer' },
+        { name: 'Missions', url: '/contribuer/missions' },
+        { name: 'Transferts', url: '/transferts' },
+        { name: 'Intégrer', url: '/integrer' },
     ];
 
     for (const pageInfo of pagesToCheck) {

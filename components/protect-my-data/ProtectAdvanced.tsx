@@ -153,7 +153,7 @@ export default function ProtectAdvanced({ lang }: { lang: string }) {
                       ? "text-umd-indigo-700 hover:bg-umd-indigo-50"
                       : can
                         ? "text-umd-slate-600 hover:bg-umd-slate-100"
-                        : "cursor-not-allowed text-umd-slate-400"
+                        : "cursor-not-allowed text-umd-slate-500"
                 }`}
               >
                 <span

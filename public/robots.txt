@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unlock-my-data.com/sitemap.xml

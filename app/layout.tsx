@@ -14,17 +14,16 @@ export const metadata: Metadata = {
         ],
         apple: "/apple-touch-icon.png",
     },
+    metadataBase: new URL("https://unlock-my-data.com"),
+    // "./" resolves against each route: a hard-coded home URL here made every
+    // page without its own alternates canonicalise to the homepage.
     alternates: {
-        canonical: "https://unlock-my-data.com",
-        languages: {
-            'fr-FR': "https://unlock-my-data.com",
-            'en-US': "https://unlock-my-data.com/en",
-        },
+        canonical: "./",
     },
     openGraph: {
         title: "Unlock My Data - reprenez le contrôle sur vos données personnelles",
         description: "Chaque jour, des milliers de données personnelles sont collectées par des entreprises. Découvrez ce qu'elles savent de vous et comment faire le ménage.",
-        url: "https://unlock-my-data.com",
+        url: "./",
         siteName: "Unlock My Data",
         images: [
             {
@@ -51,7 +50,7 @@ export default function RootLayout({
 
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "NGO",
         "name": "Unlock My Data",
         "url": "https://unlock-my-data.com",
         "logo": "https://unlock-my-data.com/icon-512.png",

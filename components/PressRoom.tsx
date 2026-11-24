@@ -172,7 +172,7 @@ function Swatch({ name, hex, copied }: { name: string; hex: string; copied: stri
             <span className="block h-14 w-36 border-b border-umd-slate-200" style={{ background: hex }} />
             <span className="block px-3 py-2.5">
                 <span className="block text-xs font-bold">{name}</span>
-                <span className={`data block text-xs ${done ? "text-umd-green-600" : "text-umd-slate-400"}`}>{done ? copied : hex}</span>
+                <span className={`data block text-xs ${done ? "text-umd-green-600" : "text-umd-slate-500"}`}>{done ? copied : hex}</span>
             </span>
         </button>
     );
@@ -200,7 +200,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                 {/* Sidebar */}
                 <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
                     <nav aria-label={c.toc}>
-                        <p className="mb-2 px-3 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{c.toc}</p>
+                        <p className="mb-2 px-3 text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{c.toc}</p>
                         <div className="flex flex-col">
                             {sectionIds.map((id) => (
                                 <a key={id} href={`#${id}`} className="rounded-lg px-3 py-2 text-sm font-medium text-umd-slate-600 hover:bg-umd-indigo-50 hover:text-umd-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-umd-indigo-300">
@@ -210,16 +210,16 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                         </div>
                     </nav>
                     <div className="umd-card p-4">
-                        <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{c.kit}</p>
+                        <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{c.kit}</p>
                         <p className="m-0 text-xs leading-relaxed text-umd-slate-500">{c.kitNote}</p>
                         <div className="my-3 h-px bg-umd-slate-200" />
                         <a href="/umd-logo-symbol.svg" download className="umd-ftr-link text-sm">Symbole seul (SVG)</a>
                         <a href="/logoUMD.webp" download className="umd-ftr-link text-sm">Logo principal (WEBP)</a>
                     </div>
                     <div className="umd-card p-4">
-                        <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{c.contactTitle}</p>
+                        <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{c.contactTitle}</p>
                         <a href={`mailto:${PRESS_EMAIL}`} className="block text-sm font-bold text-umd-indigo-700">{PRESS_EMAIL}</a>
-                        <p className="mt-1.5 text-xs text-umd-slate-400">{c.contactDelay}</p>
+                        <p className="mt-1.5 text-xs text-umd-slate-500">{c.contactDelay}</p>
                     </div>
                 </aside>
 
@@ -234,7 +234,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                                 <div key={k.l} className="umd-card p-5">
                                     <div className="data text-3xl font-bold leading-none text-umd-indigo-800">{k.v}</div>
                                     <div className="mb-1 mt-2 text-sm font-bold">{k.l}</div>
-                                    <div className="text-xs leading-relaxed text-umd-slate-400">{k.d}</div>
+                                    <div className="text-xs leading-relaxed text-umd-slate-500">{k.d}</div>
                                 </div>
                             ))}
                         </div>
@@ -247,7 +247,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                             <p className="mb-4 leading-relaxed text-umd-slate-700">{BOILER[lang]}</p>
                             <div className="flex flex-wrap items-center gap-3">
                                 <CopyButton text={BOILER[lang]} label={c.aproposCopy} copied={c.copied} />
-                                <span className="text-xs text-umd-slate-400">{c.aproposNote}</span>
+                                <span className="text-xs text-umd-slate-500">{c.aproposNote}</span>
                             </div>
                         </div>
                         <p className="mt-5 leading-relaxed text-umd-slate-600">{c.aproposLine}</p>
@@ -262,7 +262,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                                 const href = `${c.basePath}/${r.slug}`;
                                 return (
                                     <article key={r.slug} className="umd-card umd-card-hover grid items-center gap-5 p-5 sm:grid-cols-[110px_1fr_auto]">
-                                        <span className="data text-xs leading-snug text-umd-slate-400">{rc.date}</span>
+                                        <span className="data text-xs leading-snug text-umd-slate-500">{rc.date}</span>
                                         <Link href={href} className="min-w-0">
                                             <h3 className="mb-1 font-display text-base font-bold leading-snug text-umd-slate-900 hover:text-umd-indigo-700">{rc.title}</h3>
                                             <p className="m-0 text-sm leading-relaxed text-umd-slate-500">{rc.summary}</p>
@@ -298,7 +298,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                                     <div className="flex items-center gap-3 px-4 py-3">
                                         <div className="min-w-0 flex-1">
                                             <div className="text-sm font-bold">{a.t}</div>
-                                            <div className="text-xs text-umd-slate-400">{a.note}</div>
+                                            <div className="text-xs text-umd-slate-500">{a.note}</div>
                                         </div>
                                         <a href={a.img} download className="umd-btn umd-btn-outline umd-btn-sm">{a.ext}</a>
                                     </div>
@@ -331,7 +331,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                                         </span>
                                     </a>
                                     <div className="flex flex-1 flex-col gap-2 px-5 py-4">
-                                        <span className="text-[11px] font-bold uppercase tracking-widest text-umd-slate-400">{conf.event}</span>
+                                        <span className="text-[11px] font-bold uppercase tracking-widest text-umd-slate-500">{conf.event}</span>
                                         <h3 className="font-display text-base font-bold leading-snug text-umd-slate-900">{conf.title}</h3>
                                         <p className="m-0 text-sm leading-relaxed text-umd-slate-500">{conf.desc[lang]}</p>
                                         <div className="mt-auto flex flex-wrap gap-2 pt-2">
@@ -367,7 +367,7 @@ export default function PressRoom({ lang = "fr" }: { lang?: Lang }) {
                                 {PRESS_EMAIL}
                             </a>
                         </div>
-                        <p className="mt-6 inline-flex items-center gap-2 text-sm text-umd-slate-400">
+                        <p className="mt-6 inline-flex items-center gap-2 text-sm text-umd-slate-500">
                             <GitBranch className="h-4 w-4" aria-hidden="true" />
                             {lang === "fr" ? "Projet open source — " : "Open-source project — "}
                             <a href="https://github.com/les-enovateurs/unlock-my-data" target="_blank" rel="noopener noreferrer" className="font-semibold text-umd-indigo-700 underline underline-offset-4">GitHub</a>

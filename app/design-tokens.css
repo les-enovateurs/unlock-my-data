@@ -100,7 +100,7 @@
   --slate-200: #dde1ec;  /* hairline borders */
   --slate-300: #c3c9d8;
   --slate-400: #99a1b5;
-  --slate-500: #6b7388;  /* muted text */
+  --slate-500: #5f677c;  /* muted text; #6b7388 fell below 4.5:1 on slate-50 / indigo-50 */
   --slate-600: #4a5169;
   --slate-700: #343a4f;
   --slate-800: #21263a;

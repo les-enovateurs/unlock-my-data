@@ -2046,7 +2046,7 @@ function TabGouv({ p, t }: { p: FicheProps; t: ReturnType<typeof useT> }) {
                     : <span className="umd-chip umd-chip-safe w-fit"><Check aria-hidden="true" />{t("noSanction")}</span>}
                 {p.sanctionDetails && (
                     <div className="flex gap-3 items-start bg-umd-slate-50 border border-umd-slate-200 rounded-(--umd-radius-md) px-4 py-3.5">
-                        <Landmark aria-hidden="true" className="w-[17px] h-[17px] text-umd-slate-400 shrink-0 mt-0.5" />
+                        <Landmark aria-hidden="true" className="w-[17px] h-[17px] text-umd-slate-500 shrink-0 mt-0.5" />
                         <div>
                             <p className="m-0 mb-1.5 text-[13.5px] font-bold text-umd-slate-800">{t("context")}</p>
                             <SanctionText text={p.sanctionDetails} linkLabel={t("sanctionRead")} newWindow={t("newWindow")} />
@@ -2223,7 +2223,7 @@ function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused =
                     {desc && <span className="block text-umd-slate-500 text-[12px] mt-0.5">{desc}</span>}
                 </span>
                 {verifiedLabel && <span className={verifiedClass} style={{ fontSize: "10.5px", padding: "2px 8px" }}>{verifiedLabel}</span>}
-                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
+                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-500 transition-transform" + (open ? " rotate-180" : "")} />}
             </button>
             {open && quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(quote)} »</blockquote>}
         </div>
@@ -2239,7 +2239,7 @@ function LegalItemRow({ label, quote, onShow }: { label: string; quote?: string;
                 aria-expanded={hasQuote ? open : undefined}
                 onClick={hasQuote ? () => { if (!open) onShow?.(quote!); setOpen(!open); } : undefined}>
                 <span className="flex-1 text-[12.5px] text-umd-slate-600">{label}</span>
-                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[14px] h-[14px] text-umd-slate-400 transition-transform" + (open ? " rotate-180" : "")} />}
+                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[14px] h-[14px] text-umd-slate-500 transition-transform" + (open ? " rotate-180" : "")} />}
             </button>
             {open && quote && <blockquote className="umd-quotebox mt-1.5 text-[12px]">« {cleanQuote(quote)} »</blockquote>}
         </div>
@@ -2568,11 +2568,11 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    /* `w-full` on <main> is load-bearing: it is a flex item of the layout's
-       column container, and without an explicit width the tab strip's
-       max-content width sizes the whole page, which then scrolls sideways. */
+    /* `w-full` is load-bearing: this is a flex item of the layout's column
+       container, and without an explicit width the tab strip's max-content
+       width sizes the whole page, which then scrolls sideways. */
     return (
-        <main className={"w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 " + (tab === "donnees" ? "max-w-7xl" : "max-w-5xl")}>
+        <div className={"w-full mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 " + (tab === "donnees" ? "max-w-7xl" : "max-w-5xl")}>
             <Link href={lang === "fr" ? "/liste-applications" : "/list-app"} className="umd-btn umd-btn-ghost umd-btn-sm !pl-1.5 mb-5">
                 <ArrowLeft aria-hidden="true" />{t("back")}
             </Link>
@@ -2650,6 +2650,6 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
                     </span>
                 )}
             </div>
-        </main>
+        </div>
     );
 }

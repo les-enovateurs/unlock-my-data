@@ -166,7 +166,7 @@ export default function ProtectActionDrawer({
           <button
             onClick={onClose}
             aria-label={t.t("drawerClose")}
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-umd-slate-400 transition-colors hover:bg-umd-slate-100 hover:text-umd-slate-700"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-umd-slate-500 transition-colors hover:bg-umd-slate-100 hover:text-umd-slate-700"
           >
             <X className="h-5 w-5" />
           </button>

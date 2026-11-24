@@ -3,7 +3,7 @@ import { CleanUpProvider } from "@/context/CleanUpContext";
 import dict from "@/i18n/DigitalCleanUp.json";
 
 export const metadata: Metadata = {
-    title: `${dict.fr.title} | Unlock My Data`,
+    title: "Nettoyage numérique : faire le ménage dans ses comptes | Unlock My Data",
     description: dict.fr.description,
 };
 
