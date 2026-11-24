@@ -1,0 +1,78 @@
+{
+  "name": "LDLC",
+  "logo": "https://upload.wikimedia.org/wikipedia/fr/c/c7/LDLC_logo.jpg",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Groupe LDLC",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@groupe-ldlc.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "DPO du Groupe LDLC.",
+      "comment_en": "Groupe LDLC DPO."
+    },
+    {
+      "type": "postal",
+      "value": "GROUPE LDLC – DPO, 2 rue des Érables, 69760 Limonest",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale du DPO indiquée dans la politique.",
+      "comment_en": "DPO postal address given in the policy."
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "confidentiality_policy_url": "https://www.groupe-ldlc.com/wp-content/uploads/2026/05/20260528_GROUPE-LDLC-Politique-de-confidentialite.pdf",
+  "confidentiality_policy_url_en": "https://www.groupe-ldlc.com/personal-data-protection-policy/",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_type": "Pour LDLC.com, la politique renvoie vers un formulaire d'exercice des droits propre au site. Sinon, contacter le DPO par e-mail à dpo@groupe-ldlc.com ou par courrier à GROUPE LDLC – DPO, 2 rue des Érables, 69760 Limonest (téléphone : 04 72 52 37 77).",
+  "data_access_type_en": "For LDLC.com, the policy refers to a site-specific rights request form. Otherwise, contact the DPO by e-mail at dpo@groupe-ldlc.com or by post at GROUPE LDLC – DPO, 2 rue des Érables, 69760 Limonest (phone: 04 72 52 37 77).",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2024-02-29",
+      "type": "Base présentée comme issue de LDLC.com mise en vente sur le dark web : environ 1,5 million de clients. Données annoncées : nom, prénom, e-mail, adresse postale, téléphones fixe et portable, ainsi que des données de clients professionnels.",
+      "type_en": "Database presented as coming from LDLC.com put up for sale on the dark web: about 1.5 million customers. Data claimed: name, e-mail, postal address, landline and mobile numbers, plus business customer data.",
+      "proof_url": "https://www.it-connect.fr/un-piratage-chez-ldlc-15-million-de-donnees-personnelles-seraient-en-vente/",
+      "media_link": "https://www.it-connect.fr/un-piratage-chez-ldlc-15-million-de-donnees-personnelles-seraient-en-vente/",
+      "contributor": "wassym"
+    },
+    {
+      "date": "2024-12-11",
+      "type": "Le Groupe LDLC annonce être victime d'une fuite de données clients. Données concernées et nombre de personnes non précisés ; aucune donnée financière ou sensible selon l'entreprise.",
+      "type_en": "Groupe LDLC announces a customer data breach. Data concerned and number of people not specified; no financial or sensitive data according to the company.",
+      "proof_url": "https://next.ink/brief-article/ldlc-deuxieme-incident-de-cybersecurite-et-fuite-de-donnees-de-lannee/",
+      "media_link": "https://next.ink/brief-article/ldlc-deuxieme-incident-de-cybersecurite-et-fuite-de-donnees-de-lannee/",
+      "contributor": "wassym"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "Accès non autorisé à un système d'information, clients prévenus par e-mail et CNIL notifiée. Données : nom, prénom, adresse postale, e-mail, fax, téléphones, langue, civilité, codes clients, type de client, date de dernière connexion et d'inscription. Pas de données bancaires ni d'identifiants selon LDLC.",
+      "type_en": "Unauthorised access to an information system; customers notified by e-mail and CNIL notified. Data: name, postal address, e-mail, fax, phone numbers, language, title, customer codes, customer type, last login and sign-up dates. No bank data or login credentials according to LDLC.",
+      "proof_url": "https://next.ink/brief-article/fuite-de-donnees-et-de-quatre-pour-ldlc/",
+      "media_link": "https://next.ink/brief-article/fuite-de-donnees-et-de-quatre-pour-ldlc/",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay_fr": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month according to GDPR",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Vos données ne sont pas transférées dans des pays tiers et restent hébergées au sein de l'Union européenne. Toutefois, dans le cadre des paiements effectués via certaines cartes bancaires, des données peuvent être transférées en dehors de l'Espace économique européen (EEE) ou du Royaume-Uni [...]",
+  "outside_eu_storage": false,
+  "comments": "Responsables : GROUPE LDLC (RCS 403 554 181) et ses filiales, 2 rue des Érables, 69760 Limonest. Politique en vigueur datée du 28.05.2026 (PDF). La politique ne précise ni pièce d'identité requise ni délai de réponse (délai légal RGPD d'un mois). Données hébergées dans l'UE ; transferts possibles hors EEE ou Royaume-Uni liés à certains paiements par carte (lutte anti-blanchiment, prévention de la fraude), sans pays nommé. La section 11 donne aussi une adresse dpo@groupeldlc.com (sans tiret), probable coquille. Une attaque de 2021 (Ragnar Locker, données internes) n'est pas ajoutée comme fuite de données clients.",
+  "comments_en": "Controllers: GROUPE LDLC (RCS 403 554 181) and its subsidiaries, 2 rue des Érables, 69760 Limonest. Current policy dated 28.05.2026 (PDF). It does not state an ID requirement or response time (GDPR legal deadline of one month). Data hosted in the EU; possible transfers outside the EEA or UK for some card payments (anti-money laundering, fraud prevention), no country named. Section 11 also gives dpo@groupeldlc.com (no hyphen), probably a typo. A 2021 attack (Ragnar Locker, internal data) is not added as a customer data breach.",
+  "better_alternative": false,
+  "created_at": "2026-11-24",
+  "created_by": "wassym",
+  "status": "draft"
+}
