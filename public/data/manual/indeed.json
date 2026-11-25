@@ -22,7 +22,7 @@
   "response_delay_en": "Under 1 month according to the RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Indeed partage des informations avec ses Filiales pour les raisons décrites ci-dessous<br> Nos services ne pourraient pas être fournis et les Sites ne pourraient pas fonctionner sans de tels transferts d’informations<br>/nSi vous ne voulez pas que vos informations soient communiquées de la sorte, il est préférable que vous n’utilisiez pas ces Sites",
+  "privacy_policy_quote_fr": "Indeed partage des informations avec ses Filiales pour les raisons décrites ci-dessous<br> Nos services ne pourraient pas être fournis et les Sites ne pourraient pas fonctionner sans de tels transferts d’informations<br>/nSi vous ne voulez pas que vos informations soient communiquées de la sorte, il est préférable que vous n’utilisiez pas ces Sites",
   "privacy_policy_quote_en": "Indeed shares information with its Affiliates for the reasons described below<br> Our services could not be provided and the Sites could not operate without such transfers of information<br>/nIf you do not want your information to be shared in this way, it is best that you do not use these Sites",
   "transfer_destination_countries": [
     "us",

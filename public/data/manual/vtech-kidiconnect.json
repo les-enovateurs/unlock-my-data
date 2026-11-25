@@ -15,7 +15,7 @@
   "response_delay_fr": "1 mois maximum à compter de la réception de la demande",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Transferts : « Le lieu de traitement des données à caractère personnel peut inclure Hong Kong, la Chine, et les États-Unis. » ; « VTech utilisera les Clauses Contractuelles Types de la Commission Européenne pour protéger votre vie privée autant que possible. Si cela n'est pas possible, VTech sollicitera votre consentement afin de transmettre vos données (à caractère personnel) vers des pays n'offrant pas un niveau de protection adéquat. » — Enfants : « VTech ne traitera pas les données à caractère personnel se rapportant à un enfant sans l'accord préalable de ses parents. » — Messages : « Dans le cadre normal du service, le contenu des messages de chat (photo, vidéo, voix et texte non transmis) seront effacés après 1 mois. » — Décisions automatisées : « VTech peut utiliser des outils de prise de décision individuelle automatisée. » — Information précontractuelle Data Act : « Les données ne seront en aucun cas utilisées pour le profilage ou le suivi des enfants, ni pour des activités de marketing ou de publicité sans le consentement de l'utilisateur. »",
+  "privacy_policy_quote_fr": "Transferts : « Le lieu de traitement des données à caractère personnel peut inclure Hong Kong, la Chine, et les États-Unis. » ; « VTech utilisera les Clauses Contractuelles Types de la Commission Européenne pour protéger votre vie privée autant que possible. Si cela n'est pas possible, VTech sollicitera votre consentement afin de transmettre vos données (à caractère personnel) vers des pays n'offrant pas un niveau de protection adéquat. » — Enfants : « VTech ne traitera pas les données à caractère personnel se rapportant à un enfant sans l'accord préalable de ses parents. » — Messages : « Dans le cadre normal du service, le contenu des messages de chat (photo, vidéo, voix et texte non transmis) seront effacés après 1 mois. » — Décisions automatisées : « VTech peut utiliser des outils de prise de décision individuelle automatisée. » — Information précontractuelle Data Act : « Les données ne seront en aucun cas utilisées pour le profilage ou le suivi des enfants, ni pour des activités de marketing ou de publicité sans le consentement de l'utilisateur. »",
   "transfer_destination_countries": [
     "hk",
     "cn",
@@ -71,7 +71,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
@@ -92,7 +92,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Données de la fonction de chat listées par la politique : « Identifiant utilisateur, adresse e-mail, Nom, Contenu du message de chat (texte, photo, video, message vocal), Historique du journal de chat, analyse du chat (temps de chat, compteurs, participants, résultats, temps actif/non actif, etc.) ». Seul le contenu est effacé au bout d'un mois ; l'analyse du chat suit la durée de vie du compte.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",

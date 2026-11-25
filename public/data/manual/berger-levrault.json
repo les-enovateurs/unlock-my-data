@@ -54,7 +54,7 @@
   "data_access_via_other": false,
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "privacy_policy_quote": "Les données personnelles collectées sont réservées à l’usage des personnes habilitées au sein de Berger‑Levrault et de ses filiales, ainsi qu’aux prestataires autorisés intervenant pour leur compte. Elles ne font pas l’objet de transfert vers un pays tiers à l’Union européenne en dehors des cas prévus par la réglementation applicable et assortis de garanties appropriées.",
+  "privacy_policy_quote_fr": "Les données personnelles collectées sont réservées à l’usage des personnes habilitées au sein de Berger‑Levrault et de ses filiales, ainsi qu’aux prestataires autorisés intervenant pour leur compte. Elles ne font pas l’objet de transfert vers un pays tiers à l’Union européenne en dehors des cas prévus par la réglementation applicable et assortis de garanties appropriées.",
   "comments": "Berger-Levrault a été impliqué dans un incident de sécurité informatique touchant plusieurs dizaines d'hôpitaux en 2013.  Son logiciel ResUrgences a relevé qu'un fichier contenait des identifiants permettant d'accéder à distance aux systèmes informatiques de plusieurs dizaines d'hôpitaux. (sources : Piratage.fr et Observatoire SansTrace).",
   "better_alternative": false,
   "created_at": "2026-11-22",

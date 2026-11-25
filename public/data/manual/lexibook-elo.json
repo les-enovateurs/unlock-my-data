@@ -51,7 +51,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Aucune citation retenue : la politique publiée sur lexibook.ai ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts. Elle déclare couvrir « www.lexibook.com » — pas le site des jouets IA. Dernière mise à jour affichée : octobre 2025.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
@@ -114,7 +114,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "La FAQ produit (https://lexibook.ai/fr/pages/frequently-asked-questions, relevée le 2026-09-18) affirme ce que la politique de confidentialité ne dit nulle part : « Les données audio et de conversation sont traitées en toute sécurité et uniquement dans la mesure nécessaire pour fournir le service » ; « Les parents peuvent demander la suppression des données liées au compte à tout moment via le tableau de bord des parents ou le service client » ; « Le jouet n'écoute que lorsqu'il est activé par l'enfant ou lors d'interactions prévues. Des indicateurs visuels ou sonores permettent [de le signaler] ». Aucune durée de conservation, aucun sous-traitant, aucun pays de destination n'y figure — et ces engagements ne sont pas repris dans le document contractuel.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",

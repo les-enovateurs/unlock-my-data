@@ -26,7 +26,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Mozilla (et nos serveurs) sont basés aux États-Unis. Étant donné que nous sommes une entreprise internationale, afin de fournir les services décrits dans la présente Politique de confidentialité, les informations que nous recueillons peuvent être consultées à partir des lieux où se trouvent nos employés et les données peuvent également être transférées vers d'autres juridictions suite au partage des données avec nos partenaires.&#x20;",
+  "privacy_policy_quote_fr": "Mozilla (et nos serveurs) sont basés aux États-Unis. Étant donné que nous sommes une entreprise internationale, afin de fournir les services décrits dans la présente Politique de confidentialité, les informations que nous recueillons peuvent être consultées à partir des lieux où se trouvent nos employés et les données peuvent également être transférées vers d'autres juridictions suite au partage des données avec nos partenaires.&#x20;",
   "transfer_destination_countries": [
     "us",
     "europe",

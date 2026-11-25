@@ -32,7 +32,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "\"Epic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez.\"",
+  "privacy_policy_quote_fr": "\"Epic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez.\"",
   "transfer_destination_countries": [
     "us",
     "world"

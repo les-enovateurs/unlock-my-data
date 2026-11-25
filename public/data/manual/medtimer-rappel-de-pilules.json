@@ -25,7 +25,7 @@
   ],
   "details_required_documents_en": "Not mentioned",
   "confidentiality_policy_url_en": "https://medtimer.me/privacy",
-  "privacy_policy_quote": "Nous conservons vos données aussi longtemps que votre compte est actif. Vous pouvez supprimer définitivement votre compte et toutes les données associées à tout moment à partir de *Paramètres → Supprimer* le *compte* à l'intérieur du App. La suppression supprime vos médicaments, vos horaires, vos journaux, vos photos et votre profil. Notez que L'annulation d'un abonnement est traitée séparément via les paramètres de votre compte App Store.",
+  "privacy_policy_quote_fr": "Nous conservons vos données aussi longtemps que votre compte est actif. Vous pouvez supprimer définitivement votre compte et toutes les données associées à tout moment à partir de *Paramètres → Supprimer* le *compte* à l'intérieur du App. La suppression supprime vos médicaments, vos horaires, vos journaux, vos photos et votre profil. Notez que L'annulation d'un abonnement est traitée séparément via les paramètres de votre compte App Store.",
   "data_access_type": "via le compte ou via mail",
   "privacy_policy_quote_en": "We keep your data for as long as your account is active. You can permanently delete your account and all associated data at any time from *Settings → Delete Account* inside the app. Deletion removes your medications, schedules, logs, photos, and profile. Note that cancelling a subscription is handled separately through your App Store account settings.",
   "updated_by": "Charlotte L",

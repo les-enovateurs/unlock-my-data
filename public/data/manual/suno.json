@@ -25,7 +25,7 @@
   "data_access_type_en": "By email",
   "address_export": "Suno Inc., Attn: General Counsel, 17 Dunster St, Floor 4, Cambridge, MA 02138, United States",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Pour les transferts depuis l'EEE vers des pays que la Commission européenne ne juge pas adéquats (dont les États-Unis), nous avons mis en place les clauses contractuelles types adoptées par la Commission européenne pour les transferts d'informations personnelles, comme garantie pour le transfert de vos informations.",
+  "privacy_policy_quote_fr": "Pour les transferts depuis l'EEE vers des pays que la Commission européenne ne juge pas adéquats (dont les États-Unis), nous avons mis en place les clauses contractuelles types adoptées par la Commission européenne pour les transferts d'informations personnelles, comme garantie pour le transfert de vos informations.",
   "privacy_policy_quote_en": "For transfers from the EEA to countries not considered adequate by the European Commission (including the United States), we have put in place standard contractual clauses adopted by the European Commission regarding Personal Information transfers as a safeguard for the transfer of your information.",
   "transfer_destination_countries": [
     "us"

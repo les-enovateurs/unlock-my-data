@@ -20,7 +20,7 @@
   "data_access_via_other": false,
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "privacy_policy_quote": "Le depot de temoignage est anonyme par defaut. Aucune adresse IP n'est collectee ni conservee par notre serveur. L'email n'est collecte que si vous cochez explicitement la case correspondante.",
+  "privacy_policy_quote_fr": "Le depot de temoignage est anonyme par defaut. Aucune adresse IP n'est collectee ni conservee par notre serveur. L'email n'est collecte que si vous cochez explicitement la case correspondante.",
   "better_alternative": false,
   "created_at": "2026-10-30",
   "created_by": "Charlotte L",

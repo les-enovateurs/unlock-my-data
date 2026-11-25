@@ -48,7 +48,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Aucune citation retenue : la politique ne traite ni du micro, ni de la caméra, ni des enfants, ni des transferts hors pays, alors que le produit embarque les deux capteurs et vise le grand public familial. Aucune mention de consentement parental.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",

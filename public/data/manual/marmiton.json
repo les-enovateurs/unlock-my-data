@@ -22,7 +22,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Les traitements de Données que nous mettons en place peuvent impliquer des échanges de données transfrontaliers avec des sociétés situées dans des pays hors de l’Union européenne.",
+  "privacy_policy_quote_fr": "Les traitements de Données que nous mettons en place peuvent impliquer des échanges de données transfrontaliers avec des sociétés situées dans des pays hors de l’Union européenne.",
   "transfer_destination_countries": [
     "unspecified"
   ],

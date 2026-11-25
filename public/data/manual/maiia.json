@@ -24,7 +24,7 @@
   "sanctioned_by_cnil": true,
   "sanction_details": "Cegedim a été sanctionné en 2024 à 800 000€ d'amende par la CNIL pour traitement non autorisé de données de santé (pas directement par Maiia mais cela peut être intéressant de le mentionner malgré tout).&#x20;",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "En vue de fournir certains services, CEGEDIM SANTE fait appel à des sous-traitants pouvant être situés hors de l’Union européenne. La liste de ces sous-traitants est prévue en Annexe 1.\nLorsque le transfert de données est réalisé dans un pays tiers dans lequel la législation n’a pas été reconnue comme offrant un niveau de protection adéquat des Données personnelles, CEGEDIM SANTE veille à ce que les garanties nécessaires soient mises en place conformément à l’article 46, paragraphes 2 et 3 du ainsi qu’à l’article 49 paragraphe 1 du RGPD.",
+  "privacy_policy_quote_fr": "En vue de fournir certains services, CEGEDIM SANTE fait appel à des sous-traitants pouvant être situés hors de l’Union européenne. La liste de ces sous-traitants est prévue en Annexe 1.\nLorsque le transfert de données est réalisé dans un pays tiers dans lequel la législation n’a pas été reconnue comme offrant un niveau de protection adéquat des Données personnelles, CEGEDIM SANTE veille à ce que les garanties nécessaires soient mises en place conformément à l’article 46, paragraphes 2 et 3 du ainsi qu’à l’article 49 paragraphe 1 du RGPD.",
   "transfer_destination_countries": [
     "ma",
     "us"

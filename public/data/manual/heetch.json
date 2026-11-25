@@ -23,7 +23,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "[Vos données sont conservées et stockées pendant toute la durée des traitements sur les serveurs de la société Amazon Web Services, situés dans l’Union européenne.\n\nDans le cadre des outils que nous utilisons (voir article sur les destinataires concernant nos sous-traitants), vos données sont susceptibles de faire l’objet de transferts hors de l’Union européenne. ](https://www.heetch.com/privacy#)",
+  "privacy_policy_quote_fr": "[Vos données sont conservées et stockées pendant toute la durée des traitements sur les serveurs de la société Amazon Web Services, situés dans l’Union européenne.\n\nDans le cadre des outils que nous utilisons (voir article sur les destinataires concernant nos sous-traitants), vos données sont susceptibles de faire l’objet de transferts hors de l’Union européenne. ](https://www.heetch.com/privacy#)",
   "transfer_destination_countries": [
     "unspecified"
   ],

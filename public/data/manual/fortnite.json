@@ -40,7 +40,7 @@
   "response_delay_fr": "Dossier disponible rapidemment (dès le lendemain parfois) et pendant 15 jours avant de devoir faire une nouvelle demande",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "1. OÙ TRAITONS-NOUS LES INFORMATIONS ?\n   Epic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez",
+  "privacy_policy_quote_fr": "1. OÙ TRAITONS-NOUS LES INFORMATIONS ?\n   Epic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez",
   "outside_eu_storage": true,
   "better_alternative": false,
   "created_at": "2026-10-27",

@@ -24,7 +24,7 @@
   "address_export": "Atlassian Pty Ltd, c/o Atlassian US, Inc., 350 Bush Street, Floor 13, San Francisco, CA 94104, United States",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous collectons des informations dans le monde entier et pouvons transférer, traiter et stocker vos informations en dehors de votre pays de résidence, partout où nous ou nos prestataires tiers opérons afin de vous fournir les Services.",
+  "privacy_policy_quote_fr": "Nous collectons des informations dans le monde entier et pouvons transférer, traiter et stocker vos informations en dehors de votre pays de résidence, partout où nous ou nos prestataires tiers opérons afin de vous fournir les Services.",
   "privacy_policy_quote_en": "We collect information globally and may transfer, process, and store your information outside of your country of residence, to wherever we or our third-party service providers operate for the purpose of providing you the Services.",
   "transfer_destination_countries": [
     "us"
