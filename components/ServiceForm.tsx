@@ -115,7 +115,7 @@ const initialFormData: FormData = {
     sanctioned_by_cnil: false,
     sanction_details: "",
     data_transfer_policy: false,
-    privacy_policy_quote: "",
+    privacy_policy_quote_fr: "",
     privacy_policy_quote_en: "",
     transfer_destination_countries: [],
     outside_eu_storage: null,
@@ -399,7 +399,7 @@ export default function ServiceForm({
                     sanctioned_by_cnil: data.sanctioned_by_cnil || false,
                     sanction_details: data.sanction_details || "",
                     data_transfer_policy: data.data_transfer_policy || false,
-                    privacy_policy_quote: data.privacy_policy_quote || "",
+                    privacy_policy_quote_fr: data.privacy_policy_quote_fr || "",
                     privacy_policy_quote_en: data.privacy_policy_quote_en || "",
                     transfer_destination_countries:
                         data.transfer_destination_countries || [],
@@ -677,7 +677,7 @@ export default function ServiceForm({
 
         const markdownFields: Array<keyof FormData> = [
             "sanction_details",
-            "privacy_policy_quote",
+            "privacy_policy_quote_fr",
             "privacy_policy_quote_en",
             "comments",
             "comments_en",
@@ -873,7 +873,7 @@ export default function ServiceForm({
                 sanctioned_by_cnil: formData.sanctioned_by_cnil,
                 sanction_details: formData.sanction_details,
                 data_transfer_policy: formData.data_transfer_policy,
-                privacy_policy_quote: formData.privacy_policy_quote,
+                privacy_policy_quote_fr: formData.privacy_policy_quote_fr,
                 transfer_destination_countries:
                     formData.transfer_destination_countries.map(toTransferCode),
                 outside_eu_storage: formData.outside_eu_storage,
@@ -2005,12 +2005,12 @@ export default function ServiceForm({
                                                 hint={lang === "fr"
                                                     ? "Collez uniquement l'extrait sur le transfert de données (5 lignes max)."
                                                     : "Paste only the excerpt about data transfers (max 5 non-empty lines)."}
-                                                value={formData?.privacy_policy_quote
+                                                value={formData?.privacy_policy_quote_fr
                                                         .replaceAll("<br> ", "\n")
                                                         .replaceAll("<br>/n", "\n") || ""}
                                                 onChange={(val) =>
                                                     setFormData((prev) =>
-                                                        prev ? { ...prev, privacy_policy_quote: limitPrivacyQuoteExcerpt(val) } : prev,
+                                                        prev ? { ...prev, privacy_policy_quote_fr: limitPrivacyQuoteExcerpt(val) } : prev,
                                                     )
                                                 }
                                                 placeholder={lang === "fr"
