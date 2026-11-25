@@ -28,7 +28,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Non précisé dans la politique de confidentialité.",
-  "confidentiality_policy_url": "https://www.quick.fr/politique-de-protection-des-donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.quick.fr/politique-de-protection-des-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un e-mail à dpo@quick.fr ou un courrier à QUICK GESTION SAS, Service Juridique – Données Personnelles, 45 avenue Victor Hugo, Bâtiment 264, 93300 Aubervilliers. Pour une sollicitation venant d'un franchisé ou partenaire, s'adresser directement à lui.",

@@ -28,7 +28,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Non précisé dans la politique de confidentialité.",
-  "confidentiality_policy_url": "https://www.asos.com/fr/confidentialite/",
+  "confidentiality_policy_url_fr": "https://www.asos.com/fr/confidentialite/",
   "confidentiality_policy_url_en": "https://www.asos.com/privacy-policy/",
   "data_access_via_postal": true,
   "data_access_via_form": false,
