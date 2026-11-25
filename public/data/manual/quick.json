@@ -1,0 +1,59 @@
+{
+  "name": "Quick",
+  "logo": "/img/logos/quick.webp",
+  "country_code": "fr",
+  "belongs_to_group": false,
+  "contacts": [
+    {
+      "type": "email",
+      "value": "dpo@quick.fr",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Contact indiqué dans la politique pour toute question sur la protection des données.",
+      "comment_en": "Contact given in the policy for any data protection question."
+    },
+    {
+      "type": "postal",
+      "value": "QUICK GESTION SAS, Service Juridique – Données Personnelles, 45 avenue Victor Hugo, Bâtiment 264, 93300 Aubervilliers",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale indiquée dans la politique.",
+      "comment_en": "Postal address given in the policy."
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "confidentiality_policy_url": "https://www.quick.fr/politique-de-protection-des-donnees-personnelles",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Envoyer un e-mail à dpo@quick.fr ou un courrier à QUICK GESTION SAS, Service Juridique – Données Personnelles, 45 avenue Victor Hugo, Bâtiment 264, 93300 Aubervilliers. Pour une sollicitation venant d'un franchisé ou partenaire, s'adresser directement à lui.",
+  "data_access_type_en": "Send an e-mail to dpo@quick.fr or a letter to QUICK GESTION SAS, Service Juridique – Données Personnelles, 45 avenue Victor Hugo, Bâtiment 264, 93300 Aubervilliers. For marketing from a franchisee or partner, contact them directly.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-10-10",
+      "type": "Accès non autorisé détecté sur le programme de fidélité, suspendu temporairement ; adhérents prévenus par e-mail. Données : nom, prénom, téléphone, e-mail, numéro de carte de fidélité et solde de points. Pas de données bancaires selon Quick.",
+      "type_en": "Unauthorised access detected on the loyalty programme, temporarily suspended; members notified by e-mail. Data: name, phone number, e-mail, loyalty card number and points balance. No bank data according to Quick.",
+      "proof_url": "https://www.clubic.com/actualite-633553-cyberattaque-les-donnees-du-programme-de-fidelite-quick-ont-fuite.html",
+      "media_link": "https://www.clubic.com/actualite-633553-cyberattaque-les-donnees-du-programme-de-fidelite-quick-ont-fuite.html",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay_fr": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month according to GDPR",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Nous ne transférons pas vos données en dehors de l'Union européenne, sauf dans les situations où cela est nécessaire pour répondre à votre demande ou vous fournir les services demandés. Dans ce cadre uniquement, des données personnelles vous concernant peuvent être amenées à être transférées en-dehors de l'Union européenne [...]",
+  "comments": "Responsable : QUICK GESTION SAS (Aubervilliers). Politique datée de janvier 2022. Elle ne précise ni pièce d'identité requise ni délai de réponse (délai légal RGPD d'un mois), ni les pays de transfert. Date de la fuite : date de l'article Clubic (10 octobre 2026), nombre d'adhérents concernés non communiqué.",
+  "comments_en": "Controller: QUICK GESTION SAS (Aubervilliers). Policy dated January 2022. It does not state an ID requirement, response time (GDPR legal deadline of one month) or transfer countries. Leak date: date of the Clubic article (10 October 2026); number of members affected not disclosed.",
+  "better_alternative": false,
+  "created_at": "2026-11-24",
+  "created_by": "wassym",
+  "status": "draft"
+}
