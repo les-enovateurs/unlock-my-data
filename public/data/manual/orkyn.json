@@ -1,0 +1,51 @@
+{
+  "name": "Orkyn",
+  "logo": "/img/logos/orkyn.webp",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "Air Liquide",
+  "contacts": [
+    {
+      "type": "postal",
+      "value": "Délégué à la Protection des Données, AIR LIQUIDE, 75 quai d'Orsay, 75007 Paris",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse de contact indiquée dans la politique (rubrique Contact). Les demandes d'exercice des droits passent par le formulaire RGPD d'Air Liquide.",
+      "comment_en": "Contact address given in the policy (Contact section). Rights requests go through the Air Liquide GDPR form."
+    }
+  ],
+  "easy_access_data": 2,
+  "need_id_card": false,
+  "details_required_documents": "Justificatif d'identité du demandeur (type non précisé) et coordonnées de contact.",
+  "confidentiality_policy_url": "https://www.orkyn.fr/politique-donnees-personnelles",
+  "data_access_via_postal": true,
+  "data_access_via_form": true,
+  "data_access_type": "Envoyer une demande écrite via le formulaire https://www.airliquide.com/fr/groupe/contactez-nous-rgpd, en précisant les traitements concernés, avec un justificatif d'identité et des coordonnées de contact. Réponse sous un mois maximum (prolongeable de deux mois).",
+  "data_access_type_en": "Send a written request through the form https://www.airliquide.com/fr/groupe/contactez-nous-rgpd, stating the processing concerned, with proof of identity and contact details. Reply within one month at most (can be extended by two months).",
+  "data_access_via_email": false,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-09-19",
+      "type": "Accès non autorisé à un fichier de données, détecté le 19 septembre 2026 ; espace patient « Orkyn' & moi » suspendu, patients prévenus par e-mail. Données possibles : identité (nom, prénom, sexe, date de naissance, numéro de Sécurité sociale, adresse, e-mail, téléphone, code patient), suivi (visites, médecins prescripteurs, prescriptions, matériel), santé (thérapie suivie, observance), facturation Assurance maladie.",
+      "type_en": "Unauthorised access to a data file, detected on 19 September 2026; 'Orkyn' & moi' patient portal suspended, patients notified by e-mail. Possible data: identity (name, sex, date of birth, social security number, address, e-mail, phone, patient code), follow-up (visits, prescribing doctors, prescriptions, equipment), health (therapy, compliance), health insurance billing.",
+      "proof_url": "https://selectra.info/telecom/actualites/marche/fuite-donnees-orkyn-patients-faux-appel",
+      "media_link": "https://selectra.info/telecom/actualites/marche/fuite-donnees-orkyn-patients-faux-appel",
+      "contributor": "wassym"
+    }
+  ],
+  "url_export": "https://www.airliquide.com/fr/groupe/contactez-nous-rgpd",
+  "response_delay_fr": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month according to GDPR",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Les tiers identifiés à l'article 5 [...] sont en général situés au sein de l'Espace Economique Européen (EEE). Toutefois, certains tiers peuvent être localisés dans des pays en dehors de l'EEE [...] Dans une telle situation, nous veillons à mettre en place des garanties appropriées [...] notamment [...] par des clauses contractuelles types approuvées par la Commission Européenne",
+  "comments": "Orkyn' est le nom commercial de Pharma Dom SA (10 avenue Aristide Briand, 92220 Bagneux), prestataire de santé à domicile du groupe Air Liquide (apnée du sommeil, insuffisance respiratoire, diabète, Parkinson). Données de santé traitées. Pas d'adresse e-mail RGPD publiée : formulaire Air Liquide ou courrier au DPO. Pays de transfert non nommés. Pas de version anglaise de la politique : l'extrait anglais est une traduction.",
+  "comments_en": "Orkyn' is the trade name of Pharma Dom SA (10 avenue Aristide Briand, 92220 Bagneux), a home healthcare provider of the Air Liquide group (sleep apnea, respiratory failure, diabetes, Parkinson's). Health data is processed. No GDPR e-mail published: Air Liquide form or letter to the DPO. Transfer countries not named. No English version of the policy: the English extract is a translation.",
+  "better_alternative": false,
+  "created_at": "2026-11-24",
+  "created_by": "wassym",
+  "status": "draft"
+}
