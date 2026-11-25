@@ -23,7 +23,60 @@
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "draft",
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "contacts",
+      "message": "Dans https://docs.n26.com/legal/06+EU/03+Privacy%20Policy/en/01privacy-policy-en.pdf je trouve:\nprivacy@n26.com",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-25T14:56:34.703Z",
+      "resolved": false,
+      "replies": [
+        {
+          "message": "Mais effectivement ils indiquent un peu plus loin ne pas les contacter à cette adresse???",
+          "author": "dominique_usa",
+          "timestamp": "2026-11-25T15:00:17.158Z"
+        }
+      ]
+    },
+    {
+      "field": "confidentiality_policy_url",
+      "message": "https://docs.n26.com/legal/06+EU/03+Privacy%20Policy/en/01privacy-policy-en.pdf",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-25T15:01:30.659Z",
+      "resolved": false
+    },
+    {
+      "field": "confidentiality_policy_url_en",
+      "message": "https://docs.n26.com/legal/06+EU/03+Privacy%20Policy/en/01privacy-policy-en.pdf",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-25T15:01:44.576Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote",
+      "message": "Dans la mesure où N26 transmet des données à des entités situées en dehors de l’Espace économique européen et afin de garantir un niveau adéquat de protection des données équivalent à celui prévu par le RGPD lors des transferts internationaux de données à caractère personnel, N26 a mis en place un ou plusieurs des mécanismes de transfert suivants, en plus des\ngaranties prévues par l’analyse d’impact relative au transfert international de données concernant le transfert de données en question, le cas échéant :\n● Une décision de la Commission européenne établissant que le pays tiers assure un niveau adéquat de protection, conformément à l’article 45, paragraphe 1, du RGPD – les décisions d’adéquation existantes sont disponibles ici (cela inclut les organisations commerciales participant au cadre de protection des données UE-États-Unis) ;\n● Des règles d’entreprise contraignantes (« BCR ») approuvées conformément à l’article 47 du RGPD, en vertu de l’article 46, paragraphe 2, point b), du RGPD ;\n● Des clauses types de protection des données pour le transfert de données à caractère personnel vers des pays tiers (« SCC »), telles qu’ adoptées par la Commission européenne, conformément à l’article 46, paragraphe 2, point c), du RGPD – la version la plus récente des\nSCC est disponible ici: https://commission.europa.eu/publications/publications-standard-contractual-clauses-sccs_en\n● Votre consentement explicite en vertu de l’article 49, paragraphe 1, point a), du RGPD, lorsque nous transmettons des données à des entités situées en dehors de l’ Espace économique européen et dans des pays tiers qui n’assurent pas un niveau adéquat de protection des\ndonnées à caractère personnel au sens du RGPD et qu’aucun des autres mécanismes de transfert ne s’applique.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-25T15:13:56.074Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Insofar as N26 transmits data to entities located outside the European Economic Area and in order to ensure an appropriate level of data protection equivalent to that granted under the GDPR upon the international transfers of personal data, N26 has implemented one or more of the following transfer mechanisms, in addition to safeguards in accordance with the international data transfer impact assessment on the respective data transfer, if applicable:\n● A decision of the European Commission deciding that the third country ensures an adequate level of protection, pursuant to Art. 45 (1) GDPR - the existing adequacy decisions can be found here (this includes commercial organisations participating in the EU-US Data Privacy Framework);\n● Binding Corporate Rules (“BCRs”) approved as per Art. 47 GDPR, pursuant to Art. 46 (2) b) GDPR;\n● Standard data protection clauses for the transfer of personal data to third countries (“SCCs”), as adopted by the European Commission, pursuant to Art. 46 (2) c) GDPR - the most recent version of the SCCs can be found here: https://commission.europa.eu/publications/publications-standard-contractual-clauses-sccs_en\n● Your explicit consent under Art. 49 (1) a) GDPR, when we transmit data to entities located outside the European Economic Area and in third countries that don't provide an adequate level of protection of personal data in the terms of the GDPR and none of the other transfer mechanisms apply.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-25T15:16:12.610Z",
+      "resolved": false
+    },
+    {
+      "field": "data_transfer_policy",
+      "message": "checkmark ?",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-25T15:16:34.760Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-25",
   "playstore": {
     "id": "de.number26.android",
     "name": "N26 — La banque qu'on adore"
