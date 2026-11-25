@@ -63,6 +63,6 @@
       "processor": "Disneyland"
     }
   ],
-  "confidentiality_policy_url": "https://www.disneyplus.com/en-gb/legal/privacy-policy",
+  "confidentiality_policy_url_fr": "https://www.disneyplus.com/en-gb/legal/privacy-policy",
   "policy_analysis": "policy-analysis/disneyplus.json"
 }

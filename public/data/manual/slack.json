@@ -71,6 +71,6 @@
       "link_en": "/data/migrations/slack/mattermost.en.md"
     }
   ],
-  "confidentiality_policy_url": "https://slack.com/privacy-policy",
+  "confidentiality_policy_url_fr": "https://slack.com/privacy-policy",
   "policy_analysis": "policy-analysis/slack.json"
 }

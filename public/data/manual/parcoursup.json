@@ -23,7 +23,7 @@
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "https://www.parcoursup.gouv.fr/donnees-personnelles-et-cookies-1661-1661",
+  "confidentiality_policy_url_fr": "https://www.parcoursup.gouv.fr/donnees-personnelles-et-cookies-1661-1661",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un courrier ou email au DPO du MESR en mentionnant son identité et en invoquant l'article 15 du RGPD",

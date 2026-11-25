@@ -14,7 +14,7 @@
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "https://www.maiia.com/donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.maiia.com/donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un mail ou écrire à l'adresse postale (pas de formulaire disponible sur le site)",

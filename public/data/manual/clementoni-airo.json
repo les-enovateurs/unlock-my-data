@@ -38,7 +38,7 @@
     "name": "AIRO",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
+  "confidentiality_policy_url_fr": "https://clemworld.clementoni.com/en/privacy-policy-of-airo-app/",
   "review": [
     {
       "field": "permissions",

@@ -127,7 +127,7 @@ const initialFormData: FormData = {
     details_required_documents_autre: "",
     response_format_autre: "",
     response_delay_autre: "",
-    confidentiality_policy_url: "",
+    confidentiality_policy_url_fr: "",
     confidentiality_policy_url_en: "",
     example_data_export: [],
     leaks: [],
@@ -435,7 +435,8 @@ export default function ServiceForm({
                     })(),
                     response_format_autre: "",
                     response_delay_autre: "",
-                    confidentiality_policy_url: data.confidentiality_policy_url || "",
+                    confidentiality_policy_url_fr:
+                        data.confidentiality_policy_url_fr || "",
                     confidentiality_policy_url_en:
                         data.confidentiality_policy_url_en || "",
                     better_alternative: data.better_alternative || false,
@@ -848,7 +849,7 @@ export default function ServiceForm({
                         formData.details_required_documents_autre !== ""
                         ? formData.details_required_documents_autre
                         : formData.details_required_documents,
-                confidentiality_policy_url: formData.confidentiality_policy_url,
+                confidentiality_policy_url_fr: formData.confidentiality_policy_url_fr,
                 confidentiality_policy_url_en: formData.confidentiality_policy_url_en,
                 data_access_via_postal: formData.data_access_via_postal,
                 data_access_via_form: formData.data_access_via_form,
@@ -1975,8 +1976,8 @@ export default function ServiceForm({
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="confidentiality_policy_url"
-                                                    value={formData?.confidentiality_policy_url || ""}
+                                                    name="confidentiality_policy_url_fr"
+                                                    value={formData?.confidentiality_policy_url_fr || ""}
                                                     onChange={handleInputChange}
                                                     className="umd-input"
                                                     placeholder={t.placeholderPrivacyPolicyUrl}

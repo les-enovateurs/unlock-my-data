@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": true,
-  "confidentiality_policy_url": "https://www.medadom.com/politique-de-confidentialite",
+  "confidentiality_policy_url_fr": "https://www.medadom.com/politique-de-confidentialite",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un mail avec justificatif d'identité en cas de doute sur l'identité du demandeur",

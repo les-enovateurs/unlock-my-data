@@ -13,7 +13,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.strava.com/legal/privacy#how-information-is-shared",
+  "confidentiality_policy_url_fr": "https://www.strava.com/legal/privacy#how-information-is-shared",
   "confidentiality_policy_url_en": "https://www.strava.com/legal/privacy#how-information-is-shared",
   "data_access_via_postal": true,
   "data_access_via_form": true,

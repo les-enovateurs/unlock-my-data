@@ -8,7 +8,9 @@
     {
       "type": "email",
       "value": "privacy@twitch.tv",
-      "purposes": ["export"]
+      "purposes": [
+        "export"
+      ]
     }
   ],
   "easy_access_data": 3,
@@ -36,6 +38,16 @@
     "name": "Twitch",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.twitch.tv/p/legal/privacy-notice/",
-  "policy_analysis": "policy-analysis/twitch.json"
+  "confidentiality_policy_url_fr": "https://www.twitch.tv/p/legal/privacy-notice/",
+  "policy_analysis": "policy-analysis/twitch.json",
+  "leaks": [
+    {
+      "date": "2021-10-06",
+      "type": "Montants des paiements versés aux créateurs (125 Go publiés, avec le code source)",
+      "type_en": "Montants des paiements versés aux créateurs (125 Go publiés, avec le code source)",
+      "proof_url": "/proofs/proof-twitch-1795544476453.png",
+      "contributor": "wassym",
+      "media_link": "https://leclaireur.fnac.com/article/35627-une-fuite-massive-de-donnees-confidentielles-inquiete-twitch/"
+    }
+  ]
 }

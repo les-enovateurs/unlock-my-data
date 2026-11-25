@@ -6,7 +6,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.deezer.com/fr/legal/personal-datas",
+  "confidentiality_policy_url_fr": "https://www.deezer.com/fr/legal/personal-datas",
   "confidentiality_policy_url_en": "https://www.deezer.com/legal/personal-datas",
   "data_access_via_postal": false,
   "data_access_via_form": true,
@@ -76,5 +76,15 @@
   "playstore": {
     "id": "deezer.android.app",
     "name": "Deezer - Musique & Podcast"
-  }
+  },
+  "leaks": [
+    {
+      "date": "2023-01-04",
+      "type": "Adresses e-mail, Nom, date de naissance",
+      "type_en": "Email addresses, Nom, date de naissance",
+      "proof_url": "/proofs/proof-deezer-1795544408880.png",
+      "contributor": "wassym",
+      "media_link": "https://siecledigital.fr/2023/01/04/deezer-les-donnees-de-250-millions-dutilisateurs-ont-fuite/"
+    }
+  ]
 }

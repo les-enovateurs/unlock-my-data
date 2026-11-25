@@ -14,7 +14,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://privacy.ticketmaster.fr/fr/privacy-policy",
+  "confidentiality_policy_url_fr": "https://privacy.ticketmaster.fr/fr/privacy-policy",
   "confidentiality_policy_url_en": "https://privacy.ticketmaster.fr/en/privacy-policy",
   "data_access_via_postal": false,
   "data_access_via_form": true,

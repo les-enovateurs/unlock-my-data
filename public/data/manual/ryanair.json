@@ -30,6 +30,6 @@
     "name": "Ryanair",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.ryanair.com/ie/en/corporate/privacy-policy",
+  "confidentiality_policy_url_fr": "https://www.ryanair.com/ie/en/corporate/privacy-policy",
   "policy_analysis": "policy-analysis/ryanair.json"
 }

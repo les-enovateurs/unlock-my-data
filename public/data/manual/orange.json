@@ -28,7 +28,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Éléments justifiant l'identité (pièce d'identité en cas de doute raisonnable)",
-  "confidentiality_policy_url": "https://www.orange.fr/donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.orange.fr/donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Formulaire en ligne dans l'espace client orange.fr (Compte > Vie privée et confidentialité), courrier au Service Client ou e-mail au DPO. La demande doit permettre de justifier de son identité ; une pièce d'identité peut être demandée en cas de doute raisonnable",

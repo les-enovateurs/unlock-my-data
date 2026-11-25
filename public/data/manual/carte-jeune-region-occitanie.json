@@ -29,8 +29,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Justificatif d'identité (type de pièce non précisé).",
-  "confidentiality_policy_url": "https://www.laregion.fr/RGPD",
-  "confidentiality_policy_url_en": "https://www.laregion.fr/RGPD",
+  "confidentiality_policy_url_fr": "https://www.laregion.fr/RGPD",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un e-mail au DPD à dpd@laregion.fr ou un courrier à Région Occitanie, 22 boulevard du Maréchal Juin, 31406 Toulouse cedex 9, en justifiant de son identité. Pour un mineur, la demande peut être faite par le représentant légal.",
@@ -49,7 +48,7 @@
   ],
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
-  "data_transfer_policy": true,
+  "data_transfer_policy": false,
   "privacy_policy_quote": "Vos données ne sont pas : vendues ou utilisées pour une finalité autre que celle évoquée précédemment ; transférées vers un pays tiers à l'Union Européenne ou une organisation internationale.",
   "outside_eu_storage": false,
   "comments": "Dispositif de la Région Occitanie / Pyrénées-Méditerranée pour les lycéens et jeunes en formation (offres culturelles, commerciales et services liés à l'établissement). Le site cartejeune.laregion.fr renvoie vers la page RGPD générale de la Région (laregion.fr/RGPD) : les informations sur les droits, le DPD et les transferts viennent de cette page, pas d'une politique spécifique à la Carte Jeune. Ligne d'information indiquée dans l'e-mail de notification de la fuite : 05 32 30 00 40.",
@@ -88,6 +87,6 @@
       "resolved": false
     }
   ],
-  "updated_by": "Claire",
+  "updated_by": "wassym",
   "updated_at": "2026-11-24"
 }

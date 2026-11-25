@@ -33,7 +33,7 @@
     "name": "KidiCom Chat (FR)",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.vtech-jouets.com/politique-de-confidentialite",
+  "confidentiality_policy_url_fr": "https://www.vtech-jouets.com/politique-de-confidentialite",
   "review": [
     {
       "field": "group_name",

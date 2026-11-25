@@ -40,6 +40,6 @@
     "name": "Pokémon GO",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://edpo.com/privacy-policy",
+  "confidentiality_policy_url_fr": "https://edpo.com/privacy-policy",
   "policy_analysis": "policy-analysis/pokemon-go.json"
 }

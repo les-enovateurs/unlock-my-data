@@ -30,6 +30,6 @@
     "name": "Le Chat by Mistral AI",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://legal.mistral.ai/terms/privacy-policy",
+  "confidentiality_policy_url_fr": "https://legal.mistral.ai/terms/privacy-policy",
   "policy_analysis": "policy-analysis/mistral.json"
 }

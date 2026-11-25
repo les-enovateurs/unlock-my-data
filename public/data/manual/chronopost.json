@@ -14,7 +14,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "nom, prénom, adresse email, adresse postale",
-  "confidentiality_policy_url": "https://www.chronopost.fr/fr/politique-informatique-et-libertes",
+  "confidentiality_policy_url_fr": "https://www.chronopost.fr/fr/politique-informatique-et-libertes",
   "confidentiality_policy_url_en": "https://www.chronopost.fr/en/data-protection-policy",
   "data_access_via_postal": true,
   "data_access_via_form": true,

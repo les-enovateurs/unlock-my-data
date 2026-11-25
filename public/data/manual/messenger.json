@@ -37,6 +37,6 @@
   "alternatives": [
     "signal"
   ],
-  "confidentiality_policy_url": "https://www.facebook.com/about/basics",
+  "confidentiality_policy_url_fr": "https://www.facebook.com/about/basics",
   "policy_analysis": "policy-analysis/messenger.json"
 }

@@ -1,7 +1,7 @@
 import type { ServiceContact } from "@/lib/contacts";
 
 export interface FormData {
-    confidentiality_policy_url: string | undefined;
+    confidentiality_policy_url_fr: string | undefined;
     confidentiality_policy_url_en: string | undefined;
     name: string;
     logo: string;

@@ -17,7 +17,7 @@
   "details_required_documents_en": "Identity confirmation possible if McDonald's asks for it",
   "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "confidentiality_policy_url": "https://www.mcdonalds.fr/politique-protection-donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.mcdonalds.fr/politique-protection-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,

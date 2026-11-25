@@ -14,7 +14,7 @@
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "https://www.cerballiance.fr/fr/donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.cerballiance.fr/fr/donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,

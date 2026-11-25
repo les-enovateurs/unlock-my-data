@@ -6,7 +6,7 @@
   "group_name": "Match group",
   "easy_access_data": 3,
   "need_id_card": true,
-  "confidentiality_policy_url": "https://okcupid-app.zendesk.com/hc/fr/articles/44307421281179-Politique-de-confidentialit%C3%A9",
+  "confidentiality_policy_url_fr": "https://okcupid-app.zendesk.com/hc/fr/articles/44307421281179-Politique-de-confidentialit%C3%A9",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": false,

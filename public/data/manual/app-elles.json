@@ -14,7 +14,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://app-elles.org/fr/privacy_policy.html",
+  "confidentiality_policy_url_fr": "https://app-elles.org/fr/privacy_policy.html",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_via_email": true,

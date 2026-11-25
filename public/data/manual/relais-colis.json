@@ -1,0 +1,68 @@
+{
+  "name": "Relais Colis",
+  "logo": "/img/logos/relais-colis.webp",
+  "country_code": "fr",
+  "belongs_to_group": true,
+  "group_name": "GLS (General Logistics Systems)",
+  "contacts": [
+    {
+      "type": "email",
+      "value": "protectiondesdonnees@relaiscolis.com",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Délégué à la protection des données (rubrique Contact de la politique).",
+      "comment_en": "Data Protection Officer (Contact section of the policy)."
+    },
+    {
+      "type": "postal",
+      "value": "GLS France OOH, Délégué à la protection des données, CS 93730, 31037 Toulouse Cedex 1",
+      "purposes": [
+        "export",
+        "delete"
+      ],
+      "comment_fr": "Adresse postale du DPO indiquée dans la politique.",
+      "comment_en": "DPO postal address given in the policy."
+    }
+  ],
+  "easy_access_data": 4,
+  "need_id_card": false,
+  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "confidentiality_policy_url_fr": "https://relaiscolis.com/page/donnees-personnelles",
+  "data_access_via_postal": true,
+  "data_access_via_form": false,
+  "data_access_type": "Contacter le Délégué à la protection des données par e-mail à protectiondesdonnees@relaiscolis.com ou par courrier à GLS France OOH, Délégué à la protection des données, CS 93730, 31037 Toulouse Cedex 1.",
+  "data_access_type_en": "Contact the Data Protection Officer by e-mail at protectiondesdonnees@relaiscolis.com or by post at GLS France OOH, Délégué à la protection des données, CS 93730, 31037 Toulouse Cedex 1.",
+  "data_access_via_email": true,
+  "data_access_via_other": false,
+  "leaks": [
+    {
+      "date": "2026-01-15",
+      "type": "Cyberattaque via un prestataire technique, reconnue par Relais Colis mi-janvier 2026 et notifiée à la CNIL. Base d'environ 10 millions de lignes mise en vente : noms, prénoms, noms d'entreprises, adresses postales, téléphones, e-mails. Pas de données bancaires ni de mots de passe selon l'entreprise. L'e-mail de notification du 15 janvier exposait en clair 10 000 adresses e-mail d'autres clients.",
+      "type_en": "Cyberattack through a technical provider, acknowledged by Relais Colis in mid-January 2026 and notified to the CNIL. Database of about 10 million rows put up for sale: names, company names, postal addresses, phone numbers, e-mails. No bank data or passwords according to the company. The 15 January notification e-mail exposed 10,000 other customers' e-mail addresses in plain text.",
+      "proof_url": "https://www.mediaterranee.com/1022026-relais-colis-victime-dune-cyberattaque-10-millions-de-donnees-personnelles-dans-la-nature",
+      "media_link": "https://www.mediaterranee.com/1022026-relais-colis-victime-dune-cyberattaque-10-millions-de-donnees-personnelles-dans-la-nature",
+      "contributor": "wassym"
+    },
+    {
+      "date": "2026-02-13",
+      "type": "Nouvel incident annoncé par e-mail aux clients concernés (intrusion en janvier 2026 via un identifiant compromis de l'application) : nom, prénom, adresse postale, e-mail, téléphone. Pas de données bancaires ni de mots de passe selon l'entreprise.",
+      "type_en": "New incident announced by e-mail to affected customers (intrusion in January 2026 through a compromised application login): name, postal address, e-mail, phone number. No bank data or passwords according to the company.",
+      "proof_url": "https://www.phonandroid.com/encore-une-fuite-de-donnees-chez-relais-colis-avec-des-dangers-concrets-pour-les-victimes.html",
+      "media_link": "https://www.phonandroid.com/encore-une-fuite-de-donnees-chez-relais-colis-avec-des-dangers-concrets-pour-les-victimes.html",
+      "contributor": "wassym"
+    }
+  ],
+  "response_delay_fr": "1 mois conformément au RGPD",
+  "response_delay_en": "1 month according to GDPR",
+  "sanctioned_by_cnil": false,
+  "data_transfer_policy": true,
+  "privacy_policy_quote": "Par principe, GLS France OOH ne transmet pas vos données à des pays tiers (pays qui ne sont ni membres de l'Union européenne ni de l'Espace économique européen). [...] GLS France OOH peut faire appel à des sous-traitants, au sens du RGPD, dont certains peuvent être amenées à transférer des Données personnelles en dehors de l'Union Européenne.",
+  "comments": "La marque Relais Colis est exploitée par General Logistics Systems France OOH (SASU, RCS Toulouse 104 385 901, 14 rue Michel Labrousse, 31037 Toulouse Cedex 1), groupe GLS. La politique ne précise ni pièce d'identité requise ni délai de réponse (délai légal RGPD d'un mois). La liste des sous-traitants et des pays de transfert est dans un PDF lié depuis la politique (Liste-des-STT-RGPD-FR-GLS-OOH.pdf), non reprise ici. Pas de version anglaise de la politique : l'extrait anglais est une traduction.",
+  "comments_en": "The Relais Colis brand is operated by General Logistics Systems France OOH (single-shareholder SAS, Toulouse trade register 104 385 901, 14 rue Michel Labrousse, 31037 Toulouse Cedex 1), GLS group. The policy does not state an ID requirement or response time (GDPR legal deadline of one month). The list of subcontractors and transfer countries is in a PDF linked from the policy (Liste-des-STT-RGPD-FR-GLS-OOH.pdf), not reproduced here. No English version of the policy: the English extract is a translation.",
+  "better_alternative": false,
+  "created_at": "2026-11-24",
+  "created_by": "wassym",
+  "status": "draft"
+}

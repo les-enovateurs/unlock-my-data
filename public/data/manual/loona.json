@@ -31,7 +31,7 @@
     "name": "Loona",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://keyirobot.com/policies/privacy-policy",
+  "confidentiality_policy_url_fr": "https://keyirobot.com/policies/privacy-policy",
   "review": [
     {
       "field": "group_name",

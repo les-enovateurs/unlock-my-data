@@ -38,6 +38,6 @@
     "name": "Moodle Pty Ltd.",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://moodle.com/privacy-notice",
+  "confidentiality_policy_url_fr": "https://moodle.com/privacy-notice",
   "policy_analysis": "policy-analysis/moodle.json"
 }

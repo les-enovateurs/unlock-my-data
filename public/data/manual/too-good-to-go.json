@@ -6,7 +6,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "adresse email",
-  "confidentiality_policy_url": "https://www.toogoodtogo.com/fr/legal/privacy",
+  "confidentiality_policy_url_fr": "https://www.toogoodtogo.com/fr/legal/privacy",
   "confidentiality_policy_url_en": "https://www.toogoodtogo.com/en-ca/legal/privacy",
   "data_access_via_postal": false,
   "data_access_via_form": false,
@@ -19,11 +19,50 @@
   "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "8. TRANSFERTS INTERNATIONAUX DE DONNÉES\nTout transfert de vos données personnelles par TGTG à partir de l'UE/EEE, de la Suisse ou du Royaume-Uni vers des pays tiers situés en dehors de ces territoires sera fondé sur une décision d'adéquation de la Commission européenne ou sera régi par les clauses contractuelles types et/ou les règles d'entreprise contraignantes applicables ou par un mécanisme de transfert approprié équivalent, à moins que vous n'en soyez informé autrement. Tout autre transfert international de vos données personnelles en dehors de l'EEE, de la Suisse ou du Royaume-Uni s'effectuera conformément aux mécanismes appropriés de transfert international de données personnelles et aux garanties applicables en vertu de la législation locale régissant le transfert de vos données personnelles.",
+  "privacy_policy_quote": "8. TRANSFERTS INTERNATIONAUX DE DONNÉES\n   Tout transfert de vos données personnelles par TGTG à partir de l'UE/EEE, de la Suisse ou du Royaume-Uni vers des pays tiers situés en dehors de ces territoires sera fondé sur une décision d'adéquation de la Commission européenne ou sera régi par les clauses contractuelles types et/ou les règles d'entreprise contraignantes applicables ou par un mécanisme de transfert approprié équivalent, à moins que vous n'en soyez informé autrement. Tout autre transfert international de vos données personnelles en dehors de l'EEE, de la Suisse ou du Royaume-Uni s'effectuera conformément aux mécanismes appropriés de transfert international de données personnelles et aux garanties applicables en vertu de la législation locale régissant le transfert de vos données personnelles.",
   "better_alternative": false,
   "created_at": "2026-11-17",
   "created_by": "noel.b",
-  "status": "draft",
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "easy_access_data",
+      "message": "Aucun contact renseigné alors que « Accès par email » est coché. La politique (section droits) indique : pour les droits non exerçables dans l'appli, écrire à privacy@toogoodtogo.com.",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-24T18:23:07.762Z",
+      "resolved": false
+    },
+    {
+      "field": "contacts",
+      "message": "Aucun contact renseigné alors que « Accès par email » est coché. La politique (section droits) indique : pour les droits non exerçables dans l'appli, écrire à privacy@toogoodtogo.com.",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-24T18:23:36.937Z",
+      "resolved": false
+    },
+    {
+      "field": "url_export",
+      "message": "Ce lien mène à la connexion de la boutique avec des paramètres de suivi canadiens (locale=en-ca, referring_domain). Pour un utilisateur français, la politique indique d'exercer ses droits directement dans l'appli (section 1.1) ; mieux vaut retirer ce lien ou le remplacer par une page neutre.",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-24T18:23:52.982Z",
+      "resolved": false
+    },
+    {
+      "field": "confidentiality_policy_url_en",
+      "message": "Version canadienne (en-ca). Pour l'Europe, la version anglaise existe ici : https://www.toogoodtogo.com/en-gb/legal/privacy",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-24T18:23:54.288Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Champ vide. Texte officiel (version en-gb, section International data transfers) : \"Any transfers of your personal information by TGTG originating from within the EU/EEA, Switzerland, or UK to third countries outside these territories will be based on an EU Commission adequacy decision or are governed by applicable Standard Contractual Clauses and/or Binding Corporate Rules or equivalent appropriate transfer mechanism, unless you are otherwise notified.\"",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-24T18:24:30.856Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "wassym",
+  "updated_at": "2026-11-24",
   "playstore": {
     "id": "com.app.tgtg",
     "name": "Too Good To Go: pas de gaspi"

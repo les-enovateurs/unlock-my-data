@@ -51,15 +51,15 @@
             "description": "Additional comments (EN)",
             "$ref": "#/$defs/string"
         },
-        "confidentiality_policy_url": {
-            "$comment": "FIXME: will become confidentiality_policy_url_fr (#456)",
-            "description": "Privacy policy URL (FR)",
-            "$ref": "#/$defs/url"
-        },
         "confidentiality_policy_url_en": {
             "description": "Privacy policy URL (EN)",
             "$ref": "#/$defs/url"
         },
+        "confidentiality_policy_url_fr": {
+            "description": "Privacy policy URL (FR)",
+            "$ref": "#/$defs/url"
+        },
+        "confidentiality_policy_url": false,
         "contacts": {
             "description": "Contact information",
             "$ref": "#/$defs/contacts"
