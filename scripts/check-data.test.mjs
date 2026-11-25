@@ -7,6 +7,7 @@ test('detectLanguage', () => {
   assert.equal(detectLanguage('You can request the deletion of your data by email'), 'en');
   assert.equal(detectLanguage('Google LLC'), null);
   assert.equal(detectLanguage('https://example.com/privacy'), null);
+  assert.equal(detectLanguage('https://www.mgel.fr/charte-de-la-protection-des-donnees/'), null);
 });
 
 test('findPairs flags wrong language, untranslated text and key drift', () => {
