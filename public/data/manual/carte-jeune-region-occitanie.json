@@ -29,7 +29,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Justificatif d'identité (type de pièce non précisé).",
-  "confidentiality_policy_url": "https://www.laregion.fr/RGPD",
+  "confidentiality_policy_url_fr": "https://www.laregion.fr/RGPD",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un e-mail au DPD à dpd@laregion.fr ou un courrier à Région Occitanie, 22 boulevard du Maréchal Juin, 31406 Toulouse cedex 9, en justifiant de son identité. Pour un mineur, la demande peut être faite par le représentant légal.",

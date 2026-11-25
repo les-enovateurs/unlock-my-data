@@ -19,7 +19,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.macif.fr/assurance/particuliers/donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.macif.fr/assurance/particuliers/donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Remplir le formulaire en ligne \"Demande d'exercice de droits\" (justificatif d'identité demandé uniquement en cas de doute) ou écrire au DPO par courrier",

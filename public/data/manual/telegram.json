@@ -46,6 +46,6 @@
   "alternatives": [
     "signal"
   ],
-  "confidentiality_policy_url": "https://telegram.org/privacy",
+  "confidentiality_policy_url_fr": "https://telegram.org/privacy",
   "policy_analysis": "policy-analysis/telegram.json"
 }

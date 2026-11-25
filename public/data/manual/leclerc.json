@@ -13,7 +13,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Numéro de carte de fidélité",
-  "confidentiality_policy_url": "https://media.e.leclerc/LEN/document/Charte%20donn%C3%A9es%20personnelles_SUE%20%28Convergence%29?vh=18dd13&func=proxy",
+  "confidentiality_policy_url_fr": "https://media.e.leclerc/LEN/document/Charte%20donn%C3%A9es%20personnelles_SUE%20%28Convergence%29?vh=18dd13&func=proxy",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un email à dpo@e.leclerc",

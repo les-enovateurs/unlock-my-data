@@ -14,7 +14,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.myfitnesspal.com/fr/privacy-policy",
+  "confidentiality_policy_url_fr": "https://www.myfitnesspal.com/fr/privacy-policy",
   "confidentiality_policy_url_en": "https://www.myfitnesspal.com/privacy-policy",
   "data_access_via_postal": true,
   "data_access_via_form": false,

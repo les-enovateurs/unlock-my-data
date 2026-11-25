@@ -19,7 +19,7 @@
   "easy_access_data": 2,
   "need_id_card": false,
   "details_required_documents": "Justificatif d'identité du demandeur (type non précisé) et coordonnées de contact.",
-  "confidentiality_policy_url": "https://www.orkyn.fr/politique-donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.orkyn.fr/politique-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Envoyer une demande écrite via le formulaire https://www.airliquide.com/fr/groupe/contactez-nous-rgpd, en précisant les traitements concernés, avec un justificatif d'identité et des coordonnées de contact. Réponse sous un mois maximum (prolongeable de deux mois).",

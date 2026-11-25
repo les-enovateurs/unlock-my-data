@@ -29,7 +29,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Justificatif d'identité par tout moyen ; informations supplémentaires possibles en cas de doute raisonnable sur l'identité.",
-  "confidentiality_policy_url": "https://www.ornikar.com/a-propos/charte-de-confidentialite",
+  "confidentiality_policy_url_fr": "https://www.ornikar.com/a-propos/charte-de-confidentialite",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Suppression du compte directement dans l'appli (Profil > Gérer mon compte > Supprimer mon compte). Autres droits : e-mail à donneespersonnelles@ornikar.com ou courrier, en précisant le motif, l'adresse de réponse et la société concernée. Identité à justifier par tout moyen (infos supplémentaires en cas de doute)",

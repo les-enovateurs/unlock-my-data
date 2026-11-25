@@ -42,6 +42,6 @@
     "name": "Boulanger - Achat & Bons Plans",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.boulanger.com/evenement/infos-legales",
+  "confidentiality_policy_url_fr": "https://www.boulanger.com/evenement/infos-legales",
   "policy_analysis": "policy-analysis/boulanger.json"
 }

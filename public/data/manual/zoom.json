@@ -36,6 +36,6 @@
     "name": "Zoom",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://zoom.us/privacy",
+  "confidentiality_policy_url_fr": "https://zoom.us/privacy",
   "policy_analysis": "policy-analysis/zoom.json"
 }

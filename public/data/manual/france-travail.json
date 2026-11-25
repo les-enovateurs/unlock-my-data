@@ -13,7 +13,7 @@
   "easy_access_data": 3,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "https://www.francetravail.fr/informations/informations-legales-et-conditio/protection-des-donnees-personnel.html",
+  "confidentiality_policy_url_fr": "https://www.francetravail.fr/informations/informations-legales-et-conditio/protection-des-donnees-personnel.html",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Envoyer un email à contact-dpd@francetravail.fr avec une copie de sa pièce d'identité, en précisant « droit d'accès aux données personnelles » dans l'objet",

@@ -6,7 +6,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://docs.n26.com/legal/04+FR/03+Privacy+Policy/fr/Branch/01privacy-policy-FR-BRANCH-fr.pdf",
+  "confidentiality_policy_url_fr": "https://docs.n26.com/legal/04+FR/03+Privacy+Policy/fr/Branch/01privacy-policy-FR-BRANCH-fr.pdf",
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_type": "Clients actuels : formulaire RGPD en ligne (accès, effacement, opposition) et export des données depuis l'espace client en ligne (lien envoyé par e-mail, valable 24 h, protégé par un mot de passe temporaire). Anciens clients : même formulaire avec copie d'une pièce d'identité ou d'un passeport",

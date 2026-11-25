@@ -29,7 +29,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Vérification d'identité : la demande doit indiquer au minimum nom, prénom et adresse de réponse (pièce justificative non précisée).",
-  "confidentiality_policy_url": "https://www.sofinco.fr/a-propos/sofinco-informations-legales#politique-donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.sofinco.fr/a-propos/sofinco-informations-legales#politique-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Demande écrite par e-mail à dpdcacf@ca-cf.fr ou par courrier au DPO de CACF, en indiquant l'adresse de réponse. Une copie recto verso de la pièce d'identité peut être demandée en cas de doute sur l'identité",

@@ -10,7 +10,7 @@
       "contributor": "dominique_usa"
     }
   ],
-  "confidentiality_policy_url": "https://www.nissan.fr/gdpr.html",
+  "confidentiality_policy_url_fr": "https://www.nissan.fr/gdpr.html",
   "confidentiality_policy_url_en": "https://www.nissanusa.com/data-privacy.html",
   "policy_analysis": "policy-analysis/nissan.json"
 }

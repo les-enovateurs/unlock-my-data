@@ -67,6 +67,6 @@
     "mattermost",
     "rocketchat"
   ],
-  "confidentiality_policy_url": "https://discord.com/privacy",
+  "confidentiality_policy_url_fr": "https://discord.com/privacy",
   "policy_analysis": "policy-analysis/discord.json"
 }

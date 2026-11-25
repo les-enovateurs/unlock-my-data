@@ -38,7 +38,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://public.codesrousseau.fr/notre-politique-de-confidentialite/",
+  "confidentiality_policy_url_fr": "https://public.codesrousseau.fr/notre-politique-de-confidentialite/",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "E-mail au DPO externe (info@datarea.de) ou à contact@codes-rousseau.fr, ou courrier à datarea GmbH. Pour les données Easysystème traitées pour le compte d'une auto-école, s'adresser aussi à son auto-école",

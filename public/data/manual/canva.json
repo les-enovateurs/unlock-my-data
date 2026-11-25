@@ -13,7 +13,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.canva.com/fr_fr/conditions-generales-utilisation/privacy-policy/",
+  "confidentiality_policy_url_fr": "https://www.canva.com/fr_fr/conditions-generales-utilisation/privacy-policy/",
   "confidentiality_policy_url_en": "https://www.canva.com/policies/privacy-policy/",
   "data_access_via_postal": true,
   "data_access_via_form": true,

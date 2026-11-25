@@ -14,7 +14,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Selon la CNIL, la demande peut se faire sans joindre de document, mais \"si et seulement si, l'organisme a des doutes raisonnables sur votre identité, il peut vous demander de joindre tout document permettant de prouver votre identité\"",
-  "confidentiality_policy_url": "https://terms.inpost-group.com/fr/politique-de-confidentialite-compte-inpost",
+  "confidentiality_policy_url_fr": "https://terms.inpost-group.com/fr/politique-de-confidentialite-compte-inpost",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "pour la France, Envoyer un mail à l'adresse dpo@mondialrelay.fr ; ou envoyer un courrier à l'adresse DPO Mondial Relay, Direction juridique et conformité, 1, avenue de l'Horizon, 59650 Villeneuve d'Ascq, France",

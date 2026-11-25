@@ -18,7 +18,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.aroma-zone.com/content/charte-des-donnees-personnelles",
+  "confidentiality_policy_url_fr": "https://www.aroma-zone.com/content/charte-des-donnees-personnelles",
   "data_access_via_postal": false,
   "data_access_via_form": true,
   "data_access_type": "Formulaire de contact du service client ou e-mail au DPO (dpo@aroma-zone.com). Certaines données peuvent être modifiées directement dans le compte client",

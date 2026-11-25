@@ -36,7 +36,7 @@
   "alternatives": [
     "mastodon"
   ],
-  "confidentiality_policy_url": "https://www.redditinc.com/policies/privacy-policy",
+  "confidentiality_policy_url_fr": "https://www.redditinc.com/policies/privacy-policy",
   "policy_analysis": "policy-analysis/reddit.json",
   "enforcement_aliases": [
     "Reddit, Inc."

@@ -34,6 +34,6 @@
   "alternatives": [
     "osmand"
   ],
-  "confidentiality_policy_url": "https://www.waze.com/legal/privacy",
+  "confidentiality_policy_url_fr": "https://www.waze.com/legal/privacy",
   "policy_analysis": "policy-analysis/waze.json"
 }

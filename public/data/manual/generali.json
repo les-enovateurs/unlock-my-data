@@ -29,7 +29,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.generali.fr/donnees-personnelles/clause-commune/",
+  "confidentiality_policy_url_fr": "https://www.generali.fr/donnees-personnelles/clause-commune/",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Demande simple par e-mail à droitdacces@generali.fr ou par courrier à Generali France - Conformité. Un justificatif d'identité peut être demandé seulement si Generali ne parvient pas à vous identifier",

@@ -14,7 +14,7 @@
   "easy_access_data": 5,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://bolt.eu/fr-fr/privacy/privacy-for-riders/",
+  "confidentiality_policy_url_fr": "https://bolt.eu/fr-fr/privacy/privacy-for-riders/",
   "confidentiality_policy_url_en": "https://bolt.eu/en/privacy/privacy-for-riders/",
   "data_access_via_postal": false,
   "data_access_via_form": true,

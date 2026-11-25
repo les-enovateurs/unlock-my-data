@@ -58,6 +58,6 @@
     "rue-du-commerce",
     "boulanger"
   ],
-  "confidentiality_policy_url": "https://www.temu.com/fr/privacy-and-cookie-policy.html",
+  "confidentiality_policy_url_fr": "https://www.temu.com/fr/privacy-and-cookie-policy.html",
   "policy_analysis": "policy-analysis/temu.json"
 }

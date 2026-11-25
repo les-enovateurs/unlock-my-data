@@ -35,6 +35,6 @@
     "name": "Marmiton, recettes de cuisine",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.marmiton.org/sp/aide/politque-de-protection-des-donnees-personnelles.html",
+  "confidentiality_policy_url_fr": "https://www.marmiton.org/sp/aide/politque-de-protection-des-donnees-personnelles.html",
   "policy_analysis": "policy-analysis/marmiton.json"
 }

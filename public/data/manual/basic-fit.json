@@ -13,7 +13,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://www.basic-fit.com/fr-fr/a-propos-de-nous/politique-de-confidentialite",
+  "confidentiality_policy_url_fr": "https://www.basic-fit.com/fr-fr/a-propos-de-nous/politique-de-confidentialite",
   "confidentiality_policy_url_en": "https://www.basic-fit.com/en-fr/about-basic-fit/privacy-statement",
   "data_access_via_postal": false,
   "data_access_via_form": false,

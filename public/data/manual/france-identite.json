@@ -39,7 +39,7 @@
   "easy_access_data": 2,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
-  "confidentiality_policy_url": "https://france-identite.gouv.fr/politique-de-confidentialite/confidentialite-fi/",
+  "confidentiality_policy_url_fr": "https://france-identite.gouv.fr/politique-de-confidentialite/confidentialite-fi/",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_type": "Envoyer un e-mail à support@france-identite.gouv.fr avec une copie recto-verso de la carte nationale d'identité électronique (ou une attestation générée par l'appli), en précisant le droit exercé. Droit d'accès limité au numéro du titre et aux traces d'utilisation ; pas de droit à l'effacement ; opposition = désinstaller l'application",

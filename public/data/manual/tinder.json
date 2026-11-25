@@ -7,7 +7,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Aucun",
-  "confidentiality_policy_url": "https://policies.tinder.com/privacy/intl/fr/?lang=fr",
+  "confidentiality_policy_url_fr": "https://policies.tinder.com/privacy/intl/fr/?lang=fr",
   "confidentiality_policy_url_en": "https://policies.tinder.com/privacy/intl/en/",
   "data_access_via_postal": true,
   "data_access_via_form": true,

@@ -46,6 +46,6 @@
     "name": "Proton Drive",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://protonmail.com/privacy-policy",
+  "confidentiality_policy_url_fr": "https://protonmail.com/privacy-policy",
   "policy_analysis": "policy-analysis/proton-drive.json"
 }

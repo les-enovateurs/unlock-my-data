@@ -38,6 +38,6 @@
     "name": "Prime Video",
     "exodus": true
   },
-  "confidentiality_policy_url": "https://www.amazon.fr/privacy",
+  "confidentiality_policy_url_fr": "https://www.amazon.fr/privacy",
   "policy_analysis": "policy-analysis/amazon-prime-video.json"
 }

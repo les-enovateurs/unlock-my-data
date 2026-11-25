@@ -19,7 +19,7 @@
   "details_required_documents_en": "Proof of identity, only if Withings has no other way to verify that you hold the account.",
   "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",
-  "confidentiality_policy_url": "https://www.withings.com/fr/fr/legal/privacy-policy",
+  "confidentiality_policy_url_fr": "https://www.withings.com/fr/fr/legal/privacy-policy",
   "data_access_via_email": true,
   "data_access_type": "Téléchargement depuis le compte ou demande par email",
   "data_access_type_en": "Download from the account or request by email",

@@ -19,7 +19,7 @@
   "easy_access_data": 3,
   "need_id_card": false,
   "details_required_documents": "Non précisé dans la politique de confidentialité.",
-  "confidentiality_policy_url": "https://www.maileva.com/politique-de-confidentialite/",
+  "confidentiality_policy_url_fr": "https://www.maileva.com/politique-de-confidentialite/",
   "confidentiality_policy_url_en": "https://www.maileva.com/politique-de-confidentialite/",
   "data_access_via_postal": false,
   "data_access_via_form": false,

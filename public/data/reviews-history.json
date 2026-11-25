@@ -300,7 +300,7 @@
         "resolved": false
       },
       {
-        "field": "confidentiality_policy_url",
+        "field": "confidentiality_policy_url_fr",
         "message": "https://www.famileo.com/fr/politique-de-confidentialite",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-07-24T18:13:33.855Z",
@@ -659,7 +659,7 @@
         "resolved": false
       },
       {
-        "field": "confidentiality_policy_url",
+        "field": "confidentiality_policy_url_fr",
         "message": "Deux URL distinctes, française et anglaise : https://lexibook.ai/fr/policies/privacy-policy et https://lexibook.ai/policies/privacy-policy. La version française porte une section « Vos droits » qui cite la loi Informatique et Libertés et le RGPD — elle n'a pas d'équivalent dans la version anglaise, qui renvoie à une autre adresse de contact.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -788,7 +788,7 @@
         "resolved": false
       },
       {
-        "field": "confidentiality_policy_url",
+        "field": "confidentiality_policy_url_fr",
         "message": "Politique disponible en anglais uniquement, sur https://miko.ai/pages/privacy-policy ; aucune version française ni de sous-domaine localisé accessible au 2026-09-18. Section XI : « In the event of any inconsistency or conflict between a translated version and the English version, the English version shall prevail. » Miko Chess dispose d'une politique distincte (https://miko.ai/pages/miko-chess-privacy-policy).",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",

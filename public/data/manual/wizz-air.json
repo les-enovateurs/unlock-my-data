@@ -24,7 +24,7 @@
   "status": "changes_requested",
   "review": [
     {
-      "field": "confidentiality_policy_url",
+      "field": "confidentiality_policy_url_fr",
       "message": "Champ FR vide. Wizz Air ne publie pas de version française (la page fr-fr renvoie une erreur 404). On peut mettre la page qui liste les notices : https://www.wizzair.com/en-gb/legal/privacy-notice2 et préciser en commentaire qu'elle n'existe qu'en anglais.",
       "reviewer_name": "wassym",
       "timestamp": "2026-11-24T18:26:56.273Z",

@@ -35,6 +35,6 @@
   "alternatives": [
     "mastodon"
   ],
-  "confidentiality_policy_url": "https://www.snap.com/en-US/privacy/privacy-policy/",
+  "confidentiality_policy_url_fr": "https://www.snap.com/en-US/privacy/privacy-policy/",
   "policy_analysis": "policy-analysis/snapchat.json"
 }

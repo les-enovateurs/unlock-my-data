@@ -29,7 +29,7 @@
   "easy_access_data": 4,
   "need_id_card": false,
   "details_required_documents": "Justificatif d'identité si nécessaire",
-  "confidentiality_policy_url": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
+  "confidentiality_policy_url_fr": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_type": "Écrire par e-mail à support.securite@franceconnect.gouv.fr ou par courrier à FranceConnect - DINUM, en justifiant de son identité si nécessaire. Les données conservées par les sites partenaires (fournisseurs de service) se demandent directement auprès d'eux",
