@@ -169,15 +169,15 @@
             "description": "Mobile application (Google Play Store)",
             "$ref": "#/$defs/playstore"
         },
-        "privacy_policy_quote": {
-            "$comment": "FIXME: will become privacy_policy_quote_fr (#456)",
-            "description": "Privacy policy quote (FR)",
-            "$ref": "#/$defs/string"
-        },
         "privacy_policy_quote_en": {
             "description": "Privacy policy quote (EN)",
             "$ref": "#/$defs/string"
         },
+        "privacy_policy_quote_fr": {
+            "description": "Privacy policy quote (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "privacy_policy_quote": false,
         "response_delay_en": {
             "description": "Response delay (EN)",
             "$ref": "#/$defs/string"
