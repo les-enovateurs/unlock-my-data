@@ -24,6 +24,7 @@ const EN_WORDS = new Set(
 );
 
 export function detectLanguage(text) {
+  if (/^https?:\/\//.test(text.trim())) return null;
   const words = text.toLowerCase().match(/[a-zàâçéèêëîïôûùüÿœ']+/g) ?? [];
   let fr = 0;
   let en = 0;
