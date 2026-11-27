@@ -194,6 +194,20 @@ export function ficheTabMetadata(slug: string, tab: Exclude<FicheTabId, 'ess'>, 
     };
 }
 
+/**
+ * A new policy analysis, review or key quotes refresh the fiche too, without touching its JSON.
+ * Not source.checked_at: the pipeline stamps it on every check, even when the text is unchanged.
+ */
+export async function ficheLastChangeAt(slug: string): Promise<string | undefined> {
+    const entreprise = await getEntrepriseData(slug);
+    const analysis = await loadJson<FicheAnalysis>(() => import(`../../public/data/policy-analysis/${slug}.json`));
+    const review = await loadJsonFile<ReviewSidecar>(`public/data/policy-analysis/reviews/${slug}.json`);
+    const keyQuotes = (publishedQuotes as Record<string, KeyQuoteEntry>)[slug];
+    const policyHistory = (publishedHistory as Record<string, PolicyChange[]>)[slug];
+    return [entreprise?.updated_at, analysis?.analyzed_at, review?.updated_at, keyQuotes?.updated_at, keyQuotes?.created_at, policyHistory?.[0]?.created_at]
+        .filter((d): d is string => Boolean(d)).sort().at(-1);
+}
+
 export async function buildFicheProps(slug: string, lang: string): Promise<FicheProps> {
     const entreprise = await getEntrepriseData(slug);
 
@@ -461,10 +475,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         createdAt: entreprise.created_at,
         createdBy: entreprise.created_by,
         updatedAt: entreprise.updated_at,
-        // A new policy analysis, review or key quotes refresh the fiche too, without touching its JSON.
-        // Not source.checked_at: the pipeline stamps it on every check, even when the text is unchanged.
-        lastChangeAt: [entreprise.updated_at, analysis?.analyzed_at, review?.updated_at, keyQuotes?.updated_at, keyQuotes?.created_at, policyHistory[0]?.created_at]
-            .filter((d): d is string => Boolean(d)).sort().at(-1),
+        lastChangeAt: await ficheLastChangeAt(slug),
         updatedBy: entreprise.updated_by,
         easy: toEasyAccess(entreprise.easy_access_data),
         needIdCard: entreprise.need_id_card,

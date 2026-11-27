@@ -76,8 +76,8 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
   for (const [slug, entry] of Object.entries(proposals)) {
     const shown = publishedKeyQuotes(entry, sidecars[slug]);
     if (!shown.length) continue;
-    const { name, agent, created_by, created_at, updated_by, updated_at, live_check, archive_url, en } = entry;
-    quotes[slug] = { name, agent, created_by, created_at, updated_by, updated_at, live_check, archive_url, en, quotes: shown };
+    const { name, agent, created_by, created_at, updated_by, updated_at, live_check, archive_url, en, usage } = entry;
+    quotes[slug] = { name, agent, created_by, created_at, updated_by, updated_at, live_check, archive_url, en, usage, quotes: shown };
   }
   fs.writeFileSync(path.join(paDir, "_quotes.json"), JSON.stringify(quotes, null, 2) + "\n");
 

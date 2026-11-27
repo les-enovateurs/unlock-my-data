@@ -874,6 +874,7 @@ export default function ServiceForm({
                 sanction_details: formData.sanction_details,
                 data_transfer_policy: formData.data_transfer_policy,
                 privacy_policy_quote_fr: formData.privacy_policy_quote_fr,
+                privacy_policy_quote_en: formData.privacy_policy_quote_en,
                 transfer_destination_countries:
                     formData.transfer_destination_countries.map(toTransferCode),
                 outside_eu_storage: formData.outside_eu_storage,

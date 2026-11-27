@@ -15,6 +15,8 @@ export type KeyQuoteEntry = {
     /** The English version of the policy, when one exists: `quote_en` is a verbatim slice of it. */
     en?: { policy_url: string; text_sha256: string; archive_url?: string | null } | null;
     live_check: { at: string; reachable: boolean; found?: boolean[] } | null;
+    /** Frozen once by .claude/skills/policy-quotes/ai_impact.py: [min, max] estimated by EcoLogits. */
+    usage?: { impact: { energy_kwh: number[]; gwp_kgco2eq: number[] } };
     quotes: KeyQuote[];
 };
 

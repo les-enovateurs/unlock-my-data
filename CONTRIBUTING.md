@@ -39,7 +39,7 @@ Below are the fields with explanations:
 | `sanctioned_by_cnil`             | Boolean: has the CNIL sanctioned the company?                                                                   |
 | `sanction_details`               | Details and references to CNIL sanctions.                                                                       |
 | `data_transfer_policy`           | Boolean: does the company have a data transfer policy?                                                          |
-| `privacy_policy_quote`           | Relevant quote from the privacy policy.                                                                         |
+| `privacy_policy_quote_fr`        | Relevant quote from the privacy policy.                                                                         |
 | `transfer_destination_countries` | List of countries data may be transferred to.                                                                   |
 | `outside_eu_storage`             | Is personal data stored outside the EU?                                                                         |
 | `comments`                       | Additional comments.                                                                                            |
@@ -122,7 +122,7 @@ Below are the fields with explanations:
      "sanctioned_by_cnil": false,
      "sanction_details": "",
      "data_transfer_policy": false,
-     "privacy_policy_quote": "",
+     "privacy_policy_quote_fr": "",
      "transfer_destination_countries": "",
      "outside_eu_storage": "",
      "comments": "",
