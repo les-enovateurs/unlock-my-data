@@ -3,10 +3,8 @@
   "version": "1.2.0",
   "private": true,
   "scripts": {
-    "predev": "npm run generate-data",
-    "dev": "next dev",
-    "prebuild": "npm run generate-data",
-    "build": "node ./scripts/load-apk-lab.mjs && next build",
+    "dev": "npm run generate-data && next dev",
+    "build": "node ./scripts/load-apk-lab.mjs && npm run generate-data && next build",
     "start": "next start -p 3006",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
