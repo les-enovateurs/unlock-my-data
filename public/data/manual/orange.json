@@ -56,7 +56,9 @@
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "draft",
+  "status": "published",
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-27",
   "playstore": {
     "id": "com.orange.orangeetmoi",
     "name": "Orange et moi France"
