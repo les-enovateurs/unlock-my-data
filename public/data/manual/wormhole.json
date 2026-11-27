@@ -24,7 +24,6 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "privacy_policy_quote_fr": "",
   "privacy_policy_quote_en": "Wormhole cannot decrypt or otherwise access the content of your files, unless you share the file link with us, such as when reporting content. Wormhole stores end-to-end encrypted files on its servers for a limited period of time.",
   "transfer_destination_countries": [
     "us"

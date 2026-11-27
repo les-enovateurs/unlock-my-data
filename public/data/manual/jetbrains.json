@@ -35,7 +35,6 @@
   "response_delay_fr": "Réponse automatique",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote_fr": "",
   "privacy_policy_quote_en": "At times, JetBrains may process or transfer some of your Personal Data (such as your name and email address) to our affiliate companies or subprocessors outside the EU. Any such transfer and processing will be done in accordance with the applicable laws on data protection and this Privacy Notice and will be based on a relevant adequacy decision of the European Commission, especially regarding standard data protection clauses.",
   "outside_eu_storage": false,
   "created_at": "2026-02-24",
