@@ -27,7 +27,7 @@
   "address_export": "McDonald's France Services, Données Personnelles, 1 rue Gustave Eiffel, 78280 Guyancourt",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Les prestataires tiers peuvent être établis en dehors de l’Espace économique européen, ce qui peut entraîner des transferts internationaux de données vers des pays tiers bénéficiant d’un niveau de protection adéquat reconnu par la Commission européenne.",
+  "privacy_policy_quote_fr": "Les prestataires tiers peuvent être établis en dehors de l’Espace économique européen, ce qui peut entraîner des transferts internationaux de données vers des pays tiers bénéficiant d’un niveau de protection adéquat reconnu par la Commission européenne.",
   "privacy_policy_quote_en": "Third-party providers may be established outside the European Economic Area, which may result in international data transfers to third countries recognised by the European Commission as providing an adequate level of protection.",
   "transfer_destination_countries": [
     "us"

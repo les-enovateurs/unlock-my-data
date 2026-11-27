@@ -365,6 +365,7 @@ export function normalizeSidecar(slug: string, raw: any): ReviewSidecar {
     updated_at: raw?.updated_at || "",
     added_recipients: raw?.added_recipients || [],
     key_quote_plain: raw?.key_quote_plain || {},
+    ...(raw?.key_quote_order && { key_quote_order: raw.key_quote_order }),
   };
 }
 

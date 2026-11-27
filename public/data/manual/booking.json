@@ -52,7 +52,7 @@
   "sanction_details": "Cnil néerlandaise - Retard signalement d'une violation de données personnelles<br>[Source Usine Digital](https://www.usine-digitale.fr/article/booking-ecope-d-une-amende-de-475-000-euros-a-la-suite-d-une-violation-de-donnees-personnelles.N1078304)",
   "sanction_details_en": "Cnil Netherlands - Delayed reporting of a violation of personal data",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "BookingSuite traitera des Données des Utilisateurs Finaux à l'extérieur de l'EEE ou transférera des Données des Utilisateurs Finaux en dehors de l'EEE uniquement si le Traitement ou le transfert de ces données est conforme aux Lois européennes relatives à la protection des données.",
+  "privacy_policy_quote_fr": "BookingSuite traitera des Données des Utilisateurs Finaux à l'extérieur de l'EEE ou transférera des Données des Utilisateurs Finaux en dehors de l'EEE uniquement si le Traitement ou le transfert de ces données est conforme aux Lois européennes relatives à la protection des données.",
   "privacy_policy_quote_en": "BookingSuite will process End User Data outside the EEA or transfer End User Data outside the EEA only if the processing or transfer of such data complies with European data protection laws.",
   "transfer_destination_countries": [
     "gb",

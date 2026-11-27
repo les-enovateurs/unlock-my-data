@@ -1427,6 +1427,29 @@
   },
   {
     "mode": 1,
+    "slug": "deezer",
+    "name": "Deezer",
+    "logo": "/img/logos/deezer.webp",
+    "easy_access_data": 3,
+    "contacts": [],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": null,
+    "data_access_via_form": true,
+    "data_access_via_email": null,
+    "url_export": "https://support.deezer.com/hc/en-gb/requests/new?ticket_form_id=360000057869",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "deliveroo",
     "name": "Deliveroo",
     "logo": "/img/logos/deliveroo.webp",
@@ -2199,6 +2222,38 @@
     "alternatives": [
       "mistral"
     ]
+  },
+  {
+    "mode": 1,
+    "slug": "genshin-impact",
+    "name": "Genshin Impact",
+    "logo": "/img/logos/genshin-impact.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "privacy@hoyoverse.com",
+        "purposes": [
+          "delete",
+          "export"
+        ]
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "sg",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
@@ -3977,6 +4032,50 @@
     "last_update_breach": null,
     "country_code": "gb",
     "exodus": true,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
+    "slug": "orange",
+    "name": "Orange",
+    "logo": "/img/logos/orange.webp",
+    "easy_access_data": 3,
+    "contacts": [
+      {
+        "type": "postal",
+        "value": "Orange Service Client, Gestion des données personnelles, 33732 Bordeaux Cedex 9",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Service Client grand public, gestion des données personnelles",
+        "comment_en": "Consumer customer service, personal data management"
+      },
+      {
+        "type": "email",
+        "value": "group-dpo.donnees-personnelles@orange.com",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Délégué à la protection des données du groupe Orange (DPO)",
+        "comment_en": "Orange Group Data Protection Officer (DPO)"
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
     "better_alternative": false,
     "better_alternative_explication_fr": "",
     "better_alternative_explication_en": "",

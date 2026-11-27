@@ -90,4 +90,6 @@ export interface ReviewSidecar {
   /** A reviewer's rewrite of a key quote's "En clair" line, keyed `keyquote/<i>`.
    *  The quote itself is verbatim and never editable; this line is ours. */
   key_quote_plain?: Record<string, { fr: string; en: string; by: string; at: string }>;
+  /** Key quote indexes as ranked by a reviewer; the first one is featured. */
+  key_quote_order?: { order: number[]; by: string; at: string };
 }

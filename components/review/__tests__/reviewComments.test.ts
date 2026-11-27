@@ -19,7 +19,7 @@ describe("buildFieldCommentEntries", () => {
         ]
       },
       {
-        field: "privacy_policy_quote",
+        field: "privacy_policy_quote_fr",
         message: "Add a source",
         reviewer_name: "Bob",
         timestamp: "2026-02-25T10:20:00Z"
@@ -63,7 +63,7 @@ describe("buildFieldCommentEntries", () => {
         timestamp: "2026-02-25T10:00:00Z"
       },
       {
-        field: "privacy_policy_quote",
+        field: "privacy_policy_quote_fr",
         message: "Add a source",
         reviewer_name: "Bob",
         timestamp: "2026-02-25T10:20:00Z"
@@ -82,7 +82,7 @@ describe("buildFieldCommentEntries", () => {
 
     const entries = buildFieldCommentEntries({
       review,
-      field: "privacy_policy_quote",
+      field: "privacy_policy_quote_fr",
       slug: "service",
       replies: repliesState,
       resolvedComments: {}

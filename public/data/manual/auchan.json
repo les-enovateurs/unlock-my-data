@@ -50,7 +50,7 @@
   "address_export": "Service Client Auchan – 200, rue de la Recherche – CS 10636 – 59656 VILLENEUVE D’ASCQ CEDEX",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Vos données personnelles seront traitées par les salariés d’Auchan concernés, et pourront être transmises aux sociétés du groupe Auchan (y compris ses Franchisés) et aux sous-traitants d’Auchan.\n\nPar exemple : les enregistrements téléphoniques peuvent être écoutés par le conseiller concerné par l’appel, par les membres de l'encadrement du service Relation Client de la société Auchan Retail France ou de ses sous-traitants. Les personnels de la société en charge de la maintenance du matériel peuvent également accéder aux enregistrements, à cette seule fin.",
+  "privacy_policy_quote_fr": "Vos données personnelles seront traitées par les salariés d’Auchan concernés, et pourront être transmises aux sociétés du groupe Auchan (y compris ses Franchisés) et aux sous-traitants d’Auchan.\n\nPar exemple : les enregistrements téléphoniques peuvent être écoutés par le conseiller concerné par l’appel, par les membres de l'encadrement du service Relation Client de la société Auchan Retail France ou de ses sous-traitants. Les personnels de la société en charge de la maintenance du matériel peuvent également accéder aux enregistrements, à cette seule fin.",
   "better_alternative": false,
   "created_at": "2026-10-18",
   "created_by": "Gildas Kiendrebéogo",

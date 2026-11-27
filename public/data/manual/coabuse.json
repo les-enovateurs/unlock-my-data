@@ -40,7 +40,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Je ne sais pas trop... peut-être rajouter cela:\nL’Association Coabuse, et plus précisément son responsable de traitement Franck Favre, est la seule destinataire de vos données personnelles. Elle s’engage à en préserver la confidentialité la plus absolue. Aucune donnée collectée ne sera jamais transmise à un tiers, même en cas de match.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-21T22:52:56.913Z",

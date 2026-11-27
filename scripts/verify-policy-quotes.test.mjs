@@ -41,20 +41,31 @@ const proposal = { created_by: "Jérémy", created_at: "2026-11-10", quotes: [{ 
 const verdict = (verdict, by) => ({ verdict, by, at: "2026-11-11T10:00:00Z" });
 
 test("nothing is published without a human validation", () => {
-    assert.deepEqual(publishedKeyQuotes(proposal, null), []);
+    assert.deepEqual(publishedKeyQuotes(proposal, null, BEFORE), []);
 });
 test("a validation by someone else publishes that quote only", () => {
-    const out = publishedKeyQuotes(proposal, { items: { "keyquote/0": verdict("validated", "Théo") } });
+    const out = publishedKeyQuotes(proposal, { items: { "keyquote/0": verdict("validated", "Théo") } }, BEFORE);
     assert.deepEqual(out, [{ quote: "A", validated_by: "Théo" }]);
 });
-const publish = (date) => ({ reviewers: [{ name: "Jérémy", date, action: "published_key_quotes" }] });
-test("publishing without review works after the delay, never over a rejection", () => {
+const BEFORE = "2026-11-16", AFTER = "2026-11-17";
+test("unanswered quotes publish themselves after the delay, never over a rejection", () => {
     const items = { "keyquote/1": verdict("rejected", "Théo") };
-    assert.deepEqual(publishedKeyQuotes(proposal, { items, ...publish("2026-11-16") }), []);
-    assert.deepEqual(publishedKeyQuotes(proposal, { items, ...publish("2026-11-17") }), [{ quote: "A", validated_by: null }]);
+    assert.deepEqual(publishedKeyQuotes(proposal, { items }, BEFORE), []);
+    assert.deepEqual(publishedKeyQuotes(proposal, { items }, AFTER), [{ quote: "A", validated_by: null }]);
+});
+test("published quotes follow the volunteers' order, stale orders are ignored", () => {
+    const items = { "keyquote/0": verdict("validated", "Théo"), "keyquote/1": verdict("validated", "Théo") };
+    const order = (at) => ({ order: [1, 0], by: "Théo", at });
+    assert.deepEqual(publishedKeyQuotes(proposal, { items, key_quote_order: order("2026-11-12T00:00:00Z") }, BEFORE).map((q) => q.quote), ["B", "A"]);
+    assert.deepEqual(publishedKeyQuotes({ ...proposal, updated_at: "2026-11-13" }, { items, key_quote_order: order("2026-11-12T00:00:00Z") }, BEFORE).map((q) => q.quote), ["A", "B"]);
+});
+test("publishing without review keeps only the top FORCED_MAX quotes", () => {
+    const many = { ...proposal, quotes: ["A", "B", "C", "D", "E"].map((quote) => ({ quote })) };
+    const items = { "keyquote/0": verdict("rejected", "Théo") };
+    assert.deepEqual(publishedKeyQuotes(many, { items }, AFTER).map((q) => q.quote), ["B", "C", "D"]);
 });
 test("the delay restarts when the proposal is edited", () => {
-    assert.deepEqual(publishedKeyQuotes({ ...proposal, updated_at: "2026-11-15" }, publish("2026-11-17")), []);
+    assert.deepEqual(publishedKeyQuotes({ ...proposal, updated_at: "2026-11-15" }, null, AFTER), []);
 });
 test("a quote without a known topic fails", () => {
     const e = entry("Nous vendons vos données à des partenaires.");
@@ -76,15 +87,15 @@ const history = [
     { detected_at: "2026-11-09", created_at: "2026-11-10", memo: { fr: "deux", en: "two" } },
 ];
 test("a policy change follows the key-quote rule, newest first", () => {
-    assert.deepEqual(publishedHistory(history, null), []);
-    assert.equal(pendingHistory(history, null), 2);
+    assert.deepEqual(publishedHistory(history, null, "2026-11-09"), []);
+    assert.equal(pendingHistory(history, null, "2026-11-09"), 2);
     const side = { items: { "history/0": verdict("validated", "Théo"), "history/1": verdict("validated", "Léa") } };
     assert.deepEqual(publishedHistory(history, side).map((e) => e.validated_by), ["Léa", "Théo"]);
     assert.equal(pendingHistory(history, side), 0);
 });
-test("the publish button covers each change by its own date", () => {
-    const side = { items: { "history/0": verdict("rejected", "Théo") }, ...publish("2026-11-12") };
-    assert.deepEqual(publishedHistory(history, side), []);
-    assert.equal(pendingHistory(history, side), 1);
-    assert.deepEqual(publishedHistory(history, { ...publish("2026-11-17") }).map((e) => e.memo.fr), ["deux", "un"]);
+test("each change publishes itself on its own date", () => {
+    const side = { items: { "history/0": verdict("rejected", "Théo") } };
+    assert.deepEqual(publishedHistory(history, side, "2026-11-12"), []);
+    assert.equal(pendingHistory(history, side, "2026-11-12"), 1);
+    assert.deepEqual(publishedHistory(history, null, AFTER).map((e) => e.memo.fr), ["deux", "un"]);
 });

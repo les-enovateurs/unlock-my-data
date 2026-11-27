@@ -26,7 +26,7 @@
   "address_export": "Privacy Rep Office Limited, Attn: Kickstarter PBC, The Sidings, 4th Floor, Grand Canal Quay, Dublin D02 E7K8, Ireland",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Kickstarter est basé aux États-Unis. Si vous utilisez notre site web ou notre application en dehors des États-Unis, sachez que vos informations personnelles sont envoyées et traitées aux États-Unis.",
+  "privacy_policy_quote_fr": "Kickstarter est basé aux États-Unis. Si vous utilisez notre site web ou notre application en dehors des États-Unis, sachez que vos informations personnelles sont envoyées et traitées aux États-Unis.",
   "privacy_policy_quote_en": "Kickstarter is based in the United States. If you are using our website or app outside the United States, please be aware that your personal information is being sent to and processed in the United States.",
   "transfer_destination_countries": [
     "us"

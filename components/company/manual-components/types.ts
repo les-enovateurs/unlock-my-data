@@ -72,7 +72,7 @@ export type EntrepriseData = {
     sanction_details?: string;
     sanction_details_en?: string;
     data_transfer_policy?: boolean;
-    privacy_policy_quote?: string;
+    privacy_policy_quote_fr?: string;
     privacy_policy_quote_en?: string;
     transfer_destination_countries?: string[];
     outside_eu_storage?: boolean | null;

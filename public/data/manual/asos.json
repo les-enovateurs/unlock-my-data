@@ -50,7 +50,7 @@
   "response_delay_en": "1 month according to GDPR",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "ASOS est une entreprise mondiale opérant à l'intérieur et à l'extérieur du Royaume-Uni. Nous utilisons des fournisseurs et des centres de distribution situés à travers le monde. Certains de ces sites n'offrent pas le même niveau de protection de vos données personnelles que le Royaume-Uni ou l'UE [...]",
+  "privacy_policy_quote_fr": "ASOS est une entreprise mondiale opérant à l'intérieur et à l'extérieur du Royaume-Uni. Nous utilisons des fournisseurs et des centres de distribution situés à travers le monde. Certains de ces sites n'offrent pas le même niveau de protection de vos données personnelles que le Royaume-Uni ou l'UE [...]",
   "comments": "Responsable du traitement pour tous les services ASOS : ASOS.com Limited (Royaume-Uni). Autorité de contrôle citée : ICO (Royaume-Uni). La politique ne précise pas de pièce d'identité requise. Transferts possibles hors Royaume-Uni/UE via des fournisseurs et centres de distribution dans le monde, pays non nommés.",
   "comments_en": "Controller for all ASOS services: ASOS.com Limited (United Kingdom). Supervisory authority cited: ICO (UK). The policy does not state an ID requirement. Possible transfers outside the UK/EU through suppliers and fulfilment centres worldwide, countries not named.",
   "better_alternative": false,

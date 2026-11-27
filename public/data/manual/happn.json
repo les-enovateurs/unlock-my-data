@@ -21,7 +21,7 @@
   "address_export": "5 rue Feydeau  75002 Paris – France",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Les données personnelles des Membres traitées dans le cadre de l’utilisation de l’Application sont hébergées dans l’Union européenne. \n Toutefois, les données personnelles des Membres sont transmises à des prestataires sous-traitants de HAPPN situés hors Union européenne, pour le support aux Membres, la gestion des signalements, la publicité et le marketing. \n Les transferts de données hors Union européenne peuvent être effectués vers des pays pour lesquels il n’existe pas de décision d’adéquation rendue par la Commission européenne en matière de protection des données personnelles.",
+  "privacy_policy_quote_fr": "Les données personnelles des Membres traitées dans le cadre de l’utilisation de l’Application sont hébergées dans l’Union européenne. \n Toutefois, les données personnelles des Membres sont transmises à des prestataires sous-traitants de HAPPN situés hors Union européenne, pour le support aux Membres, la gestion des signalements, la publicité et le marketing. \n Les transferts de données hors Union européenne peuvent être effectués vers des pays pour lesquels il n’existe pas de décision d’adéquation rendue par la Commission européenne en matière de protection des données personnelles.",
   "transfer_destination_countries": [
     "us",
     "ma",

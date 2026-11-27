@@ -36,7 +36,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Duolingo est basé aux États-Unis et traite les données dans ce pays, qui peut ne pas offrir des niveaux de protection des données équivalents à ceux de votre juridiction d’origine. Duolingo peut transférer les données des utilisateurs en dehors des États-Unis vers les États-Unis.",
+  "privacy_policy_quote_fr": "Duolingo est basé aux États-Unis et traite les données dans ce pays, qui peut ne pas offrir des niveaux de protection des données équivalents à ceux de votre juridiction d’origine. Duolingo peut transférer les données des utilisateurs en dehors des États-Unis vers les États-Unis.",
   "transfer_destination_countries": [
     "us"
   ],

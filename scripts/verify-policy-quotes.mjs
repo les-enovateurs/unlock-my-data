@@ -15,7 +15,8 @@ const textPath = (slug) => path.join(ROOT, "public/data/policy-analysis/text", `
 const enTextPath = (slug) => textPath(`${slug}.en`);
 // Claude writes these entries: analysing Anthropic's own policy is a conflict of interest.
 const CONFLICTED = /anthropic|claude/i;
-const MAX_QUOTES = 7;
+// The agent writes every candidate; volunteers pick in the review tool.
+const MAX_QUOTES = 8;
 
 export function checkEntry(slug, entry, textBytes, enTextBytes = null) {
     const errors = [];

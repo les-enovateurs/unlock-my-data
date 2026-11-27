@@ -27,7 +27,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "\"Vos informations peuvent être traitées, stockées et transférées en dehors de votre pays de résidence et au-delà de l'Espace Économique Européen (EEE) et de la Suisse, notamment aux États-Unis, au Canada ou au Brésil.\"",
+  "privacy_policy_quote_fr": "\"Vos informations peuvent être traitées, stockées et transférées en dehors de votre pays de résidence et au-delà de l'Espace Économique Européen (EEE) et de la Suisse, notamment aux États-Unis, au Canada ou au Brésil.\"",
   "transfer_destination_countries": [
     "us",
     "br",

@@ -26,7 +26,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Deliveroo est une entreprise internationale et nous pouvons être amenés à transférer vos données en dehors du Royaume-Uni ou de l'Espace Economique Européen (EEE) pour nous aider à fournir nos services, par exemple en Inde ou dans d'autres pays où nous pouvons exercer des activités.",
+  "privacy_policy_quote_fr": "Deliveroo est une entreprise internationale et nous pouvons être amenés à transférer vos données en dehors du Royaume-Uni ou de l'Espace Economique Européen (EEE) pour nous aider à fournir nos services, par exemple en Inde ou dans d'autres pays où nous pouvons exercer des activités.",
   "transfer_destination_countries": [
     "gb",
     "in"
