@@ -56,32 +56,9 @@
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "changes_requested",
-  "review": [
-    {
-      "field": "contacts",
-      "message": "Dans https://www.orange.com/fr/notice-sur-la-protection-des-donnees-personnelles\nJe n'ai trouvé que:\nOrange SA\nA l’attention du délégué à la protection des données\n111, quai du Président Roosevelt\nCS 70222\n92449 ISSY LES MOULINEAUX CEDEX",
-      "reviewer_name": "dominique_usa",
-      "timestamp": "2026-11-25T14:26:04.433Z",
-      "resolved": false,
-      "replies": [
-        {
-          "message": "J'ai bien trouvé l'information que tu mentionnes dans https://www.orange.fr/donnees-personnelles#chapitre9\nCela n'est pas très cohérent...",
-          "author": "dominique_usa",
-          "timestamp": "2026-11-25T14:31:25.323Z"
-        }
-      ]
-    },
-    {
-      "field": "privacy_policy_quote_en",
-      "message": "Personal data collected may be processed outside the European Union. In this case, Orange takes the necessary steps with its subcontractors and partners to ensure an adequate level of protection for your personal data [...]. If the subcontractors and partners concerned are not located in a country with legislation considered to offer an adequate level of protection, they will have previously signed the European Commission's \"standard contractual clauses\" or are subject to binding internal rules approved by the authorities.",
-      "reviewer_name": "dominique_usa",
-      "timestamp": "2026-11-25T14:44:05.422Z",
-      "resolved": false
-    }
-  ],
+  "status": "published",
   "updated_by": "dominique_usa",
-  "updated_at": "2026-11-25",
+  "updated_at": "2026-11-27",
   "playstore": {
     "id": "com.orange.orangeetmoi",
     "name": "Orange et moi France"
