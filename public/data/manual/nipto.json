@@ -23,7 +23,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Il est possible que certains des services, parmi ceux listés, peuvent fonctionner à travers des serveurs répartis géographiquement, rendant la position réelle du stockage des Données personnelles difficile à déterminer.",
+  "privacy_policy_quote_fr": "Il est possible que certains des services, parmi ceux listés, peuvent fonctionner à travers des serveurs répartis géographiquement, rendant la position réelle du stockage des Données personnelles difficile à déterminer.",
   "transfer_destination_countries": [
     "us",
     "ie"

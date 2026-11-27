@@ -20,7 +20,7 @@
   "address_export": "2711 Centerville Road, Suite 400 Wilmington, DE 19808, United States of America",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Rocket.Chat possède une clientèle et des opérations mondiales, ce qui nécessite le transfert de données et un accès dans le monde entier, y compris en dehors de l'EEE, du Royaume-Uni et de la Suisse.",
+  "privacy_policy_quote_fr": "Rocket.Chat possède une clientèle et des opérations mondiales, ce qui nécessite le transfert de données et un accès dans le monde entier, y compris en dehors de l'EEE, du Royaume-Uni et de la Suisse.",
   "transfer_destination_countries": [
     "unspecified"
   ],

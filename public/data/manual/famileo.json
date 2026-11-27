@@ -23,7 +23,7 @@
   "sanctioned_by_cnil": false,
   "sanction_details": "Aucune sanction CNIL rendue publique. L'entreprise Entourage Solutions a eu un contrôle de routine de la CNIL en 2019, ne conduisant à aucune sanction.",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Si vous êtes situés hors de l'Union européenne, veuillez noter que vos données à caractère personnel seront transférées vers l'Union européenne et hébergées sur des serveurs basés au sein de l'Union européenne. Si vous êtes situés au sein de l'Union européenne, veuillez noter que ENTOURAGE SOLUTIONS héberge l'ensemble des données sur des serveurs basés dans l'Union européenne, et travaille étroitement avec ses prestataires de services et s'assure que tous les prestataires de services se conforment au RGPD.",
+  "privacy_policy_quote_fr": "Si vous êtes situés hors de l'Union européenne, veuillez noter que vos données à caractère personnel seront transférées vers l'Union européenne et hébergées sur des serveurs basés au sein de l'Union européenne. Si vous êtes situés au sein de l'Union européenne, veuillez noter que ENTOURAGE SOLUTIONS héberge l'ensemble des données sur des serveurs basés dans l'Union européenne, et travaille étroitement avec ses prestataires de services et s'assure que tous les prestataires de services se conforment au RGPD.",
   "transfer_destination_countries": [
     "ie",
     "eu",
@@ -80,7 +80,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "ENTOURAGE SOLUTIONS s'engage à traiter les données à caractère personnel conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après désigné le RGPD), à la loi française n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (telle que modifiée) et à l'ensemble des autres lois applicables.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:14:35.606Z",
@@ -160,7 +160,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "ENTOURAGE SOLUTIONS s'engage à traiter les données à caractère personnel conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après désigné le RGPD), à la loi française n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (telle que modifiée) et à l'ensemble des autres lois applicables.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:26:18.954Z",

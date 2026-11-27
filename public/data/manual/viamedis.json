@@ -49,7 +49,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "De manière générale, nous privilégions la réalisation du traitement de vos données personnelles en France en priorité ou dans un pays de l'Union Européenne. [...] Aucun transfert de données de santé à caractère personnel vers un pays tiers à l'Espace Economique Européen n'est effectué.",
+  "privacy_policy_quote_fr": "De manière générale, nous privilégions la réalisation du traitement de vos données personnelles en France en priorité ou dans un pays de l'Union Européenne. [...] Aucun transfert de données de santé à caractère personnel vers un pays tiers à l'Espace Economique Européen n'est effectué.",
   "outside_eu_storage": false,
   "comments": "Viamedis SA (RCS Paris 432 788 974), opérateur de tiers payant pour de nombreuses complémentaires santé et mutuelles, 1-11 rue Brillat-Savarin, 75634 Paris Cedex 13. Hébergeur de données de santé (HDS). Date de la fuite indiquée : publication de la CNIL du 7 février 2024 (attaque survenue fin janvier 2024). La politique ne précise pas de délai de réponse (délai légal RGPD d'un mois). Aucune sanction CNIL publique trouvée à ce jour.",
   "comments_en": "Viamedis SA (Paris trade register 432 788 974), third-party payment operator for many supplementary health insurers and mutuals, 1-11 rue Brillat-Savarin, 75634 Paris Cedex 13. Certified health data host (HDS). Leak date given: CNIL publication of 7 February 2024 (attack in late January 2024). The policy does not state a response time (GDPR legal deadline of one month). No public CNIL sanction found to date.",

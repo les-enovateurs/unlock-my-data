@@ -45,7 +45,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-21T23:12:41.353Z",
@@ -54,6 +54,6 @@
   ],
   "updated_by": "Charlotte L",
   "updated_at": "2026-10-22",
-  "privacy_policy_quote": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
+  "privacy_policy_quote_fr": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
   "privacy_policy_quote_en": "Wherever possible, we take care to process your data within the European Economic Area (EEA). However, as some of Les Martines’ service providers live in countries outside the EEA, your data may end up being transferred there. If we decide to work with service providers outside the EEA and need to share your data, we’ll let you know as soon as you register for the event."
 }

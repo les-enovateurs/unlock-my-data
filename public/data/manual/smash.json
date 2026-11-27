@@ -22,7 +22,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous stockons les données et les fichiers de nos utilisateurs (en fonction de leur localisation) dans 9 régions du monde afin de pouvoir gagner du temps sur les téléchargements. Pour information, les fichiers ne sont pas dupliqués d'une région à l'autre.",
+  "privacy_policy_quote_fr": "Nous stockons les données et les fichiers de nos utilisateurs (en fonction de leur localisation) dans 9 régions du monde afin de pouvoir gagner du temps sur les téléchargements. Pour information, les fichiers ne sont pas dupliqués d'une région à l'autre.",
   "outside_eu_storage": true,
   "better_alternative": false,
   "created_at": "2026-10-22",

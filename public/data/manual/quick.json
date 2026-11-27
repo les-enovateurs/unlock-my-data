@@ -49,7 +49,7 @@
   "response_delay_en": "1 month according to GDPR",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous ne transférons pas vos données en dehors de l'Union européenne, sauf dans les situations où cela est nécessaire pour répondre à votre demande ou vous fournir les services demandés. Dans ce cadre uniquement, des données personnelles vous concernant peuvent être amenées à être transférées en-dehors de l'Union européenne [...]",
+  "privacy_policy_quote_fr": "Nous ne transférons pas vos données en dehors de l'Union européenne, sauf dans les situations où cela est nécessaire pour répondre à votre demande ou vous fournir les services demandés. Dans ce cadre uniquement, des données personnelles vous concernant peuvent être amenées à être transférées en-dehors de l'Union européenne [...]",
   "comments": "Responsable : QUICK GESTION SAS (Aubervilliers). Politique datée de janvier 2022. Elle ne précise ni pièce d'identité requise ni délai de réponse (délai légal RGPD d'un mois), ni les pays de transfert. Date de la fuite : date de l'article Clubic (10 octobre 2026), nombre d'adhérents concernés non communiqué.",
   "comments_en": "Controller: QUICK GESTION SAS (Aubervilliers). Policy dated January 2022. It does not state an ID requirement, response time (GDPR legal deadline of one month) or transfer countries. Leak date: date of the Clubic article (10 October 2026); number of members affected not disclosed.",
   "better_alternative": false,

@@ -46,7 +46,7 @@
   "response_delay_fr": "non mentionné",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "\"10.5. TRAINME et, en cas d'achat sur le Site, le Vendeur sont les seuls destinataires de ces données. Les données personnelles ne seront en aucun cas transmises à des acteurs commerciaux ou publicitaires.\nTRAINME pourra néanmoins être amenée à transmettre ces données à des prestataires techniques pour les besoins de l’exécution de la Commande et de l’exploitation du Site.\"\n\n\"10.6. Ces données sont stockées en France.\"",
+  "privacy_policy_quote_fr": "\"10.5. TRAINME et, en cas d'achat sur le Site, le Vendeur sont les seuls destinataires de ces données. Les données personnelles ne seront en aucun cas transmises à des acteurs commerciaux ou publicitaires.\nTRAINME pourra néanmoins être amenée à transmettre ces données à des prestataires techniques pour les besoins de l’exécution de la Commande et de l’exploitation du Site.\"\n\n\"10.6. Ces données sont stockées en France.\"",
   "transfer_destination_countries": [
     "us"
   ],

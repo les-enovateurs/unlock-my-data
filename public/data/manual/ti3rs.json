@@ -22,7 +22,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "privacy_policy_quote": "**Outils et sous-traitants**\n\nTI3RS utilise notamment :\n\n* **Google Analytics** (site),\n* **Firebase** (application),\n* **Mixpanel** (analyse d’usage de l’application).",
+  "privacy_policy_quote_fr": "**Outils et sous-traitants**\n\nTI3RS utilise notamment :\n\n* **Google Analytics** (site),\n* **Firebase** (application),\n* **Mixpanel** (analyse d’usage de l’application).",
   "transfer_destination_countries": [
     "us"
   ],

@@ -25,7 +25,7 @@
   "address_export": "100 Congress Avenue, Suite 400 Austin, TX 78701",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "# MyFitnessPal a son siège social aux États-Unis et collabore avec des prestataires de services aux États-Unis et dans le monde entier. Par conséquent, vos informations personnelles peuvent être transférées aux États-Unis et dans d'autres pays ou régions dont les lois sur la protection des données et la vie privée sont différentes de celles de votre pays de résidence.",
+  "privacy_policy_quote_fr": "# MyFitnessPal a son siège social aux États-Unis et collabore avec des prestataires de services aux États-Unis et dans le monde entier. Par conséquent, vos informations personnelles peuvent être transférées aux États-Unis et dans d'autres pays ou régions dont les lois sur la protection des données et la vie privée sont différentes de celles de votre pays de résidence.",
   "transfer_destination_countries": [
     "us"
   ],

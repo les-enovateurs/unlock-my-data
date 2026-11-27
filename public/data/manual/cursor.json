@@ -29,7 +29,7 @@
   "data_access_via_other": false,
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "« Anysphere traite vos données personnelles aux fins décrites dans la présente Politique de confidentialité sur des serveurs situés dans diverses juridictions, y compris aux États‑Unis. [...] nous ne transférons les données qu’en conformité avec des mécanismes de transfert juridiquement valables. Pour les utilisateurs de l’Espace économique européen (« EEE »), lorsque vous accédez à notre Service, vos données personnelles peuvent être transférées vers nos serveurs [...] »",
+  "privacy_policy_quote_fr": "« Anysphere traite vos données personnelles aux fins décrites dans la présente Politique de confidentialité sur des serveurs situés dans diverses juridictions, y compris aux États‑Unis. [...] nous ne transférons les données qu’en conformité avec des mécanismes de transfert juridiquement valables. Pour les utilisateurs de l’Espace économique européen (« EEE »), lorsque vous accédez à notre Service, vos données personnelles peuvent être transférées vers nos serveurs [...] »",
   "transfer_destination_countries": [
     "us"
   ],

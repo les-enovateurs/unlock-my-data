@@ -19,7 +19,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Certains destinataires de vos données peuvent se trouver dans des pays autres que le vôtre. Ces pays peuvent ne pas garantir un niveau de protection des données personnelles équivalent à celui de votre pays ; des clauses contractuelles types et des mesures de sécurité adéquates sont alors mises en œuvre.",
+  "privacy_policy_quote_fr": "Certains destinataires de vos données peuvent se trouver dans des pays autres que le vôtre. Ces pays peuvent ne pas garantir un niveau de protection des données personnelles équivalent à celui de votre pays ; des clauses contractuelles types et des mesures de sécurité adéquates sont alors mises en œuvre.",
   "outside_eu_storage": true,
   "better_alternative": false,
   "created_at": "2026-11-09",
