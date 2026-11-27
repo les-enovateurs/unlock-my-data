@@ -2104,6 +2104,50 @@
   },
   {
     "mode": 1,
+    "slug": "franceconnect",
+    "name": "FranceConnect",
+    "logo": "/img/logos/franceconnect.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "support.securite@franceconnect.gouv.fr",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Exercice des droits (accès, rectification, suppression)",
+        "comment_en": "Exercise of rights (access, rectification, erasure)"
+      },
+      {
+        "type": "postal",
+        "value": "FranceConnect - DINUM, 20 avenue de Ségur, 75007 Paris",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Exercice des droits par courrier",
+        "comment_en": "Exercise of rights by post"
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "free-mobile",
     "name": "Free mobile",
     "logo": "/img/logos/free-mobile.webp",
@@ -2222,6 +2266,50 @@
     "alternatives": [
       "mistral"
     ]
+  },
+  {
+    "mode": 1,
+    "slug": "generali",
+    "name": "Generali",
+    "logo": "/img/logos/generali.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "email",
+        "value": "droitdacces@generali.fr",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Exercice des droits et Délégué à la protection des données",
+        "comment_en": "Exercise of rights and Data Protection Officer"
+      },
+      {
+        "type": "postal",
+        "value": "GENERALI France - Conformité - TSA 70100, 75309 Paris Cedex 09",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Service Conformité",
+        "comment_en": "Compliance department"
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": null,
+    "data_access_via_email": true,
+    "url_export": "",
+    "last_update_breach": null,
+    "country_code": "it",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
   },
   {
     "mode": 1,
