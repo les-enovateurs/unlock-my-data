@@ -158,7 +158,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     setActiveKey(null);
     // Loaded on demand, one file per session (~150 kB): shipping 15 MB of
     // policy text to every visitor to serve one reviewer would be absurd.
-    setPolicyText(a ? await loadPolicyText(slug, a?.source?.content_sha256 || "") : null);
+    const entry = kq[slug];
+    setPolicyText(a || entry
+      ? await loadPolicyText(slug, a?.source?.content_sha256 || entry?.text_sha256 || "") : null);
   }, []);
 
   const backToQueue = useCallback((syncUrl = true) => {
@@ -194,7 +196,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         const q = keyQuotes!.quotes[i];
         return {
         key: keyQuoteKey(i), axis: "signalement",
-        kind: tt(KEY_QUOTE_TOPICS[q.topic]?.level === "high" ? "keyQuoteHigh" : "keyQuoteMedium"),
+        kind: "",
         label: KEY_QUOTE_TOPICS[q.topic]?.[lang] ?? tt("keyQuoteKind"), quote: q.quote,
         // verify-policy-quotes already proved it verbatim on the committed text.
         origVerified: true, span: null, verifyReason: null,
@@ -508,7 +510,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         <select aria-label={tt("rankLabel")} value={rank} onChange={(e) => moveKeyQuote(key, Number(e.target.value))}>
           {order.map((_: number, r: number) => <option key={r} value={r}>{r + 1}</option>)}
         </select>
-        {order[rank] === featured && <span>{tt("rankFeatured")}</span>}
+        {order[rank] === featured && <span title={tt("rankFeatured")} aria-label={tt("rankFeatured")} style={{ color: "var(--amber-500, #f59e0b)", fontSize: 14 }}>★</span>}
       </label>
     );
   };
@@ -581,8 +583,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           {it.key.startsWith("keyquote/") && renderRank(it.key)}
           <b style={{ fontSize: 13.5 }}>{it.label}</b>
-          <span style={{ fontSize: 11.5, color: "var(--slate-600)", flex: 1, minWidth: 80 }}>{it.kind}</span>
-          {group === "verified" && <span className="umd-chip umd-chip-safe" style={{ fontSize: 10 }}>{tt("algoVerified")}</span>}
+          <span style={{ fontSize: 11.5, color: "var(--slate-600)", flex: 1 }}>{it.kind}</span>
+          {group === "verified" && !it.key.startsWith("keyquote/") && <span className="umd-chip umd-chip-safe" style={{ fontSize: 10 }}>{tt("algoVerified")}</span>}
           {v?.corrected_quote && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
           {unlocatable.has(it.key) && <span className="umd-chip umd-chip-danger" style={{ fontSize: 10 }}>{tt("quoteNotFound")}</span>}
           {stale.has(it.key) && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("staleVerdict")}</span>}
@@ -630,7 +632,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           <p className="prv-hint" style={{ color: "var(--amber-700, #b45309)" }}>{tt("staleVerdictHint")}</p>
         )}
 
-        {rejectingKey === it.key ? (
+        {it.key.startsWith("keyquote/") ? (
+          <div style={{ display: "flex", gap: 8 }}>
+            {(["validated", "rejected"] as const).map((verdict) => (
+              <button key={verdict} className="prv-chip" disabled={saving} data-active={v?.verdict === verdict ? "true" : undefined}
+                onClick={() => (v?.verdict === verdict ? clearVerdict(it.key) : submitItem(it, verdict, null))}>
+                {tt(verdict === "validated" ? (v?.verdict === verdict ? "kept" : "keep") : (v?.verdict === verdict ? "setAside" : "setAsideAction"))}
+              </button>
+            ))}
+          </div>
+        ) : rejectingKey === it.key ? (
           <div>
             {/* Note first, reason last: picking a reason submits immediately, so
                 a note placed after the buttons (and collapsed, as it was) could

@@ -42,7 +42,7 @@
     "saved": "Enregistré",
     "savedPr": "Voir la Pull Request",
     "openWindow": "Ouvrir la politique",
-    "noPublishedText": "Le texte de cette politique n'a pas encore été publié par le pipeline. Relancez « policy-analysis inventory <slug> --refresh », ou ouvrez la politique dans un onglet.",
+    "noPublishedText": "Le texte de cette politique n'est pas encore dans le dépôt. Lancez « /policy-quotes <slug> », ou ouvrez la politique dans un onglet.",
     "startHere": "Commencer par",
     "startHereHint": "Chaque citation a été proposée par un agent IA. Vérifiez qu'elle est bien dans la politique et qu'elle n'est pas sortie de son contexte : une fois validée par vous, elle est publiée.",
     "essentialsTitle": "L'essentiel",
@@ -83,7 +83,7 @@
     "staleVerdictHint": "La citation a changé depuis ce verdict (ré-analyse de la politique) : ton jugement portait sur un autre texte. À retrancher.",
     "keyQuoteKind": "Citation clé",
     "rankLabel": "Rang",
-    "rankFeatured": "à la une",
+    "rankFeatured": "À la une sur la fiche",
     "keyQuoteLabel": "Citation clé proposée par {a}",
     "keyQuotesPublishFrom": "Sans réponse, les {n} premières seront publiées le {d}",
     "keyQuotesPublished": "Propositions publiées",
@@ -93,7 +93,7 @@
     "tabPublished": "Publiées",
     "keyQuotesAllPublished": "{n} citation(s) clé(s) publiée(s)",
     "keyQuotesReviewTitle": "Citations clés à valider",
-    "keyQuotesReviewHint": "Proposées par {a}. Cliquez sur une citation pour la retrouver dans la politique. Gardée = publiée. Le chiffre = l'ordre sur la fiche ; la première gardée est à la une.",
+    "keyQuotesReviewHint": "Proposées par {a}, mot pour mot vérifiées dans la politique (cliquez pour la retrouver à gauche). Gardez celles qui comptent, écartez les autres ; recliquez pour annuler. Le chiffre fixe l'ordre sur la fiche, ★ = à la une.",
     "noKeyQuotes": "Aucune citation clé proposée pour ce service.",
     "keyQuoteAgentUnknown": "un agent IA",
     "plainLabel": "En clair",
@@ -110,7 +110,9 @@
     "changeMemo": "En clair",
     "changesPending": "{n} changement(s) de politique à valider",
     "kept": "Gardée ✓",
-    "keyQuotesPublishNext": "Sans réponse, les {n} premières partent à la prochaine mise en ligne"
+    "keyQuotesPublishNext": "Sans réponse, les {n} premières partent à la prochaine mise en ligne",
+    "setAsideAction": "Écarter",
+    "setAside": "Écartée ✓"
   },
   "en": {
     "eyebrow": "Human verification",
@@ -155,7 +157,7 @@
     "saved": "Saved",
     "savedPr": "View Pull Request",
     "openWindow": "Open the policy",
-    "noPublishedText": "The text of this policy has not been published by the pipeline yet. Re-run “policy-analysis inventory <slug> --refresh”, or open the policy in a tab.",
+    "noPublishedText": "The text of this policy is not in the repository yet. Run “/policy-quotes <slug>”, or open the policy in a tab.",
     "startHere": "Start here",
     "startHereHint": "Each quote was proposed by an AI agent. Check it is really in the policy and not taken out of context: once you validate it, it is published.",
     "essentialsTitle": "The essentials",
@@ -196,7 +198,7 @@
     "staleVerdictHint": "The citation changed after this verdict (the policy was re-analysed): you ruled on a different text. Please rule again.",
     "keyQuoteKind": "Key quote",
     "rankLabel": "Rank",
-    "rankFeatured": "featured",
+    "rankFeatured": "Featured on the fiche",
     "keyQuoteLabel": "Key quote proposed by {a}",
     "keyQuotesPublishFrom": "Without an answer, the top {n} go live on {d}",
     "keyQuotesPublished": "Proposals published",
@@ -206,7 +208,7 @@
     "tabPublished": "Published",
     "keyQuotesAllPublished": "{n} key quote(s) published",
     "keyQuotesReviewTitle": "Key quotes to validate",
-    "keyQuotesReviewHint": "Proposed by {a}. Click a quote to find it in the policy. Kept = published. The number = order on the fiche; the first kept is featured.",
+    "keyQuotesReviewHint": "Proposed by {a}, checked word for word against the policy (click to find it on the left). Keep the ones that matter, set the others aside; click again to undo. The number sets the order on the fiche, ★ = featured.",
     "noKeyQuotes": "No key quote proposed for this service.",
     "keyQuoteAgentUnknown": "an AI agent",
     "plainLabel": "In plain words",
@@ -223,6 +225,8 @@
     "changeMemo": "In plain words",
     "changesPending": "{n} policy change(s) to validate",
     "kept": "Kept ✓",
-    "keyQuotesPublishNext": "Without an answer, the top {n} go live with the next deploy"
+    "keyQuotesPublishNext": "Without an answer, the top {n} go live with the next deploy",
+    "setAsideAction": "Set aside",
+    "setAside": "Set aside ✓"
   }
 }
