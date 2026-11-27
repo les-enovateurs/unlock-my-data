@@ -13,5 +13,6 @@ export function pickLang<T>(
   if (!obj) return undefined;
   const values = obj as unknown as Record<string, string | null | undefined>;
   const fr = values[`${field}_fr`] ?? values[field];
-  return (lang === "fr" ? fr : values[`${field}_en`] || fr) || undefined;
+  const en = values[`${field}_en`];
+  return (lang === "fr" ? fr || en : en || fr) || undefined;
 }

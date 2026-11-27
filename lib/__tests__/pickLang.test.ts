@@ -17,6 +17,10 @@ describe("pickLang", () => {
     expect(pickLang(legacy, "comments", "en")).toBe("Remarque");
   });
 
+  test("falls back to English when French is empty", () => {
+    expect(pickLang({ quote_fr: "", quote_en: "Quote" }, "quote", "fr")).toBe("Quote");
+  });
+
   test("returns undefined when nothing is filled", () => {
     expect(pickLang({ a: "", a_en: "" }, "a", "en")).toBeUndefined();
     expect(pickLang(null as { a?: string; a_en?: string } | null, "a", "fr")).toBeUndefined();
