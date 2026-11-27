@@ -57,12 +57,30 @@
   "address_export": "datarea GmbH, Meißner Street 103, D-01445 Radebeul, Allemagne",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote_fr": "« Certaines sociétés listées ci-dessus, qui sont rendues destinataires de vos Données dans le cadre de la fourniture des services, sont situées hors de l’Union européenne. En conséquence, préalablement à tout transfert, nous nous assurons que : (i) les pays de destination assurent un niveau de protection adéquat [...] ; ou (ii) des garanties [...] »",
+  "privacy_policy_quote_fr": "« Certaines sociétés listées ci-dessus, qui sont rendues destinataires de vos Données dans le cadre de la fourniture des services, sont situées hors de l’Union européenne. En conséquence, préalablement à tout transfert, nous nous assurons que : (i) les pays de destination assurent un niveau de protection adéquat \\[...] ; ou (ii) des garanties \\[...] »",
   "outside_eu_storage": true,
-  "comments": "Éditeur de supports pour le permis de conduire (Les Sables-d'Olonne). Codes Rousseau agit aussi comme sous-traitant des auto-écoles pour Easysystème. DPO externe : datarea GmbH (Allemagne). Politique mise à jour en mars 2026 ; transferts hors UE via certains destinataires, sans liste de pays dans l'extrait. Pas de délai de réponse ni de justificatif d'identité mentionnés. Date de la fuite = date de la FAQ officielle (26/01/2026) ; incident vérifié avec l'e-mail reçu par le contributeur (capture disponible). Pas de sanction CNIL connue.",
-  "comments_en": "Publisher of driving licence learning materials (Les Sables-d'Olonne). Codes Rousseau also acts as processor for driving schools for Easysystème. External DPO: datarea GmbH (Germany). Policy updated in March 2026; transfers outside the EU via some recipients, no list of countries in the excerpt. No response time or ID requirement mentioned. Leak date = date of the official FAQ (26/01/2026); incident verified with the email received by the contributor (screenshot available). No known CNIL sanction.",
+  "comments": "Éditeur de supports pour le permis de conduire (Les Sables-d'Olonne). Codes Rousseau agit aussi comme sous-traitant des auto-écoles pour Easysystème. DPO externe : datarea GmbH (Allemagne). Politique mise à jour en mars 2026 ; transferts hors UE via certains destinataires, sans liste de pays dans l'extrait. Pas de délai de réponse ni de justificatif d'identité mentionnés. Date de la fuite \\= date de la FAQ officielle (26/01/2026) ; incident vérifié avec l'e-mail reçu par le contributeur (capture disponible). Pas de sanction CNIL connue.",
+  "comments_en": "Publisher of driving licence learning materials (Les Sables-d'Olonne). Codes Rousseau also acts as processor for driving schools for Easysystème. External DPO: datarea GmbH (Germany). Policy updated in March 2026; transfers outside the EU via some recipients, no list of countries in the excerpt. No response time or ID requirement mentioned. Leak date \\= date of the official FAQ (26/01/2026); incident verified with the email received by the contributor (screenshot available). No known CNIL sanction.",
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "transfer_destination_countries",
+      "message": "France, USA, Allemagne",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-27T15:38:01.159Z",
+      "resolved": false,
+      "replies": [
+        {
+          "message": "Paragraphe \"Destinataires de vos données\"",
+          "author": "dominique_usa",
+          "timestamp": "2026-11-27T15:39:23.777Z"
+        }
+      ]
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-27"
 }
