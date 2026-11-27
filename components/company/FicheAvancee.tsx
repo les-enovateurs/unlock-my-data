@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import {
     AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, Building2, Calendar, Camera, Check,
-    ChevronDown, CircleCheck, Clock, Compass, Copy, Database,
+    ChevronDown, Clock, Compass, Copy, Database,
     Download, ExternalLink, Eye, FileText, Fingerprint, Flag, FolderOpen, Globe, HeartPulse, History, IdCard,
     Landmark, Lock, Mail, MapPin, Mic, Monitor, Network, PenLine, Radar,
     Send, Shield, ShieldAlert, ShieldCheck, Smartphone, Trash2,
@@ -28,7 +28,7 @@ import { getEmailTemplate, webmailLinks } from "../../constants/emailTemplates";
 import type { Service } from "@/constants/protectData";
 import ProtectActionDrawer, { DrawerMode } from "../protect-my-data/ProtectActionDrawer";
 import type { ReviewSidecar } from "@/components/review/reviewTypes";
-import { buildFicheMerge, FicheMergeResult } from "@/components/review/ficheReviewMerge";
+import { buildFicheMerge } from "@/components/review/ficheReviewMerge";
 import { firstEmail, type ServiceContact } from "@/lib/contacts";
 import PolicySourcePane from "@/components/review/PolicySourcePane";
 import { loadPolicyText, type PolicyText } from "@/components/review/policyText";
@@ -487,7 +487,6 @@ const TR: Record<string, Record<string, string>> = {
         noSanction: "Aucune sanction directe à ce jour",
         sanctioned: "Sanctionné par la CNIL",
         context: "Contexte.",
-        donneesTitle: "Vos données collectées",
         createdOn: "Fiche créée le {d} par {b}",
         updatedOn: "Mise à jour le {d} par {b}",
         techSource: "Analyse technique : Exodus Privacy, rapport du {d}",
@@ -516,24 +515,6 @@ const TR: Record<string, Record<string, string>> = {
         anaStatusPublished: "Publié",
         anaSource: "Analyse de la politique de confidentialité : Mistral Large, le {d}",
         anaSourceReviewed: "Analyse relue et vérifiée par un humain, le {d}",
-        donneesEmpty: "Inventaire des données non disponible pour ce service — extraction insuffisante ou analyse pas encore lancée.",
-        donneesAiNote: "À prendre avec des pincettes : c'est une analyse par IA, une relecture humaine est en attente.",
-        donneesStatCollected: "catégories de données collectées",
-        donneesStatSensitive: "sensibles (santé, biométrie…)",
-        donneesStatGrey: "non précisées dans la politique",
-        donneesSignalsTitle: "Ce que la politique dit, et qui mérite votre attention",
-        donneesCollectTitle: "Ce qu'ils collectent sur vous",
-        donneesGreyIntro: "Non précisé dans la politique — zone grise, pas forcément une collecte :",
-        donneesNoIntro: "Explicitement non collecté :",
-        donneesLegalTitle: "Sur quelle base légale",
-        donneesTransferTitle: "Transferts hors UE",
-        donneesTransferOui: "Des données sont transférées hors UE",
-        donneesTransferNon: "Pas de transfert hors UE indiqué",
-        donneesTransferUnknown: "Non précisé dans la politique",
-        donneesSeeQuote: "Voir la citation",
-        donneesHideQuote: "Masquer la citation",
-        donneesCritCount: "{n} critère(s)",
-        donneesSeeN: "Voir les {n}",
         keyQuotesTitle: "Ce que dit sa politique",
         keyQuotesSub: "Phrases copiées mot pour mot dans la politique de {n}, relues par notre équipe.",
         keyQuotesShow: "Voir dans la politique",
@@ -764,7 +745,6 @@ const TR: Record<string, Record<string, string>> = {
         noSanction: "No direct sanction to date",
         sanctioned: "Sanctioned by the CNIL",
         context: "Context.",
-        donneesTitle: "Your collected data",
         createdOn: "Record created on {d} by {b}",
         updatedOn: "Updated on {d} by {b}",
         techSource: "Technical analysis: Exodus Privacy, report of {d}",
@@ -793,24 +773,6 @@ const TR: Record<string, Record<string, string>> = {
         anaStatusPublished: "Published",
         anaSource: "Privacy policy analysis: Mistral large, on {d}",
         anaSourceReviewed: "Analysis reviewed and verified by a human, on {d}",
-        donneesEmpty: "Data inventory not available for this service — insufficient extraction or analysis not run yet.",
-        donneesAiNote: "Take with a grain of salt: this is an AI analysis, a human review is pending.",
-        donneesStatCollected: "categories of data collected",
-        donneesStatSensitive: "sensitive (health, biometrics…)",
-        donneesStatGrey: "not specified in the policy",
-        donneesSignalsTitle: "What the policy says that deserves your attention",
-        donneesCollectTitle: "What they collect about you",
-        donneesGreyIntro: "Not specified in the policy — grey area, not necessarily collected:",
-        donneesNoIntro: "Explicitly not collected:",
-        donneesLegalTitle: "On what legal basis",
-        donneesTransferTitle: "Transfers outside the EU",
-        donneesTransferOui: "Some data is transferred outside the EU",
-        donneesTransferNon: "No non-EU transfer indicated",
-        donneesTransferUnknown: "Not specified in the policy",
-        donneesSeeQuote: "Show the quote",
-        donneesHideQuote: "Hide the quote",
-        donneesCritCount: "{n} criteria",
-        donneesSeeN: "Show all {n}",
         keyQuotesTitle: "What its policy says",
         keyQuotesSub: "Sentences copied word for word from {n}'s policy, checked by our team.",
         keyQuotesShow: "Show in the policy",
@@ -2140,151 +2102,8 @@ function cleanQuote(q: string): string {
     return q.replace(/[*_`]/g, "").replace(/\s+/g, " ").trim();
 }
 
-/* ---------- Data inventory (tab "Your collected data") ---------- */
-
-// Closed taxonomy — mirror of data_categories in the tool's criteria.yaml.
-// "autre" is intentionally excluded from the display order (catch-all).
-const DATA_CATEGORY_ORDER = [
-    "identite", "contact", "compte_auth", "paiement", "localisation",
-    "appareil_technique", "usage_comportement", "contenus_utilisateur",
-    "communications", "contacts_reseau", "donnees_tiers", "biometrie",
-    "donnees_sensibles", "mineurs",
-];
-
-type DataCatMeta = { sensitive: boolean; fr: { label: string; desc: string }; en: { label: string; desc: string } };
-const DATA_CATEGORY_META: Record<string, DataCatMeta> = {
-    identite: { sensitive: false, fr: { label: "Identité", desc: "nom, date de naissance, pièce d'identité" }, en: { label: "Identity", desc: "name, date of birth, ID document" } },
-    contact: { sensitive: false, fr: { label: "Coordonnées", desc: "email, téléphone, adresse postale" }, en: { label: "Contact details", desc: "email, phone, postal address" } },
-    compte_auth: { sensitive: false, fr: { label: "Compte & authentification", desc: "identifiants, nom d'utilisateur" }, en: { label: "Account & authentication", desc: "credentials, username" } },
-    paiement: { sensitive: false, fr: { label: "Données de paiement", desc: "carte bancaire, historique d'achats" }, en: { label: "Payment data", desc: "bank card, purchase history" } },
-    localisation: { sensitive: false, fr: { label: "Localisation", desc: "position GPS ou approximative" }, en: { label: "Location", desc: "GPS or approximate position" } },
-    appareil_technique: { sensitive: false, fr: { label: "Appareil & données techniques", desc: "IP, identifiants publicitaires, OS" }, en: { label: "Device & technical data", desc: "IP, advertising IDs, OS" } },
-    usage_comportement: { sensitive: false, fr: { label: "Usage & comportement", desc: "navigation, interactions, historique" }, en: { label: "Usage & behaviour", desc: "browsing, interactions, history" } },
-    contenus_utilisateur: { sensitive: false, fr: { label: "Contenus publiés", desc: "photos, vidéos, avis, commentaires" }, en: { label: "Published content", desc: "photos, videos, reviews, comments" } },
-    communications: { sensitive: false, fr: { label: "Communications", desc: "messages, appels, échanges support" }, en: { label: "Communications", desc: "messages, calls, support exchanges" } },
-    contacts_reseau: { sensitive: false, fr: { label: "Carnet d'adresses & contacts", desc: "contacts importés, réseau social" }, en: { label: "Address book & contacts", desc: "imported contacts, social graph" } },
-    donnees_tiers: { sensitive: false, fr: { label: "Données reçues de tiers", desc: "partenaires, annonceurs, autres utilisateurs" }, en: { label: "Data received from third parties", desc: "partners, advertisers, other users" } },
-    biometrie: { sensitive: true, fr: { label: "Données biométriques", desc: "reconnaissance faciale, empreintes" }, en: { label: "Biometric data", desc: "facial recognition, fingerprints" } },
-    donnees_sensibles: { sensitive: true, fr: { label: "Données sensibles", desc: "santé, opinions, vie privée (art. 9 RGPD)" }, en: { label: "Sensitive data", desc: "health, opinions, private life (GDPR art. 9)" } },
-    mineurs: { sensitive: true, fr: { label: "Données de mineurs", desc: "utilisateurs de moins de 18 ans" }, en: { label: "Minors' data", desc: "users under 18" } },
-    autre: { sensitive: false, fr: { label: "Autres données", desc: "" }, en: { label: "Other data", desc: "" } },
-};
-
-/** Same closed list as SIGNAL_CRITERIA in components/review/policyTaxonomy.ts. */
-const SIGNAL_LABELS: Record<string, { fr: string; en: string }> = {
-    scoring: { fr: "Notation / score de solvabilité", en: "Scoring / creditworthiness" },
-    decision_automatisee: { fr: "Décision automatisée", en: "Automated decision-making" },
-    donnees_achetees: { fr: "Données obtenues auprès de tiers", en: "Data obtained from third parties" },
-    partage_commercial: { fr: "Partage commercial / publicitaire", en: "Commercial / advertising sharing" },
-    biometrie: { fr: "Biométrie", en: "Biometrics" },
-    mineurs: { fr: "Collecte visant des mineurs", en: "Collection targeting minors" },
-    inference_sensible: { fr: "Inférence de données sensibles", en: "Inference of sensitive data" },
-    conservation_indefinie: { fr: "Conservation sans durée", en: "Retention with no set period" },
-};
-
-/** DOM id for a review key (`signal/1`, `cat/contact`): the fiche hash
- *  `#donnees/signal/1` opens the tab and unfolds that row. */
-const reviewAnchor = (key: string) => `rv-${key.replace(/\//g, "-")}`;
-
-type LegalBasisMeta = { color: string; fr: string; en: string };
-const LEGAL_BASIS_META: Record<string, LegalBasisMeta> = {
-    contrat: { color: "var(--indigo-600)", fr: "Exécution du contrat", en: "Performance of the contract" },
-    consentement: { color: "var(--green-600)", fr: "Consentement", en: "Consent" },
-    interet_legitime: { color: "var(--amber-400)", fr: "Intérêt légitime", en: "Legitimate interest" },
-    obligation_legale: { color: "var(--teal-400)", fr: "Obligation légale", en: "Legal obligation" },
-    mission_interet_public: { color: "var(--slate-400)", fr: "Mission d'intérêt public", en: "Public interest task" },
-    interets_vitaux: { color: "var(--slate-400)", fr: "Intérêts vitaux", en: "Vital interests" },
-};
-
-function DataCatRow({ label, desc, quote, verified, sensitive, anchor, focused = false, onShow, t }: {
-    label: string; desc: string; quote?: string; verified?: boolean | null; sensitive: boolean;
-    anchor?: string; focused?: boolean; onShow?: (quote: string) => void; t: ReturnType<typeof useT>;
-}) {
-    const [open, setOpen] = useState(focused);
-    const rowRef = useRef<HTMLDivElement>(null);
-    // The row renders before the hash is read, so `focused` arrives after mount.
-    useEffect(() => {
-        if (!focused) return;
-        setOpen(true);
-        rowRef.current?.scrollIntoView({ block: "center" });
-        if (quote) onShow?.(quote);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [focused]);
-    const hasQuote = Boolean(quote);
-    const verifiedLabel = verified === true ? t("anaVerified") : verified === false ? t("anaToReverify") : "";
-    const verifiedClass = verified === true ? "umd-chip umd-chip-safe" : verified === false ? "umd-chip umd-chip-warn" : "";
-    return (
-        <div ref={rowRef} id={anchor} className="umd-crit-row"
-            style={focused ? { borderColor: "var(--indigo-600)" } : sensitive ? { borderColor: "var(--red-200)" } : undefined}>
-            <button type="button" className="umd-crit-head" disabled={!hasQuote}
-                aria-expanded={hasQuote ? open : undefined}
-                onClick={hasQuote ? () => { if (!open) onShow?.(quote!); setOpen(!open); } : undefined}>
-                <Eye aria-hidden="true" className="w-4 h-4 text-umd-indigo-600 shrink-0" />
-                <span className="flex-1">
-                    <b className="text-[13.5px] text-umd-slate-800">{label}</b>
-                    {desc && <span className="block text-umd-slate-500 text-[12px] mt-0.5">{desc}</span>}
-                </span>
-                {verifiedLabel && <span className={verifiedClass} style={{ fontSize: "10.5px", padding: "2px 8px" }}>{verifiedLabel}</span>}
-                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[15px] h-[15px] text-umd-slate-500 transition-transform" + (open ? " rotate-180" : "")} />}
-            </button>
-            {open && quote && <blockquote className="umd-quotebox ml-[26px] mt-2.5">« {cleanQuote(quote)} »</blockquote>}
-        </div>
-    );
-}
-
-function LegalItemRow({ label, quote, onShow }: { label: string; quote?: string; onShow?: (quote: string) => void }) {
-    const [open, setOpen] = useState(false);
-    const hasQuote = Boolean(quote);
-    return (
-        <div>
-            <button type="button" className="umd-crit-head" disabled={!hasQuote}
-                aria-expanded={hasQuote ? open : undefined}
-                onClick={hasQuote ? () => { if (!open) onShow?.(quote!); setOpen(!open); } : undefined}>
-                <span className="flex-1 text-[12.5px] text-umd-slate-600">{label}</span>
-                {hasQuote && <ChevronDown aria-hidden="true" className={"w-[14px] h-[14px] text-umd-slate-500 transition-transform" + (open ? " rotate-180" : "")} />}
-            </button>
-            {open && quote && <blockquote className="umd-quotebox mt-1.5 text-[12px]">« {cleanQuote(quote)} »</blockquote>}
-        </div>
-    );
-}
-
-function LegalGroupCard({ basisKey, items, lang, merge, onShow, t }: {
-    basisKey: string; items: { item: FicheLegalBasis; idx: number }[]; lang: string;
-    merge: FicheMergeResult; onShow?: (quote: string) => void; t: ReturnType<typeof useT>;
-}) {
-    const [full, setFull] = useState(false);
-    const meta = LEGAL_BASIS_META[basisKey] || { color: "var(--slate-400)", fr: basisKey, en: basisKey };
-    const label = lang === "fr" ? meta.fr : meta.en;
-    const shown = full ? items : items.slice(0, 2);
-    const humanize = (raw?: string) => {
-        if (!raw) return "";
-        const parts = raw.split(",").map((p) => p.trim()).filter(Boolean);
-        if (parts.length && parts.every((p) => DATA_CATEGORY_META[p])) {
-            return parts.map((p) => DATA_CATEGORY_META[p][lang === "fr" ? "fr" : "en"].label).join(", ");
-        }
-        return raw.charAt(0).toUpperCase() + raw.slice(1);
-    };
-    return (
-        <div className="umd-card p-0 overflow-hidden">
-            <div className="px-[18px] py-3 bg-umd-slate-50 flex items-center gap-2.5">
-                <span className="w-2 h-2 rounded-full shrink-0" style={{ background: meta.color }} />
-                <b className="text-[13.5px] flex-1">{label}</b>
-                <span className="text-umd-slate-500 text-[12px]">{t("donneesCritCount", { n: items.length })}</span>
-            </div>
-            <div className="px-[18px] py-3 flex flex-col gap-2">
-                {shown.map(({ item, idx }) => <LegalItemRow key={idx} label={humanize(item.data)} quote={merge.quoteFor(`base/${idx}`, item.quote)} onShow={onShow} />)}
-                {items.length > 2 && (
-                    <button type="button" className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setFull((v) => !v)}>
-                        {full ? t("anaReduce") : t("donneesSeeN", { n: items.length })}
-                    </button>
-                )}
-            </div>
-        </div>
-    );
-}
-
-function TabDonnees({ a, lang, merge, focus, keyQuotes, history = [], name, t }: {
-    a: FicheAnalysis; lang: string; merge: FicheMergeResult; focus: string;
+function TabDonnees({ a, lang, focus, keyQuotes, history = [], name, t }: {
+    a: FicheAnalysis; lang: string; focus: string;
     keyQuotes?: KeyQuoteEntry | null; history?: PolicyChange[]; name: string; t: ReturnType<typeof useT>;
 }) {
     const [policy, setPolicy] = useState<PolicyText | null>(null);
@@ -2318,16 +2137,6 @@ function TabDonnees({ a, lang, merge, focus, keyQuotes, history = [], name, t }:
         showKey(keyQuotes!.quotes[i]);
     };
 
-    const inv = a.data_inventory;
-
-    if ((!inv && !keyQuotes) || analysisExtractionFailed(a)) {
-        return (
-            <div className="umd-card px-7 py-6 text-center">
-                <p className="m-0 text-[13.5px] text-umd-slate-500">{t("donneesEmpty")}</p>
-            </div>
-        );
-    }
-
     const quotesBlock = (keyQuotes || history.length > 0) && (<>
         {keyQuotes && <KeyQuotesSection entry={keyQuotes} name={name} lang={lang} t={t}
             action={(q, i) => policy && (
@@ -2356,138 +2165,7 @@ function TabDonnees({ a, lang, merge, focus, keyQuotes, history = [], name, t }:
             <div className="min-w-0">{content}</div>
         </div>
     );
-    // Key quotes stand on their own: a policy not (or no longer) analysed by the IA still shows them.
-    if (!inv) return withPolicy(quotesBlock);
-
-    const isPublished = merge.published;
-    const l = lang === "fr" ? "fr" : "en";
-
-    const collected: string[] = [];
-    const grey: string[] = [];
-    const notCollected: string[] = [];
-    for (const key of DATA_CATEGORY_ORDER) {
-        const cat = inv.categories?.[key];
-        if (!cat) continue;
-        if (cat.status === "oui") collected.push(key);
-        else if (cat.status === "non_indique") grey.push(key);
-        else if (cat.status === "non") notCollected.push(key);
-    }
-
-    // Index kept from the source array: it is the review sidecar's `signal/{i}` key.
-    const signals = (inv.signals || [])
-        .map((sig, idx) => ({ sig, key: `signal/${idx}` }))
-        .filter(({ sig, key }) => sig.quote && !merge.isRejected(key));
-
-    const rawCount = inv.data_score?.raw_count ?? collected.length;
-    const sensitiveCount = inv.data_score?.sensitive_count
-        ?? collected.filter((k) => DATA_CATEGORY_META[k]?.sensitive).length;
-
-    // Group legal bases by basis key, preserving first-seen order and the
-    // original array index (needed to build the review sidecar's `base/{i}` key).
-    const byBasis: Record<string, { item: FicheLegalBasis; idx: number }[]> = {};
-    (inv.legal_bases || []).forEach((lb, idx) => {
-        if (merge.isRejected(`base/${idx}`)) return;
-        (byBasis[lb.basis] = byBasis[lb.basis] || []).push({ item: lb, idx });
-    });
-
-    const tr = inv.transfers || { outside_eu: "non_indique", countries: [] };
-    const transferOui = tr.outside_eu === "oui";
-    const transferLabel = transferOui ? t("donneesTransferOui")
-        : tr.outside_eu === "non" ? t("donneesTransferNon") : t("donneesTransferUnknown");
-
-    const content = (
-        <div>
-            {quotesBlock}
-            <SecHead first={!keyQuotes} title={t("donneesTitle")} />
-            {!isPublished && (
-                <div className="umd-card umd-ana-warn mb-5">
-                    <Lock aria-hidden="true" className="w-[18px] h-[18px] text-umd-amber-400 shrink-0" />
-                    <p className="m-0 text-[12.5px] text-umd-slate-600">{t("donneesAiNote")}</p>
-                </div>
-            )}
-
-            <div className="flex gap-3 flex-wrap mb-5">
-                <div className="umd-stat px-5 py-3.5">
-                    <b className="text-2xl">{rawCount}</b><span>{t("donneesStatCollected")}</span>
-                </div>
-                <div className="umd-stat px-5 py-3.5" style={{ borderColor: "var(--red-200)" }}>
-                    <b className="text-2xl" style={{ color: "var(--red-600)" }}>{sensitiveCount}</b><span>{t("donneesStatSensitive")}</span>
-                </div>
-                <div className="umd-stat px-5 py-3.5">
-                    <b className="text-2xl">{grey.length}</b><span>{t("donneesStatGrey")}</span>
-                </div>
-            </div>
-
-            {signals.length > 0 && (
-                <>
-                    <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesSignalsTitle")}</h2>
-                    <div className="flex flex-col gap-2 mb-6">
-                        {signals.map(({ sig, key }) => (
-                            <DataCatRow key={key} anchor={reviewAnchor(key)} focused={focus === key}
-                                label={SIGNAL_LABELS[sig.criterion]?.[l] || sig.criterion} desc=""
-                                quote={merge.quoteFor(key, sig.quote)}
-                                verified={merge.isValidated(key) ? true : sig.quote_verified}
-                                sensitive={false} onShow={show} t={t} />
-                        ))}
-                    </div>
-                </>
-            )}
-
-            <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesCollectTitle")}</h2>
-            <div className="flex flex-col gap-2 mb-6">
-                {collected.map((key) => {
-                    if (merge.isRejected(`cat/${key}`)) return null;
-                    const cat = inv.categories[key];
-                    const meta = DATA_CATEGORY_META[key];
-                    const verified = merge.isValidated(`cat/${key}`) ? true : cat.quote_verified;
-                    return (
-                        <DataCatRow key={key} anchor={reviewAnchor(`cat/${key}`)} focused={focus === `cat/${key}`}
-                            label={meta[l].label}
-                            desc={cat.purpose || meta[l].desc} quote={merge.quoteFor(`cat/${key}`, cat.quote)}
-                            verified={verified} sensitive={meta.sensitive} onShow={show} t={t} />
-                    );
-                })}
-            </div>
-
-            {grey.length > 0 && (
-                <div className="mb-6">
-                    <p className="text-umd-slate-500 text-[12.5px] m-0 mb-2">{t("donneesGreyIntro")}</p>
-                    <div className="flex gap-2 flex-wrap">
-                        {grey.map((key) => (
-                            <span key={key} className="umd-chip umd-chip-neutral">{DATA_CATEGORY_META[key][l].label}</span>
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            {notCollected.length > 0 && (
-                <div className="mb-6">
-                    <p className="text-umd-slate-500 text-[12.5px] m-0 mb-2">{t("donneesNoIntro")}</p>
-                    <div className="flex gap-2 flex-wrap">
-                        {notCollected.map((key) => (
-                            <span key={key} className="umd-chip umd-chip-safe">{DATA_CATEGORY_META[key][l].label}</span>
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            {Object.keys(byBasis).length > 0 && (
-                <>
-                    <h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesLegalTitle")}</h2>
-                    <div className="flex flex-col gap-2.5 mb-6">
-                        {Object.entries(byBasis).map(([basisKey, items]) => (
-                            <LegalGroupCard key={basisKey} basisKey={basisKey} items={items} lang={lang} merge={merge} onShow={show} t={t} />
-                        ))}
-                    </div>
-                </>
-            )}
-
-            {/*<h2 className="umd-heading-3 !text-[18px] mb-3.5">{t("donneesTransferTitle")}</h2>*/}
-            {/*<TransferCard transferOui={transferOui} label={transferLabel}*/}
-            {/*    countries={tr.countries || []} quote={tr.quote} t={t} />*/}
-        </div>
-    );
-    return withPolicy(content);
+    return withPolicy(quotesBlock);
 }
 
 /** The key quotes, with the provenance a reader can check: date verified, archive. */
@@ -2516,35 +2194,6 @@ function KeyQuotesSection({ entry, name, lang, action, t }: {
                 </p>
             )}
         </section>
-    );
-}
-
-function TransferCard({ transferOui, label, countries, quote, t }: {
-    transferOui: boolean; label: string; countries: string[]; quote?: string;
-    t: ReturnType<typeof useT>;
-}) {
-    const [open, setOpen] = useState(false);
-    const hasQuote = Boolean(quote);
-    return (
-        <div className="umd-card px-6 py-5">
-            <div className="flex items-center gap-3 flex-wrap">
-                {transferOui
-                    ? <Globe aria-hidden="true" className="w-[18px] h-[18px] shrink-0" style={{ color: "var(--red-600)" }} />
-                    : <CircleCheck aria-hidden="true" className="w-[18px] h-[18px] text-umd-green-600 shrink-0" />}
-                <p className="m-0 text-[14px] font-semibold flex-1">{label}</p>
-                {hasQuote && (
-                    <button type="button" className="umd-btn umd-btn-ghost umd-btn-sm" onClick={() => setOpen((v) => !v)}>
-                        {open ? t("donneesHideQuote") : t("donneesSeeQuote")}
-                    </button>
-                )}
-            </div>
-            {countries.length > 0 && (
-                <div className="flex gap-1.5 flex-wrap mt-3">
-                    {countries.map((c) => <span key={c} className="umd-chip umd-chip-neutral">{c}</span>)}
-                </div>
-            )}
-            {open && quote && <blockquote className="umd-quotebox mt-3">« {cleanQuote(quote)} »</blockquote>}
-        </div>
     );
 }
 
@@ -2622,7 +2271,7 @@ export default function FicheAvancee({ tab = "ess", ...p }: FicheProps & { tab?:
                 {tab === "droits" && <TabDroits p={p} t={t} />}
                 {tab === "fuites" && <TabFuites p={p} t={t} />}
                 {tab === "fuites" && <TabGouv p={p} t={t} />}
-                {tab === "donnees" && analysis && hasPolicyAnalysis(p) && <TabDonnees a={analysis} lang={lang} merge={merge} focus={focus} keyQuotes={p.keyQuotes} history={p.policyHistory} name={p.name} t={t} />}
+                {tab === "donnees" && analysis && hasPolicyAnalysis(p) && <TabDonnees a={analysis} lang={lang} focus={focus} keyQuotes={p.keyQuotes} history={p.policyHistory} name={p.name} t={t} />}
                 {tab === "donnees" && p.memos.length > 0 && <TermsHistory p={p} t={t} first={!hasPolicyAnalysis(p)} />}
             </div>
 
