@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
 import {
-  forceAllowedFrom, historyKey, isForcedSince, keyQuoteKey, keyQuoteOrder, keyQuotesProposedAt, KEY_QUOTE_TOPICS, plainOf, PUBLISH_ACTION,
+  forceAllowedFrom, FORCED_MAX, historyKey, isForcedSince, keyQuoteKey, keyQuoteOrder, keyQuotesProposedAt, KEY_QUOTE_TOPICS, pendingKeyQuotes, plainOf, todayIso,
 } from "@/scripts/policyQuotes.mjs";
 import type { PolicyChange } from "@/components/company/PolicyHistory";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
@@ -43,7 +43,6 @@ type IndexRow = {
 const CAT_META_INPUT = { CATEGORY_ORDER: [...CATEGORY_ORDER], CATEGORY_META };
 
 /** Unsent verdicts survive a refresh: nothing reaches the server until submit. */
-const todayIso = () => new Date().toISOString().slice(0, 10);
 const draftKey = (slug: string) => `umd-policy-review-draft:${slug}`;
 
 const AVATAR_COLORS = ["#202080", "#4a4fc4", "#09b1ba", "#e84545", "#0b6e90", "#9a6a00", "#2a8a4a"];
@@ -195,8 +194,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         const q = keyQuotes!.quotes[i];
         return {
         key: keyQuoteKey(i), axis: "signalement",
-        kind: `${KEY_QUOTE_TOPICS[q.topic]?.[lang] ?? tt("keyQuoteKind")} · ${tt(KEY_QUOTE_TOPICS[q.topic]?.level === "high" ? "keyQuoteHigh" : "keyQuoteMedium")}`,
-        label: t.t("keyQuoteLabel", { a: keyQuotes!.agent || tt("keyQuoteAgentUnknown") }), quote: q.quote,
+        kind: tt(KEY_QUOTE_TOPICS[q.topic]?.level === "high" ? "keyQuoteHigh" : "keyQuoteMedium"),
+        label: KEY_QUOTE_TOPICS[q.topic]?.[lang] ?? tt("keyQuoteKind"), quote: q.quote,
         // verify-policy-quotes already proved it verbatim on the committed text.
         origVerified: true, span: null, verifyReason: null,
       }; }),
@@ -402,17 +401,6 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     persist({ ...sidecar, items: items_ });
   }, [sidecar, persist]);
 
-  /** Maintainer action (publish). Goes out immediately — it is one click, not a
-   *  session of verdicts. */
-  const setStatus = useCallback((status: ReviewSidecar["status"], action: string) => {
-    if (!sidecar) return;
-    const today = new Date().toISOString().split("T")[0];
-    const next: ReviewSidecar = {
-      ...sidecar, status,
-      reviewers: creditContributor(sidecar.reviewers, name, today, action),
-    };
-    send(next);
-  }, [sidecar, name, send]);
 
   // Open inline editor on one card at a time, seeded with the citation
   // currently shown for it (a previous correction wins over the IA quote).
@@ -459,12 +447,12 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
 
   const det = view === "detail" ? services.find((r) => r.slug === selected) : undefined;
 
-  /** Earliest day the publish button may cover something still waiting, or
-   *  null when everything proposed here is already published or ruled on. */
+  /** Day the next build publishes what is still waiting, or null when
+   *  everything proposed here is already published or ruled on. */
   const publishFrom = useMemo(() => {
     const waiting = [
-      ...(keyQuotes && !isForcedSince(keyQuotesProposedAt(keyQuotes), sidecar) ? [keyQuotesProposedAt(keyQuotes)] : []),
-      ...changes.filter((c, i) => !sidecar?.items[historyKey(i)] && !isForcedSince(c.created_at, sidecar)).map((c) => c.created_at),
+      ...(keyQuotes && pendingKeyQuotes(keyQuotes, sidecar) ? [keyQuotesProposedAt(keyQuotes)] : []),
+      ...changes.filter((c, i) => !sidecar?.items[historyKey(i)] && !isForcedSince(c.created_at)).map((c) => c.created_at),
     ];
     return waiting.length ? forceAllowedFrom(waiting.sort()[0]) : null;
   }, [keyQuotes, changes, sidecar]);
@@ -505,13 +493,10 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   };
   /** Volunteers rank the agent's candidates: the first one kept is featured
    *  on the fiche and the homepage. */
-  const moveKeyQuote = (key: string, delta: -1 | 1) => {
+  const moveKeyQuote = (key: string, to: number) => {
     if (!sidecar || !keyQuotes || !requireName()) return;
-    const order = keyQuoteOrder(keyQuotes, sidecar);
-    const from = order.indexOf(Number(key.split("/")[1]));
-    const to = from + delta;
-    if (to < 0 || to >= order.length) return;
-    [order[from], order[to]] = [order[to], order[from]];
+    const order = keyQuoteOrder(keyQuotes, sidecar).filter((i: number) => i !== Number(key.split("/")[1]));
+    order.splice(to, 0, Number(key.split("/")[1]));
     persist({ ...sidecar, key_quote_order: { order, by: normalizeReviewerName(name), at: new Date().toISOString() } });
   };
   const renderRank = (key: string) => {
@@ -519,12 +504,12 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     const rank = order.indexOf(Number(key.split("/")[1]));
     const featured = order.find((i: number) => sidecar?.items[keyQuoteKey(i)]?.verdict !== "rejected");
     return (
-      <div style={{ display: "flex", gap: 6, alignItems: "center", fontSize: 12, color: "var(--slate-700)" }}>
-        <b>{t.t("rankLabel", { n: String(rank + 1) })}</b>
-        {order[rank] === featured && <span className="umd-chip umd-chip-safe">{tt("rankFeatured")}</span>}
-        <button type="button" className="prv-linkbtn" disabled={rank === 0} aria-label={tt("rankUp")} onClick={() => moveKeyQuote(key, -1)}>↑</button>
-        <button type="button" className="prv-linkbtn" disabled={rank === order.length - 1} aria-label={tt("rankDown")} onClick={() => moveKeyQuote(key, 1)}>↓</button>
-      </div>
+      <label className="prv-rank">
+        <select aria-label={tt("rankLabel")} value={rank} onChange={(e) => moveKeyQuote(key, Number(e.target.value))}>
+          {order.map((_: number, r: number) => <option key={r} value={r}>{r + 1}</option>)}
+        </select>
+        {order[rank] === featured && <span>{tt("rankFeatured")}</span>}
+      </label>
     );
   };
   const renderPlain = (key: string) => {
@@ -591,18 +576,16 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     const group = invGroup(it, sidecar!);
     const shown = shownQuote(it.key, it.quote, sidecar);
     const editing = editingKey === it.key;
-    const border = v?.verdict === "validated" ? "var(--green-200)"
-      : v?.verdict === "rejected" ? "var(--red-200)" : "var(--slate-100)";
     return (
-      <div key={it.key} id={`prv-card-${it.key}`} className="umd-card" style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 8, borderColor: border }}>
+      <div key={it.key} id={`prv-card-${it.key}`} className="umd-card" style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 8, borderColor: "var(--slate-100)", opacity: v?.verdict === "rejected" ? 0.55 : 1 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-          <span className="umd-chip" style={{ fontSize: 10.5, background: "var(--slate-50)", borderColor: "var(--slate-200)", color: "var(--slate-600)" }}>{it.kind}</span>
-          <b style={{ fontSize: 13.5, flex: 1, minWidth: 120 }}>{it.label}</b>
+          {it.key.startsWith("keyquote/") && renderRank(it.key)}
+          <b style={{ fontSize: 13.5 }}>{it.label}</b>
+          <span style={{ fontSize: 11.5, color: "var(--slate-600)", flex: 1, minWidth: 80 }}>{it.kind}</span>
           {group === "verified" && <span className="umd-chip umd-chip-safe" style={{ fontSize: 10 }}>{tt("algoVerified")}</span>}
           {v?.corrected_quote && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("correctedBadge")}</span>}
           {unlocatable.has(it.key) && <span className="umd-chip umd-chip-danger" style={{ fontSize: 10 }}>{tt("quoteNotFound")}</span>}
           {stale.has(it.key) && <span className="umd-chip umd-chip-warn" style={{ fontSize: 10 }}>{tt("staleVerdict")}</span>}
-          {v && <span className={v.verdict === "validated" ? "umd-chip umd-chip-safe" : "umd-chip umd-chip-danger"} style={{ fontSize: 10 }}>{v.verdict === "validated" ? "✓" : "✗"}</span>}
         </div>
         <FieldHint itemKey={it.key} criterion={it.criterion} label={tt("expected")} />
         {inherited && (
@@ -639,7 +622,6 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             « {cleanQuote(shown)} »
           </blockquote>
         )}
-        {it.key.startsWith("keyquote/") && renderRank(it.key)}
         {it.key.startsWith("keyquote/") && renderPlain(it.key)}
         {!editing && unlocatable.has(it.key) && (
           <p className="prv-hint" style={{ color: "var(--red-700, #b91c1c)" }}>{tt("quoteNotFoundHint")}</p>
@@ -703,9 +685,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
           </div>
         ) : (
           <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-            <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 12px", fontSize: 12 }}
-              onClick={() => submitItem(it, "validated", null)}>{tt("keep")}</button>
-            <button className="umd-btn umd-btn-ghost umd-btn-sm" disabled={saving} style={{ padding: "5px 12px", fontSize: 12, color: "var(--red-600)" }}
+            <button className="prv-chip" disabled={saving} data-active={v?.verdict === "validated" ? "true" : undefined}
+              onClick={() => submitItem(it, "validated", null)}>{tt(v?.verdict === "validated" ? "kept" : "keep")}</button>
+            <button className="prv-chip" disabled={saving} data-active={v?.verdict === "rejected" ? "true" : undefined}
               onClick={() => { setRejectingKey(it.key); setNoteDraft(v?.note || ""); setEditingKey(null); }}>{tt("markFalse")}</button>
             {/* A key quote is published verbatim: a wrong one is rejected and re-proposed, never reworded. */}
             {!it.key.startsWith("keyquote/") && !isChange(it.key) && <button type="button" className="prv-linkbtn"
@@ -730,6 +712,8 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
         .prv-aside>summary{list-style:none;cursor:pointer;font-size:11.5px;color:var(--slate-600)}
         .prv-aside>summary::-webkit-details-marker{display:none}
         .prv-aside>summary:hover{color:var(--indigo-700)}
+        .prv-rank{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;color:var(--slate-600)}
+        .prv-rank select{font:inherit;font-size:13px;font-weight:700;color:var(--fg1,#0f172a);border:1.5px solid var(--slate-200);border-radius:8px;padding:2px 6px;background:#fff}
         .prv-linkbtn{border:none;background:none;padding:0;font:inherit;font-size:11.5px;color:var(--indigo-700);cursor:pointer;text-decoration:underline}
       `}</style>
 
@@ -804,9 +788,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
               </div>
               {sidecar && (keyQuotes || changes.length > 0) && (!publishFrom
                 ? <span className="umd-chip umd-chip-safe">{tt("keyQuotesPublished")}</span>
-                : todayIso() >= publishFrom
-                  ? <button className="umd-btn umd-btn-outline umd-btn-sm" disabled={saving} onClick={() => setStatus(sidecar.status, PUBLISH_ACTION)}>{tt("keyQuotesPublish")}</button>
-                  : <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{t.t("keyQuotesPublishFrom", { d: new Date(`${publishFrom}T00:00:00Z`).toLocaleDateString(lang, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) })}</span>)}
+                : <span style={{ fontSize: 12, color: "var(--slate-600)" }}>{todayIso() >= publishFrom ? t.t("keyQuotesPublishNext", { n: String(FORCED_MAX) }) : t.t("keyQuotesPublishFrom", { n: String(FORCED_MAX), d: new Date(`${publishFrom}T00:00:00Z`).toLocaleDateString(lang, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) })}</span>)}
               <div ref={nameFieldRef}>
                 <ReviewerNameField lang={lang} value={name} onChange={setName} />
               </div>
@@ -823,7 +805,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             {(keyQuotes || changes.length > 0) && sidecar && (
               <>
                 <h2 className="umd-heading-3" style={{ fontSize: 17, margin: "0 0 4px" }}>{tt("keyQuotesReviewTitle")}</h2>
-                <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{tt("keyQuotesReviewHint")}</p>
+                <p style={{ margin: "0 0 14px", fontSize: 12.5, color: "var(--slate-600)" }}>{t.t("keyQuotesReviewHint", { a: keyQuotes?.agent || tt("keyQuoteAgentUnknown") })}</p>
                 <div className="prv-split" style={{ marginBottom: 24 }}>
                   {policyText ? (
                     <PolicySourcePane text={policyText.text} activeSpan={activeSpan}
