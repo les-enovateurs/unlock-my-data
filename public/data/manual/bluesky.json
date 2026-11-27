@@ -27,7 +27,6 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote_fr": "Nous pouvons transférer, traiter et stocker toutes les données à caractère personnel que nous collectons partout dans le monde. Les lois en matière de protection des données varient d'un pays à l'autre.",
   "transfer_destination_countries": [
     "unspecified"
   ],
