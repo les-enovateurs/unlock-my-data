@@ -27,7 +27,6 @@
   "response_delay_en": "Automatic response",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote_fr": "",
   "privacy_policy_quote_en": "For the purpose of operating our Services, you agree to our data practices as described in our Privacy Policy, as well as the transfer of your encrypted information and metadata to the United States and other countries where we have or use facilities, service providers or partners. Examples would be Third Party Providers sending you a verification code and processing your support tickets.",
   "transfer_destination_countries": [
     "us",

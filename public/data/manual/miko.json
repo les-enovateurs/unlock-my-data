@@ -20,7 +20,6 @@
   "response_delay_fr": "45 jours après vérification de la demande parentale (suppression des données de l'enfant)",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote_fr": "",
   "transfer_destination_countries": [
     "us",
     "world"
