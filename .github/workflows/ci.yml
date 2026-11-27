@@ -118,6 +118,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
+      - run: npm run generate-data
       - run: npm run lint
 
   unit:
@@ -131,6 +132,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
+      - run: npm run generate-data
       - run: npm run test
 
   e2e:
