@@ -69,6 +69,23 @@ export default function buildPolicyIndex({ root = path.join(SCRIPT_DIR, ".."), n
       history_pending: pendingHistory(changes[slug], side),
     });
   }
+  // The AI inventory pipeline is stopped: new services only have key quotes or
+  // a history, and without a row the review page cannot open them.
+  const indexed = new Set(services.map((r) => r.slug));
+  for (const slug of new Set([...Object.keys(proposals), ...Object.keys(changes)])) {
+    if (indexed.has(slug)) continue;
+    const side = sidecars[slug];
+    services.push({
+      slug, service_name: proposals[slug]?.name || slug, ia_status: "needs_review",
+      has_inventory: false, analyzed_at: null,
+      review_status: deriveStatus({ source: { url_source: "colle_par_benevole" } }, side),
+      needs_count: 0,
+      key_quotes: proposals[slug]?.quotes.length || 0,
+      key_quotes_pending: pendingKeyQuotes(proposals[slug], side),
+      history: changes[slug]?.length || 0,
+      history_pending: pendingHistory(changes[slug], side),
+    });
+  }
   services.sort((a, b) => a.service_name.localeCompare(b.service_name));
 
   // What the site shows: only the key quotes that passed review (policyQuotes.mjs).
