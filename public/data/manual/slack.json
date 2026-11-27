@@ -24,7 +24,7 @@
   "response_delay_en": "1 month according to the GDPR",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Slack peut transférer vos Données personnelles vers d’autres pays que celui dans lequel vous résidez, y compris aux États-Unis. <br> Dans la mesure où les Données personnelles sont transférées à l’étranger, Slack veillera au respect des exigences des lois applicables dans la juridiction concernée, conformément à ses obligations.",
+  "privacy_policy_quote_fr": "Slack peut transférer vos Données personnelles vers d’autres pays que celui dans lequel vous résidez, y compris aux États-Unis. <br> Dans la mesure où les Données personnelles sont transférées à l’étranger, Slack veillera au respect des exigences des lois applicables dans la juridiction concernée, conformément à ses obligations.",
   "privacy_policy_quote_en": "Slack may transfer your personal data to countries other than the one in which you reside, including the United States.<br>To the extent personal data are transferred abroad, Slack will ensure compliance with the requirements of the laws applicable in the relevant jurisdiction, in accordance with its obligations.",
   "transfer_destination_countries": [
     "us",

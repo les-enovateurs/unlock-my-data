@@ -21,7 +21,7 @@
   "response_delay_fr": "Non indiqué (délai RGPD d'un mois applicable)",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "The app collects the following personal data: Location data; Images and videos; Device ID. Location data are required to allow the functioning of Bluetooth technology, which is necessary for app usage. In particular, AIRO® App collects location data to enable communication with the robot, even when the app is closed or not in use.",
+  "privacy_policy_quote_fr": "The app collects the following personal data: Location data; Images and videos; Device ID. Location data are required to allow the functioning of Bluetooth technology, which is necessary for app usage. In particular, AIRO® App collects location data to enable communication with the robot, even when the app is closed or not in use.",
   "transfer_destination_countries": [
     "us",
     "other"
@@ -48,7 +48,7 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "La politique annonce une collecte de localisation « even when the app is closed or not in use », alors que le manifeste ne demande pas ACCESS_BACKGROUND_LOCATION : avec ACCESS_FINE_LOCATION seul, Android ne l'accorde qu'au premier plan.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",

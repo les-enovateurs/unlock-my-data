@@ -33,7 +33,7 @@
   ],
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous n’opérons aucun transfert de vos Données en dehors de l’Union européenne. \n\nToutefois, soucieux de la sécurité et de la confidentialité de vos Données, Nous vous informons que dans l’éventualité où vos Données (à l’exception de vos données de santé et de manière générale, votre dossier médical) seraient transférées hors UE, nous nous engageons à soumettre tous nos prestataires à une obligation de confidentialité.",
+  "privacy_policy_quote_fr": "Nous n’opérons aucun transfert de vos Données en dehors de l’Union européenne. \n\nToutefois, soucieux de la sécurité et de la confidentialité de vos Données, Nous vous informons que dans l’éventualité où vos Données (à l’exception de vos données de santé et de manière générale, votre dossier médical) seraient transférées hors UE, nous nous engageons à soumettre tous nos prestataires à une obligation de confidentialité.",
   "outside_eu_storage": false,
   "better_alternative": false,
   "created_at": "2026-10-11",

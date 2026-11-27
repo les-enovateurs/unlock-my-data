@@ -49,7 +49,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "privacy_policy_quote": "Vos données ne sont pas : vendues ou utilisées pour une finalité autre que celle évoquée précédemment ; transférées vers un pays tiers à l'Union Européenne ou une organisation internationale.",
+  "privacy_policy_quote_fr": "Vos données ne sont pas : vendues ou utilisées pour une finalité autre que celle évoquée précédemment ; transférées vers un pays tiers à l'Union Européenne ou une organisation internationale.",
   "outside_eu_storage": false,
   "comments": "Dispositif de la Région Occitanie / Pyrénées-Méditerranée pour les lycéens et jeunes en formation (offres culturelles, commerciales et services liés à l'établissement). Le site cartejeune.laregion.fr renvoie vers la page RGPD générale de la Région (laregion.fr/RGPD) : les informations sur les droits, le DPD et les transferts viennent de cette page, pas d'une politique spécifique à la Carte Jeune. Ligne d'information indiquée dans l'e-mail de notification de la fuite : 05 32 30 00 40.",
   "comments_en": "Scheme run by the Occitanie / Pyrénées-Méditerranée Region for high-school students and young people in training (cultural and commercial offers, school-related services). The cartejeune.laregion.fr site links to the Region's general GDPR page (laregion.fr/RGPD): information on rights, DPO and transfers comes from that page, not from a Carte Jeune-specific policy. Information line given in the breach notification e-mail: 05 32 30 00 40.",

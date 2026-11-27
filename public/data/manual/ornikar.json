@@ -49,7 +49,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "« Certains de ces prestataires peuvent se trouver en dehors de l’Union Européenne, impliquant un transfert de données, encadré conformément aux garanties prévues par le Chapitre V du RGPD. »",
+  "privacy_policy_quote_fr": "« Certains de ces prestataires peuvent se trouver en dehors de l’Union Européenne, impliquant un transfert de données, encadré conformément aux garanties prévues par le Chapitre V du RGPD. »",
   "outside_eu_storage": true,
   "comments": "Ornikar est la marque commerciale de Marianne Formation (SAS, 170 boulevard de la Villette, Paris). Politique de confidentialité mise à jour le 7 juillet 2026. Transferts hors UE possibles via des prestataires, sans liste de pays. Réponse sous 1 mois (prolongeable de 2 mois). Fuite d'octobre 2024 vérifiée avec l'e-mail de notification reçu par le contributeur (capture disponible) et un article de presse. Pas de sanction CNIL connue.",
   "comments_en": "Ornikar is the brand of Marianne Formation (SAS, 170 boulevard de la Villette, Paris). Privacy policy updated on 7 July 2026. Possible transfers outside the EU through providers, no list of countries. Response within 1 month (extendable by 2 months). October 2024 leak verified with the notification email received by the contributor (screenshot available) and a press article. No known CNIL sanction.",

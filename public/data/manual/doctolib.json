@@ -24,7 +24,7 @@
   "response_delay_en": "1 month according to the RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Personal data may, for the purposes listed in this Agreement, be transferred to entities of the group to which Doctolib belongs, their processors or service providers established in countries benefiting from an adequate level of protection or offering adequate safeguards regarding the protection of privacy and the fundamental rights and freedoms of individuals, in accordance with the applicable legislation.",
+  "privacy_policy_quote_fr": "Personal data may, for the purposes listed in this Agreement, be transferred to entities of the group to which Doctolib belongs, their processors or service providers established in countries benefiting from an adequate level of protection or offering adequate safeguards regarding the protection of privacy and the fundamental rights and freedoms of individuals, in accordance with the applicable legislation.",
   "transfer_destination_countries": [
     "us",
     "fr",

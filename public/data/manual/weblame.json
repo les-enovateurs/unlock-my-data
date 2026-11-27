@@ -20,7 +20,7 @@
   "data_access_via_other": false,
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "privacy_policy_quote": "La SASU WEBLAME n’édite pas la plateforme, ne gère pas les témoignages et n’accède à aucune donnée personnelle des utilisateurs.\nSon activité est exclusivement dédiée à :\n• la formation professionnelle ;\n• la sensibilisation aux violences et au harcèlement dans les organisations ;\n• les interventions en entreprise et auprès d’institutions ;",
+  "privacy_policy_quote_fr": "La SASU WEBLAME n’édite pas la plateforme, ne gère pas les témoignages et n’accède à aucune donnée personnelle des utilisateurs.\nSon activité est exclusivement dédiée à :\n• la formation professionnelle ;\n• la sensibilisation aux violences et au harcèlement dans les organisations ;\n• les interventions en entreprise et auprès d’institutions ;",
   "transfer_destination_countries": [
     "fr",
     "lt",

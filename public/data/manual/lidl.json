@@ -21,7 +21,7 @@
   "address_export": "Lidl SNC, 1 rue de Hanovre 92240 Châtenay-Malabry",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Dans certaines circonstances, il peut s'avérer nécessaire de transférer vos données à caractère personnel à des destinataires situés dans un ou plusieurs pays tiers en dehors de l'Union européenne (UE) ou de l'Espace économique européen (EEE).",
+  "privacy_policy_quote_fr": "Dans certaines circonstances, il peut s'avérer nécessaire de transférer vos données à caractère personnel à des destinataires situés dans un ou plusieurs pays tiers en dehors de l'Union européenne (UE) ou de l'Espace économique européen (EEE).",
   "transfer_destination_countries": [
     "us",
     "europe",

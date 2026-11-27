@@ -10,7 +10,7 @@ export interface ReviewFieldDefinition {
 
 export const REVIEW_MARKDOWN_FIELDS = new Set([
   "sanction_details",
-  "privacy_policy_quote",
+  "privacy_policy_quote_fr",
   "privacy_policy_quote_en",
   "comments",
   "comments_en",

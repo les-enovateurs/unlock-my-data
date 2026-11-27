@@ -39,7 +39,7 @@ Voici la liste des champs et leur explication :
 | `sanctioned_by_cnil`             | Booléen : l’entreprise a-t-elle été sanctionnée par la CNIL ?                                                                       |
 | `sanction_details`               | Détails et références aux sanctions de la CNIL.                                                                                     |
 | `data_transfer_policy`           | Booléen : l’entreprise a-t-elle une politique de transfert de données ?                                                             |
-| `privacy_policy_quote`           | Citation pertinente de la politique de confidentialité.                                                                             |
+| `privacy_policy_quote_fr`        | Citation pertinente de la politique de confidentialité.                                                                             |
 | `transfer_destination_countries` | Liste des pays vers lesquels les données peuvent être transférées.                                                                  |
 | `outside_eu_storage`             | Les données personnelles sont-elles stockées hors UE ?                                                                              |
 | `comments`                       | Commentaires supplémentaires.                                                                                                       |
@@ -136,7 +136,7 @@ Voici la liste des champs et leur explication :
      "sanctioned_by_cnil": false,
      "sanction_details": "",
      "data_transfer_policy": false,
-     "privacy_policy_quote": "",
+     "privacy_policy_quote_fr": "",
      "transfer_destination_countries": "",
      "outside_eu_storage": "",
      "comments": "",

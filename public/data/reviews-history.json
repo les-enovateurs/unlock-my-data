@@ -133,7 +133,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Je ne sais pas trop... peut-être rajouter cela:\nL’Association Coabuse, et plus précisément son responsable de traitement Franck Favre, est la seule destinataire de vos données personnelles. Elle s’engage à en préserver la confidentialité la plus absolue. Aucune donnée collectée ne sera jamais transmise à un tiers, même en cas de match.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T22:52:56.913Z",
@@ -185,7 +185,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Dans la mesure du possible, on prend soin de traiter tes données au sein de l’Espace Économique Européen (EEE). Cependant, comme certains des prestataires de service des Martines vivent dans des pays en dehors de l’EEE, il se pourrait que tes données fassent un petit tour là-bas. Si on décide de faire des trucs avec des prestataires hors de l’EEE, et qu’on doit partager tes données, on te mettra au courant dès que tu t’inscris à l’événement",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-10-21T23:12:41.353Z",
@@ -307,7 +307,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "ENTOURAGE SOLUTIONS s'engage à traiter les données à caractère personnel conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après désigné le RGPD), à la loi française n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (telle que modifiée) et à l'ensemble des autres lois applicables.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-07-24T18:14:35.606Z",
@@ -387,7 +387,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "ENTOURAGE SOLUTIONS s'engage à traiter les données à caractère personnel conformément au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données (ci-après désigné le RGPD), à la loi française n° 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (telle que modifiée) et à l'ensemble des autres lois applicables.",
         "reviewer_name": "dominique_usa",
         "timestamp": "2026-07-24T18:26:18.954Z",
@@ -453,7 +453,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "La politique annonce une collecte de localisation « even when the app is closed or not in use », alors que le manifeste ne demande pas ACCESS_BACKGROUND_LOCATION : avec ACCESS_FINE_LOCATION seul, Android ne l'accorde qu'au premier plan.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -542,14 +542,14 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Chaîne de traitement de la voix : « We use the audio recorded by the Device of the Voice Interaction to transcribe that speech into text using a third-party speech-to-text service. The audio is then promptly deleted. » ; « We do this by passing that information to a third-party artificial intelligence language model that produces responses to the child's conversational prompts » ; « which is then passed to a text-to-speech service to produce audio output ». Aucun sous-traitant n'est nommé dans cette section : il faut la table des opérateurs, plus bas, pour les identifier.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Conservation : « Audio files generated from a Voice Interaction are not stored; the audio streams through our systems for transcription and is then discarded. » ; « These conversations are only retained by the third party artificial intelligence service through the length of a particular conversation and this third party does not retain information for any purposes, including for training purposes. » ; « We may retain a written representation of the Voice Interaction, including personal information provided by the child as part of those interactions for up to 90 days (unless earlier deleted by the parent), to study and process them to improve Device for other users. »",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -603,7 +603,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Aucune citation retenue : la politique publiée sur lexibook.ai ne dit rien de l'enregistrement vocal, de la durée de conservation, des sous-traitants IA ni des transferts. Elle déclare couvrir « www.lexibook.com » — pas le site des jouets IA. Dernière mise à jour affichée : octobre 2025.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -666,7 +666,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "La FAQ produit (https://lexibook.ai/fr/pages/frequently-asked-questions, relevée le 2026-09-18) affirme ce que la politique de confidentialité ne dit nulle part : « Les données audio et de conversation sont traitées en toute sécurité et uniquement dans la mesure nécessaire pour fournir le service » ; « Les parents peuvent demander la suppression des données liées au compte à tout moment via le tableau de bord des parents ou le service client » ; « Le jouet n'écoute que lorsqu'il est activé par l'enfant ou lors d'interactions prévues. Des indicateurs visuels ou sonores permettent [de le signaler] ». Aucune durée de conservation, aucun sous-traitant, aucun pays de destination n'y figure — et ces engagements ne sont pas repris dans le document contractuel.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -699,7 +699,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Aucune citation retenue : la politique ne traite ni du micro, ni de la caméra, ni des enfants, ni des transferts hors pays, alors que le produit embarque les deux capteurs et vise le grand public familial. Aucune mention de consentement parental.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -760,21 +760,21 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Conservation, extraits du « Data Retention and Deletion Policy » annexé : identifiants de compte « Retained while the account is Active. Deleted 24 months after the account becomes Inactive » ; consentement parental « Retained for 8 years after the account is closed » ; voix et images « Ephemeral. Voice inputs, and image data are processed in real time and deleted once the request has been fulfilled » ; transcriptions « saved without Personal Data. Deleted along with account deletion » ; sauvegardes écrasées « every 90 days ». Un compte est inactif après 24 mois sans connexion, avec préavis de 30 jours avant suppression.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Le seul tiers nommé dans toute la politique est Rakuten Advertising, cité en fin de section IX pour la collecte d'adresses IP, d'identifiants et de navigation à des fins de personnalisation publicitaire. Les sous-traitants qui traitent la parole de l'enfant restent anonymes : « providers of speech-to-text technologies », « Prompts for AI models ».",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Portée de l'engagement sur l'IA : « Child's Personal data is not used for any AI model training » ne vise que les données de l'enfant. La politique générale conserve pour sa part le droit d'« Undertaking research for technological development and demonstration » et d'améliorer la reconnaissance vocale avec les enregistrements (« We may also use this data to improve our voice recognition software »).",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -842,7 +842,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -910,7 +910,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -985,7 +985,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Destinataires tiers cités pour presque chaque finalité : VTech Electronics Limited et LeapFrog Enterprises, Inc. La politique ne nomme aucun sous-traitant technique — « agence web, hébergeur », « plateforme CRM externalisée », « service tiers d'analyse d'audience » — et ne publie pas de liste de sous-traitants. Les paiements sont annoncés comme entièrement délégués : « VTech ne traite ni ne stocke de coordonnées bancaires. »",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",
@@ -1006,7 +1006,7 @@
         "resolved": false
       },
       {
-        "field": "privacy_policy_quote",
+        "field": "privacy_policy_quote_fr",
         "message": "Données de la fonction de chat listées par la politique : « Identifiant utilisateur, adresse e-mail, Nom, Contenu du message de chat (texte, photo, video, message vocal), Historique du journal de chat, analyse du chat (temps de chat, compteurs, participants, résultats, temps actif/non actif, etc.) ». Seul le contenu est effacé au bout d'un mois ; l'analyse du chat suit la durée de vie du compte.",
         "reviewer_name": "Jérémy Pastouret",
         "timestamp": "2026-09-18T00:00:00.000Z",

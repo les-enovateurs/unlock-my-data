@@ -24,7 +24,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": false,
-  "privacy_policy_quote": "Nous nous engageons à ne pas transférer ou vendre vos données à caractère personnel à un tiers et nos sous-traitants et partenaires réseaux sont contraints de le respecter également. Nous gérons en interne nos newsletters, ainsi vos emails ne sont pas fournis à ce genre de service tiers.",
+  "privacy_policy_quote_fr": "Nous nous engageons à ne pas transférer ou vendre vos données à caractère personnel à un tiers et nos sous-traitants et partenaires réseaux sont contraints de le respecter également. Nous gérons en interne nos newsletters, ainsi vos emails ne sont pas fournis à ce genre de service tiers.",
   "transfer_destination_countries": [
     "fr"
   ],

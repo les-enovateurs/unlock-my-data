@@ -60,7 +60,7 @@ describe('validateServiceJSON', () => {
       updated_at: '2026-02-24',
       review: [
         {
-          field: 'privacy_policy_quote',
+          field: 'privacy_policy_quote_fr',
           message: 'À modifier',
           reviewer: 'mod@example.com',
           timestamp: '2026-02-24T10:30:00Z',

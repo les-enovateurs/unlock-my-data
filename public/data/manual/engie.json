@@ -51,7 +51,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Vos données sont stockées au sein de l'Union européenne, soit par ENGIE soit par ses prestataires. Certaines données font l'objet d'un traitement par certains prestataires situés en dehors de l'Union européenne, dans un pays ne bénéficiant pas d'une décision d'adéquation rendue par la Commission européenne.",
+  "privacy_policy_quote_fr": "Vos données sont stockées au sein de l'Union européenne, soit par ENGIE soit par ses prestataires. Certaines données font l'objet d'un traitement par certains prestataires situés en dehors de l'Union européenne, dans un pays ne bénéficiant pas d'une décision d'adéquation rendue par la Commission européenne.",
   "outside_eu_storage": true,
   "comments": "Fiche basée sur la politique ENGIE particuliers (mise à jour le 30 septembre 2026), responsable : ENGIE SA. Aucune adresse e-mail générale de DPO n'est donnée pour les clients particuliers : formulaire en ligne ou courrier. La pièce d'identité requise n'est pas précisée. Date de la fuite : date de l'article BleepingComputer (27 octobre 2026).",
   "comments_en": "Based on the ENGIE residential customer privacy policy (updated 30 September 2026); controller: ENGIE SA. No general DPO e-mail is given for residential customers: online form or post. ID requirements are not specified. Leak date: date of the BleepingComputer article (27 October 2026).",

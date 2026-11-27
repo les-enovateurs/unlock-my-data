@@ -27,7 +27,7 @@
   "response_delay_en": "Automatic response",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Lorsque vous accédez à notre site web ou à nos Services, vos données personnelles peuvent être transférées vers nos serveurs aux États-Unis ou vers d'autres pays situés en dehors de l'Espace Economique Européen (« EEE ») et du Royaume-Uni. Il peut s'agir d'une transmission directe de vos données personnelles, ou d'un transfert effectué par nous-mêmes ou par un tiers.",
+  "privacy_policy_quote_fr": "Lorsque vous accédez à notre site web ou à nos Services, vos données personnelles peuvent être transférées vers nos serveurs aux États-Unis ou vers d'autres pays situés en dehors de l'Espace Economique Européen (« EEE ») et du Royaume-Uni. Il peut s'agir d'une transmission directe de vos données personnelles, ou d'un transfert effectué par nous-mêmes ou par un tiers.",
   "privacy_policy_quote_en": "When you access our website or our Services, your personal data may be transferred to our servers in the United States or to other countries located outside the European Economic Area (\"EEA\") and the United Kingdom. This may involve a direct transmission of your personal data, or a transfer carried out by us or by a third party.",
   "transfer_destination_countries": [
     "gb",

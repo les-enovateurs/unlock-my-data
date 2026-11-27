@@ -32,7 +32,7 @@ export function ficheTabIds(p: FicheProps): FicheTabId[] {
 
 export function hasPolicyAnalysis(p: FicheProps) {
     return Boolean(p.analysis && !analysisExtractionFailed(p.analysis)
-        && (p.analysis.data_inventory || p.keyQuotes));
+        && p.keyQuotes);
 }
 
 export function ficheHref(lang: string, slug: string, tab: FicheTabId = "ess") {

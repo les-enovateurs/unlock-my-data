@@ -37,14 +37,32 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Certains prestataires et partenaires de SNCF Connect peuvent être établis hors de l’Espace économique européen (« EEE ») ou accéder à vos données depuis un pays situé hors de l’EEE.\nLorsqu’un tel transfert est nécessaire, SNCF Connect s’assure qu’il est encadré par un mécanisme reconnu par la réglementation applicable et que des garanties appropriées sont mises en œuvre afin d’assurer un niveau de protection adéquat de vos données personnelles.\n\nPour les transferts hors de l’UE ou si les données sont stockées en Europe par une société établie en dehors de l’UE ces garanties peuvent notamment reposer sur :\n-Une décision d’adéquation adoptée par la Commission européenne (pour les transferts vers les États-Unis ou si les données sont stockées en Europe par une société américaine, SNCF Connect exige que ces sociétés soient certifiés conformément à la décision d’adéquation de la Commission européenne relative au Data Privacy Framework UE–États-Unis).\n-La signature des clauses contractuelles types adoptées par la Commission européenne ;                                      -Le cas échéant, des mesures complémentaires techniques, organisationnelles ou contractuelles, telles que le chiffrement, la pseudonymisation, des restrictions d’accès ou des mesures de cloisonnement des données.",
+  "privacy_policy_quote_fr": "Certains prestataires et partenaires de SNCF Connect peuvent être établis hors de l’Espace économique européen (« EEE ») ou accéder à vos données depuis un pays situé hors de l’EEE.\nLorsqu’un tel transfert est nécessaire, SNCF Connect s’assure qu’il est encadré par un mécanisme reconnu par la réglementation applicable et que des garanties appropriées sont mises en œuvre afin d’assurer un niveau de protection adéquat de vos données personnelles.\n\nPour les transferts hors de l’UE ou si les données sont stockées en Europe par une société établie en dehors de l’UE ces garanties peuvent notamment reposer sur :\n-Une décision d’adéquation adoptée par la Commission européenne (pour les transferts vers les États-Unis ou si les données sont stockées en Europe par une société américaine, SNCF Connect exige que ces sociétés soient certifiés conformément à la décision d’adéquation de la Commission européenne relative au Data Privacy Framework UE–États-Unis).\n-La signature des clauses contractuelles types adoptées par la Commission européenne ;                                      -Le cas échéant, des mesures complémentaires techniques, organisationnelles ou contractuelles, telles que le chiffrement, la pseudonymisation, des restrictions d’accès ou des mesures de cloisonnement des données.",
   "outside_eu_storage": true,
   "comments": "La politique de confidentialité donne le lien d'un \"formulaire de contact\", lequel renvoie en réalité à la FAQ.\nPour accéder au formulaire, il faut passer par l'adresse \"https://tout-oui.sncf.com/\" et écrire \"Supprimer mes données personnelles\" et cliquer sur \"formulaire de gestions de mes données personnelles\".",
   "comments_en": "The Privacy Policy gives a link for an \"electric form\" to fill, but this link lead to the Questions page. To access to the form, go to the website \"https://tout-oui.sncf.com/\", type \"Supprimer mes données personnelles\" and clic on \"Formulaire de gestions de mes données personnelles\".\nIf you first ask the Chatbot to answer you in english, then you can type \"Delete my personal data\" and click on the \"Personal Data Management Form\"",
   "better_alternative": false,
   "created_at": "2026-11-16",
   "created_by": "noel.b",
-  "status": "draft",
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "transfer_destination_countries",
+      "message": "À compléter : la version anglaise de la politique (transfer-of-data) nomme explicitement les destinations hors UE — États-Unis, via les sous-traitants ACI Worldwide (prévention de la fraude) et Integral Ad Science / IAS (analyse publicitaire).",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-26T22:52:52.015Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Vide alors que l'URL EN est renseignée. Passage officiel à coller : « Our policy is not to transfer data outside the European Union, except in the following cases: Fraud prevention: ACI Worldwide, SNCF Connect subcontractor, uses data in the United States; Advertising analysis and identification of advertising fraud: Integral Ad Science (IAS) uses data in the United States. »",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-26T22:52:53.325Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "wassym",
+  "updated_at": "2026-11-26",
   "playstore": {
     "id": "com.vsct.vsc.mobile.horaireetresa.android",
     "name": "SNCF Connect: Trains & trajets"

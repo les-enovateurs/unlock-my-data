@@ -35,7 +35,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "En cas de transfert hors de l'Union Européenne de données personnelles, des garanties sont prises pour assurer un bon niveau de protection de ces données. Elles seront uniquement communiquées aux destinataires qui ont besoin d’y avoir accès pour la réalisation de leur mission. Le transfert est limité (i) aux pays listés par la Commission Européenne comme protégeant suffisamment les données ou (ii) aux destinataires respectant soit les clauses contractuelles types de la Commission Européenne soit des règles internes d'entreprise (BCR).",
+  "privacy_policy_quote_fr": "En cas de transfert hors de l'Union Européenne de données personnelles, des garanties sont prises pour assurer un bon niveau de protection de ces données. Elles seront uniquement communiquées aux destinataires qui ont besoin d’y avoir accès pour la réalisation de leur mission. Le transfert est limité (i) aux pays listés par la Commission Européenne comme protégeant suffisamment les données ou (ii) aux destinataires respectant soit les clauses contractuelles types de la Commission Européenne soit des règles internes d'entreprise (BCR).",
   "transfer_destination_countries": [
     "in",
     "ma",
