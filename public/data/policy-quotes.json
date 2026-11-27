@@ -1262,5 +1262,112 @@
       "estimated_at": "2026-11-27",
       "source": "https://api.ecologits.ai/v1beta/estimations"
     }
+  },
+  "signal": {
+    "name": "Signal",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-27",
+    "policy_url": "https://signal.org/legal/",
+    "text_sha256": "7fdbcf5e5bc8c4d805d373690924a601136e86ab325bcbab3b922486cc94c0cd",
+    "live_check": {
+      "at": "2026-11-27T20:40:07+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261127204059/https://signal.org/legal/",
+    "quotes": [
+      {
+        "quote": "Signal cannot decrypt or otherwise access the content of your messages or calls.",
+        "quote_en": "Signal cannot decrypt or otherwise access the content of your messages or calls.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Signal ne peut pas lire vos messages ni écouter vos appels.",
+          "en": "Signal cannot read your messages or listen to your calls."
+        }
+      },
+      {
+        "quote": "Signal does not sell, rent or monetize your personal data or content in any way – ever.",
+        "quote_en": "Signal does not sell, rent or monetize your personal data or content in any way – ever.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Signal ne vend pas, ne loue pas et ne tire aucun revenu de vos données ou de vos contenus.",
+          "en": "Signal does not sell, rent or make money from your data or your content."
+        }
+      },
+      {
+        "quote": "Information from the contacts on your device may be cryptographically hashed and transmitted to the server in order to determine which of your contacts are registered.",
+        "quote_en": "Information from the contacts on your device may be cryptographically hashed and transmitted to the server in order to determine which of your contacts are registered.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Les numéros de votre carnet d’adresses peuvent être envoyés, sous forme chiffrée, aux serveurs de Signal pour savoir lesquels de vos contacts utilisent l’application.",
+          "en": "Numbers from your address book may be sent, in scrambled form, to Signal’s servers to find out which of your contacts use the app."
+        }
+      },
+      {
+        "quote": "For the purpose of operating our Services, you agree to our data practices as described in our Privacy Policy, as well as the transfer of your encrypted information and metadata to the United States and other countries where we have or use facilities, service providers or partners.",
+        "quote_en": "For the purpose of operating our Services, you agree to our data practices as described in our Privacy Policy, as well as the transfer of your encrypted information and metadata to the United States and other countries where we have or use facilities, service providers or partners.",
+        "topic": "transferts",
+        "plain": {
+          "fr": "En utilisant Signal, vous acceptez que vos informations chiffrées et vos métadonnées partent aux États-Unis et dans d’autres pays.",
+          "en": "By using Signal, you accept that your encrypted information and metadata go to the United States and other countries."
+        }
+      },
+      {
+        "quote": "You must be at least 13 years old to use our Services.",
+        "quote_en": "You must be at least 13 years old to use our Services.",
+        "topic": "mineurs",
+        "plain": {
+          "fr": "Signal est ouvert dès 13 ans.",
+          "en": "Signal is open to users from age 13."
+        }
+      }
+    ],
+    "en": {
+      "policy_url": "https://signal.org/legal/",
+      "text_sha256": "7fdbcf5e5bc8c4d805d373690924a601136e86ab325bcbab3b922486cc94c0cd",
+      "live_check": {
+        "at": "2026-11-27T20:41:17+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261127204059/https://signal.org/legal/"
+    },
+    "usage": {
+      "models": {
+        "claude-opus-5-5": {
+          "output_tokens": 5287
+        }
+      },
+      "sessions": 1,
+      "impact": {
+        "energy_kwh": [
+          0.0161,
+          0.0311
+        ],
+        "gwp_kgco2eq": [
+          0.00645,
+          0.0122
+        ],
+        "water_l": [
+          0.0522,
+          0.125
+        ]
+      },
+      "estimated_at": "2026-11-27",
+      "source": "https://api.ecologits.ai/v1beta/estimations"
+    }
   }
 }
