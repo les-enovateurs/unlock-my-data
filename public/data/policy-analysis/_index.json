@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T17:56:15.509Z",
+  "generated_at": "2026-11-27T18:34:16.087Z",
   "services": [
     {
       "slug": "action",
@@ -568,8 +568,8 @@
       "analyzed_at": "2026-07-23",
       "review_status": "analyse_en_attente",
       "needs_count": 0,
-      "key_quotes": 0,
-      "key_quotes_pending": 0,
+      "key_quotes": 6,
+      "key_quotes_pending": 6,
       "history": 0,
       "history_pending": 0
     },

@@ -13,6 +13,7 @@
   "easy_access_data": 4,
   "need_id_card": true,
   "details_required_documents": "Carte d'identité",
+  "confidentiality_policy_url": "https://flo.health/fr/politique-de-confidentialite",
   "confidentiality_policy_url_en": "https://flo.health/privacy-policy",
   "data_access_via_postal": false,
   "data_access_via_form": true,
