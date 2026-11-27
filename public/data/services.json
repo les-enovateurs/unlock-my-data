@@ -3254,6 +3254,40 @@
   },
   {
     "mode": 1,
+    "slug": "macif",
+    "name": "Macif",
+    "logo": "/img/logos/macif.webp",
+    "easy_access_data": 4,
+    "contacts": [
+      {
+        "type": "postal",
+        "value": "MACIF, Protection des Données Personnelles, 1 rue Jacques Vandier, 79000 Niort",
+        "purposes": [
+          "export",
+          "delete"
+        ],
+        "comment_fr": "Délégué à la protection des données (DPO)",
+        "comment_en": "Data Protection Officer (DPO)"
+      }
+    ],
+    "recipient_address": null,
+    "how_to_export": "",
+    "url_delete": null,
+    "need_id_card": null,
+    "data_access_via_postal": true,
+    "data_access_via_form": true,
+    "data_access_via_email": null,
+    "url_export": "https://www.macif.fr/assurance/particuliers/donnees-personnelles/gestion-des-donnees-personnelles",
+    "last_update_breach": null,
+    "country_code": "fr",
+    "exodus": false,
+    "better_alternative": false,
+    "better_alternative_explication_fr": "",
+    "better_alternative_explication_en": "",
+    "alternatives": []
+  },
+  {
+    "mode": 1,
     "slug": "maiia",
     "name": "Maiia",
     "logo": "/img/logos/maiia.webp",
