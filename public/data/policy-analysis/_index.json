@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T17:18:21.027Z",
+  "generated_at": "2026-11-27T17:56:15.509Z",
   "services": [
     {
       "slug": "action",
@@ -89,6 +89,19 @@
       "needs_count": 0,
       "key_quotes": 0,
       "key_quotes_pending": 0,
+      "history": 0,
+      "history_pending": 0
+    },
+    {
+      "slug": "app-elles",
+      "service_name": "App-Elles",
+      "ia_status": "needs_review",
+      "has_inventory": false,
+      "analyzed_at": null,
+      "review_status": "analyse_en_attente",
+      "needs_count": 0,
+      "key_quotes": 5,
+      "key_quotes_pending": 5,
       "history": 0,
       "history_pending": 0
     },
@@ -1570,7 +1583,7 @@
       "review_status": "analyse_en_attente",
       "needs_count": 0,
       "key_quotes": 7,
-      "key_quotes_pending": 7,
+      "key_quotes_pending": 0,
       "history": 0,
       "history_pending": 0
     },
