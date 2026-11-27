@@ -158,7 +158,9 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
     setActiveKey(null);
     // Loaded on demand, one file per session (~150 kB): shipping 15 MB of
     // policy text to every visitor to serve one reviewer would be absurd.
-    setPolicyText(a ? await loadPolicyText(slug, a?.source?.content_sha256 || "") : null);
+    const entry = kq[slug];
+    setPolicyText(a || entry
+      ? await loadPolicyText(slug, a?.source?.content_sha256 || entry?.text_sha256 || "") : null);
   }, []);
 
   const backToQueue = useCallback((syncUrl = true) => {
