@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import HomePageContent from "@/components/HomePageContent";
+import HomeRecentActivity from "@/components/home/HomeRecentActivity";
 
 export const metadata: Metadata = {
   alternates: {
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomePageContent lang="fr" />;
+  return <HomePageContent lang="fr" recent={<HomeRecentActivity lang="fr" />} />;
 }

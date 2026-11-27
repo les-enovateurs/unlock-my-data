@@ -6,11 +6,13 @@ import Translator from "@/components/tools/t";
 import dict from "@/i18n/Home.json";
 import BrandLogo from "@/components/BrandLogo";
 import HomeKeyQuotes from "@/components/home/HomeKeyQuotes";
+import type { ReactNode } from "react";
 import type { Lang } from "@/context/LanguageContext";
 
-type Props = { lang: Lang };
+// `recent` comes from the server page: it reads every fiche, which must not ship in this client bundle.
+type Props = { lang: Lang; recent?: ReactNode };
 
-export default function HomePageContent({ lang }: Props) {
+export default function HomePageContent({ lang, recent }: Props) {
     const t = new Translator(dict, lang);
 
     const pillars = [
@@ -207,6 +209,8 @@ export default function HomePageContent({ lang }: Props) {
                     </div>
                 </div>
             </section>
+
+            {recent}
 
             {/* ── NEWS ─────────────────────────────────────────────── */}
             {/*<section aria-labelledby="news-heading" className="py-16 md:py-20" style={{ background: "var(--slate-50)" }}>*/}
