@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import Translator from "@/components/tools/t";
 import dict from "@/i18n/PolicyReview.json";
 import {
-  forceAllowedFrom, historyKey, isForcedSince, keyQuoteKey, keyQuotesProposedAt, KEY_QUOTE_TOPICS, plainOf, PUBLISH_ACTION,
+  forceAllowedFrom, historyKey, isForcedSince, keyQuoteKey, keyQuoteOrder, keyQuotesProposedAt, KEY_QUOTE_TOPICS, plainOf, PUBLISH_ACTION,
 } from "@/scripts/policyQuotes.mjs";
 import type { PolicyChange } from "@/components/company/PolicyHistory";
 import type { ReviewSidecar, RejectReason } from "@/components/review/reviewTypes";
@@ -191,13 +191,15 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
   // ---- derived (detail) ----
   const items: InvItem[] = useMemo(
     () => (sidecar ? [
-      ...(keyQuotes?.quotes || []).map((q, i): InvItem => ({
+      ...(keyQuotes ? keyQuoteOrder(keyQuotes, sidecar) : []).map((i: number): InvItem => {
+        const q = keyQuotes!.quotes[i];
+        return {
         key: keyQuoteKey(i), axis: "signalement",
         kind: `${KEY_QUOTE_TOPICS[q.topic]?.[lang] ?? tt("keyQuoteKind")} · ${tt(KEY_QUOTE_TOPICS[q.topic]?.level === "high" ? "keyQuoteHigh" : "keyQuoteMedium")}`,
         label: t.t("keyQuoteLabel", { a: keyQuotes!.agent || tt("keyQuoteAgentUnknown") }), quote: q.quote,
         // verify-policy-quotes already proved it verbatim on the committed text.
         origVerified: true, span: null, verifyReason: null,
-      })),
+      }; }),
       // The memo is what the reviewer rules on: a rewritten memo makes the verdict stale.
       ...changes.map((c, i): InvItem => ({
         key: historyKey(i), axis: "signalement", kind: tt("changeKind"),
@@ -501,6 +503,30 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
       [key]: { fr: fr.trim(), en: en.trim(), by: normalizeReviewerName(name), at: new Date().toISOString() } } });
     setPlainEdit(null);
   };
+  /** Volunteers rank the agent's candidates: the first one kept is featured
+   *  on the fiche and the homepage. */
+  const moveKeyQuote = (key: string, delta: -1 | 1) => {
+    if (!sidecar || !keyQuotes || !requireName()) return;
+    const order = keyQuoteOrder(keyQuotes, sidecar);
+    const from = order.indexOf(Number(key.split("/")[1]));
+    const to = from + delta;
+    if (to < 0 || to >= order.length) return;
+    [order[from], order[to]] = [order[to], order[from]];
+    persist({ ...sidecar, key_quote_order: { order, by: normalizeReviewerName(name), at: new Date().toISOString() } });
+  };
+  const renderRank = (key: string) => {
+    const order = keyQuoteOrder(keyQuotes!, sidecar);
+    const rank = order.indexOf(Number(key.split("/")[1]));
+    const featured = order.find((i: number) => sidecar?.items[keyQuoteKey(i)]?.verdict !== "rejected");
+    return (
+      <div style={{ display: "flex", gap: 6, alignItems: "center", fontSize: 12, color: "var(--slate-700)" }}>
+        <b>{t.t("rankLabel", { n: String(rank + 1) })}</b>
+        {order[rank] === featured && <span className="umd-chip umd-chip-safe">{tt("rankFeatured")}</span>}
+        <button type="button" className="prv-linkbtn" disabled={rank === 0} aria-label={tt("rankUp")} onClick={() => moveKeyQuote(key, -1)}>↑</button>
+        <button type="button" className="prv-linkbtn" disabled={rank === order.length - 1} aria-label={tt("rankDown")} onClick={() => moveKeyQuote(key, 1)}>↓</button>
+      </div>
+    );
+  };
   const renderPlain = (key: string) => {
     const i = Number(key.split("/")[1]);
     const plain = plainOf(keyQuotes!.quotes[i], sidecar, i);
@@ -613,6 +639,7 @@ export default function PolicyReviewPage({ lang }: { lang: "fr" | "en" }) {
             « {cleanQuote(shown)} »
           </blockquote>
         )}
+        {it.key.startsWith("keyquote/") && renderRank(it.key)}
         {it.key.startsWith("keyquote/") && renderPlain(it.key)}
         {!editing && unlocatable.has(it.key) && (
           <p className="prv-hint" style={{ color: "var(--red-700, #b91c1c)" }}>{tt("quoteNotFoundHint")}</p>

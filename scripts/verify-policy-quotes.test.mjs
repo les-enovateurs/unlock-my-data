@@ -53,6 +53,17 @@ test("publishing without review works after the delay, never over a rejection", 
     assert.deepEqual(publishedKeyQuotes(proposal, { items, ...publish("2026-11-16") }), []);
     assert.deepEqual(publishedKeyQuotes(proposal, { items, ...publish("2026-11-17") }), [{ quote: "A", validated_by: null }]);
 });
+test("published quotes follow the volunteers' order, stale orders are ignored", () => {
+    const items = { "keyquote/0": verdict("validated", "Théo"), "keyquote/1": verdict("validated", "Théo") };
+    const order = (at) => ({ order: [1, 0], by: "Théo", at });
+    assert.deepEqual(publishedKeyQuotes(proposal, { items, key_quote_order: order("2026-11-12T00:00:00Z") }).map((q) => q.quote), ["B", "A"]);
+    assert.deepEqual(publishedKeyQuotes({ ...proposal, updated_at: "2026-11-13" }, { items, key_quote_order: order("2026-11-12T00:00:00Z") }).map((q) => q.quote), ["A", "B"]);
+});
+test("publishing without review keeps only the top FORCED_MAX quotes", () => {
+    const many = { ...proposal, quotes: ["A", "B", "C", "D", "E"].map((quote) => ({ quote })) };
+    const items = { "keyquote/0": verdict("rejected", "Théo") };
+    assert.deepEqual(publishedKeyQuotes(many, { items, ...publish("2026-11-17") }).map((q) => q.quote), ["B", "C", "D"]);
+});
 test("the delay restarts when the proposal is edited", () => {
     assert.deepEqual(publishedKeyQuotes({ ...proposal, updated_at: "2026-11-15" }, publish("2026-11-17")), []);
 });

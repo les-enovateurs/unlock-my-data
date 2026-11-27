@@ -43,20 +43,43 @@ function isPending(sidecar, key, proposedAt) {
     return !sidecar?.items?.[key] && !isForcedSince(proposedAt, sidecar);
 }
 
+/** The agent writes every candidate (up to 8) and volunteers pick: publishing
+ *  without review keeps only the strongest few, never the whole list. */
+export const FORCED_MAX = 3;
+
+/** Quote indexes in the order volunteers set in the review tool, else the
+ *  agent's. An order saved before the proposal last changed points at other
+ *  quotes, so it is ignored. */
+export function keyQuoteOrder(entry, sidecar) {
+    const all = entry.quotes.map((_, i) => i);
+    const saved = sidecar?.key_quote_order;
+    if (!saved || saved.at < keyQuotesProposedAt(entry)) return all;
+    const kept = saved.order.filter((i) => all.includes(i));
+    return [...new Set([...kept, ...all])];
+}
+
 /** The "En clair" line as last rewritten in the review tool, else as proposed. */
 export function plainOf(q, sidecar, i) {
     const p = sidecar?.key_quote_plain?.[keyQuoteKey(i)];
     return p ? { fr: p.fr, en: p.en } : q.plain;
 }
 
-/** The quotes a visitor may see, each saying who checked it (null = forced). */
+/** The quotes a visitor may see, in the volunteers' order (the first one is
+ *  featured), each saying who checked it (null = forced). */
 export function publishedKeyQuotes(entry, sidecar) {
     const proposedAt = keyQuotesProposedAt(entry);
-    return entry.quotes
-        .map((q, i) => ({ ...q, ...(q.plain && { plain: plainOf(q, sidecar, i) }),
-            ...(sidecar?.key_quote_plain?.[keyQuoteKey(i)] && { plain_by: sidecar.key_quote_plain[keyQuoteKey(i)].by }),
-            validated_by: validatorOf(sidecar, keyQuoteKey(i)) }))
-        .filter((_, i) => isShown(sidecar, keyQuoteKey(i), proposedAt));
+    const forced = isForcedSince(proposedAt, sidecar);
+    const verdictOf = (i) => sidecar?.items?.[keyQuoteKey(i)]?.verdict;
+    return keyQuoteOrder(entry, sidecar)
+        .filter((i) => verdictOf(i) !== "rejected")
+        .filter((i, rank) => verdictOf(i) === "validated" || (forced && rank < FORCED_MAX))
+        .map((i) => {
+            const q = entry.quotes[i];
+            const rewrite = sidecar?.key_quote_plain?.[keyQuoteKey(i)];
+            return { ...q, ...(q.plain && { plain: plainOf(q, sidecar, i) }),
+                ...(rewrite && { plain_by: rewrite.by }),
+                validated_by: validatorOf(sidecar, keyQuoteKey(i)) };
+        });
 }
 
 /** Quotes nobody has ruled on yet: what keeps a service in the "à relire" tab. */
