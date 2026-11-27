@@ -23,7 +23,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Vos données personnelles — les informations nécessaires au bon fonctionnement de votre compte et de notre solution de transfert de fichiers — sont stockées chiffrées (AES-256) au sein de l’Espace Économique Européen, quelle que soit votre localisation.\n\nÀ ne pas confondre avec vos fichiers transférés : eux sont stockés au plus proche de vous, ou dans la région de votre choix avec un compte Premium ou supérieur.",
+  "privacy_policy_quote_fr": "Vos données personnelles — les informations nécessaires au bon fonctionnement de votre compte et de notre solution de transfert de fichiers — sont stockées chiffrées (AES-256) au sein de l’Espace Économique Européen, quelle que soit votre localisation.\n\nÀ ne pas confondre avec vos fichiers transférés : eux sont stockés au plus proche de vous, ou dans la région de votre choix avec un compte Premium ou supérieur.",
   "transfer_destination_countries": [
     "de",
     "fr",

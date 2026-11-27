@@ -31,10 +31,28 @@
   "response_delay_fr": "Dossier disponible rapidemment (dès le lendemain parfois) et pendant 15 jours avant de devoir faire une nouvelle demande.",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "OÙ TRAITONS-NOUS LES INFORMATIONS ?\nEpic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez.\nLes lois en matière de protection des données dans ces pays peuvent être différentes de celles du pays où vous vivez. Lorsque nous transférons vos informations en dehors du pays où elles ont été collectées, nous nous appuyons sur des mécanismes juridiques appropriés pour soutenir le transfert et mettre en œuvre des mesures de protection techniques, organisationnelles et physiques pour sécuriser vos informations. Ces mesures comprennent des clauses contractuelles types (telles que les clauses contractuelles types de la Commission européenne) et, le cas échéant, des décisions d’adéquation par les autorités réglementaires.\nLorsque la loi l’autorise, votre utilisation des Services Epic nous autorise à traiter vos informations dans tout pays où nous exerçons nos activités, y compris aux États-Unis. Pour en savoir plus sur l’entité Epic responsable de l’exploitation des Services Epic que vous utilisez, veuillez consulter la section 12 (Comment nous contacter ?).",
+  "privacy_policy_quote_fr": "OÙ TRAITONS-NOUS LES INFORMATIONS ?\nEpic Games, Inc. est basée aux États-Unis, mais nous opérons à l’échelle mondiale afin de pouvoir fournir aux utilisateurs du monde entier une meilleure expérience sur les Services Epic. Cela signifie qu’Epic peut traiter, stocker et transférer vos informations en dehors du pays où vous vivez.\nLes lois en matière de protection des données dans ces pays peuvent être différentes de celles du pays où vous vivez. Lorsque nous transférons vos informations en dehors du pays où elles ont été collectées, nous nous appuyons sur des mécanismes juridiques appropriés pour soutenir le transfert et mettre en œuvre des mesures de protection techniques, organisationnelles et physiques pour sécuriser vos informations. Ces mesures comprennent des clauses contractuelles types (telles que les clauses contractuelles types de la Commission européenne) et, le cas échéant, des décisions d’adéquation par les autorités réglementaires.\nLorsque la loi l’autorise, votre utilisation des Services Epic nous autorise à traiter vos informations dans tout pays où nous exerçons nos activités, y compris aux États-Unis. Pour en savoir plus sur l’entité Epic responsable de l’exploitation des Services Epic que vous utilisez, veuillez consulter la section 12 (Comment nous contacter ?).",
   "outside_eu_storage": true,
   "better_alternative": false,
   "created_at": "2026-11-12",
   "created_by": "noel.b",
-  "status": "draft"
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "privacy_policy_quote_en",
+      "message": "Vide alors que l'URL EN est renseignée. Passage officiel à coller : « WHERE DO WE PROCESS INFORMATION? Epic Games, Inc. is based in the United States, but we operate globally to help provide users all around the world with a better experience on the Epic Services. This means that Epic may process, store, and transfer your information outside the country where you live. »",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-26T22:54:20.140Z",
+      "resolved": false
+    },
+    {
+      "field": "transfer_destination_countries",
+      "message": "À renseigner au minimum : États-Unis — le siège d'Epic Games, Inc. est à Cary (Caroline du Nord) et les données y sont traitées. La politique évoque un traitement mondial sans lister d'autres pays précis, donc les États-Unis sont la seule destination identifiable.",
+      "reviewer_name": "wassym",
+      "timestamp": "2026-11-26T22:54:21.447Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "wassym",
+  "updated_at": "2026-11-26"
 }

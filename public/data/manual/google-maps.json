@@ -18,7 +18,7 @@
   "sanction_details": "Sanction CNIL GOOGLE LLC et GOOGLE IRELAND LIMITED du 31 décembre 2021:<br>* Manquement au recueil de consentement",
   "sanction_details_en": "Sanction CNIL GOOGLE LLC and GOOGLE IRELAND LIMITED on December 31, 2021:<br>* Lack of consent collection",
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous disposons de serveurs aux quatre coins du monde<br> Il est donc possible que vos informations soient traitées par des serveurs situés en dehors de votre pays de résidence<br>",
+  "privacy_policy_quote_fr": "Nous disposons de serveurs aux quatre coins du monde<br> Il est donc possible que vos informations soient traitées par des serveurs situés en dehors de votre pays de résidence<br>",
   "privacy_policy_quote_en": "We have servers all around the world<br> It is therefore possible that your information is processed by servers located outside your country of residence<br>",
   "transfer_destination_countries": [
     "unspecified"

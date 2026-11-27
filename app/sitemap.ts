@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import services from "@/public/data/services.json";
 import { PUBLISHED_RELEASES } from "@/data/pressReleases";
-import { ficheTabStaticParams } from "@/components/company/manual";
+import { ficheLastChangeAt, ficheTabStaticParams } from "@/components/company/manual";
 import { ficheHref } from "@/components/company/ficheTabs";
 
 export const dynamic = "force-static";
@@ -27,22 +27,23 @@ const STATIC_PAIRS: [string, string][] = [
     ["/politique-confidentialite/", "/privacy-policy/"],
 ];
 
-function entries([fr, en]: [string, string]): MetadataRoute.Sitemap {
+function entries([fr, en]: [string, string], lastModified?: string): MetadataRoute.Sitemap {
     const languages = { "fr-FR": SITE_URL + fr, "en-US": SITE_URL + en };
-    return [fr, en].map((path) => ({ url: SITE_URL + path, alternates: { languages } }));
+    return [fr, en].map((path) => ({ url: SITE_URL + path, lastModified, alternates: { languages } }));
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const pairs: [string, string][] = [...STATIC_PAIRS];
+    const sitemap = STATIC_PAIRS.flatMap((pair) => entries(pair));
     for (const { slug } of services) {
-        pairs.push([ficheHref("fr", slug), ficheHref("en", slug)]);
+        const lastModified = await ficheLastChangeAt(slug);
+        sitemap.push(...entries([ficheHref("fr", slug), ficheHref("en", slug)], lastModified));
         for (const { tab } of await ficheTabStaticParams(slug)) {
-            pairs.push([ficheHref("fr", slug, tab), ficheHref("en", slug, tab)]);
+            sitemap.push(...entries([ficheHref("fr", slug, tab), ficheHref("en", slug, tab)], lastModified));
         }
-        pairs.push([`/supprimer-mes-donnees/${slug}/`, `/delete-my-data/${slug}/`]);
+        sitemap.push(...entries([`/supprimer-mes-donnees/${slug}/`, `/delete-my-data/${slug}/`]));
     }
-    for (const { slug } of PUBLISHED_RELEASES) {
-        pairs.push([`/presse/${slug}/`, `/press/${slug}/`]);
+    for (const { slug, iso } of PUBLISHED_RELEASES) {
+        sitemap.push(...entries([`/presse/${slug}/`, `/press/${slug}/`], iso));
     }
-    return pairs.flatMap(entries);
+    return sitemap;
 }

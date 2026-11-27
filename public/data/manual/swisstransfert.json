@@ -24,7 +24,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Fournir ou exécuter nos services\nNous utilisons des services tels que Checkout ou PayPal pour offrir différentes options de paiement, Twilio pour envoyer les SMS de validation en deux étapes et MaxMind pour prévenir la fraude lors des paiements.\n\nAméliorer nos services, notre site ou nos publicités\nAvec votre consentement, nous mesurons l'audience de notre site avec Matomo, hébergé sur nos propres serveurs, et nous utilisons les outils de nos partenaires publicitaires pour mesurer l'efficacité de nos publicités.\nSécuriser notre site et afficher les avis de nos clientsNous utilisons ALTCHA et Google reCAPTCHA pour protéger nos formulaires, ainsi que Trustindex pour afficher les avis de nos clients.",
+  "privacy_policy_quote_fr": "Fournir ou exécuter nos services\nNous utilisons des services tels que Checkout ou PayPal pour offrir différentes options de paiement, Twilio pour envoyer les SMS de validation en deux étapes et MaxMind pour prévenir la fraude lors des paiements.\n\nAméliorer nos services, notre site ou nos publicités\nAvec votre consentement, nous mesurons l'audience de notre site avec Matomo, hébergé sur nos propres serveurs, et nous utilisons les outils de nos partenaires publicitaires pour mesurer l'efficacité de nos publicités.\nSécuriser notre site et afficher les avis de nos clientsNous utilisons ALTCHA et Google reCAPTCHA pour protéger nos formulaires, ainsi que Trustindex pour afficher les avis de nos clients.",
   "transfer_destination_countries": [
     "us",
     "fr",

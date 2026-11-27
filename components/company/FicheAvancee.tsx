@@ -524,6 +524,7 @@ const TR: Record<string, Record<string, string>> = {
         keyQuotesPrev: "Phrase précédente",
         keyQuotesPage: "Phrase {i} sur {n}",
         keyQuotesArchive: "Copie archivée le {d}",
+        keyQuotesImpact: "Faire relever ces phrases par une IA a consommé {wh} Wh et émis {co2} g de CO₂ (estimation EcoLogits).",
     },
     en: {
         back: "Back to the catalog",
@@ -781,6 +782,7 @@ const TR: Record<string, Record<string, string>> = {
         keyQuotesPrev: "Previous sentence",
         keyQuotesPage: "Sentence {i} of {n}",
         keyQuotesArchive: "Archived copy from {d}",
+        keyQuotesImpact: "Having an AI pick these sentences used {wh} Wh and emitted {co2} g of CO₂ (EcoLogits estimate).",
     },
 };
 
@@ -2173,6 +2175,8 @@ function KeyQuotesSection({ entry, name, lang, action, t }: {
     t: ReturnType<typeof useT>;
 }) {
     const checked = entry.live_check?.at;
+    const impact = entry.usage?.impact;
+    const range = ([min, max]: number[]) => `${Math.round(min * 1000)}–${Math.round(max * 1000)}`;
     return (
         <section className="mb-7">
             <SecHead first title={t("keyQuotesTitle")} sub={t("keyQuotesSub", { n: name })} />
@@ -2182,6 +2186,11 @@ function KeyQuotesSection({ entry, name, lang, action, t }: {
             {entry.archive_url && checked && (
                 <p className="text-[12px] text-umd-slate-600 mt-2.5 m-0">
                     <a href={entry.archive_url} rel="noopener noreferrer" target="_blank">{t("keyQuotesArchive", { d: fmtDate(checked, lang) })}</a>
+                </p>
+            )}
+            {impact && (
+                <p className="text-[12px] text-umd-slate-600 mt-1 m-0">
+                    {t("keyQuotesImpact", { wh: range(impact.energy_kwh), co2: range(impact.gwp_kgco2eq) })}
                 </p>
             )}
         </section>

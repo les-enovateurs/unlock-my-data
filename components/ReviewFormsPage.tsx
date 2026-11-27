@@ -61,7 +61,7 @@ interface FullServiceData extends ReviewService {
   sanctioned_by_cnil?: boolean;
   sanction_details?: string;
   data_transfer_policy?: boolean;
-  privacy_policy_quote?: string;
+  privacy_policy_quote_fr?: string;
   privacy_policy_quote_en?: string;
   transfer_destination_countries?: string[];
   outside_eu_storage?: boolean;
@@ -107,7 +107,7 @@ const FIELD_CATEGORIES = {
     icon: Shield,
     iconClass: "text-accent",
     iconBgClass: "bg-accent/10",
-    fields: ["confidentiality_policy_url_fr", "confidentiality_policy_url_en", "privacy_policy_quote", "privacy_policy_quote_en",
+    fields: ["confidentiality_policy_url_fr", "confidentiality_policy_url_en", "privacy_policy_quote_fr", "privacy_policy_quote_en",
       "data_transfer_policy", "transfer_destination_countries",
       "outside_eu_storage", "sanctioned_by_cnil", "sanction_details"]
   },

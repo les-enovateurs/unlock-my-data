@@ -20,7 +20,7 @@
   "address_export": "Service clients Action Parc du Pont de Flandre  Le Beauvaisis – bât⁠. 028  11 rue de Cambrai  75019 Paris",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Action a recours à des tiers, comme des fournisseurs de services techniques, afin de proposer nos produits et services⁠. Il se peut que de ce fait, vos données à caractère personnel soient traitées dans des pays en dehors de l’Espace économique européen ⁠(EEE⁠)⁠.",
+  "privacy_policy_quote_fr": "Action a recours à des tiers, comme des fournisseurs de services techniques, afin de proposer nos produits et services⁠. Il se peut que de ce fait, vos données à caractère personnel soient traitées dans des pays en dehors de l’Espace économique européen ⁠(EEE⁠)⁠.",
   "transfer_destination_countries": [
     "unspecified"
   ],

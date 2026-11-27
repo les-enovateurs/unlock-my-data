@@ -37,7 +37,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Nous pouvons être amenés à transmettre vos données à des sous-traitants afin de réaliser les services proposés. Dans un tel cas, Kiabi reste responsable de l’usage de vos données qui sera fait par les sous-traitants et s’assure de leur respect des normes en vigueur. Notamment, Kiabi met tout en œuvre pour s’assurer de leur respect des normes de sécurité.",
+  "privacy_policy_quote_fr": "Nous pouvons être amenés à transmettre vos données à des sous-traitants afin de réaliser les services proposés. Dans un tel cas, Kiabi reste responsable de l’usage de vos données qui sera fait par les sous-traitants et s’assure de leur respect des normes en vigueur. Notamment, Kiabi met tout en œuvre pour s’assurer de leur respect des normes de sécurité.",
   "outside_eu_storage": false,
   "better_alternative": false,
   "created_at": "2026-10-13",

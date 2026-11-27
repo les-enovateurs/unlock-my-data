@@ -20,7 +20,7 @@
   "response_delay_fr": "45 jours après vérification de la demande parentale (suppression des données de l'enfant)",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "Transferts : « Vous acceptez que toutes les informations que nous traitons puissent être transférées, traitées et stockées n'importe où dans le monde, y compris, sans s'y limiter, aux États-Unis ou dans d'autres pays, dont les lois sur la protection des données peuvent différer de celles de votre pays de résidence. » — Écoute : le robot « écoute en permanence son mot-clé “Hey, Miko”, qui active le mode écoute, et enregistre en continu pendant les dix secondes qui suivent la fin de la phrase de l'utilisateur » ; « il est possible que des sons d'ambiance, dont les voix d'autres personnes à proximité, soient captés pendant qu'un utilisateur parle au robot Miko ». La politique reporte sur le foyer l'obligation d'informer ces tiers et de recueillir leur consentement. — Effacement : « Les fichiers audio sont supprimés immédiatement après transcription, ne sont partagés avec aucun tiers et ne sont pas conservés par Miko. » — IA : « Les données personnelles de l'enfant ne sont utilisées pour l'entraînement d'aucun modèle d'IA. » — Biométrie : les données de visage et de voix sont conservées « pas plus de trois ans à compter de la dernière date d'utilisation ». — Suivi publicitaire : « nous ne répondons pas aux signaux DNT (Do Not Track) et ne les honorons pas », mais « nous n'employons aucun traceur publicitaire (tels que les pixels, etc.) sur le robot Miko à des fins de ciblage ou de reciblage des enfants ». — Preuve de consentement parental : conservée « pendant 8 ans après la fermeture du compte ».",
+  "privacy_policy_quote_fr": "Transferts : « Vous acceptez que toutes les informations que nous traitons puissent être transférées, traitées et stockées n'importe où dans le monde, y compris, sans s'y limiter, aux États-Unis ou dans d'autres pays, dont les lois sur la protection des données peuvent différer de celles de votre pays de résidence. » — Écoute : le robot « écoute en permanence son mot-clé “Hey, Miko”, qui active le mode écoute, et enregistre en continu pendant les dix secondes qui suivent la fin de la phrase de l'utilisateur » ; « il est possible que des sons d'ambiance, dont les voix d'autres personnes à proximité, soient captés pendant qu'un utilisateur parle au robot Miko ». La politique reporte sur le foyer l'obligation d'informer ces tiers et de recueillir leur consentement. — Effacement : « Les fichiers audio sont supprimés immédiatement après transcription, ne sont partagés avec aucun tiers et ne sont pas conservés par Miko. » — IA : « Les données personnelles de l'enfant ne sont utilisées pour l'entraînement d'aucun modèle d'IA. » — Biométrie : les données de visage et de voix sont conservées « pas plus de trois ans à compter de la dernière date d'utilisation ». — Suivi publicitaire : « nous ne répondons pas aux signaux DNT (Do Not Track) et ne les honorons pas », mais « nous n'employons aucun traceur publicitaire (tels que les pixels, etc.) sur le robot Miko à des fins de ciblage ou de reciblage des enfants ». — Preuve de consentement parental : conservée « pendant 8 ans après la fermeture du compte ».",
   "transfer_destination_countries": [
     "us",
     "world"
@@ -68,21 +68,21 @@
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Conservation, extraits du « Data Retention and Deletion Policy » annexé : identifiants de compte « Retained while the account is Active. Deleted 24 months after the account becomes Inactive » ; consentement parental « Retained for 8 years after the account is closed » ; voix et images « Ephemeral. Voice inputs, and image data are processed in real time and deleted once the request has been fulfilled » ; transcriptions « saved without Personal Data. Deleted along with account deletion » ; sauvegardes écrasées « every 90 days ». Un compte est inactif après 24 mois sans connexion, avec préavis de 30 jours avant suppression.",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Le seul tiers nommé dans toute la politique est Rakuten Advertising, cité en fin de section IX pour la collecte d'adresses IP, d'identifiants et de navigation à des fins de personnalisation publicitaire. Les sous-traitants qui traitent la parole de l'enfant restent anonymes : « providers of speech-to-text technologies », « Prompts for AI models ».",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",
       "resolved": false
     },
     {
-      "field": "privacy_policy_quote",
+      "field": "privacy_policy_quote_fr",
       "message": "Portée de l'engagement sur l'IA : « Child's Personal data is not used for any AI model training » ne vise que les données de l'enfant. La politique générale conserve pour sa part le droit d'« Undertaking research for technological development and demonstration » et d'améliorer la reconnaissance vocale avec les enregistrements (« We may also use this data to improve our voice recognition software »).",
       "reviewer_name": "Jérémy Pastouret",
       "timestamp": "2026-09-18T00:00:00.000Z",

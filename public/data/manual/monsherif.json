@@ -23,7 +23,7 @@
   "response_delay_fr": "1 mois conformément au RGPD",
   "sanctioned_by_cnil": false,
   "data_transfer_policy": true,
-  "privacy_policy_quote": "En raison de la dimension internationale de la fourniture des services par MONSHERIF®, notamment par l’intervention de sous-traitants et sociétés tierces, la collecte et le traitement des données visées ci-dessus sont susceptibles d’impliquer leur transfert vers des pays non-membres de l’Espace Économique Européen (EEE), dont les législations en matière de protection des données à caractère personnel diffèrent de celles de l’Union Européenne.**",
+  "privacy_policy_quote_fr": "En raison de la dimension internationale de la fourniture des services par MONSHERIF®, notamment par l’intervention de sous-traitants et sociétés tierces, la collecte et le traitement des données visées ci-dessus sont susceptibles d’impliquer leur transfert vers des pays non-membres de l’Espace Économique Européen (EEE), dont les législations en matière de protection des données à caractère personnel diffèrent de celles de l’Union Européenne.**",
   "transfer_destination_countries": [
     "unspecified"
   ],
