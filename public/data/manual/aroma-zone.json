@@ -44,7 +44,25 @@
   "better_alternative": false,
   "created_at": "2026-11-11",
   "created_by": "wassym",
-  "status": "draft",
+  "status": "changes_requested",
+  "review": [
+    {
+      "field": "url_export",
+      "message": "J'ai regardé la page web. On doit choisir le type de question dans des listes déroulantes qui concernent toutes les produits ou la société. Pas d'option \"autre\"pour poser une question sur les données perso... Cette option me semblent trompeuse ???",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-27T15:47:44.437Z",
+      "resolved": false
+    },
+    {
+      "field": "privacy_policy_quote_fr",
+      "message": "Klaviyo et Cheetah Messaging sont aux USA.",
+      "reviewer_name": "dominique_usa",
+      "timestamp": "2026-11-27T15:55:18.446Z",
+      "resolved": false
+    }
+  ],
+  "updated_by": "dominique_usa",
+  "updated_at": "2026-11-27",
   "playstore": {
     "id": "com.aromazone.app",
     "name": "Aroma-Zone : Beauté & Soins"
