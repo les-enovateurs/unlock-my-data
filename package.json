@@ -39,6 +39,7 @@
     "enrich-missions-alerts": "node ./scripts/enrich-missions-alerts.mjs",
     "load-apk-lab": "node ./scripts/load-apk-lab.mjs",
     "verify-policy-quotes": "node scripts/verify-policy-quotes.mjs",
+    "guide-key-quotes": "node scripts/guide-key-quotes.mjs",
     "test:policy-quotes": "node --test scripts/verify-policy-quotes.test.mjs"
   },
   "dependencies": {
