@@ -7,7 +7,7 @@ on:
     branches: [ main, master, 'fiche-**' ]
   # The private APK analysis repository signals a fresh dataset here. The data
   # itself never travels through this runner: it is dropped straight on the
-  # deploy server over SSH, and the rebuild below picks it up via `prebuild`.
+  # deploy server over SSH, and the rebuild below picks it up via `npm run build`.
   repository_dispatch:
     types: [ apk-lab-published ]
   workflow_dispatch:
@@ -118,6 +118,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
+      - run: npm run generate-data
       - run: npm run lint
 
   unit:
@@ -131,6 +132,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: ./.github/actions/setup
+      - run: npm run generate-data
       - run: npm run test
 
   e2e:

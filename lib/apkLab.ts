@@ -119,7 +119,7 @@ export function readManifest(dir: string = DATA_DIR): ApkLabManifest {
     if (!Array.isArray(raw.apps)) return ABSENT;
     return { ...ABSENT, ...raw };
   } catch {
-    // No manifest at all means `npm run prebuild` never ran here. Treated as
+    // No manifest at all means `npm run build` never ran here. Treated as
     // "no dataset" rather than thrown: the rest of the site does not depend on
     // this one.
     return ABSENT;

@@ -103,7 +103,7 @@ export default function loadApkLab({
   return { hydrated: true, app_count: copied.length, reason: null };
 }
 
-// Direct invocation from `prebuild`.
+// Direct invocation from `npm run build`.
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))) {
   loadApkLab();
 }
