@@ -4,6 +4,23 @@ Build, validation, and automation scripts for Unlock My Data.
 
 ## Available Scripts
 
+### `guide-key-quotes.mjs`
+
+Annotated screenshots of the key-quote review (section VII of the contributor
+guide) and a 2-page volunteer PDF printed from that section. Replay it after
+any change to the review page.
+
+```bash
+npm run dev                                          # another terminal
+BASE_URL=http://localhost:3000 npm run guide-key-quotes
+```
+
+Writes `public/img/guide/citations-{fr,en}-*.webp` (commit them) and
+`tmp/guide-citations-cles/citations-cles-{fr,en}.pdf` (share by hand).
+Uses the Chromium already in the Playwright cache — do not run
+`playwright install`. `SLUG=<service>` changes the example service (it needs
+pending key quotes).
+
 ### `validate-data.js`
 
 Comprehensive data validation for the Unlock My Data project.

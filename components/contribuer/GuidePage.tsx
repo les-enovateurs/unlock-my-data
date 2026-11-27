@@ -10,6 +10,7 @@ import {
     ShieldAlert,
     Sparkles,
     Smartphone,
+    Quote,
     Search,
     Lightbulb,
     ExternalLink,
@@ -110,6 +111,7 @@ const STR: Record<Lang, GuideStrings> = {
             { id: "sanctions-transferts", n: "IV", label: "Sanctions et transferts de données" },
             { id: "alternatives", n: "V", label: "Alternatives recommandées" },
             { id: "application-mobile", n: "VI", label: "Application mobile" },
+            { id: "citations-cles", n: "VII", label: "Vérifier les citations clés" },
         ],
         ctaTitle: "Prêt·e à contribuer ?",
         ctaBody: "Gardez ce guide ouvert dans un onglet pendant que vous remplissez la fiche.",
@@ -440,6 +442,85 @@ const STR: Record<Lang, GuideStrings> = {
                         caption="Clic droit → « Copier l'adresse du lien »."
                     />
                 </section>
+
+                {/* VII */}
+                <section id="citations-cles" className="guide-sec">
+                    <h2 className="guide-h2">
+                        <span className="guide-h2-ic"><Quote className="w-[18px] h-[18px]" /></span>
+                        <span><span className="guide-h2-num">VII.</span> Vérifier les citations clés</span>
+                    </h2>
+                    <p>
+                        Pour chaque service, un agent IA propose 5 à 8 phrases recopiées mot pour mot dans sa
+                        politique de confidentialité. Rien n&apos;est publié sans un regard humain : vous gardez
+                        les phrases qui comptent, vous écartez les autres et vous choisissez leur ordre. Pas besoin
+                        de compte, ni de connaissances juridiques : 10 minutes par service suffisent.
+                    </p>
+                    <p>
+                        Ça se passe sur la page{" "}
+                        <Link href="/contribuer/revue-confidentialite" style={{ color: "var(--indigo-700)" }}>
+                            Vérification par un humain — Citations clés
+                        </Link>.
+                    </p>
+
+                    <h3 className="guide-h3">a. Choisir un service</h3>
+                    <p>
+                        Écrivez d&apos;abord votre pseudo dans « Vous êtes » : c&apos;est lui qui vous crédite dans
+                        le classement des contributeurs. Puis cliquez sur un service de l&apos;onglet « À relire ».
+                    </p>
+                    <Figure
+                        src={`${IMG}/citations-fr-1-queue.webp`}
+                        alt="File des services à relire, avec le champ pseudo"
+                        caption="Le pseudo d'abord, puis le service."
+                    />
+
+                    <h3 className="guide-h3">b. Vérifier chaque citation</h3>
+                    <p>
+                        Cliquez sur une citation : le passage s&apos;éclaire en jaune dans la politique, à gauche.
+                        Lisez les phrases autour et posez-vous trois questions :
+                    </p>
+                    <ul className="guide-ul">
+                        <li>La phrase est-elle bien dans le texte, telle quelle ?</li>
+                        <li>Est-elle sortie de son contexte ? La phrase d&apos;avant ou d&apos;après ne dit-elle pas le contraire ?</li>
+                        <li>Apprend-elle quelque chose d&apos;utile à une personne qui utilise le service ?</li>
+                    </ul>
+                    <p>
+                        Trois oui : <strong>Garder</strong>. Sinon : <strong>Écarter</strong>. Un nouveau clic
+                        annule. Une citation ne se corrige pas : elle est publiée mot pour mot, donc si elle est
+                        fausse, on l&apos;écarte.
+                    </p>
+                    <p>
+                        Le chiffre à gauche du titre règle l&apos;ordre sur la fiche ; la première citation gardée
+                        (★) est mise à la une sur la fiche et sur la page d&apos;accueil. La ligne « En clair » est
+                        notre traduction : si elle exagère ou reste floue, cliquez sur « modifier ». Une phrase
+                        courte, factuelle, sans opinion, qui ne dit rien de plus que la citation.
+                    </p>
+                    <Figure
+                        src={`${IMG}/citations-fr-3-card.webp`}
+                        alt="Une citation cliquée, surlignée dans la politique, avec les boutons Garder et Écarter"
+                        caption="Cliquer, vérifier dans le texte, puis Garder ou Écarter."
+                    />
+
+                    <h3 className="guide-h3">c. Publier</h3>
+                    <p>
+                        Vos choix restent sur votre appareil tant que vous n&apos;avez pas cliqué sur{" "}
+                        <strong>Publier</strong>, en bas de page. Un seul clic à la fin suffit ; vous pouvez aussi
+                        publier une partie et revenir plus tard. L&apos;équipe relit l&apos;envoi, et les citations
+                        gardées apparaissent sur la fiche à la mise en ligne suivante.
+                    </p>
+                    <Figure
+                        src={`${IMG}/citations-fr-4-publish.webp`}
+                        alt="Barre du bas : décisions enregistrées et bouton Publier"
+                        caption="Publier une fois, quand vous avez fini."
+                    />
+                    <Tip>
+                        Sans réponse au bout de 7 jours, les 3 premières citations sont publiées d&apos;office. La
+                        date est affichée en haut du service : votre relecture passe avant, à tout moment.
+                    </Tip>
+                    <Figure
+                        src={`${IMG}/citations-fr-2-header.webp`}
+                        alt="En-tête du service avec la date de publication automatique"
+                    />
+                </section>
             </>
         ),
     },
@@ -459,6 +540,7 @@ const STR: Record<Lang, GuideStrings> = {
             { id: "sanctions-transferts", n: "IV", label: "Sanctions and data transfers" },
             { id: "alternatives", n: "V", label: "Recommended alternatives" },
             { id: "application-mobile", n: "VI", label: "Mobile application" },
+            { id: "citations-cles", n: "VII", label: "Checking key quotes" },
         ],
         ctaTitle: "Ready to contribute?",
         ctaBody: "Keep this guide open in a tab while you fill in the entry.",
@@ -778,6 +860,86 @@ const STR: Record<Lang, GuideStrings> = {
                         src={`${IMG}/playstore-copier-lien.webp`}
                         alt="Context menu: Copy link address"
                         caption="Right-click → “Copy link address”."
+                    />
+                </section>
+
+                {/* VII */}
+                <section id="citations-cles" className="guide-sec">
+                    <h2 className="guide-h2">
+                        <span className="guide-h2-ic"><Quote className="w-[18px] h-[18px]" /></span>
+                        <span><span className="guide-h2-num">VII.</span> Checking key quotes</span>
+                    </h2>
+                    <p>
+                        For each service, an AI agent proposes 5 to 8 sentences copied word for word from its
+                        privacy policy. Nothing is published without a human check: you keep the sentences that
+                        matter, set the others aside and choose their order. No account or legal knowledge
+                        needed: 10 minutes per service is enough.
+                    </p>
+                    <p>
+                        It happens on the{" "}
+                        <Link href="/contribute/privacy-review" style={{ color: "var(--indigo-700)" }}>
+                            Human verification — Key quotes
+                        </Link>{" "}
+                        page.
+                    </p>
+
+                    <h3 className="guide-h3">a. Pick a service</h3>
+                    <p>
+                        First type your nickname in “You are”: it credits you in the contributor ranking. Then
+                        click a service in the “To review” tab.
+                    </p>
+                    <Figure
+                        src={`${IMG}/citations-en-1-queue.webp`}
+                        alt="Queue of services to review, with the nickname field"
+                        caption="Nickname first, then the service."
+                    />
+
+                    <h3 className="guide-h3">b. Check each quote</h3>
+                    <p>
+                        Click a quote: the passage lights up in yellow in the policy, on the left. Read the
+                        sentences around it and ask yourself three questions:
+                    </p>
+                    <ul className="guide-ul">
+                        <li>Is the sentence really in the text, exactly as shown?</li>
+                        <li>Is it taken out of context? Does the sentence before or after say the opposite?</li>
+                        <li>Does it tell someone using the service something useful?</li>
+                    </ul>
+                    <p>
+                        Three yeses: <strong>Keep</strong>. Otherwise: <strong>Set aside</strong>. Click again
+                        to undo. A quote is never edited: it is published word for word, so if it is wrong, set
+                        it aside.
+                    </p>
+                    <p>
+                        The number left of the title sets the order on the entry; the first quote kept (★) is
+                        featured on the entry and the homepage. The “In plain words” line is our translation: if
+                        it overstates or stays vague, click “edit”. One short, factual sentence, no opinion,
+                        saying nothing more than the quote.
+                    </p>
+                    <Figure
+                        src={`${IMG}/citations-en-3-card.webp`}
+                        alt="A clicked quote, highlighted in the policy, with the Keep and Set aside buttons"
+                        caption="Click, check in the text, then Keep or Set aside."
+                    />
+
+                    <h3 className="guide-h3">c. Publish</h3>
+                    <p>
+                        Your choices stay on your device until you click <strong>Publish</strong>, at the
+                        bottom of the page. One click at the end is enough; you can also publish part of it and
+                        come back later. The team reviews what you sent, and the kept quotes appear on the entry
+                        at the next deploy.
+                    </p>
+                    <Figure
+                        src={`${IMG}/citations-en-4-publish.webp`}
+                        alt="Bottom bar: saved decisions and the Publish button"
+                        caption="Publish once, when you are done."
+                    />
+                    <Tip>
+                        With no answer after 7 days, the top 3 quotes are published automatically. The date is
+                        shown at the top of the service: your review takes precedence at any time.
+                    </Tip>
+                    <Figure
+                        src={`${IMG}/citations-en-2-header.webp`}
+                        alt="Service header with the automatic publication date"
                     />
                 </section>
             </>
