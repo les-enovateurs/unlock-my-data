@@ -1176,5 +1176,91 @@
       "estimated_at": "2026-11-27",
       "source": "https://api.ecologits.ai/v1beta/estimations"
     }
+  },
+  "umay": {
+    "name": "Umay",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-27",
+    "policy_url": "https://umay.fr/cgu-application/",
+    "text_sha256": "05108e206ffdba1d154082c287494638f2434f7ed99164e267f159e97429eddd",
+    "live_check": {
+      "at": "2026-11-27T20:15:49+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261127201646/https://umay.fr/cgu-application/",
+    "quotes": [
+      {
+        "quote": "Les utilisatrices et utilisateurs pourront être contactés par le tchat par les partenaires de UMAY : collectivités et transporteurs.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Des mairies et des transporteurs peuvent vous écrire dans le tchat de l’application.",
+          "en": "Local councils and transport companies can write to you in the app’s chat."
+        }
+      },
+      {
+        "quote": "Ils constitueront une base de données ensuite partagée avec les villes clientes et partenaires des services UMAY pour adapter les politiques publiques.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Vos signalements (harcèlement, agression…) forment une base de données partagée avec les villes clientes et les partenaires d’Umay.",
+          "en": "Your reports (harassment, assault…) build a database shared with Umay’s client cities and partners."
+        }
+      },
+      {
+        "quote": "Les informations personnelles peuvent être transmises aux partenaires de l’application si l’utilisatrice/utilisateur à donner son accors à l’application pour le faire",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Si vous l’acceptez, vos informations personnelles peuvent être envoyées aux partenaires de l’application.",
+          "en": "If you agree, your personal information can be sent to the app’s partners."
+        }
+      },
+      {
+        "quote": "Chaque signalement ouvrira une prise en charge par tchat de la part des équipe de l’application afin d’assurer une prise en charge de premier niveau des utilisatrices / utilisateurs.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Après chaque signalement, l’équipe de l’application vous écrit dans un tchat.",
+          "en": "After each report, the app’s team writes to you in a chat."
+        }
+      },
+      {
+        "quote": "En aucun cas les informations relatives à la localisation de l’Utilisateur / Utilisatrice ne seront partagées par OCEAN PINK avec un tiers différent des Contacts de confiance sélectionnés.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Votre position n’est partagée qu’avec les personnes de confiance que vous avez choisies.",
+          "en": "Your location is only shared with the trusted contacts you chose."
+        }
+      }
+    ],
+    "usage": {
+      "models": {
+        "claude-opus-5-5": {
+          "output_tokens": 7006
+        }
+      },
+      "sessions": 1,
+      "impact": {
+        "energy_kwh": [
+          0.0213,
+          0.0411
+        ],
+        "gwp_kgco2eq": [
+          0.00854,
+          0.0162
+        ],
+        "water_l": [
+          0.0691,
+          0.165
+        ]
+      },
+      "estimated_at": "2026-11-27",
+      "source": "https://api.ecologits.ai/v1beta/estimations"
+    }
   }
 }
