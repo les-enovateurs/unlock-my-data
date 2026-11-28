@@ -105,15 +105,15 @@
             "description": "Does the company have a data transfer policy?",
             "type": "boolean"
         },
-        "details_required_documents": {
-            "$comment": "FIXME: will become details_required_documents_fr (#456)",
-            "description": "Required documents for data access (FR)",
-            "$ref": "#/$defs/string"
-        },
         "details_required_documents_en": {
             "description": "Required documents for data access (EN)",
             "$ref": "#/$defs/string"
         },
+        "details_required_documents_fr": {
+            "description": "Required documents for data access (FR)",
+            "$ref": "#/$defs/string"
+        },
+        "details_required_documents": false,
         "enforcement_aliases": {
             "description": "Enforcement aliases (update-enforcement-tracker)",
             "$ref": "#/$defs/strings"

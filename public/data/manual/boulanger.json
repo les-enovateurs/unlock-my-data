@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Connection au compte, n° client ou n° de dernière facture",
+  "details_required_documents_fr": "Connection au compte, n° client ou n° de dernière facture",
   "details_required_documents_en": "Login to the account, customer number or last invoice number",
   "data_access_via_postal": true,
   "data_access_via_form": false,

@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Non indiqué",
+  "details_required_documents_fr": "Non indiqué",
   "confidentiality_policy_url_fr": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
   "confidentiality_policy_url_en": "https://www.pass.sports.gouv.fr/v2/politique-de-confidentialite",
   "data_access_via_postal": true,

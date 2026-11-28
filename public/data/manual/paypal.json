@@ -6,7 +6,7 @@
   "group_name": "PayPal Holdings, Inc.",
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.paypal.com/fr/legalhub/paypal/privacy-full",
   "confidentiality_policy_url_en": "https://www.paypal.com/us/legalhub/paypal/privacy-full",
   "data_access_via_postal": true,

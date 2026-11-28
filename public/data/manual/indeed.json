@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": true,
-  "details_required_documents": "E-mail ou numéro de téléphone lié au compte",
+  "details_required_documents_fr": "E-mail ou numéro de téléphone lié au compte",
   "details_required_documents_en": "Email or phone number linked to the account",
   "data_access_via_postal": false,
   "data_access_via_form": true,

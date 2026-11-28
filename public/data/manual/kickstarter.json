@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Nom complet, nom d'utilisateur, code postal et e-mail du compte",
+  "details_required_documents_fr": "Nom complet, nom d'utilisateur, code postal et e-mail du compte",
   "details_required_documents_en": "Full name, username, postal code and account email",
   "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",

@@ -6,7 +6,7 @@
   "group_name": "Alphabet (Google)",
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Aucun document requis",
+  "details_required_documents_fr": "Aucun document requis",
   "details_required_documents_en": "No document required",
   "data_access_via_postal": false,
   "data_access_via_form": false,

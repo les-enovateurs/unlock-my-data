@@ -6,7 +6,7 @@
   "group_name": "Indigo Partners",
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "identifiants de connexion et informations personnelles demandées par le compte remplies et à jour",
+  "details_required_documents_fr": "identifiants de connexion et informations personnelles demandées par le compte remplies et à jour",
   "confidentiality_policy_url_en": "https://www.wizzair.com/cms/api/docs/default-source/downloadable-documents/privacy-notices/wizz-air---customer-privacy-notice---5-october-2026.pdf",
   "data_access_via_postal": false,
   "data_access_via_form": true,

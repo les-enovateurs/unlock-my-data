@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://about.qwant.com/legal/confidentialite/",
   "confidentiality_policy_url_en": "https://about.qwant.com/en/legal/confidentialite/",
   "data_access_via_postal": true,

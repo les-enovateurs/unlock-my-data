@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Vérification par connexion au compte ou email associé",
+  "details_required_documents_fr": "Vérification par connexion au compte ou email associé",
   "details_required_documents_en": "Verification by logging into the account or associated email",
   "data_access_via_postal": false,
   "data_access_via_form": false,

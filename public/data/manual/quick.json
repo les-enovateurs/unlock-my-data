@@ -27,7 +27,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "details_required_documents_fr": "Non précisé dans la politique de confidentialité.",
   "confidentiality_policy_url_fr": "https://www.quick.fr/politique-de-protection-des-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": false,

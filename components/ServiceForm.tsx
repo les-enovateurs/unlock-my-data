@@ -98,7 +98,7 @@ const initialFormData: FormData = {
     contacts: [],
     easy_access_data: null,
     need_id_card: false,
-    details_required_documents: "",
+    details_required_documents_fr: "",
     details_required_documents_en: "",
     data_access_via_postal: false,
     data_access_via_form: false,
@@ -411,8 +411,8 @@ export default function ServiceForm({
                     author: data.created_by || "",
                     example_data_export: data.example_data_export || [],
                     leaks: Array.isArray(data.leaks) ? data.leaks : [],
-                    details_required_documents: (() => {
-                        const raw = data.details_required_documents || "";
+                    details_required_documents_fr: (() => {
+                        const raw = data.details_required_documents_fr || "";
                         const exists = FORM_OPTIONS.requiredDocuments.find(
                             (opt) => opt.value === raw,
                         );
@@ -424,7 +424,7 @@ export default function ServiceForm({
                     details_required_documents_en:
                         data.details_required_documents_en || "",
                     details_required_documents_autre: (() => {
-                        const raw = data.details_required_documents || "";
+                        const raw = data.details_required_documents_fr || "";
                         const exists = FORM_OPTIONS.requiredDocuments.find(
                             (opt) => opt.value === raw,
                         );
@@ -844,11 +844,11 @@ export default function ServiceForm({
                 contacts: formData.contacts.map((c) => ({ ...c, value: c.value.trim() })),
                 easy_access_data: formData.easy_access_data,
                 need_id_card: formData.need_id_card,
-                details_required_documents:
-                    formData.details_required_documents === "Autre" &&
+                details_required_documents_fr:
+                    formData.details_required_documents_fr === "Autre" &&
                         formData.details_required_documents_autre !== ""
                         ? formData.details_required_documents_autre
-                        : formData.details_required_documents,
+                        : formData.details_required_documents_fr,
                 confidentiality_policy_url_fr: formData.confidentiality_policy_url_fr,
                 confidentiality_policy_url_en: formData.confidentiality_policy_url_en,
                 data_access_via_postal: formData.data_access_via_postal,
@@ -1631,15 +1631,15 @@ export default function ServiceForm({
                                                     </span>
                                                 </label>
                                                 <select
-                                                    name="details_required_documents"
-                                                    value={formData?.details_required_documents || ""}
+                                                    name="details_required_documents_fr"
+                                                    value={formData?.details_required_documents_fr || ""}
                                                     onChange={(e) => {
                                                         const value = e.target.value;
                                                         setFormData((prev) =>
                                                             prev
                                                                 ? {
                                                                     ...prev,
-                                                                    details_required_documents: value,
+                                                                    details_required_documents_fr: value,
                                                                     need_id_card: value === "Carte d'identité",
                                                                 }
                                                                 : prev,
@@ -1654,7 +1654,7 @@ export default function ServiceForm({
                                                         </option>
                                                     ))}
                                                 </select>
-                                                {formData?.details_required_documents === "Autre" && (
+                                                {formData?.details_required_documents_fr === "Autre" && (
                                                     <input
                                                         type="text"
                                                         name="details_required_documents_autre"
@@ -1669,7 +1669,7 @@ export default function ServiceForm({
                                                 )}
                                             </div>
 
-                                            {formData?.details_required_documents === "Autre" && (
+                                            {formData?.details_required_documents_fr === "Autre" && (
                                                 <div className="mt-12">
                                                     <label>
                                                         <span className="umd-label">
@@ -1689,7 +1689,7 @@ export default function ServiceForm({
                                                 </div>
                                             )}
 
-                                            {formData?.details_required_documents !== "Autre" && (
+                                            {formData?.details_required_documents_fr !== "Autre" && (
                                                 <br />
                                             )}
 

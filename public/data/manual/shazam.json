@@ -6,7 +6,7 @@
   "group_name": "Apple Inc.",
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.shazam.com/fr/privacy",
   "confidentiality_policy_url_en": "https://www.shazam.com/fr/privacy",
   "data_access_via_postal": false,

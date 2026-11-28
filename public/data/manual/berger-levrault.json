@@ -43,7 +43,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.berger-levrault.com/fr/mentions-legales-donnees-personnelles/",
   "confidentiality_policy_url_en": "https://www.berger-levrault.com/ca/en/privacy-policy/",
   "data_access_via_postal": true,
@@ -69,7 +69,7 @@
       "resolved": false
     },
     {
-      "field": "details_required_documents",
+      "field": "details_required_documents_fr",
       "message": "La politique FR dit que la demande doit être « accompagnée d'un justificatif d'identité » : « Aucun » est donc incorrect (mettre Autre / justificatif d'identité). La facilité d'accès est à ajuster en conséquence.",
       "reviewer_name": "wassym",
       "timestamp": "2026-11-24T18:29:23.630Z",

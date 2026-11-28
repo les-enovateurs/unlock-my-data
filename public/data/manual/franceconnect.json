@@ -28,7 +28,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Justificatif d'identité si nécessaire",
+  "details_required_documents_fr": "Justificatif d'identité si nécessaire",
   "confidentiality_policy_url_fr": "https://www.franceconnect.gouv.fr/cgu/politique-protection-donnees-personnelles/",
   "data_access_via_postal": true,
   "data_access_via_form": false,

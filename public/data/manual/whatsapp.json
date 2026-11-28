@@ -6,7 +6,7 @@
   "group_name": "Meta",
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "Etre connecté",
+  "details_required_documents_fr": "Etre connecté",
   "details_required_documents_en": "Be logged in",
   "data_access_via_postal": false,
   "data_access_via_form": true,

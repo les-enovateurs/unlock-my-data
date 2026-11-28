@@ -22,7 +22,7 @@ Below are the fields with explanations:
 | `contacts`                       | List of GDPR contacts: `type` (`email` or `postal`), `value`, `purposes` (`export` and/or `delete`), optional `comment_fr` / `comment_en`. |
 | `easy_access_data`               | Information about easy access to data (if any).                                                                 |
 | `need_id_card`                   | Boolean: is an ID card required for requests?                                                                   |
-| `details_required_documents`     | Details about required documents for data access.                                                               |
+| `details_required_documents_fr`  | Details about required documents for data access.                                                               |
 | `data_access_via_postal`         | Boolean: is data access possible via postal mail?                                                               |
 | `data_access_via_form`           | Boolean: is data access possible via an online form?                                                            |
 | `data_access_type`               | Details on data access type (if not covered above).                                                             |
@@ -106,7 +106,7 @@ Below are the fields with explanations:
      ],
      "easy_access_data": "",
      "need_id_card": false,
-     "details_required_documents": "",
+     "details_required_documents_fr": "",
      "data_access_via_postal": false,
      "data_access_via_form": false,
      "data_access_type": "",

@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Etre connecté a son compte ou par email : nom, prénom, email, date de naissance et code postal.",
+  "details_required_documents_fr": "Etre connecté a son compte ou par email : nom, prénom, email, date de naissance et code postal.",
   "confidentiality_policy_url_fr": "https://www.boursorama.com/content/pdf/reglementaire/politique-de-protection-des-donnees-membres.pdf",
   "data_access_via_postal": false,
   "data_access_via_form": true,

@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Selon la CNIL, la demande peut se faire sans joindre de document, mais \"si et seulement si, l'organisme a des doutes raisonnables sur votre identité, il peut vous demander de joindre tout document permettant de prouver votre identité\"",
+  "details_required_documents_fr": "Selon la CNIL, la demande peut se faire sans joindre de document, mais \"si et seulement si, l'organisme a des doutes raisonnables sur votre identité, il peut vous demander de joindre tout document permettant de prouver votre identité\"",
   "confidentiality_policy_url_fr": "https://terms.inpost-group.com/fr/politique-de-confidentialite-compte-inpost",
   "data_access_via_postal": true,
   "data_access_via_form": true,

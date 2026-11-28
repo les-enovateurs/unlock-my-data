@@ -27,7 +27,7 @@
   ],
   "easy_access_data": 2,
   "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
+  "details_required_documents_fr": "Carte d'identité",
   "confidentiality_policy_url_fr": "https://www.mgel.fr/charte-de-la-protection-des-donnees/",
   "confidentiality_policy_url_en": "https://www.mgel.fr/charte-de-la-protection-des-donnees/",
   "data_access_via_postal": true,

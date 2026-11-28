@@ -27,7 +27,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Justificatif d'identité pouvant être demandé si nécessaire ; préciser ses coordonnées complètes.",
+  "details_required_documents_fr": "Justificatif d'identité pouvant être demandé si nécessaire ; préciser ses coordonnées complètes.",
   "confidentiality_policy_url_fr": "https://www.viamedis.fr/politique-de-confidentialite/",
   "confidentiality_policy_url_en": "https://www.viamedis.fr/politique-de-confidentialite/",
   "data_access_via_postal": true,

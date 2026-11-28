@@ -17,7 +17,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://docs.midjourney.com/hc/en-us/articles/32083472637453-Privacy-Policy",
   "confidentiality_policy_url_en": "https://docs.midjourney.com/hc/en-us/articles/32083472637453-Privacy-Policy",
   "data_access_via_postal": false,

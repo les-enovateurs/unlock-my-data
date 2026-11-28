@@ -5,7 +5,7 @@
   "belongs_to_group": false,
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Être connecté à son compte",
+  "details_required_documents_fr": "Être connecté à son compte",
   "details_required_documents_en": "Be logged in",
   "data_access_via_postal": true,
   "data_access_via_form": true,

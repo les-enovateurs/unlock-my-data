@@ -17,7 +17,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.meilleurtaux.com/a-propos-de-meilleurtaux/politique-donnee.html",
   "confidentiality_policy_url_en": "https://www.meilleurtaux.com/a-propos-de-meilleurtaux/politique-donnee.html",
   "data_access_via_postal": false,

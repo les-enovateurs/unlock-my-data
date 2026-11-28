@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://wormhole.app/legal",
   "confidentiality_policy_url_en": "https://wormhole.app/legal",
   "data_access_via_postal": true,

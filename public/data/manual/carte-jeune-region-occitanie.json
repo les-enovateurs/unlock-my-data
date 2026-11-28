@@ -28,7 +28,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Justificatif d'identité (type de pièce non précisé).",
+  "details_required_documents_fr": "Justificatif d'identité (type de pièce non précisé).",
   "confidentiality_policy_url_fr": "https://www.laregion.fr/RGPD",
   "data_access_via_postal": true,
   "data_access_via_form": false,

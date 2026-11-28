@@ -15,7 +15,7 @@
   ],
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "Nom, prénom, une de vos 3 dernières commandes sur fnac.com, ou votre adresse postale (si aucun achat).",
+  "details_required_documents_fr": "Nom, prénom, une de vos 3 dernières commandes sur fnac.com, ou votre adresse postale (si aucun achat).",
   "details_required_documents_en": "First name, last name, one of your last 3 orders on fnac.com, or your postal address (if no purchase).",
   "confidentiality_policy_url_fr": "https://www.fnac.com/Help/donneesPersonnelles",
   "data_access_via_postal": true,

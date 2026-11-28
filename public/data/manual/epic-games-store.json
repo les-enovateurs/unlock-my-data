@@ -18,7 +18,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Etre connecté à son compte",
+  "details_required_documents_fr": "Etre connecté à son compte",
   "confidentiality_policy_url_fr": "https://www.epicgames.com/site/fr/privacypolicy",
   "confidentiality_policy_url_en": "https://www.epicgames.com/site/en-US/privacypolicy",
   "data_access_via_postal": true,

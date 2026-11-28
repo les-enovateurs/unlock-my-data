@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Confirmation de l'adresse email du compte",
+  "details_required_documents_fr": "Confirmation de l'adresse email du compte",
   "confidentiality_policy_url_fr": "https://support.gog.com/hc/fr/articles/212632109-Politique-de-Confidentialit%C3%A9?product=gog",
   "confidentiality_policy_url_en": "https://support.gog.com/hc/en-us/articles/212632109-Privacy-Policy?product=gog",
   "data_access_via_postal": true,

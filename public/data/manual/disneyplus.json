@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 1,
   "need_id_card": true,
-  "details_required_documents": "Il faut être connecté à son compte",
+  "details_required_documents_fr": "Il faut être connecté à son compte",
   "details_required_documents_en": "You need to be connected to their account",
   "data_access_via_postal": false,
   "data_access_via_form": true,

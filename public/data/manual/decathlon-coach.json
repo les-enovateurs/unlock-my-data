@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Toute information nous permettant de nous assurer que l’auteur de la demande est bien la personne concernée par le traitement (n° de carte Decathlon, N° de dernière commande, Date de naissance renseignée etc...)",
+  "details_required_documents_fr": "Toute information nous permettant de nous assurer que l’auteur de la demande est bien la personne concernée par le traitement (n° de carte Decathlon, N° de dernière commande, Date de naissance renseignée etc...)",
   "confidentiality_policy_url_fr": "https://www.decathloncoach.com/fr/home/personalData-pdf",
   "data_access_via_postal": true,
   "data_access_via_form": false,

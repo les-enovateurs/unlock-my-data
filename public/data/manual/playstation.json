@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Pour verifier votre identité, vous devez fournir l'un des éléments suivants: (a) numéro de série de votre console ; (b) premiers 4 et derniers 4 chiffres de la carte de paiement associée à votrre compte ; ou (c) le nom et l'identifiant d'une transaction effectuée au cours des 6 derniers mois.",
+  "details_required_documents_fr": "Pour verifier votre identité, vous devez fournir l'un des éléments suivants: (a) numéro de série de votre console ; (b) premiers 4 et derniers 4 chiffres de la carte de paiement associée à votrre compte ; ou (c) le nom et l'identifiant d'une transaction effectuée au cours des 6 derniers mois.",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_type": "Il suffit d'avoir un compte et accédez à [Paramètres du compte] > [Paramètres de confidentialité] > [Demandes d'accès aux données]",

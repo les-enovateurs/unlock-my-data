@@ -46,7 +46,7 @@ interface FullServiceData extends ReviewService {
   contacts?: ServiceContact[];
   easy_access_data?: string;
   need_id_card?: boolean;
-  details_required_documents?: string;
+  details_required_documents_fr?: string;
   confidentiality_policy_url_fr?: string;
   data_access_via_postal?: boolean;
   data_access_via_form?: boolean;
@@ -96,7 +96,7 @@ const FIELD_CATEGORIES = {
     iconClass: "text-secondary",
     iconBgClass: "bg-secondary/10",
     fields: ["contacts", "easy_access_data", "need_id_card",
-      "details_required_documents", "details_required_documents_autre", "details_required_documents_en",
+      "details_required_documents_fr", "details_required_documents_autre", "details_required_documents_en",
       "data_access_via_postal", "data_access_via_form", "data_access_via_email",
       "data_access_via_other",
       "data_access_type", "data_access_type_en",
@@ -131,13 +131,13 @@ const CONDITIONAL_FIELDS: Record<string, (values: Record<string, any>, lang: str
   group_name: (values) => values.belongs_to_group === true,
 
   // Contact - "autre" variants
-  details_required_documents_autre: (values) => values.details_required_documents === "Autre",
+  details_required_documents_autre: (values) => values.details_required_documents_fr === "Autre",
   response_format_autre: (values) => values.response_format_fr === "Autre",
   response_delay_autre: (values) => values.response_delay_fr === "Autre",
 
   // Bilingual fields
   // For details_required_documents_en, hide it when "Autre" is selected (replaced by _autre field)
-  details_required_documents_en: (values) => values.details_required_documents !== "Autre",
+  details_required_documents_en: (values) => values.details_required_documents_fr !== "Autre",
 
   // Privacy
   sanction_details: (values) => values.sanctioned_by_cnil === true,
@@ -446,7 +446,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
         delete currentServiceEdits[fieldKey];
 
         // Also remove dependent fields if they were added
-        if (field === 'details_required_documents') {
+        if (field === 'details_required_documents_fr') {
           delete currentServiceEdits.need_id_card;
         }
         if (field === 'belongs_to_group') {
@@ -461,7 +461,7 @@ export default function ReviewFormsPage({ lang, contributePath }: ReviewFormsPag
 
       const updates: Record<string, any> = { [fieldKey]: newValue };
 
-      if (field === 'details_required_documents') {
+      if (field === 'details_required_documents_fr') {
         updates.need_id_card = newValue === "Carte d'identité";
       }
 

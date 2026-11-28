@@ -16,7 +16,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Pour assurer la sécurité de votre compte et de vos données personnelles, nous sommes susceptibles vous demander de fournir certaines informations supplémentaires avant de répondre à votre demande. Dans certains cas, nous pouvons refuser de donner suite à votre demande conformément aux lois et réglementations en vigueur. Nous pouvons également facturer des frais raisonnables pour répondre à votre demande conformément à la loi applicable (Ex. : si votre demande est manifestement répétitive ou excessive).",
+  "details_required_documents_fr": "Pour assurer la sécurité de votre compte et de vos données personnelles, nous sommes susceptibles vous demander de fournir certaines informations supplémentaires avant de répondre à votre demande. Dans certains cas, nous pouvons refuser de donner suite à votre demande conformément aux lois et réglementations en vigueur. Nous pouvons également facturer des frais raisonnables pour répondre à votre demande conformément à la loi applicable (Ex. : si votre demande est manifestement répétitive ou excessive).",
   "confidentiality_policy_url_fr": "https://genshin.hoyoverse.com/fr/company/privacy",
   "data_access_via_postal": true,
   "data_access_via_form": false,

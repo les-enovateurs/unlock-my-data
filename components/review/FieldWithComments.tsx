@@ -284,7 +284,7 @@ export default memo(function FieldWithComments({
       );
     }
 
-    if (field === "details_required_documents") {
+    if (field === "details_required_documents_fr") {
       const currentValue = String(normalizedValue || "");
       const isCustom = currentValue && !FORM_OPTIONS.requiredDocuments.find(opt => opt.value === currentValue) && currentValue !== "Autre";
       const selectValue = isCustom ? "Autre" : currentValue;

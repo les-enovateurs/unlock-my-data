@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "nom, prénom, numéro de ligne téléphonique ou de contrat",
+  "details_required_documents_fr": "nom, prénom, numéro de ligne téléphonique ou de contrat",
   "confidentiality_policy_url_fr": "https://mobile.free.fr/politique-de-confidentialite",
   "data_access_via_postal": true,
   "data_access_via_form": true,

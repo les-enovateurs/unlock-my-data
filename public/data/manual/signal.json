@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Numéro de téléphone + le motif de la demande",
+  "details_required_documents_fr": "Numéro de téléphone + le motif de la demande",
   "details_required_documents_en": "Phone number + request reason",
   "data_access_via_postal": false,
   "data_access_via_form": true,

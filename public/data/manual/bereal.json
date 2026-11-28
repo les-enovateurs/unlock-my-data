@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "numéro de téléphone, nom d'utilisateur, date de naissance",
+  "details_required_documents_fr": "numéro de téléphone, nom d'utilisateur, date de naissance",
   "confidentiality_policy_url_fr": "https://bereal.com/fr/privacy",
   "confidentiality_policy_url_en": "https://bereal.com/fr/privacy",
   "data_access_via_postal": true,

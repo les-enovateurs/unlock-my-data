@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Pas de document nécessaire",
+  "details_required_documents_fr": "Pas de document nécessaire",
   "details_required_documents_en": "No document required",
   "data_access_via_postal": true,
   "data_access_via_form": true,

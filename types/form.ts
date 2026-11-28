@@ -12,7 +12,7 @@ export interface FormData {
     contacts: ServiceContact[];
     easy_access_data: number | null;
     need_id_card: boolean;
-    details_required_documents: string;
+    details_required_documents_fr: string;
     details_required_documents_en: string;
     data_access_via_postal: boolean;
     data_access_via_form: boolean;

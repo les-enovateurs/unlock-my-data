@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Nom,prénom,email",
+  "details_required_documents_fr": "Nom,prénom,email",
   "details_required_documents_en": "Name,first name,email",
   "data_access_via_postal": true,
   "data_access_via_form": true,

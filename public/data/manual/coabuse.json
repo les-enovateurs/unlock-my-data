@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Vérification d'identité requise",
+  "details_required_documents_fr": "Vérification d'identité requise",
   "confidentiality_policy_url_fr": "https://coabuse.fr/politique-de-confidentialite/",
   "data_access_via_postal": false,
   "data_access_via_form": false,
@@ -26,7 +26,7 @@
   "status": "published",
   "review": [
     {
-      "field": "details_required_documents",
+      "field": "details_required_documents_fr",
       "message": "Dans le paragraphe Droits de la personne concernée, il est dit:\nSous réserve d'apporter la preuve de votre identité ...etc.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-21T22:46:08.871Z",

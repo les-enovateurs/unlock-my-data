@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "Pour accéder au formulaire, nécessité d'être connecté",
+  "details_required_documents_fr": "Pour accéder au formulaire, nécessité d'être connecté",
   "details_required_documents_en": "To access the form, you need to be logged in",
   "data_access_via_postal": false,
   "data_access_via_form": true,

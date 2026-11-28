@@ -27,7 +27,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Non précisé dans la politique de confidentialité.",
+  "details_required_documents_fr": "Non précisé dans la politique de confidentialité.",
   "confidentiality_policy_url_fr": "https://particuliers.engie.fr/protection-des-donnees-personnelles.html",
   "confidentiality_policy_url_en": "https://particuliers.engie.fr/protection-des-donnees-personnelles.html",
   "data_access_via_postal": true,

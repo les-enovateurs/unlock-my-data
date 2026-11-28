@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Vous devez justifier de votre identité et indiquer le contexte dans lequel vous nous avez transmis vos Données à Caractère Personnel (date de la réclamation et/ou motif).",
+  "details_required_documents_fr": "Vous devez justifier de votre identité et indiquer le contexte dans lequel vous nous avez transmis vos Données à Caractère Personnel (date de la réclamation et/ou motif).",
   "confidentiality_policy_url_fr": "https://quivive.app/politique-de-confidentialite",
   "data_access_via_postal": true,
   "data_access_via_form": false,

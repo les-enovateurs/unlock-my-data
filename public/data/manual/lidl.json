@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.lidl.fr/static/assets/20250422_Politique_de_protection_des_donnees_site_Lidl-1518687.pdf",
   "data_access_via_postal": true,
   "data_access_via_form": false,

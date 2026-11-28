@@ -28,7 +28,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Vérification d'identité : la demande doit indiquer au minimum nom, prénom et adresse de réponse (pièce justificative non précisée).",
+  "details_required_documents_fr": "Vérification d'identité : la demande doit indiquer au minimum nom, prénom et adresse de réponse (pièce justificative non précisée).",
   "confidentiality_policy_url_fr": "https://www.sofinco.fr/a-propos/sofinco-informations-legales#politique-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": false,
