@@ -459,3 +459,27 @@
 .umd-keyquote-plain b { color: var(--indigo-800); }
 .umd-keyquote-credit { margin: 0; font-size: 12px; color: var(--fg2); }
 .umd-keyquote.active { border-color: var(--indigo-600); box-shadow: var(--umd-shadow-focus); }
+
+/* Home */
+.umd-home-hero { background: var(--indigo-50); border-bottom: 1px solid var(--slate-200); }
+.umd-home-finder { background: #fff; border: 1px solid var(--slate-200); border-radius: var(--umd-radius-xl); padding: 24px; }
+.umd-home-chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 5px; border: 1px solid var(--slate-200); border-radius: 999px; background: #fff; font-size: 14px; font-weight: 600; color: var(--slate-900); text-decoration: none; }
+.umd-home-chip img { width: 22px; height: 22px; border-radius: 999px; object-fit: contain; }
+.umd-home-chip:hover { border-color: var(--indigo-600); }
+.umd-home-chip:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.umd-home-quote { display: grid; gap: 16px; padding: 28px 0; border-top: 1px solid var(--slate-200); }
+.umd-home-quote:first-child { border-top: 0; padding-top: 0; }
+@media (min-width: 768px) { .umd-home-quote { grid-template-columns: 180px 1fr; gap: 32px; } }
+.umd-home-logo { width: 48px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--slate-200); border-radius: var(--umd-radius-md); background: #fff; font-weight: 700; color: var(--indigo-800); overflow: hidden; }
+.umd-home-logo img { object-fit: contain; }
+/* A highlighter on a printed contract: the sentence is evidence, not a testimonial. */
+.umd-home-excerpt { margin: 0; font-family: var(--font-serif); font-size: clamp(18px, 2.2vw, 21px); line-height: 1.6; color: var(--slate-900); max-width: 68ch; }
+.umd-home-excerpt mark { background: linear-gradient(transparent 12%, var(--gold-100) 12%, var(--gold-100) 92%, transparent 92%); color: inherit; padding: 0 2px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.umd-home-recent { display: grid; gap: 4px 20px; padding: 14px 0; border-top: 1px solid var(--slate-200); align-items: center; }
+.umd-home-recent:first-child { border-top: 0; }
+@media (min-width: 768px) { .umd-home-recent { grid-template-columns: 110px 150px 1fr; } }
+.umd-home-tools > li { padding: 0 0 24px; }
+@media (min-width: 768px) {
+  .umd-home-tools > li { padding: 0 28px; border-left: 1px solid var(--slate-200); }
+  .umd-home-tools > li:first-child { padding-left: 0; border-left: 0; }
+}

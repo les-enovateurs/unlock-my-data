@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { flagEmoji, localizedCountry } from "@/lib/geo/serviceGeo";
@@ -74,6 +74,9 @@ export default function CatalogContent({ lang, services }: Props) {
     const [country, setCountry] = useState("all");
     const [page, setPage] = useState(1);
     const base = lang === "fr" ? "/liste-applications" : "/list-app";
+
+    // The home search submits ?q= here; read it directly so the page stays prerendered (no useSearchParams Suspense).
+    useEffect(() => { setQ(new URLSearchParams(window.location.search).get("q") ?? ""); }, []);
 
     const countryKey = (s: CatalogService) => s.countryCode?.toUpperCase() ?? "";
 
