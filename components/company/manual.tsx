@@ -459,7 +459,7 @@ export async function buildFicheProps(slug: string, lang: string): Promise<Fiche
         date: d.date || undefined,
     })));
     // "Aucun" says nothing, and "Carte d'identité" repeats the ID card row right above.
-    const requiredDocuments = ['', 'Aucun', "Carte d'identité"].includes(entreprise.details_required_documents ?? '')
+    const requiredDocuments = ['', 'Aucun', "Carte d'identité"].includes(entreprise.details_required_documents_fr ?? '')
         ? undefined
         : pickLang(entreprise, "details_required_documents", lang);
 

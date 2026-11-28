@@ -99,7 +99,7 @@ describe("ReviewFormsPage", () => {
           json: async () => ({
             slug: "test-service-autre",
             name: "Test Service Autre",
-            details_required_documents: "Autre",
+            details_required_documents_fr: "Autre",
             details_required_documents_autre: "Custom documents info",
             details_required_documents_en: "Should not be visible"
           })

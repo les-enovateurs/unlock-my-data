@@ -106,7 +106,7 @@ describe("ServiceForm review history", () => {
       // submit stops at reportValidity and the confirm modal never opens.
       logo: "/img/logos/action.webp",
       easy_access_data: 4,
-      details_required_documents: "Aucun",
+      details_required_documents_fr: "Aucun",
       transfer_destination_countries: ["Non indiqué"],
       transfer_destination_countries_en: ["Not specified"],
     };

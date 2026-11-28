@@ -40,7 +40,7 @@ const SELECT_FIELDS: Record<string, ReviewFieldDefinition> = {
     type: "select",
     options: FORM_OPTIONS.easyAccessLevels
   },
-  details_required_documents: {
+  details_required_documents_fr: {
     type: "select",
     options: FORM_OPTIONS.requiredDocuments as Array<Record<string, string>>,
     allowCustom: true
