@@ -1551,5 +1551,145 @@
       "estimated_at": "2026-11-28",
       "source": "https://api.ecologits.ai/v1beta/estimations"
     }
+  },
+  "kahoot": {
+    "name": "Kahoot!",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-28",
+    "policy_url": "https://trust.kahoot.com/fr/privacy-policy/",
+    "text_sha256": "4a3a6f71f5885277d936483f5c7daa20a12552b8c92089f097acd469c9a87d15",
+    "live_check": {
+      "at": "2026-11-28T07:26:36+00:00",
+      "reachable": true,
+      "found": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    "archive_url": "https://web.archive.org/web/20261128072642/https://trust.kahoot.com/fr/privacy-policy/",
+    "quotes": [
+      {
+        "quote": "Nous et nos fournisseurs de services recueillons également les informations décrites ci-dessus, sous la rubrique «informations que nous recueillons automatiquement», auprès des Enfants.",
+        "quote_en": "We and our service providers also collect the information described above, under “information we collect automatically,” from Children.",
+        "topic": "mineurs",
+        "plain": {
+          "fr": "Kahoot! et ses prestataires collectent aussi automatiquement chez les enfants les données techniques et d'usage (appareil, adresse IP, activité).",
+          "en": "Kahoot! and its providers also automatically collect technical and usage data (device, IP address, activity) from children."
+        }
+      },
+      {
+        "quote": "Certaines fonctionnalités des Services scolaires permettent à un enseignant de collecter des informations sur la classe et sur chaque étudiant, notamment les parties jouées, les résultats, les réponses fournies pendant les jeux Kahoot! et les performances des étudiants.",
+        "quote_en": "Certain features of the School Services permit a teacher to collect information about the class, as well as about individual students, such as games played, results, answers submitted when playing Kahoot! games and performance on Kahoot! games.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "En classe, l'enseignant peut suivre pour chaque élève les parties jouées, les réponses données et les résultats obtenus.",
+          "en": "In class, the teacher can track for each pupil the games played, the answers given and the results."
+        }
+      },
+      {
+        "quote": "Par exemple, si vous choisissez de connecter une intégration Google à votre compte Kahoot!, nous vous demandons de nous autoriser à consulter et/ou télécharger, selon le cas, vos données Google Sheets, Google Contacts et Google Drive.",
+        "quote_en": "For instance, if you choose to connect a Google integration to your Kahoot! account, we’ll ask you to grant us permission to view and/or download, as applicable, your Google Sheets, Google Contacts and Google Drive.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Si vous reliez votre compte Google, Kahoot! demande à voir ou télécharger vos tableurs Google Sheets, vos contacts et votre Google Drive.",
+          "en": "If you link your Google account, Kahoot! asks to view or download your Google Sheets, your contacts and your Google Drive."
+        }
+      },
+      {
+        "quote": "Kahoot! peut coopérer avec des réseaux sociaux pour promouvoir nos Services, tant sur nos Sites Internet que sur des sites Internet tiers.",
+        "quote_en": "Kahoot! may cooperate with social media channels to promote our Services, both on our Websites and third-party websites.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Kahoot! peut travailler avec des réseaux sociaux pour faire sa publicité, sur ses sites et ailleurs.",
+          "en": "Kahoot! may work with social networks to advertise itself, on its own sites and elsewhere."
+        }
+      },
+      {
+        "quote": "Nous collectons des informations dans le monde entier et pouvons transférer, traiter et conserver vos informations en dehors de votre pays de résidence, dans tout pays dans lequel nos prestataires de services tiers ou nous-mêmes opérons aux fins décrites dans la section 3.1 ci-dessous.",
+        "quote_en": "We collect information globally and may transfer, process and store your information outside of your country of residence, to wherever we or our third-party service providers operate for the purposes identified in Section 3.1 above.",
+        "topic": "transferts",
+        "plain": {
+          "fr": "Vos données peuvent être envoyées et stockées dans n'importe quel pays où Kahoot! ou ses prestataires travaillent.",
+          "en": "Your data can be sent to and stored in any country where Kahoot! or its providers operate."
+        }
+      },
+      {
+        "quote": "Le processus de sélection des candidats est automatisé ; en revanche, toute décision concernant le candidat que nous engagerons pour le poste à pourvoir sera prise par notre personnel.",
+        "quote_en": "The process of finding suitable applicants is automatic, however, any decision as to who we will engage to fill the job opening will be made by our staff.",
+        "topic": "decision_automatisee",
+        "plain": {
+          "fr": "Si vous postulez chez Kahoot!, le tri des candidatures est fait par une machine ; seule l'embauche finale est décidée par une personne.",
+          "en": "If you apply for a job at Kahoot!, applications are sorted by a machine; only the final hiring decision is made by a person."
+        }
+      },
+      {
+        "quote": "Kahoot! se conforme aux normes établies dans le présent Avis de confidentialité et ne surveille ni ne suit aucune demande de nature « Interdire le suivi de votre navigateur ».",
+        "quote_en": "Kahoot! adheres to the standards set out in this Privacy Notice and does not monitor or follow any Do Not Track browser requests.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Kahoot! ne tient pas compte du réglage « Ne pas me pister » de votre navigateur.",
+          "en": "Kahoot! ignores the \"Do Not Track\" setting of your browser."
+        }
+      },
+      {
+        "quote": "Toute transmission s’effectue par conséquent à vos propres risques et il vous incombe de veiller à ce que les Informations Personnelles que vous nous transmettez le soient de manière sécurisée.",
+        "quote_en": "therefore any transmission remains at your own risk and you are responsible for ensuring that any Personal Information that you send to us are sent securely.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Kahoot! dit ne pas pouvoir garantir la sécurité des données envoyées en ligne : c'est à vous de veiller à les envoyer de façon sûre.",
+          "en": "Kahoot! says it cannot guarantee the security of data sent online: it is up to you to send it securely."
+        }
+      }
+    ],
+    "en": {
+      "policy_url": "https://trust.kahoot.com/privacy-policy/",
+      "text_sha256": "5c4b43f8e3da61c012e2ae57f276640dbb56438aa502c77efd4d29cab9f128c1",
+      "live_check": {
+        "at": "2026-11-28T07:26:57+00:00",
+        "reachable": true,
+        "found": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "archive_url": "https://web.archive.org/web/20261128072722/https://trust.kahoot.com/privacy-policy/"
+    },
+    "usage": {
+      "models": {
+        "claude-opus-5-5": {
+          "output_tokens": 10283
+        }
+      },
+      "sessions": 1,
+      "impact": {
+        "energy_kwh": [
+          0.0312,
+          0.0604
+        ],
+        "gwp_kgco2eq": [
+          0.0125,
+          0.0237
+        ],
+        "water_l": [
+          0.101,
+          0.242
+        ]
+      },
+      "estimated_at": "2026-11-28",
+      "source": "https://api.ecologits.ai/v1beta/estimations"
+    }
   }
 }
