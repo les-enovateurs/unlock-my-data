@@ -1,335 +1,932 @@
-*Version : Juillet 2026*
-
 ## INTRODUCTION
 
-**Le respect de la vie privée est un droit fondamental et l’une des valeurs essentielles de Doctolib.**
+*Les termes utilisés dans la présente Politique de protection des données à caractère personnel (ci-après “Politique”) avec des majuscules et non autrement définis dans la Politique ont la définition et/ou le sens qui leur est attribuée par le RGPD.*
 
-**Doctolib s’engage à respecter la 
-réglementation française et européenne sur la protection des données 
-personnelles, en particulier le Règlement (UE) général sur la protection
- des données du 27 avril 2016 (« RGPD ») et la Loi 
-Informatique et Libertés du 6 janvier 1978 modifiée (« LIL »).**
+**Les informations relatives à notre santé sont personnelles et doivent être traitées et protégées avec le plus grand soin.**
 
-**Nous travaillons avec les autorités 
-en charge de la protection des données, au niveau européen et pour 
-chaque pays où nous sommes implantés, avec les acteurs publics 
-responsables de l’organisation du système de santé, ainsi qu’avec 
-l’ensemble des représentants des Patients, des Acteurs de santé, 
-Professionnels de santé et des établissements de santé, pour nous 
-assurer que nous respectons l’intégralité de nos obligations légales en 
-matière de protection des Données personnelles et Données de santé.**
+**Le respect de la vie privée est un droit fondamental et l’une de nos valeurs essentielles chez Doctolib.**
 
-**Doctolib dispose d’une équipe dédiée à
- la protection des Données à caractère personnel, incluant notamment un 
-Délégué à la protection des données, une équipe de sécurité, une équipe 
-juridique et des ingénieurs spécialisés en protection des données.**
+**A cet égard, nous respectons la réglementation française et européenne et, en particulier le Règlement (UE) général sur la protection des données du 27 avril 2016 (“RGPD”) et la Loi Informatique et Libertés du 6 janvier 1978 modifiée (“LIL”).**
 
-**Les données à caractère personnel (y 
-compris de santé) des Patients et Professionnels de santé qui utilisent 
-les services de Doctolib sont hébergées par un hébergeur 
-d’infrastructure physique et infogéreur ayant reçu la certification HDS 
-(Hébergeur de Données de Santé).**
+**Nous travaillons avec les autorités en charge de la protection des données, au niveau européen et pour chaque pays où nous sommes implantés, avec les acteurs publics responsables de l’organisation du système de santé, ainsi qu’avec l’ensemble des représentants des patients, des acteurs de la santé, des professionnels de santé et des établissements de santé. Nous nous assurons du respect de nos obligations en matière de protection des Données à caractère personnel et Données de santé.**
 
-**Pour plus d’informations sur les engagements pris par Doctolib 
-pour protéger les Données à caractère personnel de ses utilisateurs, 
-vous pouvez consulter notre page dédiée.**
+**Nous disposons d’une équipe dédiée à la protection des Données à caractère personnel, incluant notamment un délégué à la protection des données, une équipe de sécurité, une équipe juridique et des ingénieurs spécialisés en protection des données.**
 
-## 1. DÉFINITIONS
+**Les Données à caractère personnel (y compris de santé) des patients et des professionnels de santé tels que définis par leur professions dans le Code de la santé publique, ci-après les “Professionnels de santé”) qui utilisent les services Doctolib sont hébergées au sein de l’Union européenne par des hébergeurs agréés. Ces hébergeurs sont certifiés par le label français “Hébergeur de Données de Santé" ("HDS") conformément à la loi et aux normes établies par l'Agence du Numérique en Santé (“ANS"), en concertation avec la Commission nationale de l'informatique et des libertés (“CNIL"), l’autorité française de protection des données.**
 
-Les termes utilisés dans la présente Politique de protection des Données à caractère personnel (ci-après « Politique ») avec des majuscules ont été définis dans le document « Définitions » disponible ici.
+**Nos hébergeurs sont également certifiés par les principales normes internationales, dont ISO/IEC 27001, et sont audités chaque année par un organisme indépendant. Leurs centres de données bénéficient d'une sécurité physique 24h/24 et 7j/7 et de mesures de protection technologiques parmi les plus avancées au monde.**
 
-En cas de contradiction entre les termes définis dans la présente Politique et les termes du document « Définitions », les termes de la Politique prévalent.
+**Pour plus d’informations sur nos engagements pour protéger vos Données à caractère personnel, vous pouvez consulter notre page dédiée.**
 
-## 2. QUEL EST L’OBJECTIF DE LA POLITIQUE?
+Cette Politique s’applique à vous, utilisateur, qui accédez, naviguez et utilisez le site ou l’application (“Plateforme”), ou utilisez les services que nous vous proposons sur notre Plateforme. Cette Politique vous éclaire sur l’utilisation et la protection de vos Données à caractère personnel. Pour plus de transparence, cette Politique énumère également en Section 5 les principaux traitements pour lesquels Doctolib agit comme Sous-traitant.
 
-Doctolib détaille dans la présente Politique la manière dont elle traite et protège vos Données à caractère personnel (en qualité de professionnels).
+## 01QUEL EST L’OBJECTIF DE LA POLITIQUE ?
 
-Cette Politique s’applique à toutes personnes physiques, Visiteurs des sites professionnels tels que notamment pro.doctolib.fr, community.doctolib.fr (ci-après ensemble « les Sites ») ; Abonnés et Utilisateurs, ayant un compte ; Acteurs de santé référencés sur l’annuaire de doctolib.fr ; Acteurs de santé référencés par des Utilisateurs comme susceptibles d’être intéressés par nos Services ; prospects ; partenaires (collectivement ci-après nommés « les Professionnels » ou « Vous »).
+Doctolib peut agir soit en tant que Responsable de traitement soit en tant que Sous-traitant.
 
-Pour plus d’information sur les mesures mises en place par Doctolib pour protéger les Données à caractère personnel des Patients, vous pouvez vous référer à la Politique de protection des données Patients disponible en ligne et si vous êtes Abonné ou Utilisateur, à l’Accord sur la protection des données à caractère personnel attaché à votre Contrat.
+Nous sommes Responsable de traitement quand nous agissons pour notre propre compte et décidons des finalités d’usage de vos Données à caractère personnel.
 
-## 3. QUEL EST LE RÔLE DE DOCTOLIB SUR VOS DONNÉES?
+Exemples:
 
-Doctolib est Responsable de traitement pour les Données à caractère personnel collectées dans le cadre de la Politique à moins que cela ne soit indiqué autrement.
+- Doctolib en tant que Responsable de traitement : nous sommes Responsable de traitement lorsque vous créez votre espace personnel sur la Plateforme vous permettant d’utiliser nos services (“Compte Utilisateur” ou "Compte").
+- Doctolib en tant que Sous-traitant : le Professionnel de santé est le Responsable de traitement lorsqu’il vous envoie des rappels de rendez-vous. Dans ce cas, Doctolib intervient en tant que Sous-traitant pour le compte du Professionnel de santé.
 
-En tant que Responsable de traitement, Doctolib prend les mesures propres à assurer la protection et la confidentialité des Données à caractère personnel qu’elle détient ou qu’elle traite dans le respect des dispositions du RGPD.
+Que ce soit en tant que Responsable du traitement ou en tant que Sous-traitant, nous prenons les mesures appropriées pour garantir la protection et la confidentialité de vos Données à caractère personnel.
 
-Doctolib fait appel à des sous-traitants pour la réalisation des Services.
+## 02COMMENT RECUEILLONS-NOUS VOS DONNÉES À CARACTÈRE PERSONNEL ?
 
-## 4. DE QUELLE MANIÈRE DOCTOLIB RECUEILLE-T-ELLE VOS DONNÉES À CARACTÈRE PERSONNEL?
+Doctolib traite des Données à caractère personnel recueillies :
 
-Les Données à caractère personnel traitées par Doctolib proviennent de différentes sources.
+- Directement auprès de vous: par exemple lors de la création de votre Compte Utilisateur ou de l’utilisation des services sur notre Plateforme, via les formulaires de contact, à l’occasion d’évènements, lors des échanges par mail ou téléphone avec nous, ou encore lorsque vous naviguez sur la Plateforme, notamment via l’utilisation de cookies Consulter la Politique en matière de cookies.
+- Auprès des professionnels de santé ou professionnels directement ou indirectement impliqués dans votre prise en charge sanitaire ou médico-sociale (ensemble les “Acteurs de santé”): lorsqu’ils utilisent nos services, ces derniers peuvent entrer vos Données à caractère personnel dans la Plateforme, que vous possédiez ou non un Compte Utilisateur. Dans ce cas, vos Données à caractère personnel sont collectées par les Acteurs de santé.
+- Auprès de vos proches: les utilisateurs peuvent ajouter des proches à leur Compte Utilisateur. Dans ce cas, vos Données à caractère personnel sont initialement collectées par ces utilisateurs.
 
-1. Données à caractère personnel obtenues directement auprès de vous
+## 03QUELLES SONT LES CONDITIONS RELATIVES À L'UTILISATION DE VOS DONNÉES À CARACTÈRE PERSONNEL ?
 
-Doctolib est susceptible de traiter les Données à caractère personnel fournies directement par vous (i) lors de la création de votre Compte Utilisateur ou de l’Utilisation des Services Doctolib, (ii) via les formulaires de contact ou tout autre document disponibles en ligne sur les Sites et ou fournies à l’occasion d’évènements extérieurs tels que les salons professionnels, (iii) lors des échanges par mail ou téléphone avec Doctolib.
+## 1. Nécessité de la collecte
 
-2. Données à caractère personnel collectées de sources publiques ou auprès de tiers
+Nous ne collectons que les Données à caractère personnel strictement nécessaires à la fourniture de nos services. Si vous ne souhaitez pas communiquer ces informations, ou si vous vous opposez à leur utilisation, il se peut que vous ne puissiez pas accéder à l’intégralité de la Plateforme ou de nos services et que Doctolib soit dans l’incapacité de répondre à votre demande.
 
-Doctolib est susceptible de collecter vos Données à caractère personnel auprès de tiers.
+## 2. Durées de conservation
 
-Recommandations d’autres Acteurs de Santé : Certaines fonctionnalités disponibles dans les Services permettent aux Utilisateurs/Abonnés de Doctolib qui le souhaitent de recommander à leurs confrères l’utilisation des Services Doctolib. Les informations ainsi complétées peuvent être utilisées par Doctolib aux fins de vous contacter et vous proposer d’accéder aux Services. Les communications envoyées sont accompagnées d’informations sur l’origine et la nature des Données à caractère personnel collectées ainsi que d’un lien de désinscription.
+Toutes les Données à caractère personnel collectées sont traitées et conservées pour une durée limitée en fonction de la finalité du Traitement et de la législation applicable aux services que nous proposons. Vous pouvez retrouver le détail des durées de conservation des Données à caractère personnel pour lesquelles nous agissons en tant que Responsable de traitement à la Section 4.
 
-Données publiques : Doctolib est susceptible d’utiliser des Données à caractère personnel publiques disponibles sur des sites web institutionnels et/ou publics (notamment sur le site ameli.fr ou issues de bases de données RPPS fournies par la CNAM, Annuaire Santé, Santé.fr, Accessible.fr). Ces Données à caractère personnel sont utilisées aux fins de créer et mettre à disposition du grand public un annuaire des Acteurs de santé, disponible sur le site doctolib.fr.
+Dans le cadre des Traitements effectués en qualité de Sous-traitant (présentés à la Section 5), nous agissons uniquement sur instruction des Acteurs de santé, qui agissent quant à eux comme Responsables de traitement. Dans ce cadre, nous ne déterminons pas la durée de conservation des Données à caractère personnel. Néanmoins, en notre qualité de prestataire de service et pour les besoins de la conformité et sécurité de nos services, nous pouvons mettre en place des durées de conservation par défaut. Vous trouverez plus de détails à ce sujet à la Section 5. En cas de question à ce propos, nous vous recommandons de vous adresser directement à votre Acteur de santé. A l’expiration des durées de conservation, vos Données à caractère personnel sont supprimées de façon définitive ou anonymisées. Dans certains cas, certaines données peuvent être archivées de manière intermédiaire lorsqu’elles présentent encore un intérêt administratif ou répondent à une obligation légale. Elles ne peuvent être consultées que de manière ponctuelle et par des personnes habilitées pendant la durée nécessaire à ces obligations particulières.
 
-Bases de données de tiers : Doctolib est également susceptible de faire appel aux services de prestataires spécialisés afin d’accéder à des bases de données à jour des Acteurs de santé.
+## 04QUE FAIT DOCTOLIB DE VOS DONNÉES À CARACTÈRE PERSONNEL ?
 
-Partenaires : Doctolib est susceptible de faire appel aux services de partenaires avec lesquels vous avez des relations afin de collecter vos données.
+Vous trouverez dans cette section les Traitements pour lesquels nous agissons en tant que Responsable de traitement, c’est-à-dire les Traitements pour lesquels nous décidons des raisons et de la façon dont vos Données à caractère personnel sont utilisées.
 
-Réseaux sociaux et sites tiers : Doctolib est également susceptible de recueillir des données lorsque vous remplissez un formulaire associé à une annonce publicitaire sur les réseaux sociaux. Ces données permettent à Doctolib d’enrichir sa base de Prospects et Clients. Les informations peuvent être utilisées par Doctolib aux fins de vous contacter et proposer d’accéder aux Services ou à de nouveaux Services.
+### Gestion de votre Compte Utilisateur
 
-Abonnés de Doctolib Connect Organisations : quand une société utilise Doctolib Connect Organisations, les Données à caractère personnel des employés de la société peuvent être transmises à Doctolib, afin que Doctolib créé le Réseau de l’Organisation et afin d’inviter les employés à devenir Utilisateur de l’Application Doctolib Connect Chat ainsi qu’à rejoindre le Réseau de l’Organisation.
+Nous utilisons vos données pour créer, gérer et supprimer votre Compte Utilisateur. Nous vérifions également si plusieurs Comptes correspondent à une même personne afin d’éviter les doublons et de garantir le bon fonctionnement de nos services.
 
-3. Données à caractère personnel que Doctolib collecte automatiquement lors de l’utilisation des Services Doctolib
+## Quelles Données à caractère personnel utilisons-nous ?
 
-Doctolib peut être amenée à recueillir automatiquement des Données à caractère personnel lors de l’utilisation des Services et de la navigation sur la Plateforme Doctolib. Cette collecte automatique peut notamment se faire via l’utilisation de cookies et autres traceurs. Pour plus d’informations, vous pouvez consulter notre Politique en matière de cookies en pied de page de nos sites internet.
+Données d’identification
 
-## 5. QUE FAIT DOCTOLIB DE VOS DONNÉES À CARACTÈRE PERSONNEL?
+Coordonnées
 
-| Pourquoi les Données à caractère personnel sont-elles utilisées ? | Quelles sont les Données à caractère personnel utilisées ? | Sur quelle base légale les Données à caractère personnel sont-elles traitées ? | Combien de temps les Données à caractère personnel sont-elles conservées ? | 
-|---|---|---|---|
-| Création et gestion du Compte Utilisateur Doctolib (création du Compte Utilisateur, vérification de l’identité et du droit d’exercer des Acteurs de santé, exigences en matière de traçabilité, etc..). | Données d’identification : Genre, nom, prénom, date de naissance, nationalité, photographie (photographie instantanée sur la Plateforme)/avatar, identifiant, adresse professionnelle, numéro RPPS, numéro Adeli, numéro Finess, numéro d’enregistrement à l’Ordre, pièces justificatives du droit d’exercice, profession, spécialité, et / ou des qualifications professionnelles, adresse IP à des fins probatoires lors de l’acceptation du Contrat, numéro d’identification de l’entreprise (SIREN), numéro de TVA. Statut de vérification (« Non démarrée », « Identité vérifiée uniquement », « identité et droit d’exercice vérifiés ») Pays d’exercice, lieu de travail (nom(s) du profil de ou des organisations) Données de contact : Adresse email, numéro de téléphone, adresse postale professionnelle. Doctolib conserve une photocopie de la pièce d’identité et un selfie vidéo afin de s’assurer de : – l’identité de l’Acteur de santé au moment de la création de son Compte Utilisateur – l’identitovigilance de l’Acteur de santé – en cas de litige relatif à l’identité de l’Acteur de santé. Autres : Coordonnées bancaires (RIB), rôle de l’Utilisateur (tel que représentant légal). | Pour la création du Compte Utilisateur et la vérification de l’identité : Nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci. Pour répondre aux exigences de traçabilité : obligation légale (notamment les articles 1649 ter A et suivants du Code Général des Impôts et le règlement (UE) 2022/2065). | Pour la création du Compte Utilisateur et la vérification de l’identité : Durée de la relation contractuelle. Les documents d’identité et selfies vidéo sont conservés pendant 30 jours avant la suppression des données. Pour le Service de Messagerie, Doctolib supprime les photocopies des documents d’identité après vérification. Afin de se prémunir contre tout litige, Doctolib est susceptible de conserver certaines informations jusqu’à 5 ans à compter de la fin de la relation contractuelle. Pour répondre aux exigences de traçabilité : Doctolib conserve les données déclarées à l’administration fiscale pendant 10 ans (article 1649 ter D du Code Général des Impôts). | 
-| Création d’un annuaire et de Fiches Profil Utilisateur de l’ensemble des Acteurs de santé. | Données d’identification : Civilité, nom, prénom, titre. Données professionnelles : Numéro de téléphone, adresse professionnelle, photographie, Numéro RPPS, numéro Adeli, numéro Finess, numéro d’enregistrement à l’Ordre, membre ou non d’une Association de gestion agréée, parcours universitaire et professionnel, droit d’exercice, spécialisation, qualifications professionnelles, projets de recherche et publications, récompenses et distinctions, associations, spécialité, présentation, langues parlées, secteur conventionné, plages d’ouvertures de consultation. | 
- Pour les prospects : Intérêt légitime de Doctolib à faciliter l’accès au public à un annuaire de professionnels de santé | Jusqu’à demande de suppression. | 
-| Fourniture du Service de Transmission de Prescriptions permettant aux Patients de communiquer leurs ordonnances électroniques aux pharmacies (lorsque l’Acteur de santé ne dispose pas de compte sur Doctolib), et de repartager plus facilement de nouvelles ordonnances électroniques à la pharmacie dans le futur. | Données de contact : adresse email. | Intérêt légitime de Doctolib de fournir ses services à ses Utilisateurs | 12 mois à compter du renseignement par le Patient de l’adresse email de la pharmacie pour les besoins de la transmission d’une prescription. | 
-| Fourniture d’informations quant aux Services (nouvelles fonctionnalités, guides d’utilisation des Services, nouveaux produits etc.). | Données d’identification : Civilité, nom, prénom. Données de contact : Adresse, email, numéro de téléphone, fax. | Intérêt légitime de Doctolib de promouvoir ses produits et services | Durée de la relation contractuelle. | 
-| Fonctionnement du Service de Téléconsultation. | Données de connexion et de séance de téléconsultation : Informations relatives à la durée de la Téléconsultation, heure de début et heure de fin, à la tenue de la Téléconsultation, à la qualité de la vidéo et du son, aux erreurs et bugs, au flux vidéo et audio, permettant la transmission vidéo entre le patient et le professionnel de santé pendant la téléconsultation, aux informations concernant l’état du matériel utilisé pour la téléconsultation (niveau de batterie, accès à la caméra et au microphone) ; Le flux vidéo permettant la vidéo transmission entre le Patient et l’Acteur de santé lors de la Téléconsultation ; Information de session de Téléconsultation : erreur & bug, heure de début et de fin de la Téléconsultation, débit vidéo et sonore, information concernant l’état des équipements utilisés pour la Téléconsultation (niveau de batterie, accès caméra et micro). | Nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci. | 3 mois à compter de la Téléconsultation. Pour les métadonnées : 3 mois à compter de la Téléconsultation. En cas de débogage, les journaux techniques, les changements d’appareil photo avant/arrière par l’utilisateur, les connexions/déconnexions sont conservés pendant 30 jours. | 
-| Fonctionnement de l’Application Doctolib Connect Chat (par exemple, suggérer des connexions possibles sur le réseau à partir des coordonnées présentes dans le répertoire téléphonique de l’Utilisateur). | Numéro de téléphone, numéro de téléphone des contacts (du répertoire téléphonique). Données de contexte professionnel afin de suggérer des connexions (par exemple, votre qualité de médecin traitant, prescripteur ou adresseur, droits d’accès au même agenda, autres indicateurs de liens professionnels pertinents) | Les Données sont traitées par Doctolib Connect en tant que responsable de traitement sur le fondement des bases légales suivantes : Numéro de téléphone de l’Utilisateur et données utilisées pour suggérer des connexions : nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci. Numéros de téléphone des contacts de l’Utilisateur : consentement. Ce consentement est recueilli via un pop-up permettant d’autoriser ou non l’accès au répertoire téléphonique. | Durée de la relation contractuelle | 
-| Prévenir et lutter contre la fraude informatique (spamming, hacking, attaques DDos etc.). | Données d’usage et de connexion relatives à l’usage des Services et de la Plateforme Doctolib : Matériel informatique utilisé pour la navigation, l’adresse IP. | Intérêt légitime de Doctolib d’assurer la sécurité des services Doctolib et prévenir les incidents de sécurité | Les logs utilisés aux fins d’assurer la sécurité des Services sont conservés pour une durée de 1 an à compter de leur enregistrement. | 
-| 
- 
- | 
- Données de l’annuaire : membre ou non d’une Association de gestion agréée (oui/non), spécialité, langues parlées, secteur d’activité, horaires d’ouverture, services souscrits. Données d’utilisation et de connexion relatives à l’utilisation des Services et de la Plateforme Doctolib : date et heure de la visite des Sites ou de l’utilisation des Services (date de la dernière connexion/utilisation des Services, données et taux d’utilisation des Services, etc.), évènements analytiques génériques, évènements liés aux comptes, identifiants (tels que les identifiants de session, d’utilisateurs, etc.), matériels utilisés pour naviguer (tels que l’adresse IP de l’utilisateur, le type et le modèle de smartphone, la version du système d’exploitation de l’application, etc.) statistiques d’utilisation des Services, segmentation des réseaux par les réseaux sociaux. Catégorie de client, Catégorie d’activité et d’action en fonction de la version Doctolib Connect, nombre de groupes, rôle dans l’organisation. Étapes de la procédure d’inscription, statut des données rentrées. Enquêtes : Réponses à diverses questions sur le secteur de la santé ou sur le parcours de soins et les soins médicaux. Réponses aux enquêtes sur le terrain. Communauté : posts/articles, commentaires, posts/articles aimés, préférences et intérêts, contenus consultés. Données de support : requêtes et retours d’expérience. Données de téléconsultation et informations sur la session : Données de connexion : informations sur la durée, l’heure de début et de fin de la Téléconsultation, le déroulement de la Téléconsultation, les erreurs et bugs, flux vidéo et audio, débit et qualité, les informations concernant l’état du matériel utilisé pour la téléconsultation (niveau de batterie, caméra et accès). Données dont le traitement ultérieur est soumis à autorisation conformément à l’article 4.3 de l’Accord sur la protection des données : vos données professionnelles ; données d’usage et de connexion liées à votre utilisation des Services de Doctolib, les enregistrements vocaux, les données de support et de retour d’expérience utilisateur. | Intérêt légitime de Doctolib agissant en qualité de responsable de traitement d’améliorer les Services et produire des statistiques sur les Services. Pour les recherches dans le domaine de la santé : Intérêt légitime de Doctolib à conduire des recherches scientifiques dans le but d’améliorer les soins pour tous. | Durées spécifiques selon les données concernées : Durée de la relation contractuelle pour les données de gestion et de création du Compte Utilisateur ainsi que pour les données de la base de données client ou Jusqu’à demande de suppression pour les données de Fiche Profil Utilisateur ou 1 an à compter de leur enregistrement pour les données de connexion et d’utilisation des Sites, de la Plateforme Doctolib et des Services, ainsi que du site Communauté ou 3 mois à compter de la Téléconsultation pour les données de connexion ou 1 mois à compter de leur envoi à Doctolib pour les réponses aux questionnaires ou Jusqu’à opposition pour les données de Compte Utilisateur ou Jusqu’à opposition ou demande de suppression pour les données de prospects. | 
-| Mener des enquêtes facultatives sur les Services de Doctolib et leurs possibles évolutions, analyse du taux de satisfaction (notamment NPS score), ateliers « recherche utilisateurs » permettant à Doctolib d’améliorer son produit, etc. | En fonction des enquêtes : Données d’identification : Nom, prénom, âge, genre. Données de contact : Coordonnées téléphoniques et postales professionnelles. Données professionnelles : Activité professionnelle. Autres : Questions diverses sur le secteur de la santé ou sur le parcours de soins et la prise en charge médicale, note de satisfaction. Dans le cadre des ateliers : Données d’identification : Nom, prénom. Données de contact : Adresse email. Données professionnelles : Spécialité. | Intérêt légitime de Doctolib à comprendre et analyser l’avis des utilisateurs sur les services Pour les ateliers : Nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci. | Les réponses aux questionnaires sont conservées 1 mois à compter de leur envoi à Doctolib. Pour les Ateliers : Durée de la relation contractuelle +3 mois à des fins de prospection commerciale. Pour les analyses du taux de satisfaction : 3 ans à compter de leur envoi à Doctolib. | 
-| Prospection commerciale par email, SMS, téléphone, voie postale, fenêtres contextuelles et affichage d’encarts de contenus y compris personnalisés (Informations sur les actualités, nouveautés services, produits, événements, ebooks proposés par Doctolib, génération de rapport de campagnes et d’analyse). | Données d’identification : Civilité, nom, prénom. Données de contact : Adresse, email, numéro de téléphone, adresse postale. Données professionnelles : Spécialité, numéro RPPS. Données de compte : Services souscrits, données et taux d’utilisation des services. Données d’usage et de connexion relatives à l’usage des Services et de la Plateforme Doctolib, telles que : – date et heure de visite du Site ou de l’usage des Services ; – pages consultées ; – terminaux utilisés pour la navigation ; – identifiant de session. | Intérêt légitime de Doctolib à promouvoir ses services et produits | Prospects : le plus tôt entre : – 3 ans à partir du dernier contact avec le prospect – opposition ou demande de suppression. Clients : le plus tôt entre : – opposition – Durée de la relation contractuelle + 5 ans. | 
-| Optimisation et personnalisation des communications de prospection commerciale par e-mail, notamment : – Mesure de leur délivrabilité – Evaluation et amélioration des campagnes de communication – Personnalisation des communications en fonction de vos préférences et centres d’intérêt, y compris sur différents canaux | Informations relatives à la consultation d’une communication lors de l’utilisation de pixels de suivi : adresse e-mail, le fait que vous ouvriez la communication, que vous cliquiez sur les liens qu’elle contient, identifiant utilisateur, informations relatives à votre appareil (adresse IP, agent utilisateur, horodatage). Informations déduites des informations relatives à la consultation d’une communication lors de l’utilisation de pixels de suivi : vos préférences en matière de communication (fréquence, canaux de communication, etc.), les sujets qui vous intéressent. | Le cas échéant, le consentement à l’utilisation de pixels de suivi dans les communications (pour plus d’informations, veuillez consulter notre Politique en matière de cookies) | Mêmes durées de conservation que pour la « Prospection commerciale » (ci-dessus) Concernant la durée de conservation appliquée par l’éditeur des pixels de suivi, veuillez vous référer à sa politique de confidentialité | 
-| Diffusion et optimisation de campagnes publicitaires sur différents canaux (y compris sur les réseaux sociaux et des sites tiers) en fonction de vos préférences et centres d’intérêt | Titre, prénom et nom, adresse e-mail (y compris hachée), numéro de téléphone, ainsi que les versions pseudonymisées des informations soumises via les formulaires sur Doctolib. Spécialité. Type d’appareil, système d’exploitation, détails du navigateur, informations de connexion, langue, fuseau horaire, adresse IP et identifiants techniques uniques. Pages consultées, interactions avec le contenu (par exemple, clics sur des boutons), quel site externe vous a conduit vers nous, données de conversion (par exemple, un prospect qui souscrit à un abonnement Doctolib). Profil attribué par les réseaux sociaux et les sites tiers. | Intérêt légitime de Doctolib à promouvoir ses produits et services et à améliorer la performance de ses campagnes publicitaires, y compris sur les réseaux sociaux et les sites tiers Consentement (dans la bannière de cookies ou dans les « Paramètres des cookies » sur la Plateforme Doctolib) | Même durée de conservation que pour la « Prospection commerciale » (ci-dessus). Concernant la durée de conservation appliquée par les réseaux sociaux et les sites tiers (par exemple, sur les profils attribués), veuillez vous référer à leurs politiques de confidentialité respectives. | 
-| Création et gestion de la base de clients et prospects (Gestion et optimisation de la base de données clients, création de rapports, formation des équipes support de Doctolib, organisation d’événement, webinaires) | Données d’identification : Civilité, nom, prénom ID utilisateur pour les clients. Données de contact : Numéro de téléphone, adresse et email. Données professionnelles : Spécialité, numéro de RPPS, numéro Adeli, numéro Finess, adresse professionnelle. Pour les clients : données de compte : Date de dernière connexion, Données d’utilisation de l’Agenda, usages des Services, taux d’utilisation des Services, numéro de compte, historique du compte. Enregistrement des conversations téléphoniques (aux fins de formation des équipes, d’évaluation de la qualité des Services, de prise de notes automatisée) | Intérêt légitime de Doctolib à développer et maintenir ses relations commerciales avec ses clients et prospects | Pour les prospects, le plus tôt entre : – 3 ans à partir du dernier contact avec le prospect – Jusqu’à opposition ou demande de suppression. Pour les clients : – Durée de la relation contractuelle + 5 ans. – Les enregistrements des appels sont conservés jusqu’à 6 mois à compter de la date d’enregistrement. Les enregistrements des appels au service client sont conservés pour une durée de 6 mois à compter de la date d’enregistrement. | 
-| 
- (Gestion des demandes de support, référencement commercial, gestion du Contrat, de la facturation et des paiements, facturation, recouvrement, reporting et statistiques). | Données d’identification : ID Utilisateur, nom, prénom. Données de contact : Numéro de téléphone, adresse et email. Données professionnelles : Spécialité, organisation dans laquelle exerce l’Utilisateur, adresse postale y compris latitude et longitude, numéro de SIRET et TVA. Données de compte : Services souscrits, statut d’Administrateur. Données relatives au matériel informatique utilisé, les préférences, l’utilisation des données, le contenu de la demande de support et des échanges ultérieurs. Données économiques et financières : numéro de compte bancaire, information de mandat, raison de rejet de paiement, méthode de paiement, échéancier de paiement. Données de connexion et d’utilisation de la Plateforme | Intérêt légitime de Doctolib à gérer ses relations commerciales avec ses clients ou nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à l’exécution de mesures précontractuelles prises à la demande de celle-ci. Facturation et recouvrement : Obligation légale (art. 289 Code général des impôts et art. L. 123-22 Code de commerce). | Durée de la relation contractuelle ou opposition. Gestion du contrat factures et recouvrement : 10 ans. | 
-| 
- | Données d’identification : Nom, prénom. Données de contact : Numéro de téléphone, Adresse, email. Données de compte : Services souscrits. | Pour les mises à jour nécessaires au maintien de la conformité des Services : obligation légale (art. L.224-25-25 Code de consommation). Pour les mises à jour non nécessaires au maintien de la conformité des Services : exécution du contrat. | Durée de la relation contractuelle. | 
-| 
- | Données d’identification : Civilité, nom, prénom, photographie/avatar, Identifiant. Données de contact : email. Données de navigation : Adresse IP, données de connexion, préférences et centres d’intérêt, contenus consultés, adresses IP, données de navigation. Autres : posts/articles, commentaires, posts/articles et commentaires aimés, préférences et centres d’intérêt, contenus consultés. | 
- Pour les Visiteurs : Intérêt légitime de Doctolib à gérer et administrer le Site Communauté, notamment pour assurer son bon fonctionnement, sa sécurité et la qualité des interactions entre ses membres. | Jusqu’à suppression par l’utilisateur. Les logs utilisés aux fins d’assurer la sécurité des Services sont conservés pour une durée de 1 an à compter de leur enregistrement. Afin de se prémunir contre tout litige, Doctolib est susceptible de conserver certaines informations jusqu’à 5 ans à compter de leur enregistrement. | 
-| 
- | Prénom et nom, adresse, numéro de téléphone, courriel, numéro d’identification du contribuable (NIF), date de naissance (et lieu de naissance pour les personnes physiques ne disposant pas d’un NIF), numéro d’identification de l’entreprise individuelle (SIREN/SIRET), numéro de TVA. | Obligation légale (DAC 7 ; Digital Services Act). | Pour le numéro de téléphone et l’adresse électronique : 6 mois après la fin de la relation contractuelle avec le praticien concerné. Pour toutes les autres informations : 10 ans après l’année au cours de laquelle une déclaration utilisant ces informations a été déposée. | 
-| 
- | Informations d’identification : Nom, Prénom, Intitulé du poste / Fonction Informations de contact : Adresse, Numéro de téléphone, Adresse e-mail Autres : Nom de l’entreprise, Numéro d’immatriculation (RCS), Coordonnées bancaires, Numéro de TVA | Nécessaire à l’exécution d’un contrat auquel la personne concernée est partie ou à la mise en œuvre de mesures précontractuelles prises à la demande de celle-ci | Durée de la relation contractuelle. Supprimé dans les 30 jours suivant l’expiration du contrat. Certaines données peuvent également être conservées pendant la durée requise par les obligations légales applicables. | 
+Données relatives au Compte, y compris la date du dernier rendez-vous pris
 
-Pour des raisons de sécurité, notamment pour assurer la continuité de ses Services, certaines Données à caractère personnel sont susceptibles d’être conservées par Doctolib dans des fichiers de sauvegardes protégés.
+Données de recherche de rendez-vous
 
-En cas de restauration de ces fichiers de sauvegarde, les durées de conservation indiquées ci-dessus seront automatiquement prises en compte.
+Données techniques relatives à l’appareil et à la connexion
 
-Vos données personnelles sont conservées, le cas échéant, pour une période plus longue afin que Doctolib puisse se conformer à ses obligations légales dans le cadre de litige, ou jusqu’à la date de prescription.
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
 
-## 6. A QUI DOCTOLIB TRANSMET-ELLE VOS DONNÉES À CARACTÈRE PERSONNEL ?
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
 
-Usage interne : Vos Données à caractère personnel peuvent être traitées par les employés du Groupe Doctolib, dans la limite de leurs attributions respectives et ce exclusivement afin de réaliser les finalités de la présente Politique.
+## Combien de temps conservons-nous vos Données à caractère personnel ?
 
-**Destinataires et sous-traitants :**
+- Nous conservons vos Données à caractère personnel tant que votre Compte Utilisateur est actif. Votre Compte Utilisateur est supprimé soit à votre demande, soit automatiquement en cas d’inactivité, c'est-à-dire trois ans à compter de la date de votre dernier rendez-vous réservé.
+- Si vous avez créé une fiche pour un proche, celle-ci est supprimée avec votre Compte, sauf si ce proche est également rattaché à un autre Compte Utilisateur. Dans ce cas, sa fiche est conservée pour cet autre Compte Utilisateur.
 
-Hébergement : Doctolib fait appel à des Hébergeurs de Données de santé (HDS) certifiés agissant en tant que sous-traitants :
+Après la suppression de votre Compte Utilisateur, nous conservons les documents et informations associés pendant sept (7) jours dans une base d’archivage, avant leur suppression définitive.
 
-– Amazon Web Services (AWS) et
+### Fourniture d'informations sur votre Compte Utilisateur
 
-– Thales Cloud Sécurisé (S3NS), dont les services reposent sur l’infrastructure HDS de Google Cloud Platform (GCP) dont il est revendeur agréé.
+Nous vous transmettons les informations et conseils nécessaires à la gestion de votre Compte et à l’utilisation de nos services, notamment un message de bienvenue ainsi que des informations sur l’évolution des services et de nos Conditions d’utilisation.
 
-Pour augmenter la sécurité de tous nos services, nous avons décidé d’y déposer toutes les Données personnelles de nos clients et des Acteurs de Santé, sans distinction de leur qualification ou non de Données de santé.
+## Quelles Données à caractère personnel utilisons-nous ?
 
-Doctolib est également certifié HDS « hébergeur infogéreur » depuis le 14 octobre 2021.
+Données d’identification
 
-Cette certification exige des mesures de sécurité avancées pour protéger les centres d’hébergement de données de santé, garantissant la confidentialité de ces données.
+Coordonnées
 
-Les données à caractère personnel traitées par AWS, S3NS et GCP sont stockées au sein de l’Union Européenne (UE). A titre exceptionnel, un accès distant depuis les Etats-Unis peut intervenir pour permettre à AWS ou GCP de se conformer à une obligation légale ou à une injonction valide et contraignante émanant d’une autorité publique. Par ailleurs, certains niveaux de support liés à l’hébergement sur l’infrastructure GCP peuvent impliquer des accès depuis l’extérieur de l’EEE (Etats-Unis) encadrés par un cadre contractuel et dans des conditions techniques strictes.
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
 
-Il est précisé que AWS et GCP sont certifiés au titre du Cadre de protection des données UE–États-Unis (Data Privacy Framework, DPF). La Commission européenne a reconnu en juillet 2023 que ce cadre assure un niveau de protection adéquat au sens de l’article 45 du RGPD.
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
 
-Sous-traitants : Doctolib recourt aux services fournis par plusieurs prestataires spécialisés dont la liste est présentée en Annexe 1.
+Lorsque ces informations sont nécessaires à la conformité de nos services, nous nous reposons sur notre obligation légale.
 
-Transfert transfrontalier : Afin de fournir ses Services, Doctolib peut avoir recours à des prestataires se situant hors de l’Union européenne. Si le transfert a lieu vers un pays tiers dans lequel la législation n’a pas été reconnue comme offrant un niveau de protection adéquat des Données à caractère personnel, Doctolib veille à ce que les mesures adéquates soient mises en place conformément à la Loi Informatique et Libertés et aux articles 46, paragraphes 2 et 3 ainsi qu’à l’article 49 paragraphe 1 du RGPD et notamment, lorsque nécessaire à ce que des clauses contractuelles types de l’Union européenne ou des clauses ad hoc équivalentes soient intégrées dans le contrat conclu entre Doctolib et ses prestataires.
+## Combien de temps conservons-nous vos Données à caractère personnel ?
 
-Autres destinataires : Afin de satisfaire ses obligations légales, Doctolib peut transmettre des Données à caractère personnel à des autorités publiques ou judiciaires.
+Jusqu'à la suppression de votre Compte Utilisateur.
 
-Scraping de données : Les informations professionnelles publiques que vous publiez sur votre profil en ligne Doctolib peuvent être réutilisées par des tiers, y compris nos partenaires (tels que nos partenaires en assurance santé), afin de créer des répertoires ou annuaires publics contribuant à faciliter la prise de rendez-vous. Cette réutilisation est autorisée sous deux conditions : (i) le tiers mentionne explicitement Doctolib comme source des données, et (ii) la réutilisation respecte l’ensemble des règles applicables en matière de protection de la vie privée. Cette approche reste cohérente avec la finalité initiale de la publication de vos informations : faciliter la recherche de votre profil par les patients et la prise de rendez-vous.
+### Recherche d'Acteurs de santé sur la Plateforme
 
-Doctolib peut également communiquer des données à caractère personnel au Ministère français de la Santé ou à d’autres organismes (Institutions publiques, organismes de recherche menant des projets d’étude, d’évaluation ou de recherche dans le secteur de la santé). Ces communications peuvent avoir pour objectif d’inviter des professionnels de santé à participer à des projets de recherche, de proposer des parcours de soins ou d’analyser des données démographiques relatives à l’accès aux soins.
+Nous utilisons vos données pour vous permettre de rechercher un rendez-vous à partir de mots-clés et des critères que vous renseignez. Nous vous affichons ensuite les disponibilités ainsi que les informations utiles sur les Acteurs de santé, afin que vous puissiez choisir un créneau et prendre rendez-vous.
 
-## 7. QUELS SONT VOS DROITS SUR VOS DONNÉES À CARACTÈRE PERSONNEL ?
+## Quelles Données à caractère personnel utilisons-nous ?
 
-Conformément au RGPD et à la loi n° 78-17 du 6 janvier 1978, vous disposez des droits suivants sur ces Données personnelles :
+Requêtes de recherche
 
-Droit d’accès (article 15 RGPD) : vous pouvez à tout moment accéder aux informations personnelles vous concernant et détenues par Doctolib.
+Données de géolocalisation pour afficher des résultats basés sur la localisation
 
-Droit de rectification (article 16 RGPD), et droit d’effacement (article 17 du RGPD) : vous pouvez demander la modification ou la suppression de vos Données à caractère personnel.
+Données techniques relatives à l’appareil, à la connexion et au navigateur, incluant l’adresse IP
 
-Droit à la limitation du traitement (article 18 RGPD) : vous disposez du droit de limiter les traitement effectués sur vos Données à caractère personnel uniquement lorsque l’une des situations suivantes se présente : (i) lorsque vous contestez l’exactitude de vos données, (ii) lorsque vous pensez que le traitement de vos Données à caractère personnel est illicite, ou (iii) lorsque vous avez besoin de cette limitation pour la constatation, l’exercice ou la défense de vos droits en justice.
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
 
-Droit à la portabilité des données (article 20 RGPD) : vous avez la possibilité de demander à récupérer les Données à caractère personnel que vous avez fournies à Doctolib, pour un usage personnel ou pour les transmettre à un tiers de votre choix. Uniquement lorsque ces Données à caractère font l’objet de traitements automatisés fondés sur votre consentement ou sur un contrat.
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
 
-Droit d’opposition (article 21 RGPD) : vous pouvez vous opposer au traitement de vos Données à caractère personnel à des fins de marketing direct et/ou vous opposer aux traitements effectués sur le fondement de l’intérêt légitime de Doctolib.
+Les données de localisation sont collectées sur la base de votre consentement.
 
-Droit de définir le sort des Données à caractère personnel après votre mort et de choisir à qui Doctolib devra communiquer (ou non) vos Données à caractère personnel à un tiers qu’ils auront préalablement désigné (en savoir plus). Dès que Doctolib a connaissance de votre décès et à défaut d’instructions de votre part, Doctolib s’engage à détruire vos Données à caractère personnel, sauf si leur conservation s’avère nécessaire à des fins probatoires ou pour répondre à une obligation légale (telle que la conservation du dossier patient).
+## Combien de temps conservons-nous vos Données à caractère personnel ?
 
-Vous avez également le droit d’introduire une réclamation auprès d’une autorité de contrôle, et notamment de la CNIL (https://www.cnil.fr/fr/plaintes).
+- Le temps de votre session de recherche.
+- Les informations de recherche peuvent être conservées à d’autres fins, précisées dans les activités de traitements correspondants ci-dessous.
 
-Pour plus d’informations ou pour exercer vos droits, vous pouvez contacter Doctolib par écrit à l’adresse suivante : Doctolib – DPO, 54 quai Charles Pasqua, 92300 Levallois-Perret ou par mail à contact.dataprivacy@doctolib.com. Dans ce cas, vous devez indiquer les Données à caractère personnel que vous souhaitez que Doctolib corrige, mette à jour ou supprime, en vous identifiant de manière précise avec une copie d’une pièce d’identité (carte d’identité ou passeport) ou tout autre élément permettant de justifier de votre identité.
+### Fourniture d'un service de carte
 
-Si votre demande concerne des traitements de Service de Messagerie et Doctolib Connect Organisation, merci de le préciser dans votre demande.
+A votre demande, nous affichons un service de carte via Google Maps.
 
-Pour la recherche dans le domaine de la santé : Vous pouvez donner ou retirer votre autorisation à l’utilisation des données de vos patients à tout moment en accédant à Mon Compte > Centre de confidentialité, sans que cela n’affecte votre accès aux solutions Doctolib.
+## Quelles Données à caractère personnel utilisons-nous ?
 
-## 8. COMMENT DOCTOLIB PROTÈGE-T-ELLE VOS DONNÉES ?
+En cas d’activation du service "Google Maps" :
 
-Doctolib met en œuvre les mesures techniques et organisationnelles appropriées liées à la sécurité conformément aux dispositions prévues par la Loi Informatique et Libertés et le RGPD, et visant à garantir un niveau de sécurité approprié face aux risques présentés par le Traitement de vos Données à caractère personnel. Pour évaluer le niveau de sécurité approprié, Doctolib tiendra compte des risques pouvant résulter d’une destruction accidentelle ou illicite, d’une corruption, d’une perte, d’une modification, d’une divulgation non autorisée ou de l’accès à des Données à caractère personnel susceptibles d’être transmises, stockées ou autrement traitées, conformément aux dispositions de l’article 32 du RGPD.
+Données de géolocalisation lors de la recherche d’un Acteur de santé / adresse postale
 
-## 9. ET CONCERNANT LES COOKIES?
+Données techniques relatives à l’appareil et à la connexion, incluant l’adresse IP et le user agent
 
-Veuillez vous référer à notre politique en matière de cookies, disponible en pied de page des Sites et de la Plateforme Doctolib.
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
 
-## 10. ET CONCERNANT LES RÉSEAUX SOCIAUX ET SITES TIERS?
+Nous traitons ces données sur la base de votre consentement à l'activation du service Google Maps. Vous pouvez le retirer à tout moment depuis votre Compte Utilisateur.
 
-1. Lien vers les réseaux sociaux
+Lorsque vous utilisez Google Maps, Google traite vos données conformément à sa Politique de confidentialité.
 
-Vous avez la possibilité de cliquer sur les icônes dédiées aux réseaux sociaux X (Twitter), Facebook, Linkedin, Medium, Youtube et Instagram figurant sur les Sites ou dans la Plateforme Doctolib. En cliquant sur ces icônes vous êtes redirigés vers des sites web externes.
+## Combien de temps conservons-nous vos Données à caractère personnel ?
 
-Les réseaux sociaux permettent d’améliorer la convivialité des Sites ou de la Plateforme Doctolib et aident à leur promotion via les partages. Les services de partage de vidéo permettent d’enrichir les Sites ou la Plateforme Doctolib de contenus vidéo et augmentent leur visibilité.
+- Nous conservons uniquement la preuve de votre consentement à l'affichage de la carte pendant 3 mois, ou jusqu'à son retrait.
+- Aucune autre donnée n'est conservée.
 
-Lorsque vous cliquez sur ces icônes, Doctolib ne collecte et ne traite pas vos données ou les partages effectués via Twitter, Facebook, Linkedin, Medium, Youtube et Instagram. Il s’agit uniquement de liens vous renvoyant à ces réseaux sociaux lorsqu’il clique sur les icônes. Lorsque vous êtes renvoyé sur les réseaux sociaux, les interactions et informations collectées par les réseaux sociaux sont soumises aux paramètres de confidentialité définis par vous auprès de chaque réseau social :
+### Partage de vos prescriptions et de celles de vos proches
 
-X (Twitter) – États Unis / Facebook – États Unis / Linkedin – États Unis / Medium – États Unis / Youtube – États Unis / Instagram – États Unis.
+Nous vous permettons de partager et de transmettre les prescriptions que vous recevez sur la Plateforme.
 
-2. Publicité sur les réseaux sociaux et sites tiers
+## Quelles Données à caractère personnel utilisons-nous ?
 
-Doctolib affiche de la publicité ciblée sur les réseaux sociaux par le biais de programmes proposés par Meta (Facebook et Instagram), Google, Linkedin et Tik Tok. Le site tiers affiche des publicités et des formulaires de collecte de données pour ses utilisateurs avec des caractéristiques de profil définies par le site tiers et sélectionnées par Doctolib. Veuillez noter que les données utilisées pour personnaliser les campagnes sont celles directement collectées auprès des utilisateurs par les médias sociaux et les sites tiers.
+Données d’identification
 
-## 11. QUI PEUT UTILISER DOCTOLIB? EST-CE QUE LES MINEURS PEUVENT UTILISER DOCTOLIB?
+Prescriptions reçues sur la Plateforme et transmises à un autre Acteur de santé
 
-Les Sites et la Plateforme Doctolib s’adressent à des personnes majeures capables de contracter des obligations conformément à la législation du pays dans lequel vous vous trouvez. L’utilisation de la Plateforme Doctolib est réservée aux Acteurs de santé. En tant qu’Acteur de santé, vous reconnaissez que vous agissez dans le cadre de votre activité professionnelle exercée dans votre pays et vous engagez à vérifier que chaque Acteur de santé de votre organisation agit également dans le cadre de son activité professionnelle exercée dans votre pays.
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
 
-## 12. QUELLES SONT LES CONDITIONS D’APPLICATION DE LA POLITIQUE?
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
 
-Doctolib est susceptible de modifier, compléter ou mettre à jour la présente Politique afin de prendre en compte toute évolution légale, réglementaire, jurisprudentielle et/ou technique.
+## Combien de temps conservons-nous vos Données à caractère personnel ?
 
-En cas de modifications significatives (relatives aux finalités de traitement, aux Données à caractère personnel collectées, à l’exercice des droits, au transfert des Données à caractère personnel) des termes de la présente Politique, Doctolib s’engage à vous en informer par tout moyen écrit dans un délai minimum de quinze (15) jours avant leur date de prise d’effet.
+- Jusqu'à ce que vous supprimiez le document par vous,
+- ou jusqu'à la suppression de votre Compte Utilisateur.
 
-Tout accès et utilisation des Services Doctolib passé ce délai seront soumis aux termes de la nouvelle Politique.
+Lorsque vous partagez une prescription avec un Acteur de santé :
 
-Vous êtes informé que l’unique version de la Politique qui fait foi est celle qui se trouve en ligne, ce que vous reconnaissez.
+\- S’il ne dispose pas d’un Compte Doctolib, le lien d’accès est valable 1 heure, ou 24 heures s’il active un compte gratuit ;
 
-Vous êtes tenus de vous référer à la version en ligne de la Politique à la date de votre accès et de chaque utilisation des Services.
+\- S’il est abonné à Doctolib, il reçoit la prescription et la conserve pendant la durée qu’il détermine, en sa qualité de Responsable de traitement.
 
-## 13. COMMENT CONTACTER DOCTOLIB POUR DES QUESTIONS LIÉES AU DONNÉES À CARACTÈRE PERSONNEL ?
+### Fonctionnement du service de téléconsultation
 
-Pour toutes questions ou réclamations concernant le respect par Doctolib de la présente Politique, ou pour toutes recommandations ou tous commentaires visant à améliorer la qualité de la présente Politique, vous pouvez contacter Doctolib par écrit à l’adresse suivante : Doctolib – DPO, 54 quai Charles Pasqua, 92300 Levallois-Perret ou contact.dataprivacy@doctolib.com et préciser, le cas échéant, si elles sont relatives au Service de Messagerie Doctolib Connect Chat et/ou Service Doctolib Connect Organisation.
+Nous utilisons vos données pour assurer le bon fonctionnement du service de téléconsultation et en suivre la qualité.
 
-## Annexe 1 : Liste des sous-traitants
+## Quelles Données à caractère personnel utilisons-nous ?
 
-Afin de fournir ses Services, Doctolib peut avoir recours à des prestataires se situant hors de l’Union européenne. Si le transfert a lieu vers un pays tiers dans lequel la législation n’a pas été reconnue comme offrant un niveau de protection adéquat des Données à caractère personnel, Doctolib veille à ce que les mesures adéquates soient mises en place conformément à la Loi Informatique et Libertés et aux articles 46, paragraphes 2 et 3 ainsi qu’à l’article 49 paragraphe 1 du RGPD et notamment, lorsque nécessaire à ce que des clauses contractuelles types de l’Union européenne ou des clauses ad hoc équivalentes soient intégrées dans le contrat conclu entre Doctolib et ses prestataires.
+Données techniques relatives à l’appareil, à la connexion et à l’utilisation du service, notamment les logs relatifs à la connexion, à la durée de la téléconsultation, à son déroulement, ainsi qu’à la qualité de la vidéo et du son
 
-Dans le cadre de la fourniture et de l’amélioration de ses services, Doctolib peut faire appel à des fournisseurs de services tests non listés ci-dessous. Le traitement dans ce cadre est effectué dans le strict respect de la présente Politique.
+Retours des Utilisateurs
 
-**Hébergement :**
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
-|---|---|---|---|
-| Atos | France | France | Hébergement de la clé de chiffrement de Doctolib |
-| AWS EMEA | Maison mère : Etats-Unis Entité contractante : Luxembourg | UE | Hébergement des données de Services Doctolib |
-| Cloudinary | Etats-Unis | Etats-Unis | Hébergement des photographies des Acteurs de santé |
-| Discourse | Etats-Unis | UE | Publication du Site Communauté |
-| S3NS / GCP | France / Etats-Unis | UE | Hébergement des données pour les services Doctolib |
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
 
-**Support :**
+## Combien de temps conservons-nous vos Données à caractère personnel ?
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
-|---|---|---|---|
-| TeamViewer | Allemagne | UE | Offrir un service d’assistance à distance sous supervision de l’Utilisateur/ Abonné |
-| Microsoft | Etats-Unis | UE | Stockage des enregistrements effectués dans le cadre d’opérations de support Utilisateurs / Abonnés |
-| Walkme | Israël | UE | Gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés |
-| Salesforce | Maison mère : Etats-Unis Entité contractante : France | France | Gérer la relation client |
-| Allomedia | France | UE | Retranscription des enregistrements téléphoniques |
-| Hubicus | France | UE | Stockage des enregistrements téléphoniques |
-| Webhelp | France | France | Gérer les demandes de support des Utilisateurs/Abonnés |
-| Calendly | Etats-Unis | UE | Faciliter la prise en charge et les rendez-vous avec les Utilisateurs / Abonnés |
-| Atlassian | Etats-Unis | UE | Gérer les demandes de support des Utilisateurs/Abonnés |
-| Zendesk | Etats-Unis | UE | Permettre, grâce à l’émission de tickets, le suivi des échanges entre les employés et les utilisateurs dans le cadre des commentaires que ces derniers font via le service de Messagerie Doctolib ConnectSiilo Chat |
-| Datadog | Etats-Unis | UE | Surveiller et investiguer les alertes et bugs |
-| Boomi | Etats-Unis | UE | Synchronisations des données entre les plateformes |
+90 jours à compter de leur collecte.
 
-**Télécom :**
+### Communications sur les services
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
-|---|---|---|---|
-| Iagility | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) |
-| Sendinblue | France | UE | Envoi des rappels de rendez-vous à destination des Patients (emails) |
-| Flowmailer | Pays-Bas | UE | Envoi des rappels de rendez-vous à destination des Patients (emails) |
-| SMSMODE (Calade technologie) | France | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) |
-| Sinch | Suède | UE | Envoi des rappels de rendez-vous à destination des Patients (sms) |
-| Vonage (Nexmo) | Etats-Unis | UE | Permet à Doctolib de gérer la transmission vidéo de la Téléconsultation |
-| Braze | Etats-Unis | UE | Permet à Doctolib de gérer ses campagnes de communication avec les Utilisateurs/ Abonnés et d’évaluer l’impact de ses campagnes afin d’améliorer le contenu de ces dernières |
-| ON24 | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires |
-| ZOOM | Etats-Unis | Etats-Unis | Permet à Doctolib d’organiser des webinaires |
-| Walkme | Israël | UE | Surveiller, gérer et afficher dans l’application du contenu à destination des Utilisateurs / Abonnés |
-| Twilio | Etats-Unis | Irlande | Permet de transmettre des appels vocaux et vidéos par internet dans le cadre de la Messagerie Doctolib ConnectSiilo Chat |
-| CM.com | Pays-Bas | Pays-Bas | Envoi de SMS aux utilisateurs avec un code pour confirmer qu’ils ont accès au matériel connecté à un numéro spécifique |
+Nous pouvons vous envoyer ou vous afficher des communications concernant les dernières mises à jour de nos et nos offres par e-mail, dans l’application ou par notification push. Ces messages peuvent également apparaître dans les encarts de contenu de la Plateforme.
 
-**Analytics :**
+## Quelles Données à caractère personnel utilisons-nous ?
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
-|---|---|---|---|
-| Tableau | Etats-Unis | UE | Aide Doctolib à établir des tableaux de suivi |
-| Didomi | France | UE | Aide Doctolib à gérer le consentement des Professionnels au dépôt de cookies |
-| Modjo | France | UE | Aide Doctolib à améliorer la relation avec les professionnels de santé |
-| Firebase | Etats-Unis | UE | Permet de réaliser des rapports d’analyses et d’incidents, d’envoyer des notifications pour les applications Android et de créer des liens dynamiques pour les non-utilisateurs |
-| Short.io | Etats-Unis | UE | Crée des liens profonds personnalisés avec le nom de notre marque à destination des non-utilisateurs. |
-| Sentry | Etats-Unis | Etats-Unis | Aide à contrôler et à suivre les erreurs dans l’Application |
-| Amplitude | Etats-Unis | UE | Outil d’analyse de données qui reçoit des événements permettant d’analyser le parcours des utilisateurs |
+Données d’identification
 
-**Marketing :**
+Coordonnées
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
-|---|---|---|---|
-| Typeform | Espagne | UE | Aide Doctolib à créer des enquêtes à destination des Utilisateurs/Abonnés. |
-| Meta (Facebook et Instagram) | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données |
-| Google | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Génération de leads et collecte des données |
-| Salesforce | UE | France | Aide Doctolib à faire de la prospection commerciale |
-| Reltio | Etats-Unis | France | Aide Doctolib à gérer la base de prospects et clients |
-| Guideflow | UE | UE | Aide Doctolib à faire des démonstrations de ses Services |
-| Salesforce Experience Cloud | Maison mère : Etats-Unis Entité contractante : France | France | Aide Doctolib à gérer sa relation avec ses partenaires |
-| LinkedIn | Maison mère : Etats-Unis Entité contractante : Irlande | UE – Etats-Unis | Optimisation des campagnes publicitaires |
-| Zyte | Irlande | UE | Collecte d’informations sur les Acteurs de santé |
+Données relatives aux proches associés au Compte
 
-**Finance-Legal :**
+Données relatives aux rendez-vous (hors données de santé)
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
-|---|---|---|---|
-| SAP | France | UE | Aide Doctolib à gérer la facturation de l’Abonné |
-| Zuora | Etats-Unis | Allemagne | Aide Doctolib à gérer la facturation de l’Abonné |
-| STRIPE | Etats-Unis | Etats-Unis | Gérer les paiements en ligne des Téléconsultations |
-| Adyen | Pays-Bas | UE | Gérer les paiements en ligne |
-| Docusign | Etats-Unis | UE | Aide Doctolib à gérer les signatures de ses contrats |
-| Complya | France | UE | Gestion des contrats |
-| Pivot | France | UE | Gestion financière des Programmes de Partenariats |
+Données relatives au Compte et à l’utilisation des services
 
-**Sécurité Informatique :**
+Adresse IP tronquée
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Type de tâche effectuée |
-|---|---|---|---|
-| Cloudflare | Etats-Unis | UE | Aide Doctolib à se prémunir contre les attaques du type CDS et DDos |
+Données de navigation et d’intéractions (pour plus d’informations Consulter la Politique en matière de cookies)
 
-**Autres :**
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
 
-| Sous-traitant | Pays d’origine | Localisation des serveurs | Catégorie de service concerné | Type de tâche effectuée |
-|---|---|---|---|---|
-| Onfido | Royaume-Uni | Royaume-Uni | Logiciel de connaissance client | Aide Doctolib à vérifier l’identité des Acteurs de santé clients |
-| Zapier | Etats-Unis | Etats-Unis | Logiciel d’automatisation de flux entre applications web | Permet à Doctolib d’automatiser la transmission de flux de données entre différentes applications web |
-| Screeb | France | UE | Logiciel d’envoi d’enquêtes de satisfaction | Enquêtes de satisfaction envoyées afin de mieux connaître l’utilisation des Services |
-| Microsoft Azure | USA | UE | Recherche et développement de services | Traitements et analyses de données |
-| Looker | Etats-Unis | Etats-Unis mais aucune Donnée à caractère personnel n’est stockée dans la base de données de Looker | Création de tableau de bord | Looker est utilisé comme plateforme de création de tableau de bord et de BI qui se connecte à la base de données Amazon Redshift. Bien qu’aucune donnée ne soit stockée de manière permanente chez Looker, ce dernier (pour traiter et visualiser les données) a besoin d’une connexion et d’un cache temporaire de la base de données Redshift afin de pouvoir le faire. |
-| Modjo | France | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects |
-| Amazon Connect | Etats-Unis | UE | Relation client | Aide Doctolib à automatiser la prise de notes lors des interactions avec les clients et prospects |
-| Anthropic | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches |
-| Google (Gemini) | Etats-Unis | UE | Fourniture du modèle de LLM | Analyse et création de contenu à des fins d’automatisation de tâches |
-| Dust (Permutation Labs SAS) | France | UE | Automatisation de tâche via IA | Permet à Doctolib d’automatiser certaines tâches internes et d’améliorer ses processus opérationnels |
-| Prestataires d’annotation | UE | UE | Système d’exploitation IA pour les achats | Réalisation d’annotations pour les modèles d’IA de transcription vocale et d’extraction de faits médicaux |
-| Prestataires événementiel | UE | UE | Evénementiel et communication | Accompagnement dans l’organisation d’événements, notamment la coordination des lieux, la gestion de la logistique, l’envoi des invitations, la gestion des inscriptions et toute activité de communication associée |
+Nous traitons ces données sur la base de notre intérêt légitime à promouvoir nos produits et services auprès de vous.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+Les données sont conservées pendant les durées applicables à la gestion de votre Compte Utilisateur.
+
+### Affichage de contenus publicitaires de santé et de prévention
+
+Nous affichons dans l’application des contenus publicitaires de santé ou de prévention financés par des partenaires tiers et adaptés à certaines données de votre compte ou de celui de vos proches, comme l’âge. Le caractère sponsorisé du contenu et l’identité du partenaire concerné sont clairement indiqués.
+
+Aucune donnée de santé n’est utilisée à cette fin.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Pour chaque Utilisateur et, le cas échéant, pour chaque proche :
+
+Données d’identification
+
+Coordonnées
+
+Données relatives aux proches associés au Compte
+
+Données relatives aux rendez-vous (hors données de santé)
+
+Données relatives au Compte et à l’utilisation des services
+
+Adresse IP tronquée
+
+Données de navigation et d’intéractions (pour plus d’informations Consulter la Politique en matière de cookies)
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données sur la base de notre intérêt légitime à vous proposer des contenus sponsorisés de santé et de prévention susceptibles de vous intéresser. Cette finalité contribue également au financement et au développement de nos services.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+Les données sont conservées pendant les durées applicables à la gestion de votre Compte Utilisateur.
+
+### Mesure de performance des publicités sur des sites tiers
+
+Nous mesurons l’audience de nos publicités diffusées sur des sites tiers et analysons l’efficacité de nos campagnes publicitaires
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Identifiant unique
+
+Données de connexion et d’utilisation de la plateforme
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données sur la base de notre intérêt légitime à améliorer la performance de nos campagnes publicitaires, ou de votre consentement recueilli via la bannière ou la gestion des cookies sur la Plateforme.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+L'identifiant est supprimé après son envoi au site tiers, sinon 13 mois à compter de la collecte.
+
+### Informations et recommandations de santé adaptées à votre profil
+
+Selon vos préférences, nous vous adressons des informations générales de santé et des contenus de prévention adaptés à certaines données de votre compte ou de celui de vos proches, comme l’âge. Ces contenus peuvent porter, par exemple, sur des recommandations de santé publique en matière de vaccination ou de dépistage, ou d’autres sujets de santé susceptibles de vous intéresser.
+
+Cette personnalisation n’utilise pas vos données de santé.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Pour chaque Utilisateur et, le cas échéant, pour chaque proche :
+
+Données d’identification
+
+Coordonnées
+
+Données relatives aux proches associés au Compte
+
+Données relatives aux rendez-vous (hors données de santé)
+
+Données relatives au Compte et à l’utilisation des services
+
+Adresse IP tronquée
+
+Données de navigation et d’intéractions (pour plus d’informations Consulter la Politique en matière de cookies)
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données sur la base de notre intérêt légitime à contribuer à la prévention en santé en vous informant des recommandations de santé publique adaptées à votre profil et à celui de vos proches.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+Les données sont conservées pendant les durées applicables à la gestion de votre Compte Utilisateur.
+
+### Détermination de l’éligibilité et adaptation des services disponibles
+
+Nous déterminons, pour vous et vos proches, les services Doctolib auxquels vous êtes éligible, notamment en fonction de l’âge de votre proche, puis les rendons disponibles sur la Plateforme lorsque vous accédez à votre Compte.
+
+Les services auxquels vous pouvez accéder peuvent évoluer lorsque les informations renseignées dans votre compte ou celui de vos proches sont mises à jour.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Pour chaque Utilisateur et, le cas échéant, pour chaque proche :
+
+Données d’identification, y compris âge
+
+Données relatives au Compte et à l’utilisation des services
+
+Données techniques relatives à l’appareil et à la connexion
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données sur la base de notre intérêt légitime à adapter la Plateforme au profil de l’Utilisateur afin de mettre à disposition les services et fonctionnalités pertinents.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+Les données sont conservées pendant les durées applicables à la gestion de votre Compte Utilisateur.
+
+### Centralisation et organisation de l’historique de santé
+
+Nous vous permettons de centraliser et d’organiser, notamment en consultant, modifiant, ou supprimant, dans votre historique de santé, les informations utiles au suivi de votre santé. Ces informations peuvent être renseignées par vous ou vos soignants, ou provenir des services que vous utilisez, notamment des données relatives à vos rendez-vous, de vos documents, de vos échanges avec l’Assistant IA ou de d’applications connectées.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Pour chaque Utilisateur et le cas échéant, pour chaque proche concerné :
+
+Données d’identification
+
+Coordonnées
+
+Données relatives au Compte
+
+Données relatives aux rendez-vous et aux interactions avec les Acteurs de santé, notamment l’historique des messages échangés
+
+Documents, y compris médicaux
+
+Antécédents médicaux (notamment les allergies, interventions chirurgicales, vaccins etc.)
+
+Antécédents familiaux
+
+Mesures corporelles et mesures physiologiques
+
+Traitements y compris médicaux (notamment les traitements médicaux habituels etc.)
+
+Vaccins
+
+Habitudes de vie
+
+Données, y compris données de santé, issues d’applications et de dispositifs connectés
+
+Les informations issues de l’usage des services Doctolib, y compris les données de santé, notamment de l’Assistant IA
+
+Toute autre information ou donnée de santé enregistrée dans l’historique de santé
+
+Source de l’information, c’est-à-dire, l’Utilisateur ou le professionnel de santé, ainsi que les libellés associés
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
+
+Votre consentement est requis pour le traitement des données de santé.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+- Les données sont conservées pendant les durées applicables à la gestion de votre Compte Utilisateur.
+- Les données de santé sont conservées pendant 30 jours à compter du retrait du consentement.
+
+### Fourniture d’un accompagnement santé adapté à vos besoins et ceux de vos proches
+
+Nous traitons vos données de santé afin de vous proposer un accompagnement personnalisé. Cet accompagnement peut notamment comprendre des réponses fournies par l’Assistant IA, des recommandations de santé, incluant par exemple des informations de prévention adaptées, des suggestions de rendez-vous, ainsi que des rappels relatifs à vos rendez-vous, vaccinations, dépistages, consultations ou traitements.
+
+Ces services peuvent également concerner les proches que vous gérez, selon les choix applicables à chacun d’eux.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Pour chaque Utilisateur et, le cas échéant, pour chaque proche concerné :
+
+Données d’identification
+
+Données de l’historique de santé
+
+Données relatives aux rendez-vous et aux interactions avec les Acteurs de santé, notamment les rendez-vous à venir
+
+Contenus personnalisés
+
+Données d’usage et de navigation révélant une information relative à la santé
+
+Échanges avec l’Assistant IA, y compris l’historique des conversations, les documents, les enregistrements vocaux et les vidéos ainsi que leurs informations techniques.
+
+Toute autre information, y compris relative à la santé, résultant de l’utilisation des services d’accompagnement en santé
+
+Informations relatives à l’utilisation de la messagerie patient, à l’exclusion du contenu des messages
+
+Dépistages et évaluations de santé réalisés ou à réaliser
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
+
+Votre consentement est requis pour le traitement des données de santé.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+- Les données sont conservées pendant les durées applicables à la gestion de votre Compte Utilisateur.
+- Les données de santé sont conservées jusqu’au retrait du consentement.
+- Pour les messages échangés avec l’Assistant IA : 2 ans à compter de leur collecte.
+
+### Gestion de l’abonnement aux services payants (Doctolib+)
+
+Nous utilisons vos données pour gérer votre abonnement aux services payants, notamment sa souscription, son renouvellement et sa résiliation. Nous traitons également les commandes, les paiements et les factures associés, répondons à vos demandes de service après-vente et gérons les périodes d’essai gratuit, y compris la vérification de votre éligibilité.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Données d’identification
+
+Coordonnées
+
+Informations relatives à l’abonnement aux services payants
+
+Données de facturation et de paiement
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
+
+Nous pouvons également nous reposer sur nos obligations légales, en particulier s’agissant de nos obligations comptables.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+Jusqu’à la fin de l’abonnement aux services payants
+
+### Recherches et études ; développement et amélioration des services ; production de statistiques ; anonymisation des données
+
+Nous étudions la manière dont vous utilisez notre Site et notre Plateforme afin d’améliorer leur navigation et leur fonctionnement.
+
+Nous pouvons utiliser certaines données pour entraîner nos modèles d’intelligence artificielle, notamment pour la reconnaissance de texte et de la voix, afin de créer des solutions innovantes et d’améliorer nos produits.
+
+Nous produisons également des statistiques agrégées, qui peuvent être communiquées au public et à nos partenaires.
+
+Par ailleurs, nous menons des recherches, études, et évaluations présentant un caractère d’intérêt public. Voir notre portail de recherche.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+**Aucune donnée directement identifiante n’est utilisée.**
+
+Pour l’Utilisateur et, le cas échéant, les proches de moins de 18 ans :
+
+Données renseignées dans le compte : date de naissance (mois/année), sexe, localité
+
+Données relatives au compte et à l’utilisation des services
+
+Données techniques relatives à l’appareil et à la connexion
+
+Réponses aux enquêtes volontaires
+
+Données relatives aux demandes d’assistance (support)
+
+Données de santé non directement identifiantes, incluant : données de l’historique de santé ; données résultant de l’utilisation des services d’accompagnement en santé ; données de santé collectées par l’Acteur de santé sur l’Utilisateur/le proche dans le cadre de son utilisation des services Doctolib (si l’Acteur de Santé l’a expressément autorisé) ; données issues des consultations : enregistrement vocal, transcriptions des enregistrements, suggestions de prise de notes (si l’Acteur de Santé l’a expressément autorisé) ; données issues d’applications et de dispositifs connectés ; échanges avec l’Assistant IA, y compris les documents, les enregistrements vocaux et les vidéos données de connexion et d’utilisation de la Plateforme.
+
+Ces données peuvent être utilisées pour établir des statistiques et peuvent être anonymisées.
+
+Les données traitées sont précisées pour chacun des projets sur notre portail de recherche.
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Lorsque les données traitées ne comprennent pas de données de santé, nous fondons le traitement sur notre intérêt légitime à améliorer nos services et à produire des statistiques sur les services.
+
+Lorsque les données traitées comprennent des données de santé, votre consentement est requis (sauf dans le cadre de recherches, études, et évaluations présentant un caractère d’intérêt public. Voir notre portail de recherche).
+
+Lorsque le traitement de données est réalisé dans le cadre d’une recherche dans le domaine de la santé, nous fondons :
+
+\- le traitement des Données à caractère personnel sur notre intérêt légitime à conduire des recherches scientifiques visant à améliorer les soins et les parcours de santé ;
+
+\- le traitement des données de santé sur le fondement applicable à la recherche scientifique, dans le respect des garanties prévues par la réglementation applicable.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+Les données sont conservées pendant les durées suivantes :
+
+- Données du compte, données de santé non directement identifiantes et échanges avec l’Assistant IA : jusqu’à 3 ans à compter du dernier événement pertinent, selon la donnée concernée, tel que la réservation d’un rendez-vous, la collecte de données de santé ou un échange avec l’Assistant IA. Ces données peuvent être supprimées plus tôt en cas de suppression du compte incluant une demande de suppression ;
+- Données de connexion et d’utilisation de la Plateforme : 13 mois à compter de leur collecte ;
+- Adresse IP : 1 an à compter de son enregistrement ;
+- Réponses aux enquêtes volontaires : 3 mois à compter de leur réception ;
+- Métadonnées et données techniques de connexion, ainsi que commentaires relatifs au service de téléconsultation : 90 jours à compter de leur collecte.
+
+Les données peuvent être utilisées sous une forme anonymisée afin d’établir des statistiques. Une fois anonymisées, elles peuvent être conservées à cette fin.
+
+Les données de conservation applicables sont précisées pour chacun des projets sur notre portail de recherche.
+
+### Support Utilisateur
+
+Nous traitons vos demandes liées à l’utilisation de nos services et réalisons les analyses techniques nécessaires pour diagnostiquer et résoudre les problèmes rencontrés.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Données d’identification
+
+Contenu des demandes
+
+Document de vérification d’identité (lorsque nécessaire pour vérifier l’identité du demandeur)
+
+Données de santé : dans de rares cas, certaines données de santé que l’Utilisateur choisit de communiquer lors de sa demande (par exemple : informations relatives à un rendez-vous, nom de l’Acteur de santé, description du problème) peuvent être traitées par notre équipe support afin de résoudre le problème remonté, avec le consentement de l’Utilisateur.
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données pour les besoins de l’exécution du contrat qui nous lie ou, avant sa conclusion, pour mettre en œuvre les mesures précontractuelles que vous avez demandées.
+
+Votre consentement est requis lorsque le traitement de votre demande implique un accès temporaire à des données de santé ; son retrait n'empêche pas l'accès au support mais peut limiter le traitement de certaines demandes.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+- 3 ans à compter de votre demande.
+- Votre document d'identité est conservé le temps nécessaire à la vérification de votre identité.
+- Vos données de santé ne sont conservées que le temps nécessaire au traitement de votre demande, sauf obligation légale de conservation plus longue.
+
+### Réclamations et demandes de droits
+
+Nous traitons vos demandes concernant vos droits sur vos Données à caractère personnel ainsi que vos réclamations, et en assurons le suivi.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Données d’identification
+
+Contenu des demandes
+
+Document de vérification d’identité (lorsque nécessaire pour vérifier l’identité du demandeur)
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous nous reposons sur notre obligation légale.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+- 5 ans à compter de votre demande.
+- Votre document d'identité est conservé le temps nécessaire à la vérification de votre identité.
+
+### Réalisation d'enquêtes volontaires
+
+Nous pouvons vous proposer de participer librement à des enquêtes sur nos services et leurs évolutions, de partager votre expérience du secteur de la santé et de votre prise en charge, ou d’évaluer votre satisfaction via des questionnaires envoyés par e-mail ou dans l’application. Nous pouvons aussi vous inviter à participer à des campagnes de prévention menées avec des partenaires externes, notamment sous forme d’enquêtes, de quiz sur des sujets de santé publique ou de tests de nouvelles fonctionnalités (bêta-tests).
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+En fonction des enquêtes :
+
+Données d’identification
+
+Coordonnées
+
+Données professionnelles
+
+Situation familiale
+
+Enregistrements audio ou vidéo
+
+Fréquence d’utilisation des services
+
+Réponses aux questionnaires (incluant des données de santé le cas échéant), satisfaction
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données sur la base de notre intérêt légitime à connaître et analyser votre avis sur nos services, ou avec votre consentement lorsque l'enquête porte sur des données de santé.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+3 mois à compter de la réception des réponses
+
+### Prévention et lutte contre la fraude informatique
+
+Nous utilisons vos données pour prévenir et détecter les fraudes informatiques, comme l’envoi massif de messages indésirables (spamming) ou le piratage (hacking), et pour mener des enquêtes de cybersécurité.
+
+## Quelles Données à caractère personnel utilisons-nous ?
+
+Données relatives au Compte et à l’utilisation des services, notamment les logs techniques
+
+Données techniques relatives à l’appareil et à la connexion, notamment l’adresse IP
+
+## Sur quelle base légale traitons-nous vos Données à caractère personnel ?
+
+Nous traitons ces données sur la base de notre intérêt légitime à assurer la sécurité de nos services et à prévenir les incidents de sécurité.
+
+## Combien de temps conservons-nous vos Données à caractère personnel ?
+
+- Pour les logs : 1 an à compter du dernier rendez-vous pris.
+- Pour l’adresse IP : 1 an à compter de sa collecte.
+
+## 05QUE FAIT DOCTOLIB DE VOS DONNÉES À CARACTÈRE PERSONNEL EN TANT QUE SOUS-TRAITANT POUR LE COMPTE DES ACTEURS DE SANTÉ ?
+
+Certains de nos services sont utilisés par votre Acteur de santé. Dans ce cas, c'est l’Acteur de santé qui décide pourquoi et comment vos données sont utilisées : nous intervenons uniquement en exécutant ses instructions. C'est pourquoi votre Acteur de santé reste votre interlocuteur si vous avez une question sur ces Traitements ou si vous souhaitez exercer vos droits à ce sujet.
+
+### Fourniture d’un Service de gestion des rendez-vous et de l’agenda
+
+- Assurer la gestion des agendas de l’Acteur de santé et la planification des rendez-vous, et permettre aux Patients et à leurs Proches de prendre rendez-vous en ligne sur la Plateforme Doctolib. Ce service comprend la gestion de l’identité des Patients, ainsi que l’envoi de communications d’information ou de prévention (y compris des documents) entre l’Acteur de santé et les Patients/Proches relatives au parcours de soins des Patients (telles que la confirmation / l’annulation / les rappels de rendez-vous) ou à l’activité de l’Acteur de santé, par SMS, e-mail, notification “push” ou directement via la Plateforme Doctolib ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Identité et coordonnées : genre/civilité, nom, prénom, date de naissance, lieu de naissance, adresse postale (y compris le digicode - pour les visites), adresse e-mail, numéro de téléphone ;
+- Situation professionnelle ;
+- Données relatives aux rendez-vous : date/heure du rendez-vous, lieu du rendez-vous, spécialité de l’Acteur de santé, motif de consultation, statut du rendez-vous (à venir, passé, annulé, confirmé), champs renseignés (informations saisie par le Patient/Proche dans le cadre du rendez-vous) ;
+- Documents ;
+- Données d’identification INS.
+
+### Fourniture d’un Service d’assistant téléphonique virtuel
+
+- Enregistrer et retranscrire les appels pris en charge par l’assistant téléphonique virtuel ;
+- Transformer les retranscriptions en messages dans le service de Messagerie Patients et créer les rendez-vous associés ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Contenu des appels: enregistrements audio des appels et transcriptions des appels, y compris les informations que vous communiquez lors de l’appel (nom, date de naissance, motif de la demande, ordonnances et informations familiales, informations médicales, allergies, données biométriques et biologiques, ainsi que toute autre donnée à caractère personnel fournie) ;
+- Numéro de téléphone.
+
+### Fourniture d’un Service de Téléconsultation
+
+- Permettre la réalisation de téléconsultations, y compris le partage de documents associé et le suivi clinique ;
+- Traiter les paiements et les démarches liées à la facturation et/ou au remboursement, et prévenir la fraude ;
+- Vous informer (par e-mail/SMS) lorsque votre praticien propose des téléconsultations ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Identité et données relatives au compte : civilité/genre, nom (nom de famille/prénom), adresse e-mail, numéro d’identification du Patient, date de création du Compte Utilisateur, code postal ;
+- Données de paiement : numéro d’identification de la transaction, coordonnées bancaires, date/heure de la transaction, montant facturé, moyen de paiement ;
+- Données de santé : documents médicaux, notes et captures d’écran (le cas échéant) établis par l’Acteur de santé, ainsi que le NIR.
+
+### Fourniture d’un Service de Messagerie Patients
+
+- Vous permettre, ainsi qu’à votre Acteur de santé, d’échanger des messages et des documents et de gérer vos demandes ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Identité et coordonnées : civilité/genre, prénom, nom, date de naissance, adresse e-mail ;
+- Données de santé : informations que vous ou votre Acteur de santé échangez dans les messages (y compris les documents téléchargés, ordonnances, analyses cliniques, comptes rendus, informations relatives aux médecins traitants, ainsi que toute “information complémentaire” renseignée par vous ou votre Acteur de santé).
+
+### Mise à disposition d’un logiciel de gestion de cabinet
+
+- Créer et gérer votre dossier médical et accompagner votre prise en charge ainsi que votre suivi ;
+- Gérer les démarches administratives et de remboursement et, le cas échéant, le paiement des consultations ;
+- Vérifier et gérer votre identité, et corriger les erreurs lorsqu’elles sont signalées ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Identifiants nationaux : numéro de sécurité sociale (NIR), données d’identité INS ;
+- Données de contexte : situation familiale, nombre d’enfants, profession, conditions de travail, informations relatives au mode de vie ;
+- Données de santé : antécédents médicaux et thérapeutiques, diagnostics, traitements prescrits, actes réalisés, résultats d’analyses, ainsi que toute autre information de santé pertinente enregistrée dans le cadre de votre prise en charge ;
+- Données de paiement : numéro d’identification du Patient, adresse e-mail, civilité/genre, code postal, date de création du Compte Utilisateur, coordonnées bancaires, date/heure de la transaction, montant facturé, moyen de paiement.
+
+### Fourniture d’un Service d’assistant de consultation
+
+- Transcrire votre consultation et proposer des notes à votre Acteur de santé ;
+- Mettre à jour votre dossier médical avec des informations structurées, après validation par votre Acteur de santé ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Audio et transcription de la consultation : enregistrements audio de la consultation, informations contenues dans l’enregistrement, ainsi que la transcription ;
+- Données du dossier médical : données issues de votre dossier médical, y compris les éléments structurés ajoutés à partir de suggestions validées.
+
+### Fourniture d’un Service de gestionnaire de tâches intelligent
+
+- Aider votre Acteur de santé à coordonner votre suivi, vos rendez-vous et les tâches administratives associées ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Identité et coordonnées : civilité/genre, nom, prénom, date de naissance, lieu de naissance, adresse postale (y compris le digicode), adresse e-mail, numéro de téléphone ;
+- Situation professionnel ;
+- Qualité d’assuré ;
+- Données relatives aux rendez-vous : date/heure/lieu du rendez-vous, spécialité de l’Acteur de santé, motif de consultation, statut du rendez-vous (à venir, passé, annulé, confirmé), informations renseignées par l’Acteur de santé ;
+- Documents médicaux ;
+- Données d’identification INS.
+
+### Mise à disposition du Lecteur Doctolib
+
+- Permettre l’accès aux services de la CNAM et aux feuilles de soins électroniques sécurisées (FSE) ;
+- Créer, gérer et signer des factures lors des visites à domicile ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Identité : civilité/genre, nom, prénom, date de naissance, lieu de naissance ;
+- Numéro de sécurité sociale (NIR) ;
+- Données relatives à l’assurance : régime d’assurance maladie et organisme de rattachement, droits à la Complémentaire santé solidaire (CSS), droits à l’exonération du ticket modérateur ;
+- Données de santé : antécédents médicaux et thérapeutiques, traitements prescrits, ainsi que toute autre information de santé pertinente.
+
+### Fourniture d’un Service de messagerie
+
+- Faciliter une coordination des soins sécurisée entre Acteurs de santé ;
+- Permettre le partage, entre Acteurs de santé, de messages, documents et médias relatifs aux Patients ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Données d’identification et coordonnées ;
+- Données de santé partagées dans les messages/médias : antécédents allergiques, médicaux et familiaux, données de consultation et de prescription, données biométriques et biologiques, imagerie médicale ;
+- Contenus partagés et données d’appel : photos, vidéos, messages vocaux, documents et autres médias, ainsi que les flux audio/vidéo dans le cadre des appels.
+
+### Fourniture d’un Service de gestion des documents et formulaires
+
+- Créer, envoyer, recevoir, conserver et signer électroniquement des documents/formulaires ;
+- Recueillir les informations nécessaires à la préparation de votre rendez-vous ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Données d’identification et coordonnées ;
+- Carte vitale et/ou numéro de sécurité sociale (NIR) ;
+- Informations relatives à la complémentaire santé ;
+- Habitudes de vie (ex : activité physiques et habitudes alimentaires) ;
+- Données de santé figurant dans les documents/formulaires : antécédents allergiques, médicaux et familiaux, données de consultation et de prescription, données biométriques et biologiques, imagerie médicale.
+
+### Fourniture d’un Service de transmission de prescriptions
+
+- Transmettre de manière sécurisée vos ordonnances aux pharmaciens ;
+- Suivre et partager le statut d’émission/délivrance des ordonnances ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Données d’identification ;
+- Données de santé : antécédents médicaux, familiaux et allergies, données de consultation, données de prescription et historique de d’émission/délivrance des ordonnances ;
+- Carte Vitale et/ou Numéro de Sécurité Sociale (NIR) ;
+- Informations relatives à la complémentaire santé.
+
+### Fourniture d’un Service de pré-admission
+
+- Aider à préparer et gérer votre dossier de pré-admission ;
+- Vous adresser des informations, mises à jour et rappels relatifs à votre pré-admission ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Données d’identification ;
+- Données de santé : antécédents médicaux, familiaux et allergies, données de consultation et de prescription, données biométriques et biologiques ;
+- Documents/formulaires que vous fournissez.
+
+### Fourniture d’un Service de dictée médicale
+
+- Transcrire les dictées dans le logiciel de votre Acteur de santé ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Audio et transcription des dictées : enregistrements audio et leurs transcriptions ;
+- Données du dossier médical : informations ajoutées à votre dossier médical à partir de dictées validées.
+
+### Fourniture d’un Service de réseau organisationnel privé (Doctolib Connect)
+
+- Aider les équipes de soins à communiquer et à partager des informations en interne ;
+- Gérer le réseau de l’organisation de santé ;
+- Améliorer le service (correction des problèmes techniques, analyses statistiques et anonymisation).
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Données de santé : antécédents médicaux, allergiques et familiaux, données de consultation et de prescription, données biométriques et biologiques, imagerie médicale ;
+- Médias partagés et données d’appel : photos, ainsi que les flux audio/vidéo dans le cadre des appels.
+
+### Fourniture d’un Service de paiement en ligne
+
+Traitement des paiements en ligne, fourniture d’une assistance aux Utilisateurs et activités de prévention de la fraude.
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Nom, prénom, nom de naissance ;
+- Adresse e-mail ;
+- Identifiant du compte Utilisateur ;
+- Numéro d’identification de la transaction ;
+- Code postal ;
+- Données du compte : date et heure de création ;
+- Adresse IP ;
+- Coordonnées bancaires (pour le paiement en ligne) ;
+- Date et heure de la transaction, montant facturé, moyen de paiement utilisé.
+
+### Fourniture du service de gestion du parcours de soins des Patients via les Services Doctolib, le cas échéant
+
+Suivi des Patients, orientation des Patients vers d’autres Professionnels de santé, garantie de la bonne prise en charge des Patients
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Nom, prénom, sexe ;
+- Date de naissance ;
+- Lieu de naissance ;
+- Historique des rendez-vous ;
+- Informations relatives aux rendez-vous ;
+- Notes concernant le rendez-vous ;
+- Médecin traitant et médecin adresseur (prescripteur).
+
+### Réclamations et demandes de droits des Patients
+
+Gestion par les Acteurs de santé des demandes de droit des Patients concernant les Données à caractère personnel pour lesquelles les Acteurs de santé agissent en tant que Responsable de traitement
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Sexe, Nom, Prénom ;
+- Adresse email ;
+- Contenu de la demande ;
+- Pièce d’identité (lorsque nécessaire).
+
+### Envoi d’informations et de recommandations aux Patients et leurs Proches
+
+Envoi de communications et d’informations par email au nom et au choix de l’Acteur de santé (par exemple, email de bienvenue, absences, campagnes de vaccination, nouveaux traitements, etc.) et gestion des demandes de désinscription à la réception de ces communications.
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Sexe, nom, Prénom, Adresse email, Numéro de téléphone.
+
+### Gestion de l’agenda et de la prise en charge des Patients en cas de crise sanitaire
+
+Mise en place d’une organisation adaptée du cabinet ou de l’établissement de santé en cas de crise sanitaire
+
+## Quelles sont les données à caractère personnel utilisées ?
+
+- Sexe, nom, Prénom, Informations relatives au rendez-vous ;
+- Question sur les symptômes ou l’état de santé du Patient préalablement à la prise de rendez-vous.
+
+## 06À QUI DOCTOLIB TRANSMET-ELLE VOS DONNÉES À CARACTÈRE PERSONNEL ?
+
+Usage interne
+
+Vos Données à caractère personnel sont traitées par les employés de Doctolib, dans la limite de leurs attributions respectives et ce exclusivement afin de réaliser les finalités décrites dans cette Politique. Nos employés amenés à traiter vos données sont liés par une obligation stricte de confidentialité.
+
+Destinataires et sous-traitants
+
+**Hébergement :** Nous avons recours à des hébergeurs certifiés Hébergeurs de Données de santé (“HDS”) : (i) Amazon Web Services (AWS) et (ii) Thales Cloud Sécurisé (S3NS), dont les services reposent sur l'infrastructure Google Cloud Platform (GCP).
+
+Ces Hébergeurs bénéficient de la certification HDS de l’Agence du Numérique en Santé. Afin de garantir la sécurité de nos services, nous avons décidé d’y déposer toutes les Données à caractère personnel, sans distinction de leur qualification ou non de Données de santé. Doctolib est également certifié HDS “hébergeur infogéreur” depuis le 14 octobre 2021. Cette certification impose des mesures de sécurité avancées pour la protection des Données de santé hébergées, assurant ainsi leur confidentialité.
+
+**Sous-traitants :** Nous avons recours aux services fournis par plusieurs prestataires spécialisés. Pour en savoir plus, consulter notre page dédiée.
+
+Responsables de traitement indépendants
+
+- Lorsque vous activez les Services “Google Maps” vos données sont traitées par Google France SARL et Google LLC (US) en leur qualité de Responsables de traitement indépendants. Pour plus d’informations sur la façon dont Google traite vos données, veuillez consulter la Politique de confidentialité de Google.
+- Dans le cadre de l’achat de Services Doctolib+ (tels que définis dans les Conditions Générales) et en cas de demandes de remboursement liées aux achats intégrés effectués via
+  - l’Apple Store, certaines données peuvent être partagées avec Apple Distribution International Ltd. (Irlande) dans le seul but de permettre à Apple de gérer l’abonnement (y compris la facturation et le paiement) et d’évaluer les demandes de remboursement, conformément à la Politique de confidentialité d’Apple ;
+  - Google Play Store, les données peuvent être transmises à Google LLC (États-Unis) dans le seul but de permettre à Google de gérer l'abonnement (y compris la facturation et le paiement) et d’évaluer les demandes de remboursement, conformément à la Politique de confidentialité de Google.
+
+Autres destinataires
+
+- Afin de satisfaire nos obligations légales, nous pouvons transmettre des Données à caractère personnel à des autorités publiques ou judiciaires.
+- Dans le cadre de l'Assistant IA (tel que défini dans les Conditions Générales), et en cas de danger grave vous concernant ou concernant votre enfant, nous pouvons, à titre exceptionnel, communiquer les informations strictement nécessaires pour vous protéger vous et votre enfant à des tiers compétents, tels que des services d'urgence ou des professionnels de santé habilités, afin de sauvegarder vos intérêts vitaux ou ceux de votre enfant.
+
+## 07QUELS SONT VOS DROITS SUR VOS DONNÉES À CARACTÈRE PERSONNEL ?
+
+## 1. Vos droits
+
+Conformément au RGPD et à la loi n° 78-17 du 6 janvier 1978, vous disposez des droits suivants sur ces Données à caractère personnel:
+
+Droit d’accès
+
+(article 15 RGPD) : vous pouvez à tout moment accéder aux informations personnelles vous concernant et détenues par Doctolib.
+
+Droit de rectification et droit d’effacement
+
+(article 16 RGPD et article 17 du RGPD) : vous pouvez demander la modification ou la suppression de vos Données à caractère personnel.
+
+Droit à la limitation du traitement
+
+(article 18 RGPD) : vous disposez du droit de limiter les traitement effectués sur vos Données à caractère personnel uniquement lorsque l’une des situations suivantes se présente: (i) lorsque vous contestez l’exactitude de vos données, (ii) lorsque vous pensez que le Traitement de vos Données à caractère personnel est illicite, ou (iii) lorsque vous avez besoin de cette limitation pour la constatation, l’exercice ou la défense de vos droits en justice.
+
+Droit à la portabilité des données
+
+(article 20 RGPD): vous avez la possibilité de demander à récupérer les Données à caractère personnel que vous avez fournies à Doctolib, pour un usage personnel ou pour les transmettre à un tiers de votre choix. Uniquement lorsque ces Données à caractère font l’objet de traitements automatisés fondés sur votre consentement ou sur un contrat.
+
+Droit d’opposition
+
+(article 21 RGPD) : vous pouvez vous opposer au traitement de vos Données à caractère personnel à des fins de marketing direct et/ou vous opposer aux traitements effectués sur le fondement de l’intérêt légitime de Doctolib.
+
+Droit de définir le sort des Données à caractère personnel
+
+après votre mort et de choisir à qui Doctolib devra transférer (ou non) vos Données à caractère personnel à un tiers qu’ils auront préalablement désigné (en savoir plus). Dès que Doctolib a connaissance de votre décès et à défaut d’instructions de votre part, Doctolib s’engage à supprimer vos Données à caractère personnel, sauf si leur conservation s’avère nécessaire à des fins probatoires ou pour répondre à une obligation légale (telle que la conservation du dossier patient).
+
+Vous avez également le droit de déposer une plainte auprès de l'autorité compétente en matière de protection des données de votre lieu de résidence, de travail ou du lieu où la violation présumée des données a eu lieu. Toutefois, l'établissement principal du groupe Doctolib au sens du RGPD est la société mère Doctolib SAS (France). Par conséquent, pour le traitement transfrontalier des données effectué par Doctolib dans le cadre de ses services, au sens de l'article 56 du RGPD, la Commission nationale de l'informatique et des libertés (CNIL) est l'autorité de contrôle chef de file désignée.
+
+Pour plus d’information sur vos droits, vous pouvez consulter le site de la CNIL ici
+
+## 2. Comment exercer vos droits
+
+**2.1.** Pour toutes les demandes concernant des Données à caractère personnel pour lesquelles **Doctolib agit en tant que Responsable de traitement (voir Section 4)** :
+
+vous pouvez contacter Doctolib à l’adresse suivante :
+
+Doctolib – DPO, 54 quai Charles Pasqua, 92300 Levallois-Perret ou par mail à contact.dataprivacy@doctolib.com**.**
+
+Dans ce cas, vous devrez indiquer les Données à caractère personnel que vous souhaitez que Doctolib corrige, mette à jour ou supprime.
+
+Lorsque nécessaire ou en cas de doutes raisonnables sur l’identité du requérant, nous pourrons vous demander de vous identifier de manière précise avec une copie d’une pièce d’identité (carte d’identité ou passeport) ou tout autre élément permettant de justifier de votre identité.
+
+**2.2.** Pour toutes les demandes concernant des Données à caractère personnel pour lesquelles **Doctolib agit en tant que Sous-traitant (voir Section 5):**
+
+Vous pouvez contacter votre Acteur de santé qui est le Responsable de traitement. A la demande de l’Acteur de santé, nous pourrons l’assister dans les suites à donner à vos demandes . Votre Acteur de santé nous répondra directement.
+
+## 08COMMENT DOCTOLIB PROTÈGE-T-ELLE VOS DONNÉES?
+
+Nous mettons en œuvre les mesures techniques et organisationnelles appropriées liées à la sécurité conformément aux dispositions prévues par la Loi Informatique et Libertés et le RGPD, et visant à garantir un niveau de sécurité approprié face aux risques présentés par le traitement de vos Données à caractère personnel. Pour évaluer le niveau de sécurité approprié, nous tenons compte des risques pouvant résulter d'une destruction accidentelle ou illicite, d'une corruption, d'une perte, d'une modification, d'une divulgation non autorisée ou de l'accès à des Données à caractère personnel susceptibles d'être transmises, stockées ou autrement traitées, conformément aux dispositions de l'article 32 du RGPD.
+
+Tous les Acteurs de santé recevant des Données à caractère personnel dans le cadre de leur utilisation des services garantissent leur sécurité et leur confidentialité.
+
+## 09ET CONCERNANT LES COOKIES ?
+
+Lorsque vous naviguez sur la Plateforme ou utilisez les services, nous utilisons des cookies ou autres traceurs sur vos appareils, avec ou sans votre consentement selon leur finalité. Pour en savoir plus et connaître les modalités de refus, consultez notre Politique en matière de cookies accessible sur notre Plateforme.
+
+## 10DOCTOLIB UTILISE-T-ELLE DES RÉSEAUX SOCIAUX ET DES SITES TIERS ?
+
+Nous affichons des publicités ciblées sur les réseaux sociaux au travers de programmes proposés par Meta (Facebook et Instagram) et Google. Les sites tiers affichent des publicités pour leurs utilisateurs en fonction des caractéristiques de leurs profils préalablement définis par ces sites et sélectionnées par nos soins. Les données utilisées pour personnaliser les campagnes sont collectées auprès des utilisateurs des réseaux sociaux et des sites tiers.
+
+Sur nos sites web et dans nos newsletters, nous pouvons proposer des liens de partage simples vous permettant de partager du contenu via des services de messagerie. Ces liens ne sont pas des plugins de réseaux sociaux. Avant que vous ne cliquiez sur le lien, aucune donnée n’est transmise aux fournisseurs des services de messagerie via la fonction de partage. Après avoir cliqué sur le lien, vous êtes redirigé vers le service concerné avec un message pré-rempli que vous pouvez librement modifier. Vous décidez si, quoi et à qui vous envoyez. Des données techniques, y compris votre adresse IP, peuvent être transmises aux fournisseurs des services de messagerie. Doctolib ne reçoit aucune information sur le processus d’envoi et n’utilise ni paramètres personnalisés ni suivi de recommandation (referral tracking).
+
+## 11QUELLES SONT LES CONDITIONS D’APPLICATION DE LA POLITIQUE ?
+
+Nous pouvons modifier ou mettre à jour la Politique afin de prendre en compte toute évolution légale, réglementaire, jurisprudentielle ou encore technique.
+
+En cas de modifications significatives des termes de la Politique concernant les finalités de Traitement, les Données à caractère personnel collectées, l’exercice de vos droits ou le transfert de vos Données à caractère personnel, nous vous en informerons en amont de manière appropriée. À compter de sa date d'entrée en vigueur, la nouvelle Politique de confidentialité s'applique à tout accès et à toute utilisation des services de Doctolib.
+
+L’unique version de la Politique qui fait foi est celle qui se trouve en ligne.
+
+## 12COMMENT CONTACTER DOCTOLIB POUR DES QUESTIONS LIÉES AU DONNÉES À CARACTÈRE PERSONNEL ?
+
+Pour toutes questions, réclamations, recommandations ou commentaires visant le respect ou l’amélioration de la Politique, vous pouvez nous contacter par écrit à l’adresse suivante : Doctolib – DPO, 54 quai Charles Pasqua, 92300 Levallois-Perret ou contact.dataprivacy@doctolib.com.

@@ -42,6 +42,6 @@
     "name": "Doctolib - Gérez votre santé",
     "exodus": true
   },
-  "confidentiality_policy_url_fr": "https://www.doctolib.fr/terms/agreement",
+  "confidentiality_policy_url_fr": "https://landing.doctolib.fr/pp-fr-B2C",
   "policy_analysis": "policy-analysis/doctolib.json"
 }

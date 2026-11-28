@@ -2046,5 +2046,101 @@
       "estimated_at": "2026-11-28",
       "source": "https://api.ecologits.ai/v1beta/estimations"
     }
+  },
+  "doctolib": {
+    "name": "Doctolib",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-28",
+    "policy_url": "https://landing.doctolib.fr/pp-fr-B2C",
+    "text_sha256": "b535c4c1a48cc0f95504157cb97108de7cf3ee9bcce8aeb1a5f675074be49ccd",
+    "live_check": {
+      "at": "2026-11-28T09:50:51+00:00",
+      "reachable": false,
+      "error": "bot wall or landing page / bot wall or landing page"
+    },
+    "archive_url": "https://web.archive.org/web/20261128095202/https://landing.doctolib.fr/pp-fr-B2C",
+    "quotes": [
+      {
+        "quote": "Nous affichons dans l’application des contenus publicitaires de santé ou de prévention financés par des partenaires tiers et adaptés à certaines données de votre compte ou de celui de vos proches, comme l’âge.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Doctolib affiche dans l'application des publicités santé payées par des partenaires, choisies selon des informations de votre compte ou de celui de vos proches, comme l'âge.",
+          "en": "Doctolib shows health ads paid for by partners in the app, chosen using details from your account or your relatives' accounts, such as age."
+        }
+      },
+      {
+        "quote": "Nous pouvons utiliser certaines données pour entraîner nos modèles d’intelligence artificielle, notamment pour la reconnaissance de texte et de la voix, afin de créer des solutions innovantes et d’améliorer nos produits.",
+        "topic": "ia",
+        "plain": {
+          "fr": "Doctolib peut se servir de certaines de vos données pour entraîner ses IA, notamment celles qui reconnaissent le texte et la voix.",
+          "en": "Doctolib may use some of your data to train its AI, including AI that recognises text and voice."
+        }
+      },
+      {
+        "quote": "Contenu des appels: enregistrements audio des appels et transcriptions des appels, y compris les informations que vous communiquez lors de l’appel (nom, date de naissance, motif de la demande, ordonnances et informations familiales, informations médicales, allergies, données biométriques et biologiques, ainsi que toute autre donnée à caractère personnel fournie)",
+        "topic": "biometrie",
+        "plain": {
+          "fr": "Vos appels sont enregistrés et retranscrits, avec tout ce que vous dites : ordonnances, allergies, informations médicales, données biométriques.",
+          "en": "Your calls are recorded and transcribed, with everything you say: prescriptions, allergies, medical information, biometric data."
+        }
+      },
+      {
+        "quote": "Ces informations peuvent être renseignées par vous ou vos soignants, ou provenir des services que vous utilisez, notamment des données relatives à vos rendez-vous, de vos documents, de vos échanges avec l’Assistant IA ou de d’applications connectées.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "Les informations de votre historique de santé peuvent venir de vos soignants, de vos rendez-vous, de vos documents, de vos conversations avec l’assistant IA ou d’applications connectées.",
+          "en": "The information in your health history can come from your health professionals, your appointments, your documents, your chats with the AI assistant or connected apps."
+        }
+      },
+      {
+        "quote": "Nous affichons des publicités ciblées sur les réseaux sociaux au travers de programmes proposés par Meta (Facebook et Instagram) et Google.",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Doctolib diffuse des publicités ciblées sur Facebook, Instagram et Google.",
+          "en": "Doctolib runs targeted ads on Facebook, Instagram and Google."
+        }
+      },
+      {
+        "quote": "lorsqu’ils utilisent nos services, ces derniers peuvent entrer vos Données à caractère personnel dans la Plateforme, que vous possédiez ou non un Compte Utilisateur.",
+        "topic": "non_utilisateurs",
+        "plain": {
+          "fr": "Vos soignants peuvent enregistrer vos données sur Doctolib même si vous n'avez pas de compte.",
+          "en": "Your health professionals can enter your data into Doctolib even if you have no account."
+        }
+      },
+      {
+        "quote": "Pour les messages échangés avec l’Assistant IA : 2 ans à compter de leur collecte.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Vos conversations avec l'assistant IA de Doctolib sont gardées 2 ans.",
+          "en": "Your conversations with Doctolib's AI assistant are kept for 2 years."
+        }
+      }
+    ],
+    "usage": {
+      "models": {
+        "claude-opus-5-5": {
+          "output_tokens": 14433
+        }
+      },
+      "sessions": 1,
+      "impact": {
+        "energy_kwh": [
+          0.0437,
+          0.0847
+        ],
+        "gwp_kgco2eq": [
+          0.0176,
+          0.0333
+        ],
+        "water_l": [
+          0.142,
+          0.34
+        ]
+      },
+      "estimated_at": "2026-11-28",
+      "source": "https://api.ecologits.ai/v1beta/estimations"
+    }
   }
 }
