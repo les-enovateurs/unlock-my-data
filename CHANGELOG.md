@@ -1,5 +1,44 @@
 # Changelog
 
+## [1.3.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.2.0...v1.3.0) (2026-11-28)
+
+
+### Features
+
+* **home:** lighter home with policy excerpts and recent activity ([ea79388](https://github.com/les-enovateurs/unlock-my-data/commit/ea79388628f413db630602da1ad32a797bd1f1b5))
+* **policy-quotes:** app-elles candidates ([f4d6020](https://github.com/les-enovateurs/unlock-my-data/commit/f4d6020cea5e8d8b40a22656ff2a78c18127d4cf))
+* **policy-quotes:** auto-publish top 3 after 7 days, drop the publish button ([3211305](https://github.com/les-enovateurs/unlock-my-data/commit/3211305812909c7fb0556b4ea41b096b171aafc5))
+* **policy-quotes:** candy-crush candidates ([8b3bf84](https://github.com/les-enovateurs/unlock-my-data/commit/8b3bf84be0c787a9b353e625a506dc9dcc420ab2))
+* **policy-quotes:** drip candidates ([b27bfbe](https://github.com/les-enovateurs/unlock-my-data/commit/b27bfbed4d30d3ce423746ecddace31bfc96ff46))
+* **policy-quotes:** flo-health-inc candidates ([47dbaf9](https://github.com/les-enovateurs/unlock-my-data/commit/47dbaf92b067d3425267986cccf3674356cd1429))
+* **policy-quotes:** kahoot candidates ([9182e15](https://github.com/les-enovateurs/unlock-my-data/commit/9182e15ca7a77c6ea9fa204951caef5a194cea5e))
+* **policy-quotes:** leboncoin candidates ([f007884](https://github.com/les-enovateurs/unlock-my-data/commit/f007884641b24a20e42974fbd227c70686ca8ac4))
+* **policy-quotes:** pokemon-go candidates ([e75944d](https://github.com/les-enovateurs/unlock-my-data/commit/e75944d9c328239c64ce636c47064ef229945c78))
+* **policy-quotes:** pronote candidates ([1ccd59f](https://github.com/les-enovateurs/unlock-my-data/commit/1ccd59f0485f853457012e753c6ac445ec46d0bf))
+* **policy-quotes:** show the frozen EcoLogits impact of each AI pick ([1701886](https://github.com/les-enovateurs/unlock-my-data/commit/1701886ea632db5400264e0ffb2e54886ebfc35d))
+* **policy-quotes:** signal candidates ([2ff7876](https://github.com/les-enovateurs/unlock-my-data/commit/2ff7876fdca946f5f28359319502c962d40f7921))
+* **policy-quotes:** the-sorority candidates ([3608647](https://github.com/les-enovateurs/unlock-my-data/commit/3608647f8dfa9c2cc785ac62ff4b4df91ee76c7e))
+* **policy-quotes:** umay candidates ([e6e426c](https://github.com/les-enovateurs/unlock-my-data/commit/e6e426cc23869fed3f025302a55dabc5ba893d04))
+* **policy-quotes:** volunteers pick and rank AI candidates in review ([5c70220](https://github.com/les-enovateurs/unlock-my-data/commit/5c702208699942e30f7d07cc2c70cb259a850024))
+* **seo:** lastModified per fiche and press release in sitemap ([f2c59be](https://github.com/les-enovateurs/unlock-my-data/commit/f2c59be67f437a64071b46431b525707670a4ad8))
+* sitemap, SEO titles and structured data, support page, accessibility fixes ([016567b](https://github.com/les-enovateurs/unlock-my-data/commit/016567bd57d514276304bcdeed41d07b549eee14))
+* sitemap, SEO titles and structured data, support page, accessibility fixes ([e7fc2e8](https://github.com/les-enovateurs/unlock-my-data/commit/e7fc2e846836af923265e4e8ee65ac3436c46480))
+
+
+### Bug Fixes
+
+* **build:** run data generation inside dev/build, npm skips pre-hooks ([7475bc9](https://github.com/les-enovateurs/unlock-my-data/commit/7475bc9ef95f77b8ac365060be66352e13e7599d))
+* **check-data:** skip URLs in language detection ([0a54d67](https://github.com/les-enovateurs/unlock-my-data/commit/0a54d673bc1d8be57a550d7e1a32f16abbd4fd8a))
+* **data:** drop empty French quote keys ([0608544](https://github.com/les-enovateurs/unlock-my-data/commit/0608544d11896b22f30ff8f5638023de841cb809))
+* **data:** rename confidentiality_policy_url in fiches added since the PR base ([d6e884e](https://github.com/les-enovateurs/unlock-my-data/commit/d6e884e37c0c40399371238e5fe9459d60b8cc86))
+* **fiche:** fall back to English when the French field is empty ([112ee57](https://github.com/les-enovateurs/unlock-my-data/commit/112ee577ffeee703d6a7cafdf9b7221953d8c3be))
+* **flo-health-inc:** confidentiality_policy_url → _fr ([15b61d1](https://github.com/les-enovateurs/unlock-my-data/commit/15b61d15776edacde29a358d1fc825cd2068d3ca))
+* **macif:** rename privacy_policy_quote to _fr ([bac4584](https://github.com/les-enovateurs/unlock-my-data/commit/bac45841e0fac9a4d5be4e54fef1f3899d4ccac4))
+* **orange:** restore confidentiality_policy_url_fr and unescape quote ([eed7067](https://github.com/les-enovateurs/unlock-my-data/commit/eed7067d1bfd3ef3ee75f9f28dbbd0fcad8bf095))
+* **policy-review:** list quote-only services in the review queue ([a6efc44](https://github.com/les-enovateurs/unlock-my-data/commit/a6efc44ce5e94624c30ffba9877889ef40eb4110))
+* **policy-review:** load the policy text of quote-only services ([eced231](https://github.com/les-enovateurs/unlock-my-data/commit/eced2312f71d911c150c416c9ab053211cf75770))
+* **press:** align Curio claims with policy wording in AI toys release ([6482375](https://github.com/les-enovateurs/unlock-my-data/commit/6482375700b05fd83b2bb867edad6e6b725c6910))
+
 ## [1.2.0](https://github.com/les-enovateurs/unlock-my-data/compare/v1.1.0...v1.2.0) (2026-11-24)
 
 
