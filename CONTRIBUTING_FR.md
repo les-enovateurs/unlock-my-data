@@ -22,7 +22,7 @@ Voici la liste des champs et leur explication :
 | `contacts`                       | Liste des contacts RGPD : `type` (`email` ou `postal`), `value`, `purposes` (`export` et/ou `delete`), `comment_fr` / `comment_en` facultatifs. |
 | `easy_access_data`               | Infos concernant un accès facilité aux données, si existant.                                                                        |
 | `need_id_card`                   | Booléen : une carte d’identité est-elle requise pour les demandes ?                                                                 |
-| `details_required_documents`     | Détails sur les documents nécessaires pour l’accès aux données.                                                                     |
+| `details_required_documents_fr`  | Détails sur les documents nécessaires pour l’accès aux données.                                                                     |
 | `data_access_via_postal`         | Booléen : l’accès aux données est-il possible par courrier postal ?                                                                 |
 | `data_access_via_form`           | Booléen : l’accès aux données est-il possible via un formulaire en ligne ?                                                          |
 | `data_access_type`               | Détails sur le type d’accès aux données (si non couvert ci-dessus).                                                                 |
@@ -120,7 +120,7 @@ Voici la liste des champs et leur explication :
      ],
      "easy_access_data": "",
      "need_id_card": false,
-     "details_required_documents": "",
+     "details_required_documents_fr": "",
      "data_access_via_postal": false,
      "data_access_via_form": false,
      "data_access_type": "",
