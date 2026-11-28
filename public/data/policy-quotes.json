@@ -1369,5 +1369,101 @@
       "estimated_at": "2026-11-27",
       "source": "https://api.ecologits.ai/v1beta/estimations"
     }
+  },
+  "leboncoin": {
+    "name": "Leboncoin",
+    "agent": "Claude Opus 5.5",
+    "created_by": "Jérémy Pastouret",
+    "created_at": "2026-11-28",
+    "policy_url": "https://www.leboncoin.fr/dc/cookies",
+    "text_sha256": "93701a269ab49a3b0f8722081aa9f40982724d8f8751da6e46b0fa5369c24af4",
+    "live_check": {
+      "at": "2026-11-28T06:53:58+00:00",
+      "reachable": false,
+      "error": "403 Client Error: Forbidden for url: https://www.leboncoin.fr/dc/cookies / bot wall or landing page"
+    },
+    "archive_url": null,
+    "quotes": [
+      {
+        "quote": "Par ailleurs, afin d'améliorer la pertinence des mises en relation, leboncoin peut calculer et partager avec le vendeur professionnel un score reflétant votre degré d'intérêt pour l'annonce.",
+        "topic": "scoring",
+        "plain": {
+          "fr": "Quand vous contactez un vendeur professionnel, leboncoin peut lui envoyer une note qui mesure à quel point l'annonce vous intéresse.",
+          "en": "When you contact a professional seller, leboncoin may send them a score measuring how interested you are in the listing."
+        }
+      },
+      {
+        "quote": "Enfin, afin de lutter contre la fraude, de détecter les comportements malveillants et de garantir la sécurité de la Plateforme, leboncoin peut également analyser les conversations sur le fondement de son intérêt légitime.",
+        "topic": "messages_prives",
+        "plain": {
+          "fr": "Leboncoin peut analyser vos conversations avec les autres utilisateurs pour repérer la fraude, sans avoir besoin de votre accord.",
+          "en": "Leboncoin may analyse your conversations with other users to spot fraud, without needing your consent."
+        }
+      },
+      {
+        "quote": "LiveRamp peut déposer un cookie dans votre navigateur et mettre en correspondance les informations que vous avez partagées avec ses bases de données marketing en ligne et hors ligne, ainsi qu’avec celles de ses partenaires publicitaires, afin d’établir un lien entre votre navigateur et les informations contenues dans ces autres bases de données.",
+        "topic": "donnees_achetees",
+        "plain": {
+          "fr": "LiveRamp, partenaire publicitaire de leboncoin, peut relier votre navigateur à ce que ses fichiers marketing et ceux de ses partenaires savent déjà sur vous.",
+          "en": "LiveRamp, an advertising partner of leboncoin, may link your browser to what its marketing files and its partners' files already hold about you."
+        }
+      },
+      {
+        "quote": "Ce lien peut être partagé par nos partenaires dans le monde entier afin de permettre à des tiers non affiliés à notre site web de vous proposer des contenus et publicités personnalisés en fonction de vos centres d’intérêt tout au long de votre expérience en ligne (par exemple, sur plusieurs appareils, sur le web, par email et dans des applications).",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Ce lien peut être partagé dans le monde entier pour que d'autres entreprises vous montrent des publicités ciblées sur le web, par e-mail et dans les applications.",
+          "en": "This link may be shared worldwide so that other companies can show you targeted ads on the web, by email and in apps."
+        }
+      },
+      {
+        "quote": "Néanmoins, vos Données transmises à LNRS sont également traitées par ce dernier en qualité de responsable de traitement, dans le contexte de leur fonctionnalité Digital Identity Network (DIN).",
+        "topic": "partage_commercial",
+        "plain": {
+          "fr": "Les données envoyées à LexisNexis pour lutter contre la fraude servent aussi à LexisNexis pour son propre réseau d'identité numérique.",
+          "en": "Data sent to LexisNexis to fight fraud is also used by LexisNexis for its own digital identity network."
+        }
+      },
+      {
+        "quote": "Si vous utilisez une connexion Internet partagée, la navigation d’autres personnes qui consentent également à Utiq peut être associée.",
+        "topic": "collecte_cachee",
+        "plain": {
+          "fr": "Avec Utiq, un identifiant publicitaire créé avec votre opérateur télécom, la navigation des autres personnes de votre connexion peut être liée à la vôtre.",
+          "en": "With Utiq, an ad identifier created with your telecom operator, the browsing of other people on your connection may be linked to yours."
+        }
+      },
+      {
+        "quote": "Compte tenu du fait que leboncoin vous propose des Services par essence personnalisés, pour vous opposer à ce traitement de personnalisation, vous pouvez supprimer votre compte directement depuis les paramètres de celui-ci.",
+        "topic": "deductions",
+        "plain": {
+          "fr": "Pour refuser que leboncoin adapte ce qu'il vous montre selon votre activité, la seule solution indiquée est de supprimer votre compte.",
+          "en": "To refuse having leboncoin tailor what it shows you based on your activity, the only option given is to delete your account."
+        }
+      }
+    ],
+    "usage": {
+      "models": {
+        "claude-opus-5-5": {
+          "output_tokens": 8087
+        }
+      },
+      "sessions": 1,
+      "impact": {
+        "energy_kwh": [
+          0.0245,
+          0.0475
+        ],
+        "gwp_kgco2eq": [
+          0.00985,
+          0.0187
+        ],
+        "water_l": [
+          0.0797,
+          0.19
+        ]
+      },
+      "estimated_at": "2026-11-28",
+      "source": "https://api.ecologits.ai/v1beta/estimations"
+    }
   }
 }
