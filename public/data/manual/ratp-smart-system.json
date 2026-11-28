@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Nom, prénom, adresse mail, carte d'idenité",
+  "details_required_documents_fr": "Nom, prénom, adresse mail, carte d'idenité",
   "confidentiality_policy_url_fr": "https://www.ratp.fr/politique-generale-de-confidentialite",
   "confidentiality_policy_url_en": "https://www.ratp.fr/en/ratp-general-privacy-policy",
   "data_access_via_postal": true,

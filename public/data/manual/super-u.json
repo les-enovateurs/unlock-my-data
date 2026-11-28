@@ -16,7 +16,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.magasins-u.com/donnees-personnelles",
   "data_access_via_postal": false,
   "data_access_via_form": true,

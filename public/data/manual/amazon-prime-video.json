@@ -12,7 +12,7 @@
     }
   ],
   "need_id_card": false,
-  "details_required_documents": "Il faut être connecté à son compte",
+  "details_required_documents_fr": "Il faut être connecté à son compte",
   "details_required_documents_en": "Must be logged in to your account",
   "data_access_via_postal": false,
   "data_access_via_form": true,

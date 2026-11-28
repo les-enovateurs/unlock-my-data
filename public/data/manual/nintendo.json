@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
+  "details_required_documents_fr": "Carte d'identité",
   "confidentiality_policy_url_fr": "https://www.nintendo.com/fr-fr/Mentions-legales/Contact-et-politique-de-confidentialite-du-site-1082263.html",
   "confidentiality_policy_url_en": "https://www.nintendo.com/eu/contact",
   "data_access_via_postal": true,

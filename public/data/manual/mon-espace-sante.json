@@ -6,7 +6,7 @@
   "group_name": "Caisse Nationale de l'Assurance Maladie",
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.monespacesante.fr/protection-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,

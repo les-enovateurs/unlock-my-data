@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Adresse mail du compte carrefour + n° carte fidélité (si demande de droit concernant le compte fidélité)",
+  "details_required_documents_fr": "Adresse mail du compte carrefour + n° carte fidélité (si demande de droit concernant le compte fidélité)",
   "details_required_documents_en": "Mail address of the carrefour account + card ID (if requesting right concerning the fiducial account)",
   "data_access_via_postal": true,
   "data_access_via_form": true,

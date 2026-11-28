@@ -12,7 +12,7 @@
     }
   ],
   "need_id_card": false,
-  "details_required_documents": "Connexion au compte requise",
+  "details_required_documents_fr": "Connexion au compte requise",
   "details_required_documents_en": "Connection to the account required",
   "data_access_via_postal": false,
   "data_access_via_form": true,

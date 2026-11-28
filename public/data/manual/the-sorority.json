@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "nom, prénom, email, adresse postale",
+  "details_required_documents_fr": "nom, prénom, email, adresse postale",
   "confidentiality_policy_url_fr": "https://www.jointhesorority.com/mentions-legales-polique-confid-cgu-appli",
   "confidentiality_policy_url_en": "https://www.jointhesorority.com/mentions-legales-polique-confid-cgu-appli?lang=en",
   "data_access_via_postal": false,

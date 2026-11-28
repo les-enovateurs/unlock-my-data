@@ -6,7 +6,7 @@
   "group_name": "Meta",
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Etre connecté à son compte ou CNI si demande par mail",
+  "details_required_documents_fr": "Etre connecté à son compte ou CNI si demande par mail",
   "confidentiality_policy_url_fr": "https://help.instagram.com/515230437301944",
   "confidentiality_policy_url_en": "https://help.instagram.com/515230437301944",
   "data_access_via_postal": true,

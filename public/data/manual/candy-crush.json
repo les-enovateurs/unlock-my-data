@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Etre connecté",
+  "details_required_documents_fr": "Etre connecté",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,

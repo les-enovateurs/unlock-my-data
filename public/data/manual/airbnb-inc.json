@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": true,
-  "details_required_documents": "Être connecté",
+  "details_required_documents_fr": "Être connecté",
   "confidentiality_policy_url_fr": "https://www.airbnb.fr/help/article/3175",
   "confidentiality_policy_url_en": "https://www.airbnb.gy/help/article/3175?_set_bev_on_new_domain=1769339430_EAMDQ0M2EzNDVjMD&set_everest_cookie_on_new_domain=1769339430.EAZGI5YjVkNGViOTE5ZG.9v9eN2jB6U24omdOI5HlseW5YJ1u5OebQ7-1fyzE5hE",
   "data_access_via_postal": false,

@@ -11,7 +11,7 @@
     }
   ],
   "need_id_card": false,
-  "details_required_documents": "il faut être connecté à son compte OU envoyer un e-mail depuis l'e-mail de son compte",
+  "details_required_documents_fr": "il faut être connecté à son compte OU envoyer un e-mail depuis l'e-mail de son compte",
   "details_required_documents_en": "You need to be logged in to your account or send an email from your account email",
   "data_access_via_postal": false,
   "data_access_via_form": true,

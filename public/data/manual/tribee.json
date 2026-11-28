@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "une preuve d'identité peut etre demandée en cas de doute sur l'identité du demandeur",
+  "details_required_documents_fr": "une preuve d'identité peut etre demandée en cas de doute sur l'identité du demandeur",
   "confidentiality_policy_url_fr": "https://tribee.fr/politique-confidentialite",
   "data_access_via_postal": false,
   "data_access_via_form": false,

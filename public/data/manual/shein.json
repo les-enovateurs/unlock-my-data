@@ -20,7 +20,7 @@
   ],
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "être connecté",
+  "details_required_documents_fr": "être connecté",
   "details_required_documents_en": "You need to be logged in",
   "data_access_via_postal": true,
   "data_access_via_form": true,

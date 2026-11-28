@@ -16,7 +16,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Vos identifiants de connexion à votre compte EpicGames",
+  "details_required_documents_fr": "Vos identifiants de connexion à votre compte EpicGames",
   "confidentiality_policy_url_fr": "https://legal.epicgames.com/epicgames/privacy-policy",
   "confidentiality_policy_url_en": "https://legal.epicgames.com/epicgames/privacy-policy?lang=en-US",
   "data_access_via_postal": true,

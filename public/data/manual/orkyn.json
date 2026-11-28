@@ -18,7 +18,7 @@
   ],
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "Justificatif d'identité du demandeur (type non précisé) et coordonnées de contact.",
+  "details_required_documents_fr": "Justificatif d'identité du demandeur (type non précisé) et coordonnées de contact.",
   "confidentiality_policy_url_fr": "https://www.orkyn.fr/politique-donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,

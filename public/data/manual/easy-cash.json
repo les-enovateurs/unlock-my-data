@@ -17,7 +17,7 @@
   ],
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "Copie signée d'un titre d'identité.",
+  "details_required_documents_fr": "Copie signée d'un titre d'identité.",
   "confidentiality_policy_url_fr": "https://www.easycash.fr/mentions-et-conditions/mentions-legales",
   "data_access_via_postal": false,
   "data_access_via_form": false,

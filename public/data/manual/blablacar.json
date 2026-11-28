@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
+  "details_required_documents_fr": "Carte d'identité",
   "confidentiality_policy_url_fr": "https://legal.blablacar.com/fr-fr/privacy-policy/",
   "confidentiality_policy_url_en": "https://legal.blablacar.com/en-gb/privacy-policy/",
   "data_access_via_postal": true,

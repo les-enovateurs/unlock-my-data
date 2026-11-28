@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "confidentiality_policy_url_fr": "https://www.laposte.fr/politique-de-protection-des-donnees",
   "data_access_via_postal": true,
   "data_access_via_form": true,

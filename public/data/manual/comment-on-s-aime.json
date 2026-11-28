@@ -6,7 +6,7 @@
   "group_name": "Association en avant toute(s)",
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "Non indiqué",
+  "details_required_documents_fr": "Non indiqué",
   "data_access_via_postal": true,
   "data_access_via_form": false,
   "data_access_via_email": false,

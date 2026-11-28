@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": true,
-  "details_required_documents": "Carte d'identité",
+  "details_required_documents_fr": "Carte d'identité",
   "data_access_via_postal": true,
   "data_access_via_form": true,
   "data_access_via_email": true,

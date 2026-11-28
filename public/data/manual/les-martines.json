@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 4,
   "need_id_card": false,
-  "details_required_documents": "Vérification d'identité",
+  "details_required_documents_fr": "Vérification d'identité",
   "confidentiality_policy_url_fr": "https://www.lesmartines.app/politique-de-confidentialite/#hors-eee",
   "data_access_via_postal": false,
   "data_access_via_form": false,
@@ -31,7 +31,7 @@
   "status": "published",
   "review": [
     {
-      "field": "details_required_documents",
+      "field": "details_required_documents_fr",
       "message": "Peu clair mais:\nDans certaines situations, Les Martines pourrait te demander des infos spécifiques pour confirmer qui tu es, et s’assurer que c’est bien toi qui demandes ces droits.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-10-21T23:10:11.583Z",

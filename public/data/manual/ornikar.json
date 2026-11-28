@@ -28,7 +28,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Justificatif d'identité par tout moyen ; informations supplémentaires possibles en cas de doute raisonnable sur l'identité.",
+  "details_required_documents_fr": "Justificatif d'identité par tout moyen ; informations supplémentaires possibles en cas de doute raisonnable sur l'identité.",
   "confidentiality_policy_url_fr": "https://www.ornikar.com/a-propos/charte-de-confidentialite",
   "data_access_via_postal": true,
   "data_access_via_form": false,
@@ -59,7 +59,7 @@
   "status": "changes_requested",
   "review": [
     {
-      "field": "details_required_documents",
+      "field": "details_required_documents_fr",
       "message": "Pour exercer Vos droits, Vous devez justifier de votre identité par tout moyen. Lorsqu’ORNIKAR a des doutes raisonnables quant à votre identité, il peut Vous être demandé de fournir des informations supplémentaires nécessaires pour confirmer votre identité.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-11-16T15:23:54.201Z",

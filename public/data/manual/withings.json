@@ -15,7 +15,7 @@
   ],
   "easy_access_data": 5,
   "need_id_card": false,
-  "details_required_documents": "Un justificatif d'identité, seulement si Withings n'a pas d'autre moyen de vérifier que vous êtes titulaire du compte.",
+  "details_required_documents_fr": "Un justificatif d'identité, seulement si Withings n'a pas d'autre moyen de vérifier que vous êtes titulaire du compte.",
   "details_required_documents_en": "Proof of identity, only if Withings has no other way to verify that you hold the account.",
   "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",

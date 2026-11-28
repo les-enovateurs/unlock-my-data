@@ -13,7 +13,7 @@
   ],
   "easy_access_data": 2,
   "need_id_card": false,
-  "details_required_documents": "Envoyer la demande depuis l'adresse e-mail du compte",
+  "details_required_documents_fr": "Envoyer la demande depuis l'adresse e-mail du compte",
   "details_required_documents_en": "Send the request from the account's email address",
   "response_delay_fr": "1 mois conformément au RGPD",
   "response_delay_en": "1 month in accordance with the GDPR",

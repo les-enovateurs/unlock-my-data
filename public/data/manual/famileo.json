@@ -45,7 +45,7 @@
   "status": "published",
   "review": [
     {
-      "field": "details_required_documents",
+      "field": "details_required_documents_fr",
       "message": "Documents requis - je n'ai pas vu Carte d'Identité - seulement qu'ils peuvent demander des informations complémentaires pour confirmer l'identité du demandeur.",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T17:31:37.338Z",
@@ -118,7 +118,7 @@
       "resolved_note": "J'ai décoché la case."
     },
     {
-      "field": "details_required_documents",
+      "field": "details_required_documents_fr",
       "message": "Voir ci dessus",
       "reviewer_name": "dominique_usa",
       "timestamp": "2026-07-24T18:21:25.515Z",

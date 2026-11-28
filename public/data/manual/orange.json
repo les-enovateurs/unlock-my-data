@@ -27,7 +27,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Éléments justifiant l'identité (pièce d'identité en cas de doute raisonnable)",
+  "details_required_documents_fr": "Éléments justifiant l'identité (pièce d'identité en cas de doute raisonnable)",
   "confidentiality_policy_url_fr": "https://www.orange.fr/donnees-personnelles",
   "data_access_via_postal": true,
   "data_access_via_form": true,

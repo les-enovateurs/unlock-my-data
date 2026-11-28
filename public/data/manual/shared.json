@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Vérification d'identité",
+  "details_required_documents_fr": "Vérification d'identité",
   "confidentiality_policy_url_fr": "https://share-d.com/politique-de-confidentialite",
   "confidentiality_policy_url_en": "https://share-d.com/en/politique-de-confidentialite",
   "data_access_via_postal": true,

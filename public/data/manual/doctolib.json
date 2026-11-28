@@ -12,7 +12,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "nom, prénom, adresse mail, numéro de téléphone et date de naissance associé au compte",
+  "details_required_documents_fr": "nom, prénom, adresse mail, numéro de téléphone et date de naissance associé au compte",
   "details_required_documents_en": "name, first name, email, phone number and date of birth associated to the account",
   "data_access_via_postal": true,
   "data_access_via_form": true,

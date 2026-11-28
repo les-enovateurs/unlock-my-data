@@ -28,7 +28,7 @@
   ],
   "easy_access_data": 3,
   "need_id_card": false,
-  "details_required_documents": "Justificatif d'identité",
+  "details_required_documents_fr": "Justificatif d'identité",
   "confidentiality_policy_url_fr": "https://www.urssaf.org/accueil/politique-de-confidentialite/politique-de-confidentialite-com.html",
   "data_access_via_postal": true,
   "data_access_via_form": false,

@@ -5,7 +5,7 @@
   "belongs_to_group": false,
   "easy_access_data": 1,
   "need_id_card": false,
-  "details_required_documents": "Aucun",
+  "details_required_documents_fr": "Aucun",
   "data_access_via_postal": false,
   "data_access_via_form": false,
   "data_access_via_email": false,
