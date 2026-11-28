@@ -1,0 +1,93 @@
+{
+  "slug": "pokemon-go",
+  "status": "relu",
+  "reviewers": [
+    {
+      "name": "noel.b",
+      "date": "2026-11-28",
+      "action": "reviewed"
+    }
+  ],
+  "items": {
+    "keyquote/0": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "noel.b",
+      "at": "2026-11-28T14:06:52.798Z",
+      "quote_ref": "v05wq.89"
+    },
+    "keyquote/1": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "noel.b",
+      "at": "2026-11-28T14:08:50.454Z",
+      "quote_ref": "oli0c9.311"
+    },
+    "keyquote/3": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "noel.b",
+      "at": "2026-11-28T14:16:51.598Z",
+      "quote_ref": "chghgb.374"
+    },
+    "keyquote/4": {
+      "verdict": "rejected",
+      "reason": null,
+      "note": "",
+      "by": "noel.b",
+      "at": "2026-11-28T14:18:32.056Z",
+      "quote_ref": "1lzjfwc.108"
+    },
+    "keyquote/5": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "noel.b",
+      "at": "2026-11-28T14:19:25.919Z",
+      "quote_ref": "149xctc.190"
+    },
+    "keyquote/6": {
+      "verdict": "rejected",
+      "reason": null,
+      "note": "",
+      "by": "noel.b",
+      "at": "2026-11-28T14:20:29.900Z",
+      "quote_ref": "1pifv25.137"
+    },
+    "keyquote/2": {
+      "verdict": "validated",
+      "reason": null,
+      "note": "",
+      "by": "noel.b",
+      "at": "2026-11-28T14:21:07.925Z",
+      "quote_ref": "1soqozm.380"
+    }
+  },
+  "service_note": "",
+  "updated_at": "2026-11-28T14:23:16.918Z",
+  "added_recipients": [],
+  "key_quote_plain": {
+    "keyquote/3": {
+      "fr": "Le jeu collecte des informations relatives à votre téléphone, comme le modèle les paramètres, mais aussi des informations sur les autres applications installées sur votre téléphone.",
+      "en": "The game collects information concerning you phone, such as the model or the settngs, but also information about the other apps installed on your phone.",
+      "by": "noel.b",
+      "at": "2026-11-28T14:16:39.952Z"
+    }
+  },
+  "key_quote_order": {
+    "order": [
+      0,
+      3,
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "by": "noel.b",
+    "at": "2026-11-28T14:21:10.347Z"
+  }
+}
